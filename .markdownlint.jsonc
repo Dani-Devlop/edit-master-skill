@@ -1,0 +1,27 @@
+{
+  // markdownlint-cli2 config for edit-master-skill.
+  // Prose wraps at 80 characters; the rule allows 100 so tables and
+  // long links breathe.
+  "MD013": {
+    "line_length": 100,
+    "code_blocks": false,
+    "tables": false,
+    "headings": false
+  },
+
+  // README and doc pages open with badge images; the issue templates
+  // open with YAML frontmatter, not an H1.
+  "MD041": false,
+
+  // Hook entries and template sections repeat the same labels and
+  // headings by design.
+  "MD024": false,
+
+  // Bold lead-ins (Shape:, Example:, On-screen:) are used as compact
+  // labels inside hook entries.
+  "MD036": false,
+
+  // Inline HTML is tolerated in docs (badge-style markup); today the
+  // README uses shield images, which are markdown images, not HTML.
+  "MD033": false
+}

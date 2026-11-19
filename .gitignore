@@ -25,3 +25,6 @@ __pycache__/
 .cache/
 out/
 render/
+
+# Raw test footage stays local (100+ MB); only sources.txt + test-results/ are committed
+raw_videos/

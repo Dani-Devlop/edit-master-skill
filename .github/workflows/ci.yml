@@ -1,0 +1,86 @@
+name: CI
+
+"on":
+  push:
+    branches: [main]
+  pull_request:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  markdown-lint:
+    name: Markdown lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Lint all markdown
+        uses: DavidAnson/markdownlint-cli2-action@v17
+        with:
+          globs: '**/*.md'
+          config: '.markdownlint.jsonc'
+
+  link-check:
+    name: Link check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check links in all markdown
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: >-
+            --max-concurrency 4
+            --no-progress
+            --exclude 'example\.com'
+            --exclude 'localhost'
+            --exclude '127\.0\.0\.1'
+            './**/*.md'
+          fail: true
+
+  skill-structure:
+    name: SKILL.md structure anchors
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify required sections and files
+        run: |
+          set -euo pipefail
+          grep -qF '## User Onboarding Questions' SKILL.md
+          grep -qF '## Hook Formulas Library' SKILL.md
+          grep -qF '## Hook Scoring Methodology (5-property panel)' SKILL.md
+          grep -qF '## The 5-Phase Workflow' SKILL.md
+          grep -qF '## Quality Checklist (the QA gate)' SKILL.md
+          grep -qF '21 long-form' SKILL.md
+          grep -qF '26 short-form' SKILL.md
+          test -f templates/voice.md
+          test -f examples/example-1-onboarding-and-plan.md
+          test -f examples/example-2-edl.md
+          test -f examples/example-3-captions.srt
+          echo 'SKILL.md structure: OK'
+
+  required-files:
+    name: Required files present
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify required repository files
+        run: |
+          set -euo pipefail
+          missing=0
+          for f in README.md SKILL.md LICENSE CONTRIBUTING.md SECURITY.md \
+                   CHANGELOG.md CODE_OF_CONDUCT.md \
+                   docs/INSTALLATION.md docs/WORKFLOWS.md docs/HOOKS.md \
+                   docs/TOOLS.md docs/FAQ.md docs/EXAMPLES.md \
+                   tests/README.md GPG-PUBLIC-KEY.asc Makefile \
+                   .github/PULL_REQUEST_TEMPLATE.md \
+                   .github/ISSUE_TEMPLATE/bug_report.md \
+                   .github/ISSUE_TEMPLATE/feature_request.md; do
+            if test -f "$f"; then
+              echo "ok: $f"
+            else
+              echo "MISSING: $f"
+              missing=1
+            fi
+          done
+          exit $missing

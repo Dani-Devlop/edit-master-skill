@@ -25,23 +25,23 @@ Repository: https://github.com/Dani-Devlop/edit-master-skill
 - [x] 1.7 Commit & push Phase 1 (signed or unsigned per policy, never unverified)
 
 ## Phase 2: Community & Documentation Files
-- [ ] 2.1 CONTRIBUTING.md (PR process, style guide, commit conventions)
-- [ ] 2.2 SECURITY.md (vulnerability reporting policy)
-- [ ] 2.3 CHANGELOG.md (v1.0.0 release notes)
-- [ ] 2.4 CODE_OF_CONDUCT.md (Contributor Covenant v2.1)
-- [ ] 2.5 docs/INSTALLATION.md (Claude Code, Codex, Cursor, Gemini CLI, chat-mode)
-- [ ] 2.6 docs/WORKFLOWS.md (5-phase deep dive)
-- [ ] 2.7 docs/HOOKS.md (all 47 formulas with examples)
-- [ ] 2.8 docs/TOOLS.md (ffmpeg, Remotion, HyperFrames, FilmCraft, NLEs)
-- [ ] 2.9 docs/FAQ.md (20+ common questions)
-- [ ] 2.10 docs/EXAMPLES.md (extended outputs)
-- [ ] 2.11 tests/README.md (test protocol)
-- [ ] 2.12 .github/ISSUE_TEMPLATE/bug_report.md
-- [ ] 2.13 .github/ISSUE_TEMPLATE/feature_request.md
-- [ ] 2.14 .github/PULL_REQUEST_TEMPLATE.md
-- [ ] 2.15 .github/workflows/ci.yml (markdown lint, link check, SKILL.md structure)
-- [ ] 2.16 .github/workflows/release.yml (auto-release on tag)
-- [ ] 2.17 Makefile (install, test, docs, clean targets)
+- [x] 2.1 CONTRIBUTING.md (PR process, style guide, commit conventions)
+- [x] 2.2 SECURITY.md (vulnerability reporting policy)
+- [x] 2.3 CHANGELOG.md (v1.0.0 release notes)
+- [x] 2.4 CODE_OF_CONDUCT.md (Contributor Covenant v2.1)
+- [x] 2.5 docs/INSTALLATION.md (Claude Code, Codex, Cursor, Gemini CLI, chat-mode)
+- [x] 2.6 docs/WORKFLOWS.md (5-phase deep dive)
+- [x] 2.7 docs/HOOKS.md (all 47 formulas with examples)
+- [x] 2.8 docs/TOOLS.md (ffmpeg, Remotion, HyperFrames, FilmCraft, NLEs)
+- [x] 2.9 docs/FAQ.md (20+ common questions)
+- [x] 2.10 docs/EXAMPLES.md (extended outputs)
+- [x] 2.11 tests/README.md (test protocol)
+- [x] 2.12 .github/ISSUE_TEMPLATE/bug_report.md
+- [x] 2.13 .github/ISSUE_TEMPLATE/feature_request.md
+- [x] 2.14 .github/PULL_REQUEST_TEMPLATE.md
+- [x] 2.15 .github/workflows/ci.yml (markdown lint, link check, SKILL.md structure)
+- [x] 2.16 .github/workflows/release.yml (auto-release on tag)
+- [x] 2.17 Makefile (install, test, docs, clean targets)
 - [ ] 2.18 Commit & push Phase 2
 
 ## Phase 3: Download 25 Real Videos

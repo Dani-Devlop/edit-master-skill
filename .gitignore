@@ -1,0 +1,27 @@
+# Secrets and environment - NEVER commit these
+.env
+.env.*
+*.env
+!.env.example
+
+# Keys and credentials
+*.pem
+*.key
+secrets/
+credentials*
+
+# OS noise
+.DS_Store
+Thumbs.db
+
+# Editor noise
+.idea/
+.vscode/
+*.swp
+
+# Logs and caches
+*.log
+__pycache__/
+.cache/
+out/
+render/

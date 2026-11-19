@@ -106,22 +106,23 @@ and checklists are original to this skill.
 
 ## Commit signing & verification
 
-All commits and tags in this repository are GPG-signed with an ephemeral
-ed25519 OpenPGP key. The public key is committed at
-[`GPG-PUBLIC-KEY.asc`](GPG-PUBLIC-KEY.asc) so you can verify that every
-commit really came from this repo, even before GitHub shows the badge:
+This repository follows a strict badge policy: every commit on `main`
+shows **either** the blue **Verified** badge **or no signature badge at
+all** — a yellow *Unverified* badge is never accepted.
+
+The maintainer's ed25519 signing key is published at
+[`GPG-PUBLIC-KEY.asc`](GPG-PUBLIC-KEY.asc). Registering it with the GitHub
+account requires an API token with the `admin:gpg_key` scope; when that
+scope is unavailable, commits are intentionally left unsigned (no badge)
+rather than signed-but-unverified. If you maintain the account, you can
+complete registration in **Settings → SSH and GPG keys → New GPG key**
+(paste the contents of `GPG-PUBLIC-KEY.asc`); future commits can then be
+verified by anyone with:
 
 ```bash
 gpg --import GPG-PUBLIC-KEY.asc
-git verify-commit <commit-sha>     # should say: Good signature from Dani-Devlop
-git verify-tag v1.0.0
+git verify-commit <commit-sha>
 ```
-
-If the commit shows **Verified** on GitHub, the signature was validated
-against the key registered on the maintainer's account. If it shows
-**Unverified** but `git verify-commit` passes locally, the signature is
-still valid — GitHub just has not been introduced to the key from your
-side.
 
 ## License
 

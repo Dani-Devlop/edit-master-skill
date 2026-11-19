@@ -1,3 +1,11 @@
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![GitHub release](https://img.shields.io/github/v/release/Dani-Devlop/edit-master-skill)](https://github.com/Dani-Devlop/edit-master-skill/releases)
+[![GitHub stars](https://img.shields.io/github/stars/Dani-Devlop/edit-master-skill?style=social)](https://github.com/Dani-Devlop/edit-master-skill)
+[![GitHub forks](https://img.shields.io/github/forks/Dani-Devlop/edit-master-skill?style=social)](https://github.com/Dani-Devlop/edit-master-skill)
+[![GitHub commits](https://img.shields.io/github/commit-activity/m/Dani-Devlop/edit-master-skill)](https://github.com/Dani-Devlop/edit-master-skill/commits)
+[![Last commit](https://img.shields.io/github/last-commit/Dani-Devlop/edit-master-skill)](https://github.com/Dani-Devlop/edit-master-skill)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/Dani-Devlop/edit-master-skill/pulls)
+
 # Edit Master Skill
 
 **Universal viral video editing skill for any AI agent** — Claude, ChatGPT,
@@ -95,6 +103,25 @@ Synthesized and adapted with thanks to:
 Hook libraries and the scoring-panel concept are adapted from the two
 MIT-licensed repositories above; the onboarding, workflow, editing principles
 and checklists are original to this skill.
+
+## Commit signing & verification
+
+All commits and tags in this repository are GPG-signed with an ephemeral
+ed25519 OpenPGP key. The public key is committed at
+[`GPG-PUBLIC-KEY.asc`](GPG-PUBLIC-KEY.asc) so you can verify that every
+commit really came from this repo, even before GitHub shows the badge:
+
+```bash
+gpg --import GPG-PUBLIC-KEY.asc
+git verify-commit <commit-sha>     # should say: Good signature from Dani-Devlop
+git verify-tag v1.0.0
+```
+
+If the commit shows **Verified** on GitHub, the signature was validated
+against the key registered on the maintainer's account. If it shows
+**Unverified** but `git verify-commit` passes locally, the signature is
+still valid — GitHub just has not been introduced to the key from your
+side.
 
 ## License
 

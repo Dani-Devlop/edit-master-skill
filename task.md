@@ -19,7 +19,7 @@ Repository: https://github.com/Dani-Devlop/edit-master-skill
 - [x] 1.1 Update repo description via API
 - [x] 1.2 Add topics (20 topics)
 - [x] 1.3 Enable issues, wiki, discussions
-- [ ] 1.4 Create Release v1.0.0 with full changelog
+- [x] 1.4 Create Release v1.0.0 with full changelog
 - [x] 1.5 Add shields.io badges to README.md header
 - [x] 1.6 Upload GPG-PUBLIC-KEY.asc to repo root
 - [x] 1.7 Commit & push Phase 1 (signed or unsigned per policy, never unverified)

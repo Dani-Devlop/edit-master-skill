@@ -314,3 +314,52 @@ Generated: 2026-11-20 01:16:47 UTC | 25 edits across 16 categories | all 1080x19
    styles additionally ride a 112 BPM bed.
 5. All edits respect the 1080x1920 safe zones: hook cards at y=280 and
    captions at y=1330 stay inside y=230..1440.
+
+---
+
+# Phase 4.5: Premium Edit Upgrade (2026-11-20)
+
+## Why
+
+Review verdict on v1: too basic. Food video 1 was one continuous slow pan
+with plain black-box captions; reference edits (Joseph, Dan Kieft, Grow with
+Alex style) change the frame every 1.5-3s, use kinetic captions with a
+styled keyword, motion graphics, layered SFX and a designed background.
+
+## What changed in v2 (all 25 videos)
+
+| Dimension | v1 | v2 |
+|---|---|---|
+| Beat structure | 5 caption windows over one shot | 10 beats, none >4s |
+| Captions | ALL-CAPS black boxes | kinetic: Poppins + Playfair italic accent #FF6B35, pop-up blur fade-in, max 6 words |
+| Motion graphics | 0 | 5 per video (callouts, counter, line-draw, chapter, progress bar) |
+| Frame change | none | zoom-punch hook, 2 punch-ins, 2 B-roll cutaways, 0.5x slow-mo, 1.5x->0.6x ramp |
+| Background | blurred letterbox | brand gradient + grain + glow (blur banned) |
+| Sound | music + 1 whoosh | music + 18 SFX events |
+| Ending | fade out | payoff card echoing the hook keyword + sub-bass |
+
+## Scores
+
+Average overall moved from 8.01 (v1) to 9.17 (v2). Biggest gains:
+pacing (+1.3), captions (+1.3),
+sound (+1.2). Per-video rows in scores.csv carry the
+v1 limitation note forward where it still applies (e.g. talkinghead_2's 6.6s
+source forces window reuse even in v2).
+
+## Honest method notes (v2)
+
+- Word-synced caption timing = beat-synced: the stock sources have no speech
+  and no transcript to sync against; every caption pops on its beat boundary.
+- B-roll cutaways are alternate crop regions of the same source clip (spec
+  allows "AI-generated insert or alternate crop/angle"; no second camera).
+- Whip-pans are approximated by zoom-punch transitions (112->100% over 10
+  frames) + whoosh; a true motion-blur whip needs per-frame compositing that
+  ffmpeg cannot express directly - noted instead of faked.
+- SFX pack (riser/impact/whoosh/click/pop/sub-bass) was synthesized in-house
+  with ffmpeg aevalsrc; royalty-free by construction, not downloaded.
+- Color grade: curves + colorbalance + vibrance per style; before/after
+  frames in grades/ prove the grade (v1's "warm grade" claim was weak).
+- tech_1 exports at ~50MB (grainy digital-map source inflates H.264 bitrate
+  at crf 18); every other video is 12-36MB. All are 1080x1920 H.264+AAC.
+- QA gate is enforced in code (scripts/p45_premium.py qa_gate): a video that
+  fails any of the 11 checks is not delivered.

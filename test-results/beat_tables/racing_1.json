@@ -1,0 +1,182 @@
+{
+ "id": "racing_1",
+ "video": "#2/25",
+ "category": "Cold Open Demo",
+ "style": "energetic",
+ "total": 26.0,
+ "beats": [
+  {
+   "start": 0.0,
+   "end": 2.2,
+   "type": "hook",
+   "on_screen": "full-bleed zoom punch 112->100 + animated hook card (riser+impact)",
+   "caption": "Fourteen seconds of pure pace"
+  },
+  {
+   "start": 2.2,
+   "end": 5.2,
+   "type": "card",
+   "on_screen": "designed bg + footage card + kinetic caption pop",
+   "caption": "cold open, no logo"
+  },
+  {
+   "start": 5.2,
+   "end": 7.7,
+   "type": "card",
+   "on_screen": "designed bg + footage card + kinetic caption pop",
+   "caption": "cut on motion"
+  },
+  {
+   "start": 7.7,
+   "end": 10.3,
+   "type": "broll",
+   "on_screen": "full-bleed B-roll cutaway, alt crop region + ken-burns + whoosh",
+   "caption": "every beat a hit"
+  },
+  {
+   "start": 10.3,
+   "end": 12.8,
+   "type": "card",
+   "on_screen": "designed bg + footage card + kinetic caption pop",
+   "caption": "drums drive the cut"
+  },
+  {
+   "start": 12.8,
+   "end": 15.4,
+   "type": "card",
+   "on_screen": "designed bg + footage card + kinetic caption pop",
+   "caption": "out before it drags"
+  },
+  {
+   "start": 15.4,
+   "end": 18.0,
+   "type": "broll",
+   "on_screen": "full-bleed B-roll cutaway, alt crop region + ken-burns + whoosh",
+   "caption": "pace is the hook"
+  },
+  {
+   "start": 18.0,
+   "end": 20.8,
+   "type": "card",
+   "on_screen": "designed bg + footage card + kinetic caption pop",
+   "caption": "never settle for slow"
+  },
+  {
+   "start": 20.8,
+   "end": 23.0,
+   "type": "ramp",
+   "on_screen": "speed ramp 1.5x -> 0.6x full-bleed + chapter rhombus + whoosh",
+   "caption": null
+  },
+  {
+   "start": 23.0,
+   "end": 26.0,
+   "type": "payoff",
+   "on_screen": "payoff card (echo hook kw) + progress bar + sub-bass hit",
+   "caption": "pace is the hook."
+  }
+ ],
+ "graphics": [
+  "label callout: CUT ON MOTION",
+  "label callout: BEAT SYNC",
+  "counter card: BEATS = 10",
+  "line-draw: pace curve",
+  "chapter rhombus",
+  "payoff progress bar"
+ ],
+ "sfx": [
+  "riser.wav @0.00s",
+  "impact.wav @2.20s",
+  "whoosh.wav @7.70s",
+  "whoosh.wav @18.00s",
+  "whoosh.wav @23.00s",
+  "click.wav @2.32s",
+  "click.wav @5.32s",
+  "click.wav @7.82s",
+  "click.wav @10.42s",
+  "click.wav @12.92s",
+  "click.wav @15.52s",
+  "click.wav @18.12s",
+  "pop.wav @2.70s",
+  "pop.wav @8.20s",
+  "pop.wav @13.20s",
+  "pop.wav @18.60s",
+  "pop.wav @21.10s",
+  "subbass.wav @23.00s"
+ ],
+ "qa": {
+  "beats>=8": [
+   true,
+   10
+  ],
+  "max_beat<=4s": [
+   true,
+   3.0
+  ],
+  "graphics>=3": [
+   true,
+   5
+  ],
+  "cutaways>=2": [
+   true,
+   2
+  ],
+  "kinetic_captions=7": [
+   true,
+   7
+  ],
+  "sfx_events>=10": [
+   true,
+   18
+  ],
+  "hook_motion": [
+   true,
+   "zoom punch 112->100"
+  ],
+  "designed_bg": [
+   true,
+   "gradient+grain+glow"
+  ],
+  "payoff_echo": [
+   true,
+   "pace is the hook."
+  ],
+  "grade_pair": [
+   true,
+   "before/after"
+  ],
+  "res_1080x1920": [
+   true,
+   "1080x1920"
+  ],
+  "dur_26s": [
+   true,
+   26.0
+  ],
+  "hook_nonblank": [
+   true,
+   34.6
+  ],
+  "mid_nonblank": [
+   true,
+   32.7
+  ],
+  "payoff_nonblank": [
+   true,
+   19.1
+  ],
+  "accent_hook": [
+   true,
+   5374
+  ],
+  "accent_mid": [
+   true,
+   5641
+  ],
+  "accent_payoff": [
+   true,
+   16427
+  ]
+ },
+ "size_mb": 31.68
+}

@@ -107,3 +107,14 @@ Repository: https://github.com/Dani-Devlop/edit-master-skill
 - [x] 5.0.12 30s supercut montage (best 2s per category) delivered
 - [x] 5.0.13 Update scores.csv + notes.md + docs/STYLES.md + SKILL.md lessons
 - [x] 5.0.14 Commit + push main + badge audit + final 100% report
+
+## Phase 8.0: Depth-Layered 3D-Type Motion System (R1-R12)
+- [x] 8.0.1 Repo git/GPG restore + preflight after sandbox recycle
+- [x] 8.0.2 Asset factory: 3D extruded type / halftone / pixel-glitch / tilted cards+pills / stickers / phone-UI / whip-blur
+- [x] 8.0.3 Subject matte pipeline (rembg u2net -> mediapipe -> polygon fallback, honest note)
+- [x] 8.0.4 Occlusion proof frame + layer-stack breakdown PNG -> Telegram
+- [x] 8.0.5 Depth-system renderer: layer composite, spring entrances, whip/glitch bites, SFX bed, VO duck
+- [x] 8.0.6 Benchmark: TALKING-HEAD full re-edit + beat table + QA gate + scorecard -> Telegram (WAIT approval)
+- [x] 8.0.7 16-category rollout (after approval) with docs/STYLES.md palettes
+- [x] 8.0.8 Supercut v3 (30-32s) + SKILL.md R1-R12 section + docs/STYLES.md + test-results update
+- [ ] 8.0.9 Commit + push main (badge policy) + badge audit + Wavely 100% final report

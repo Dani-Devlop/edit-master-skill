@@ -156,3 +156,49 @@ signature graphics kit, particle system and the AI insert-beat prompt.
 - Talking-head asks for a script accent: Caveat is used (open equivalent).
 - City asks for 'glitch mono': JetBrains Mono Italic + ffmpeg `rgbashift` flashes implement the glitch vocabulary.
 - Mindset 'no hard cuts': soft mask wipes only, breathing 4-6-8 zoom, heavy grain baked into the grade.
+
+---
+
+# Phase 8.0 Depth-Anchor Sheets (16 reps, depth-layered 3D-type system)
+
+Per-category depth anchor, layout family, palette accent and signature graphic
+for the R1-R12 motion system (SKILL.md "Depth-Layered 3D-Type Motion System").
+Anchors were probe-driven (4 rembg frames per video) and are honest: F1/F2
+categories carry real 30fps alpha mattes (occlusion pixel-verified in QA);
+F3 categories use duotone-scrim depth with NO occlusion claim.
+
+| # | video | category | family | depth anchor | palette accent | signature graphic |
+|---|-------|----------|--------|--------------|----------------|-------------------|
+| 1 | talkinghead_1 | Talking head | F1 talking-head stack | masked subject (u2net 30fps, edge-IoU 0.991) | terracotta #E87850 | speaker pill "SPEAKER TAKEOVER" + quote payoff |
+| 2 | podcast_1 | Podcast clip | F1 talking-head stack | masked subject (u2net 30fps, 0.992) | amber #FFBE46 | "REC 00:26" pill + two-mic label |
+| 3 | education_1 | Education | F1 talking-head stack | masked subject (u2net 30fps, 0.992) | ink blue #1C50A0 | "DAILY DRILL" pill + step labels |
+| 4 | fitness_1 | Motivation / Fitness | F1 talking-head stack | masked subject - athlete (u2net 30fps, 0.978) | volt #B4FF00 | rep counter pill "REP COUNTER 8/12" |
+| 5 | food_1 | Food / Restaurant | F2 hero object | masked object - dish (u2net 30fps, 0.990) | orange #FF6B35 | "READS $4,000" pill + order callout |
+| 6 | product_2 | Product demo | F2 hero object | masked object - device (u2net 30fps, 0.987) | cobalt #2878FF | "SPEC SHEET V2" pill + check draw |
+| 7 | branding_1 | Branding / Corporate | F2 hero object | masked object - signage (u2net 30fps, 0.980) | gold #D4AF37 | gold counter pill "GOLD COUNTER x12" |
+| 8 | nature_1 | Nature | F3 world pan | world-pan scrim (matte FAIL on water: u2net 0.678 / isnet 0.773 - honest flip, C4 amendment) | sand #E0C478 | "TIDE TABLE +0.4M" mono label |
+| 9 | cars_2 | Cars / Luxury | F3 world pan | world-pan scrim (probe fg 5.9%, unstable) | cyan #00E5FF | "GEAR PILL N-60" + speed stickers |
+| 10 | racing_1 | Racing / Motorsport | F3 world pan | world-pan scrim (probe fg 0.1%) | cyan/orange | "RPM 12,400" mono pill + whip flash |
+| 11 | city_1 | City / Urban | F3 world pan | world-pan scrim (probe IoU 0.005) | magenta #FF2DAA | "ROOFTOP 51F" pill + neon callout |
+| 12 | fashion_1 | Fashion | F3 world pan | world-pan scrim (probe IoU 0.0) | blush #FFBECD | "LOOKBOOK 12" pill + frame-in-frame |
+| 13 | mindset_1 | Mindset / Focus | F3 world pan | world-pan scrim (probe bw 0.16) | amber #E6B46E | "BREATH 4-4-6" pill + soft leak |
+| 14 | music_1 | Music | F3 world pan | world-pan scrim (probe IoU 0.14) | purple #AA5AFF | "128 BPM LIVE" pill + waveform |
+| 15 | tech_1 | Tech / Coding | F3 world pan | world-pan scrim (probe fg 0.2%, dark screens) | phosphor #00FF82 | "> ping 12ms" terminal label + UPLINK pill |
+| 16 | travel_1 | Travel | F3 world pan | world-pan scrim (probe bw 0.17) | sunset #FFAA50 | "ROUTE 1 OPEN" pill + stamp pop |
+
+Layout rules per family:
+- **F1 talking-head stack**: giant type (2-line slam) behind the speaker's
+  head; cards below face rect; stickers on side thirds; phone typing beat;
+  payoff loops the hook footage (REWIND type over the b0 window).
+- **F2 hero object**: salient object (dish/device/signage) occludes the giant
+  type; cards flank lower third; object top-30% zone is the protected area.
+- **F3 world pan**: NO matte claim. Giant type under duotone scrim gradient +
+  vignette, upper 55%; cards / stickers / labels / phone confined to the
+  lower safe band (y >= 1080 of 1920) so any in-frame face stays clear; depth
+  QA = scrim separation + type legibility (honest naming in QA gate).
+
+Shared rhythm (all families): b0 type slam + glitch -> b1 type -> b2 type +
+zoom-through exit -> b3 card cascade + connector -> b4 phone typing ->
+b5 AI surreal insert + pill + impact -> b6 cards + connector -> b7 signature
+type -> b8 echo phone (hook words retype) -> b9 payoff (loop the hook).
+Every beat ends with a graphics-only whip blur (subject/object stays sharp).

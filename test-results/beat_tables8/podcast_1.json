@@ -1,0 +1,632 @@
+{
+ "vid": "podcast_1",
+ "cat": "PODCAST",
+ "family": "F1",
+ "accent": [
+  255,
+  190,
+  70
+ ],
+ "secondary": [
+  240,
+  240,
+  240
+ ],
+ "ink": [
+  26,
+  20,
+  14
+ ],
+ "type_fill": "white",
+ "extrude": "accent_dark",
+ "halftone": "accent",
+ "sticker_color": "accent",
+ "card_border": [
+  255,
+  190,
+  70
+ ],
+ "pill_bg": [
+  255,
+  190,
+  70
+ ],
+ "bg_tint": [
+  255,
+  236,
+  210,
+  14
+ ],
+ "cards_spec": [
+  [
+   "the setup",
+   1.2
+  ],
+  [
+   "the room",
+   6.0
+  ],
+  [
+   "the talk",
+   8.5
+  ]
+ ],
+ "labels": [
+  "on air",
+  "two mics",
+  "step 01",
+  "step 02"
+ ],
+ "sig_pill": "REC 00:26",
+ "stickers": [
+  "play",
+  "headphones",
+  "star",
+  "bolt",
+  "arrow",
+  "clapper"
+ ],
+ "insert_prompt": "surreal 3D dream world, giant condenser microphone growing out of a warm amber cloud island, recording cables as rivers of light, amber and cream palette, halftone dot sky, vertical, cinematic render, no text, no watermark",
+ "raw_dur": 10.26,
+ "total": 26.4,
+ "durs": [
+  2.6,
+  2.7,
+  2.6,
+  2.8,
+  2.6,
+  2.6,
+  2.8,
+  2.5,
+  2.2,
+  3.0
+ ],
+ "focal": {
+  "fx": 400.1780643094542,
+  "fy": 373.65999999999997,
+  "bbox": [
+   245.0,
+   162.0,
+   611.0,
+   719.0
+  ],
+  "protected": [
+   310.88,
+   162.0,
+   545.12,
+   329.1
+  ]
+ },
+ "protected": [
+  310.88,
+  162.0,
+  545.12,
+  329.1
+ ],
+ "matte": true,
+ "matte_fps": 30,
+ "vo": [
+  {
+   "idx": 0,
+   "raw": "How do you record like that",
+   "dur": 2.352,
+   "atempo": 1.023,
+   "start": 0.12,
+   "beat": 0,
+   "f": "/home/z/my-project/p4work/p50/vo/podcast_1_0.wav"
+  },
+  {
+   "idx": 1,
+   "raw": "two mics",
+   "dur": 1.872,
+   "atempo": 0.85,
+   "start": 2.72,
+   "beat": 1,
+   "f": "/home/z/my-project/p4work/p50/vo/podcast_1_1.wav"
+  },
+  {
+   "idx": 2,
+   "raw": "get close",
+   "dur": 1.872,
+   "atempo": 0.85,
+   "start": 5.42,
+   "beat": 2,
+   "f": "/home/z/my-project/p4work/p50/vo/podcast_1_2.wav"
+  },
+  {
+   "idx": 3,
+   "raw": "warm key light",
+   "dur": 2.064,
+   "atempo": 0.85,
+   "start": 8.02,
+   "beat": 3,
+   "f": "/home/z/my-project/p4work/p50/vo/podcast_1_3.wav"
+  },
+  {
+   "idx": 4,
+   "raw": "loop the talk",
+   "dur": 1.896,
+   "atempo": 0.85,
+   "start": 10.82,
+   "beat": 4,
+   "f": "/home/z/my-project/p4work/p50/vo/podcast_1_4.wav"
+  },
+  {
+   "idx": 5,
+   "raw": "the room is the studio",
+   "dur": 2.352,
+   "atempo": 1.023,
+   "start": 13.42,
+   "beat": 5,
+   "f": "/home/z/my-project/p4work/p50/vo/podcast_1_5.wav"
+  },
+  {
+   "idx": 6,
+   "raw": "keep the depth",
+   "dur": 1.872,
+   "atempo": 0.85,
+   "start": 16.02,
+   "beat": 6,
+   "f": "/home/z/my-project/p4work/p50/vo/podcast_1_6.wav"
+  },
+  {
+   "idx": 7,
+   "raw": "sound expensive",
+   "dur": 2.184,
+   "atempo": 0.993,
+   "start": 18.82,
+   "beat": 7,
+   "f": "/home/z/my-project/p4work/p50/vo/podcast_1_7.wav"
+  },
+  {
+   "idx": 8,
+   "raw": "now record like that.",
+   "dur": 2.304,
+   "atempo": 0.853,
+   "start": 23.52,
+   "beat": 9,
+   "f": "/home/z/my-project/p4work/p50/vo/podcast_1_8.wav"
+  }
+ ],
+ "beats": [
+  {
+   "t": 2.6,
+   "whip": "right",
+   "zoom": [
+    1.02,
+    1.16
+   ],
+   "kind": "type",
+   "src": [
+    0.0,
+    2.6
+   ],
+   "type": [
+    "RECORD",
+    "LIKE THAT"
+   ],
+   "vo": 0,
+   "halftone": "halftone_accent.png",
+   "glitch": "glitch_1.png",
+   "zoomout_next": false,
+   "stickers": [
+    [
+     "stick_play.png",
+     [
+      70,
+      1470
+     ],
+     0.25
+    ],
+    [
+     "stick_headphones.png",
+     [
+      80,
+      520
+     ],
+     0.35
+    ]
+   ],
+   "labels": [
+    [
+     "label_i0.png",
+     [
+      48,
+      1600
+     ],
+     0.35
+    ]
+   ]
+  },
+  {
+   "t": 2.7,
+   "whip": "left",
+   "zoom": [
+    1.03,
+    1.14
+   ],
+   "kind": "type",
+   "src": [
+    2.65,
+    2.7
+   ],
+   "type": [
+    "TWO",
+    "MICS"
+   ],
+   "vo": 1,
+   "halftone": "halftone_accent.png",
+   "glitch": null,
+   "zoomout_next": false,
+   "stickers": [
+    [
+     "stick_star.png",
+     [
+      850,
+      1290
+     ],
+     0.25
+    ]
+   ],
+   "labels": []
+  },
+  {
+   "t": 2.6,
+   "whip": "right",
+   "zoom": [
+    1.03,
+    1.14
+   ],
+   "kind": "type",
+   "src": [
+    5.4,
+    2.6
+   ],
+   "type": [
+    "THE ROOM",
+    "IS THE STUDIO"
+   ],
+   "vo": 2,
+   "halftone": null,
+   "glitch": null,
+   "zoomout_next": true,
+   "stickers": [
+    [
+     "stick_arrow.png",
+     [
+      80,
+      520
+     ],
+     0.25
+    ],
+    [
+     "stick_clapper.png",
+     [
+      830,
+      760
+     ],
+     0.35
+    ]
+   ],
+   "labels": [
+    [
+     "label_i2.png",
+     [
+      48,
+      1780
+     ],
+     0.3
+    ]
+   ]
+  },
+  {
+   "t": 2.8,
+   "whip": "left",
+   "zoom": [
+    1.03,
+    1.14
+   ],
+   "kind": "cards",
+   "src": [
+    0.4,
+    2.8000000000000003
+   ],
+   "vo": 3,
+   "connector": true,
+   "stickers": [
+    [
+     "stick_play.png",
+     [
+      880,
+      1660
+     ],
+     0.25
+    ]
+   ],
+   "labels": [
+    [
+     "label_i3.png",
+     [
+      48,
+      1780
+     ],
+     0.35
+    ]
+   ],
+   "cards": [
+    [
+     "card_0.png",
+     [
+      350,
+      1300
+     ],
+     0.12
+    ],
+    [
+     "card_1.png",
+     [
+      720,
+      1460
+     ],
+     0.42
+    ]
+   ],
+   "connector_pair": [
+    "card_0.png",
+    "card_1.png"
+   ]
+  },
+  {
+   "t": 2.6,
+   "whip": "right",
+   "zoom": [
+    1.03,
+    1.14
+   ],
+   "kind": "phone",
+   "src": [
+    3.25,
+    2.6
+   ],
+   "vo": 4,
+   "phone": [
+    150,
+    600,
+    780,
+    1050
+   ],
+   "stickers": [
+    [
+     "stick_star.png",
+     [
+      830,
+      760
+     ],
+     0.25
+    ]
+   ]
+  },
+  {
+   "t": 2.6,
+   "whip": "left",
+   "zoom": [
+    1.16,
+    1.02
+   ],
+   "kind": "insert",
+   "src": null,
+   "vo": 5,
+   "glitch": "glitch_2.png",
+   "pill": [
+    "REC 00:26",
+    [
+     330,
+     1880
+    ],
+    1.55
+   ],
+   "impact": true,
+   "phone": [
+    240,
+    980,
+    600,
+    880
+   ]
+  },
+  {
+   "t": 2.8,
+   "whip": "right",
+   "zoom": [
+    1.03,
+    1.14
+   ],
+   "kind": "cards",
+   "src": [
+    5.9,
+    2.8000000000000003
+   ],
+   "vo": 6,
+   "connector": true,
+   "stickers": [
+    [
+     "stick_play.png",
+     [
+      70,
+      1470
+     ],
+     0.25
+    ]
+   ],
+   "labels": [],
+   "cards": [
+    [
+     "card_2.png",
+     [
+      330,
+      1560
+     ],
+     0.12
+    ],
+    [
+     "card_0.png",
+     [
+      350,
+      1300
+     ],
+     0.42
+    ]
+   ],
+   "connector_pair": [
+    "card_2.png",
+    "card_0.png"
+   ]
+  },
+  {
+   "t": 2.5,
+   "whip": "left",
+   "zoom": [
+    1.03,
+    1.14
+   ],
+   "kind": "type",
+   "src": [
+    0.4,
+    2.5
+   ],
+   "type": [
+    "SOUND",
+    "EXPENSIVE"
+   ],
+   "vo": 7,
+   "halftone": "halftone_accent.png",
+   "glitch": null,
+   "zoomout_next": false,
+   "stickers": [
+    [
+     "stick_star.png",
+     [
+      850,
+      1290
+     ],
+     0.25
+    ],
+    [
+     "stick_bolt.png",
+     [
+      880,
+      1660
+     ],
+     0.35
+    ]
+   ],
+   "labels": [
+    [
+     "label_i1.png",
+     [
+      48,
+      1600
+     ],
+     0.5
+    ]
+   ]
+  },
+  {
+   "t": 2.2,
+   "whip": "left",
+   "zoom": [
+    1.03,
+    1.14
+   ],
+   "kind": "phone",
+   "src": [
+    1.0,
+    2.2
+   ],
+   "vo": null,
+   "echo": true,
+   "phone": [
+    150,
+    580,
+    780,
+    1120
+   ],
+   "glitch": "glitch_4.png",
+   "stickers": [
+    [
+     "stick_arrow.png",
+     [
+      80,
+      520
+     ],
+     0.25
+    ]
+   ]
+  },
+  {
+   "t": 3.0,
+   "whip": "right",
+   "zoom": [
+    1.18,
+    1.02
+   ],
+   "kind": "type",
+   "src": [
+    0.0,
+    3.0
+   ],
+   "type": [
+    "REWIND",
+    null
+   ],
+   "vo": 8,
+   "payoff": true,
+   "halftone": "halftone_accent.png",
+   "glitch": "glitch_1.png",
+   "stickers": [
+    [
+     "stick_play.png",
+     [
+      880,
+      1660
+     ],
+     0.25
+    ],
+    [
+     "stick_headphones.png",
+     [
+      60,
+      1620
+     ],
+     0.35
+    ]
+   ],
+   "labels": []
+  }
+ ],
+ "card_assets": [
+  {
+   "name": "card_0.png",
+   "label": "the setup",
+   "src_t": 1.2,
+   "tilt": -6,
+   "w": 540,
+   "h": 660
+  },
+  {
+   "name": "card_1.png",
+   "label": "the room",
+   "src_t": 6.0,
+   "tilt": 5,
+   "w": 540,
+   "h": 660
+  },
+  {
+   "name": "card_2.png",
+   "label": "the talk",
+   "src_t": 8.5,
+   "tilt": -3,
+   "w": 540,
+   "h": 660
+  }
+ ]
+}

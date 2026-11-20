@@ -416,3 +416,14 @@ representative video per category was re-rendered with its own style sheet.
   not per-phoneme.
 - Parallax is feathered-layer, not depth-map true 3D.
 - mindset_1 was re-encoded (CRF 24) to fit Telegram's 50MB send limit.
+
+## Phase 8.0 - Depth-Layered 3D-Type Motion System (16 reps)
+
+- QA gate 23/23 on all 16 (22 benchmark checks + C1 matte check). Avg scorecard 9.6/10 (scores_phase8.csv).
+- Depth anchors: 7 MASKED (4 subjects, 3 objects - real rembg 30fps mattes, occlusion pixel-verified) / 9 WORLD-PAN (honest scrim depth, no matte claim). nature_1 flipped masked->world-pan after matte flicker FAIL (u2net 0.678, isnet-general-use 0.773 vs 0.78 bar; moving water = unstable alpha) - C4 amendment sent before render.
+- Matte pipeline: 30fps extraction, ALPHA-ONLY L-PNG storage (18-40MB/video), temporal smoothing (0.6/0.2/0.2 + 0.8px), edge IoU 0.977-0.992 on all kept mattes.
+- Loudness: two-pass loudnorm, final measured -14.1..-14.3 LUFS, TP -1.3/-1.4 dBFS (loudnorm.json per video).
+- SFX: entrance parity exact on all 16 (entrance sfx count == element entrances incl. typing words); sfx_events registry merges across partial re-renders.
+- Masters: CRF-17 1080x1920 H.264 + AAC; Telegram delivery copies CRF-23 (final_tg.mp4). Registry with md5 hashes: render registry (C6) - supercut v3 hash-verified all 16 sources.
+- Supercut v3: 30.7s, 24 beat-synced cuts + end card (repo URL), -14.2 LUFS, TP -1.2 dBFS. Showcase: type-slam montage (varied hooks), card cascade, sticker pops, phone typing, AI inserts, real zoom-through, hero-object occlusion, world-pan whips, payoff loop.
+- Known limits (honest): silent sources -> synthetic VO (edge-tts) reused from Phase 5.0 schedule re-timed to Phase 8 beats; insert beat = AI still with 2.5D parallax (no video gen); music beds licensed-free stock wavs from earlier phases.

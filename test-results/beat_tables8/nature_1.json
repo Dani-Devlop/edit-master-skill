@@ -1,0 +1,632 @@
+{
+ "vid": "nature_1",
+ "cat": "NATURE",
+ "family": "F3",
+ "accent": [
+  224,
+  196,
+  120
+ ],
+ "secondary": [
+  180,
+  220,
+  170
+ ],
+ "ink": [
+  12,
+  24,
+  16
+ ],
+ "type_fill": "white",
+ "extrude": "accent_dark",
+ "halftone": "accent",
+ "sticker_color": "accent",
+ "card_border": [
+  224,
+  196,
+  120
+ ],
+ "pill_bg": [
+  224,
+  196,
+  120
+ ],
+ "bg_tint": [
+  230,
+  240,
+  220,
+  12
+ ],
+ "cards_spec": [
+  [
+   "the water",
+   1.5
+  ],
+  [
+   "the wave",
+   5.5
+  ],
+  [
+   "the horizon",
+   9.5
+  ]
+ ],
+ "labels": [
+  "tide +0.4m",
+  "slow cuts only",
+  "step 01",
+  "step 02"
+ ],
+ "sig_pill": "TIDE TABLE +0.4M",
+ "stickers": [
+  "star",
+  "arrow",
+  "play",
+  "rocket",
+  "bolt",
+  "headphones"
+ ],
+ "insert_prompt": "surreal 3D dream world, giant wave curling over a floating forest island with golden pollen light beams, misty green tones, deep green and sand palette, vertical, cinematic render, no text, no watermark",
+ "raw_dur": 15.31,
+ "total": 26.0,
+ "durs": [
+  2.6,
+  2.7,
+  2.5,
+  2.7,
+  2.6,
+  2.5,
+  2.7,
+  2.5,
+  2.2,
+  3.0
+ ],
+ "focal": {
+  "fx": 226.4997478291378,
+  "fy": 121.98,
+  "bbox": [
+   28.0,
+   0.0,
+   542.0,
+   321.0
+  ],
+  "protected": [
+   120.52,
+   0.0,
+   449.48,
+   96.3
+  ]
+ },
+ "protected": [
+  120.52,
+  0.0,
+  449.48,
+  96.3
+ ],
+ "matte": false,
+ "matte_fps": null,
+ "vo": [
+  {
+   "idx": 0,
+   "raw": "When did you last watch water",
+   "dur": 2.544,
+   "atempo": 1.106,
+   "start": 0.12,
+   "beat": 0,
+   "f": "/home/z/my-project/p4work/p50/vo/nature_1_0.wav"
+  },
+  {
+   "idx": 1,
+   "raw": "watch the water",
+   "dur": 1.944,
+   "atempo": 0.85,
+   "start": 2.72,
+   "beat": 1,
+   "f": "/home/z/my-project/p4work/p50/vo/nature_1_1.wav"
+  },
+  {
+   "idx": 2,
+   "raw": "waves set the tempo",
+   "dur": 2.304,
+   "atempo": 1.047,
+   "start": 5.42,
+   "beat": 2,
+   "f": "/home/z/my-project/p4work/p50/vo/nature_1_2.wav"
+  },
+  {
+   "idx": 3,
+   "raw": "slow cuts only",
+   "dur": 2.208,
+   "atempo": 0.92,
+   "start": 7.92,
+   "beat": 3,
+   "f": "/home/z/my-project/p4work/p50/vo/nature_1_3.wav"
+  },
+  {
+   "idx": 4,
+   "raw": "cool shadows",
+   "dur": 2.088,
+   "atempo": 0.908,
+   "start": 10.62,
+   "beat": 4,
+   "f": "/home/z/my-project/p4work/p50/vo/nature_1_4.wav"
+  },
+  {
+   "idx": 5,
+   "raw": "breathe out",
+   "dur": 1.872,
+   "atempo": 0.851,
+   "start": 13.22,
+   "beat": 5,
+   "f": "/home/z/my-project/p4work/p50/vo/nature_1_5.wav"
+  },
+  {
+   "idx": 6,
+   "raw": "tide is the timeline",
+   "dur": 2.328,
+   "atempo": 0.97,
+   "start": 15.72,
+   "beat": 6,
+   "f": "/home/z/my-project/p4work/p50/vo/nature_1_6.wav"
+  },
+  {
+   "idx": 7,
+   "raw": "end on the horizon",
+   "dur": 2.208,
+   "atempo": 1.004,
+   "start": 18.42,
+   "beat": 7,
+   "f": "/home/z/my-project/p4work/p50/vo/nature_1_7.wav"
+  },
+  {
+   "idx": 8,
+   "raw": "watch water. breathe out.",
+   "dur": 2.76,
+   "atempo": 1.022,
+   "start": 23.12,
+   "beat": 9,
+   "f": "/home/z/my-project/p4work/p50/vo/nature_1_8.wav"
+  }
+ ],
+ "beats": [
+  {
+   "t": 2.6,
+   "whip": "right",
+   "zoom": [
+    1.02,
+    1.16
+   ],
+   "kind": "type",
+   "src": [
+    0.0,
+    2.6
+   ],
+   "type": [
+    "WATCH",
+    "WATER"
+   ],
+   "vo": 0,
+   "halftone": "halftone_accent.png",
+   "glitch": "glitch_1.png",
+   "zoomout_next": false,
+   "stickers": [
+    [
+     "stick_star.png",
+     [
+      70,
+      1470
+     ],
+     0.55
+    ],
+    [
+     "stick_arrow.png",
+     [
+      80,
+      1620
+     ],
+     0.8
+    ]
+   ],
+   "labels": [
+    [
+     "label_i0.png",
+     [
+      48,
+      1600
+     ],
+     0.35
+    ]
+   ]
+  },
+  {
+   "t": 2.7,
+   "whip": "left",
+   "zoom": [
+    1.03,
+    1.14
+   ],
+   "kind": "type",
+   "src": [
+    2.65,
+    2.7
+   ],
+   "type": [
+    "WAVES SET",
+    "THE TEMPO"
+   ],
+   "vo": 1,
+   "halftone": "halftone_accent.png",
+   "glitch": null,
+   "zoomout_next": false,
+   "stickers": [
+    [
+     "stick_play.png",
+     [
+      850,
+      1290
+     ],
+     0.55
+    ]
+   ],
+   "labels": []
+  },
+  {
+   "t": 2.5,
+   "whip": "right",
+   "zoom": [
+    1.03,
+    1.14
+   ],
+   "kind": "type",
+   "src": [
+    5.4,
+    2.5
+   ],
+   "type": [
+    "END ON THE",
+    "HORIZON"
+   ],
+   "vo": 2,
+   "halftone": null,
+   "glitch": null,
+   "zoomout_next": true,
+   "stickers": [
+    [
+     "stick_bolt.png",
+     [
+      80,
+      1620
+     ],
+     0.55
+    ],
+    [
+     "stick_headphones.png",
+     [
+      830,
+      1520
+     ],
+     0.8
+    ]
+   ],
+   "labels": [
+    [
+     "label_i2.png",
+     [
+      48,
+      1780
+     ],
+     0.3
+    ]
+   ]
+  },
+  {
+   "t": 2.7,
+   "whip": "left",
+   "zoom": [
+    1.02,
+    1.1
+   ],
+   "kind": "cards",
+   "src": [
+    7.95,
+    2.7
+   ],
+   "vo": 3,
+   "connector": true,
+   "stickers": [
+    [
+     "stick_star.png",
+     [
+      880,
+      1660
+     ],
+     0.55
+    ]
+   ],
+   "labels": [
+    [
+     "label_i3.png",
+     [
+      48,
+      1780
+     ],
+     0.35
+    ]
+   ],
+   "cards": [
+    [
+     "card_0.png",
+     [
+      330,
+      1560
+     ],
+     0.12
+    ],
+    [
+     "card_1.png",
+     [
+      730,
+      1620
+     ],
+     0.42
+    ]
+   ],
+   "connector_pair": [
+    "card_0.png",
+    "card_1.png"
+   ]
+  },
+  {
+   "t": 2.6,
+   "whip": "right",
+   "zoom": [
+    1.03,
+    1.14
+   ],
+   "kind": "phone",
+   "src": [
+    10.7,
+    2.6
+   ],
+   "vo": 4,
+   "phone": [
+    240,
+    1080,
+    600,
+    800
+   ],
+   "stickers": [
+    [
+     "stick_play.png",
+     [
+      830,
+      1520
+     ],
+     0.55
+    ]
+   ]
+  },
+  {
+   "t": 2.5,
+   "whip": "left",
+   "zoom": [
+    1.16,
+    1.02
+   ],
+   "kind": "insert",
+   "src": null,
+   "vo": 5,
+   "glitch": "glitch_2.png",
+   "pill": [
+    "TIDE TABLE +0.4M",
+    [
+     330,
+     1880
+    ],
+    1.55
+   ],
+   "impact": true,
+   "phone": [
+    240,
+    1080,
+    600,
+    800
+   ]
+  },
+  {
+   "t": 2.7,
+   "whip": "right",
+   "zoom": [
+    1.02,
+    1.1
+   ],
+   "kind": "cards",
+   "src": [
+    0.8,
+    2.7
+   ],
+   "vo": 6,
+   "connector": true,
+   "stickers": [
+    [
+     "stick_star.png",
+     [
+      70,
+      1470
+     ],
+     0.55
+    ]
+   ],
+   "labels": [],
+   "cards": [
+    [
+     "card_2.png",
+     [
+      520,
+      1730
+     ],
+     0.12
+    ],
+    [
+     "card_0.png",
+     [
+      330,
+      1560
+     ],
+     0.42
+    ]
+   ],
+   "connector_pair": [
+    "card_2.png",
+    "card_0.png"
+   ]
+  },
+  {
+   "t": 2.5,
+   "whip": "left",
+   "zoom": [
+    1.03,
+    1.14
+   ],
+   "kind": "type",
+   "src": [
+    3.55,
+    2.5
+   ],
+   "type": [
+    "BREATHE",
+    "OUT"
+   ],
+   "vo": 7,
+   "halftone": "halftone_accent.png",
+   "glitch": null,
+   "zoomout_next": false,
+   "stickers": [
+    [
+     "stick_play.png",
+     [
+      850,
+      1290
+     ],
+     0.55
+    ],
+    [
+     "stick_rocket.png",
+     [
+      880,
+      1660
+     ],
+     0.8
+    ]
+   ],
+   "labels": [
+    [
+     "label_i1.png",
+     [
+      48,
+      1600
+     ],
+     0.5
+    ]
+   ]
+  },
+  {
+   "t": 2.2,
+   "whip": "left",
+   "zoom": [
+    1.03,
+    1.14
+   ],
+   "kind": "phone",
+   "src": [
+    1.0,
+    2.2
+   ],
+   "vo": null,
+   "echo": true,
+   "phone": [
+    240,
+    1080,
+    600,
+    800
+   ],
+   "glitch": "glitch_4.png",
+   "stickers": [
+    [
+     "stick_bolt.png",
+     [
+      80,
+      1620
+     ],
+     0.55
+    ]
+   ]
+  },
+  {
+   "t": 3.0,
+   "whip": "right",
+   "zoom": [
+    1.18,
+    1.02
+   ],
+   "kind": "type",
+   "src": [
+    0.0,
+    3.0
+   ],
+   "type": [
+    "RUN IT",
+    "BACK"
+   ],
+   "vo": 8,
+   "payoff": true,
+   "halftone": "halftone_accent.png",
+   "glitch": "glitch_1.png",
+   "stickers": [
+    [
+     "stick_star.png",
+     [
+      880,
+      1660
+     ],
+     0.55
+    ],
+    [
+     "stick_arrow.png",
+     [
+      60,
+      1730
+     ],
+     0.8
+    ]
+   ],
+   "labels": []
+  }
+ ],
+ "card_assets": [
+  {
+   "name": "card_0.png",
+   "label": "the water",
+   "src_t": 1.5,
+   "tilt": -6,
+   "w": 470,
+   "h": 580
+  },
+  {
+   "name": "card_1.png",
+   "label": "the wave",
+   "src_t": 5.5,
+   "tilt": 5,
+   "w": 470,
+   "h": 580
+  },
+  {
+   "name": "card_2.png",
+   "label": "the horizon",
+   "src_t": 9.5,
+   "tilt": -3,
+   "w": 470,
+   "h": 580
+  }
+ ]
+}

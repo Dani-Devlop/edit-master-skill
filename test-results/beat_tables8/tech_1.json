@@ -1,0 +1,632 @@
+{
+ "vid": "tech_1",
+ "cat": "TECH",
+ "family": "F3",
+ "accent": [
+  0,
+  255,
+  130
+ ],
+ "secondary": [
+  180,
+  190,
+  200
+ ],
+ "ink": [
+  6,
+  14,
+  10
+ ],
+ "type_fill": "accent",
+ "extrude": "accent_dark",
+ "halftone": "accent",
+ "sticker_color": "accent",
+ "card_border": [
+  0,
+  255,
+  130
+ ],
+ "pill_bg": [
+  0,
+  255,
+  130
+ ],
+ "bg_tint": [
+  220,
+  255,
+  235,
+  8
+ ],
+ "cards_spec": [
+  [
+   "the map",
+   1.5
+  ],
+  [
+   "the nodes",
+   5.5
+  ],
+  [
+   "the flow",
+   9.0
+  ]
+ ],
+ "labels": [
+  "> ping 12ms",
+  "grade in neon",
+  "step 01",
+  "step 02"
+ ],
+ "sig_pill": "UPLINK 12ms",
+ "stickers": [
+  "bolt",
+  "arrow",
+  "play",
+  "star",
+  "rocket",
+  "clapper"
+ ],
+ "insert_prompt": "surreal 3D dream world, giant glowing green data map of the world hovering above a dark terminal cloud island, neon phosphor rivers connecting cities, green and dark palette, vertical, cinematic render, no text, no watermark",
+ "raw_dur": 15.0,
+ "total": 26.0,
+ "durs": [
+  2.6,
+  2.6,
+  2.5,
+  2.8,
+  2.5,
+  2.6,
+  2.7,
+  2.5,
+  2.2,
+  3.0
+ ],
+ "focal": {
+  "fx": 597.780487804878,
+  "fy": 397.46,
+  "bbox": [
+   575.0,
+   391.0,
+   618.0,
+   408.0
+  ],
+  "protected": [
+   582.74,
+   391.0,
+   610.26,
+   396.1
+  ]
+ },
+ "protected": [
+  582.74,
+  391.0,
+  610.26,
+  396.1
+ ],
+ "matte": false,
+ "matte_fps": null,
+ "vo": [
+  {
+   "idx": 0,
+   "raw": "We teardown the world's data map",
+   "dur": 2.256,
+   "atempo": 0.981,
+   "start": 0.12,
+   "beat": 0,
+   "f": "/home/z/my-project/p4work/p50/vo/tech_1_0.wav"
+  },
+  {
+   "idx": 1,
+   "raw": "the data map",
+   "dur": 1.896,
+   "atempo": 0.85,
+   "start": 2.72,
+   "beat": 1,
+   "f": "/home/z/my-project/p4work/p50/vo/tech_1_1.wav"
+  },
+  {
+   "idx": 2,
+   "raw": "nodes are cities",
+   "dur": 2.184,
+   "atempo": 0.993,
+   "start": 5.32,
+   "beat": 2,
+   "f": "/home/z/my-project/p4work/p50/vo/tech_1_2.wav"
+  },
+  {
+   "idx": 3,
+   "raw": "flows are you",
+   "dur": 1.92,
+   "atempo": 0.85,
+   "start": 7.82,
+   "beat": 3,
+   "f": "/home/z/my-project/p4work/p50/vo/tech_1_3.wav"
+  },
+  {
+   "idx": 4,
+   "raw": "grade in neon",
+   "dur": 2.064,
+   "atempo": 0.938,
+   "start": 10.62,
+   "beat": 4,
+   "f": "/home/z/my-project/p4work/p50/vo/tech_1_4.wav"
+  },
+  {
+   "idx": 5,
+   "raw": "zoom with purpose",
+   "dur": 2.232,
+   "atempo": 0.97,
+   "start": 13.12,
+   "beat": 5,
+   "f": "/home/z/my-project/p4work/p50/vo/tech_1_5.wav"
+  },
+  {
+   "idx": 6,
+   "raw": "the internet has a shape",
+   "dur": 2.328,
+   "atempo": 0.97,
+   "start": 15.72,
+   "beat": 6,
+   "f": "/home/z/my-project/p4work/p50/vo/tech_1_6.wav"
+  },
+  {
+   "idx": 7,
+   "raw": "follow the flow",
+   "dur": 1.992,
+   "atempo": 0.905,
+   "start": 18.42,
+   "beat": 7,
+   "f": "/home/z/my-project/p4work/p50/vo/tech_1_7.wav"
+  },
+  {
+   "idx": 8,
+   "raw": "now you've read the map.",
+   "dur": 2.232,
+   "atempo": 0.85,
+   "start": 23.12,
+   "beat": 9,
+   "f": "/home/z/my-project/p4work/p50/vo/tech_1_8.wav"
+  }
+ ],
+ "beats": [
+  {
+   "t": 2.6,
+   "whip": "right",
+   "zoom": [
+    1.02,
+    1.16
+   ],
+   "kind": "type",
+   "src": [
+    0.0,
+    2.6
+   ],
+   "type": [
+    "THE",
+    "DATA MAP"
+   ],
+   "vo": 0,
+   "halftone": "halftone_accent.png",
+   "glitch": "glitch_1.png",
+   "zoomout_next": false,
+   "stickers": [
+    [
+     "stick_bolt.png",
+     [
+      70,
+      1470
+     ],
+     0.25
+    ],
+    [
+     "stick_arrow.png",
+     [
+      80,
+      1620
+     ],
+     0.65
+    ]
+   ],
+   "labels": [
+    [
+     "label_i0.png",
+     [
+      48,
+      1600
+     ],
+     0.35
+    ]
+   ]
+  },
+  {
+   "t": 2.6,
+   "whip": "left",
+   "zoom": [
+    1.03,
+    1.14
+   ],
+   "kind": "type",
+   "src": [
+    2.65,
+    2.6
+   ],
+   "type": [
+    "NODES ARE",
+    "CITIES"
+   ],
+   "vo": 1,
+   "halftone": "halftone_accent.png",
+   "glitch": null,
+   "zoomout_next": false,
+   "stickers": [
+    [
+     "stick_play.png",
+     [
+      850,
+      1290
+     ],
+     0.25
+    ]
+   ],
+   "labels": []
+  },
+  {
+   "t": 2.5,
+   "whip": "right",
+   "zoom": [
+    1.03,
+    1.14
+   ],
+   "kind": "type",
+   "src": [
+    5.3,
+    2.5
+   ],
+   "type": [
+    "FOLLOW",
+    "THE FLOW"
+   ],
+   "vo": 2,
+   "halftone": null,
+   "glitch": null,
+   "zoomout_next": true,
+   "stickers": [
+    [
+     "stick_rocket.png",
+     [
+      80,
+      1620
+     ],
+     0.25
+    ],
+    [
+     "stick_clapper.png",
+     [
+      830,
+      1520
+     ],
+     0.65
+    ]
+   ],
+   "labels": [
+    [
+     "label_i2.png",
+     [
+      48,
+      1780
+     ],
+     0.3
+    ]
+   ]
+  },
+  {
+   "t": 2.8,
+   "whip": "left",
+   "zoom": [
+    1.02,
+    1.1
+   ],
+   "kind": "cards",
+   "src": [
+    7.85,
+    2.8000000000000003
+   ],
+   "vo": 3,
+   "connector": true,
+   "stickers": [
+    [
+     "stick_bolt.png",
+     [
+      880,
+      1660
+     ],
+     0.25
+    ]
+   ],
+   "labels": [
+    [
+     "label_i3.png",
+     [
+      48,
+      1780
+     ],
+     0.35
+    ]
+   ],
+   "cards": [
+    [
+     "card_0.png",
+     [
+      330,
+      1560
+     ],
+     0.12
+    ],
+    [
+     "card_1.png",
+     [
+      730,
+      1620
+     ],
+     0.42
+    ]
+   ],
+   "connector_pair": [
+    "card_0.png",
+    "card_1.png"
+   ]
+  },
+  {
+   "t": 2.5,
+   "whip": "right",
+   "zoom": [
+    1.03,
+    1.14
+   ],
+   "kind": "phone",
+   "src": [
+    10.7,
+    2.5
+   ],
+   "vo": 4,
+   "phone": [
+    240,
+    1080,
+    600,
+    800
+   ],
+   "stickers": [
+    [
+     "stick_play.png",
+     [
+      830,
+      1520
+     ],
+     0.25
+    ]
+   ]
+  },
+  {
+   "t": 2.6,
+   "whip": "left",
+   "zoom": [
+    1.16,
+    1.02
+   ],
+   "kind": "insert",
+   "src": null,
+   "vo": 5,
+   "glitch": "glitch_2.png",
+   "pill": [
+    "UPLINK 12ms",
+    [
+     330,
+     1880
+    ],
+    1.55
+   ],
+   "impact": true,
+   "phone": [
+    240,
+    1080,
+    600,
+    800
+   ]
+  },
+  {
+   "t": 2.7,
+   "whip": "right",
+   "zoom": [
+    1.02,
+    1.1
+   ],
+   "kind": "cards",
+   "src": [
+    1.2,
+    2.7
+   ],
+   "vo": 6,
+   "connector": true,
+   "stickers": [
+    [
+     "stick_bolt.png",
+     [
+      70,
+      1470
+     ],
+     0.25
+    ]
+   ],
+   "labels": [],
+   "cards": [
+    [
+     "card_2.png",
+     [
+      520,
+      1730
+     ],
+     0.12
+    ],
+    [
+     "card_0.png",
+     [
+      330,
+      1560
+     ],
+     0.42
+    ]
+   ],
+   "connector_pair": [
+    "card_2.png",
+    "card_0.png"
+   ]
+  },
+  {
+   "t": 2.5,
+   "whip": "left",
+   "zoom": [
+    1.03,
+    1.14
+   ],
+   "kind": "type",
+   "src": [
+    3.95,
+    2.5
+   ],
+   "type": [
+    "THE INTERNET",
+    "HAS A SHAPE"
+   ],
+   "vo": 7,
+   "halftone": "halftone_accent.png",
+   "glitch": null,
+   "zoomout_next": false,
+   "stickers": [
+    [
+     "stick_play.png",
+     [
+      850,
+      1290
+     ],
+     0.25
+    ],
+    [
+     "stick_star.png",
+     [
+      880,
+      1660
+     ],
+     0.65
+    ]
+   ],
+   "labels": [
+    [
+     "label_i1.png",
+     [
+      48,
+      1600
+     ],
+     0.5
+    ]
+   ]
+  },
+  {
+   "t": 2.2,
+   "whip": "left",
+   "zoom": [
+    1.03,
+    1.14
+   ],
+   "kind": "phone",
+   "src": [
+    1.0,
+    2.2
+   ],
+   "vo": null,
+   "echo": true,
+   "phone": [
+    240,
+    1080,
+    600,
+    800
+   ],
+   "glitch": "glitch_4.png",
+   "stickers": [
+    [
+     "stick_rocket.png",
+     [
+      80,
+      1620
+     ],
+     0.25
+    ]
+   ]
+  },
+  {
+   "t": 3.0,
+   "whip": "right",
+   "zoom": [
+    1.18,
+    1.02
+   ],
+   "kind": "type",
+   "src": [
+    0.0,
+    3.0
+   ],
+   "type": [
+    "REWIND",
+    null
+   ],
+   "vo": 8,
+   "payoff": true,
+   "halftone": "halftone_accent.png",
+   "glitch": "glitch_1.png",
+   "stickers": [
+    [
+     "stick_bolt.png",
+     [
+      880,
+      1660
+     ],
+     0.25
+    ],
+    [
+     "stick_arrow.png",
+     [
+      60,
+      1730
+     ],
+     0.65
+    ]
+   ],
+   "labels": []
+  }
+ ],
+ "card_assets": [
+  {
+   "name": "card_0.png",
+   "label": "the map",
+   "src_t": 1.5,
+   "tilt": -6,
+   "w": 470,
+   "h": 580
+  },
+  {
+   "name": "card_1.png",
+   "label": "the nodes",
+   "src_t": 5.5,
+   "tilt": 5,
+   "w": 470,
+   "h": 580
+  },
+  {
+   "name": "card_2.png",
+   "label": "the flow",
+   "src_t": 9.0,
+   "tilt": -3,
+   "w": 470,
+   "h": 580
+  }
+ ]
+}

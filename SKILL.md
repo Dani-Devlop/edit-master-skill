@@ -653,3 +653,78 @@ the wrong voice reads like a brand.
    single-use (asplit before reusing a VO bus); pow(a,b) commas can break
    filter option parsing (use multiplication); -nostdin everywhere or ffmpeg
    hangs on the interactive prompt.
+
+## Depth-Layered 3D-Type Motion System (Phase 8.0, R1-R12)
+
+The reference-grade "agency reel" look: giant 3D extruded type living BEHIND
+the subject, halftone dot fields, pixel-glitch bites, tilted photo cards with
+pill labels, white-outline vector stickers, phone-UI typing reveals, whip-blur
+transitions, AI surreal insert beats. Compositing stack per frame (strict
+order): graded full-bleed bg -> halftone -> giant 3D type -> SUBJECT alpha
+matte -> photo cards -> connector draw-on -> stickers -> corner labels ->
+phone UI -> pill callout -> glitch overlay -> whip blur on graphics only.
+
+- **R1** Giant 3D type: heavy grotesk italic, 12-copy extrusion stack at 45deg
+  + vertical gradient face + specular edge; back-out spring entrance
+  (easeOutBack), blur 12->0, word-synced pulse on VO words. Rendered BEHIND
+  the subject so the silhouette genuinely occludes it (the depth signature).
+- **R2** Layer split (see Anti-Amateur #1): under-subject = halftone + type;
+  over-subject = cards / connector / stickers / labels / phone / pill.
+- **R3** Halftone dot fields: radial-falloff dot grid, animated scale+alpha
+  entrance, accent or white.
+- **R4** Pixel glitch: corner-biased red/cyan/white pixel squares, stepped
+  alpha (2-of-4 frames), 7px graphics jitter; doubles as a transition bite.
+- **R5** Photo cards: rounded rect, thick brand border + white inner ring,
+  tilted +-6deg, spring entrance with blur 8->0, pill name label baked in.
+- **R6** Vector stickers: PIL-drawn shapes with crisp white outline + interior
+  holes, pop-in with overshoot + continuous wobble.
+- **R7** Phone UI: white rounded frame + notch, word-by-word typing reveal
+  (each word pops blur->sharp with a click), syncs to the VO line.
+- **R8** AI insert beat: surreal 768x1344 generation in the category palette,
+  2.5D parallax crop drift + micro y-float, pill callout + impact SFX.
+- **R9** Whip transitions: 1x31 horizontal motion-blur kernel on GRAPHIC
+  layers only (subject stays sharp), 260px directional slide, last 0.2s.
+- **R10** Corner labels: small italic/mono micro-copy with white stroke,
+  slide-in from off-frame + blur->sharp.
+- **R11** Connector draw-on: curved brand-color line drawn across two cards
+  over 16 steps, arrowhead at completion.
+- **R12** Category palette: one accent + secondary + ink per niche
+  (docs/STYLES.md); type face color = accent/white/ink by bg lightness,
+  extrusion always a darkened accent.
+
+### Depth anchors (pick per footage type, never fake)
+- **masked subject / masked object**: real per-frame segmentation (rembg u2net
+  or isnet-general-use) at OUTPUT fps. Occlusion is pixel-verified in QA:
+  render with vs without the subject; where type-alpha and subject-alpha
+  overlap, the composite must equal the with-subject render (diff >0.85), and
+  type must be visible outside the silhouette.
+- **world pan (scrim)**: when segmentation is unstable (landscapes, wide
+  b-roll, water, dark screens), do NOT fake a matte. Giant type sits under a
+  duotone scrim gradient + vignette in the footage world; elements confined
+  to the lower safe band. QA asserts scrim separation and type legibility -
+  honestly named, no occlusion claim.
+
+### Phase 8.0 lessons (add to Anti-Amateur)
+1. **Under/over-subject layer split (the fake-occlusion bug)**: graphics
+   containing giant type MUST composite BEFORE the subject matte; cards,
+   stickers, labels, phone frames composite AFTER. Drawing type on top of the
+   subject is the amateur tell; type behind hair/shoulders is the signature.
+2. **Matte fps == output fps**: a 10fps matte on 30fps output strobes on the
+   silhouette. Extract segmentation at output fps (30) with temporal alpha
+   smoothing (a[t]=0.6a[t]+0.2a[t-1]+0.2a[t+1] + 0.8px blur), then QA edge
+   stability: min edge IoU >= 0.78 on 3 consecutive frames at beat midpoints;
+   any flicker -> re-extract (different model), else honestly drop the matte.
+3. **Two-pass loudnorm rule**: single-pass loudnorm drifts (benchmark hit
+   -15.4 LUFS). Always analyze (print_format=json) then apply measured_I/TP/
+   LRA/thresh/offset with linear=true, then MEASURE the final file with
+   ebur128 (I and true peak) and report the FINAL numbers.
+4. **sfx_events registry must persist across partial re-renders**: merge
+   (union by exact timestamp + file for entrance SFX, 0.1s bucket for ramp
+   SFX), never overwrite. SFX event count must equal the element-entrance
+   count from the beat table (cards + stickers + labels + phone frames +
+   pills + typing words); entrance SFX keep exact timestamps so parity is
+   checkable.
+5. **Probe before you promise**: matte feasibility is a property of the
+   FOOTAGE (water surfaces, dark screens and wide landscapes fail). Probe 4
+   frames first (fg fraction 8-62%, bbox >= 30%x25%, IoU >= 0.34), decide the
+   depth anchor from data, and publish the anchor plan before batch rendering.

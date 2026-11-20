@@ -1,0 +1,632 @@
+{
+ "vid": "food_1",
+ "cat": "FOOD",
+ "family": "F2",
+ "accent": [
+  255,
+  107,
+  53
+ ],
+ "secondary": [
+  255,
+  190,
+  120
+ ],
+ "ink": [
+  30,
+  16,
+  8
+ ],
+ "type_fill": "white",
+ "extrude": "accent_dark",
+ "halftone": "accent",
+ "sticker_color": "accent",
+ "card_border": [
+  255,
+  107,
+  53
+ ],
+ "pill_bg": [
+  255,
+  107,
+  53
+ ],
+ "bg_tint": [
+  255,
+  226,
+  200,
+  14
+ ],
+ "cards_spec": [
+  [
+   "window light",
+   1.5
+  ],
+  [
+   "the crop",
+   5.5
+  ],
+  [
+   "the glints",
+   9.0
+  ]
+ ],
+ "labels": [
+  "order up",
+  "fresh",
+  "step 01",
+  "step 02"
+ ],
+ "sig_pill": "READS $4,000",
+ "stickers": [
+  "star",
+  "play",
+  "arrow",
+  "rocket",
+  "bolt",
+  "clapper"
+ ],
+ "insert_prompt": "surreal 3D dream world, giant gourmet dish floating on a warm orange cloud with fruit towers and light glints, dark wood sky, orange and cream palette, halftone dots, vertical, cinematic render, no text, no watermark",
+ "raw_dur": 12.0,
+ "total": 26.1,
+ "durs": [
+  2.6,
+  2.6,
+  2.5,
+  2.8,
+  2.6,
+  2.6,
+  2.7,
+  2.5,
+  2.2,
+  3.0
+ ],
+ "focal": {
+  "fx": 744.4182621464203,
+  "fy": 361.92,
+  "bbox": [
+   178.0,
+   159.0,
+   1279.0,
+   693.0
+  ],
+  "protected": [
+   376.18,
+   159.0,
+   1080.82,
+   319.2
+  ]
+ },
+ "protected": [
+  376.18,
+  159.0,
+  1080.82,
+  319.2
+ ],
+ "matte": true,
+ "matte_fps": 30,
+ "vo": [
+  {
+   "idx": 0,
+   "raw": "This fruit shot costs nothing",
+   "dur": 2.28,
+   "atempo": 0.991,
+   "start": 0.12,
+   "beat": 0,
+   "f": "/home/z/my-project/p4work/p50/vo/food_1_0.wav"
+  },
+  {
+   "idx": 1,
+   "raw": "one window, zero gear",
+   "dur": 2.904,
+   "atempo": 1.263,
+   "start": 2.72,
+   "beat": 1,
+   "f": "/home/z/my-project/p4work/p50/vo/food_1_1.wav"
+  },
+  {
+   "idx": 2,
+   "raw": "side light only",
+   "dur": 2.16,
+   "atempo": 0.982,
+   "start": 5.32,
+   "beat": 2,
+   "f": "/home/z/my-project/p4work/p50/vo/food_1_2.wav"
+  },
+  {
+   "idx": 3,
+   "raw": "crop in close",
+   "dur": 2.088,
+   "atempo": 0.85,
+   "start": 7.82,
+   "beat": 3,
+   "f": "/home/z/my-project/p4work/p50/vo/food_1_3.wav"
+  },
+  {
+   "idx": 4,
+   "raw": "catch the glints",
+   "dur": 2.016,
+   "atempo": 0.877,
+   "start": 10.62,
+   "beat": 4,
+   "f": "/home/z/my-project/p4work/p50/vo/food_1_4.wav"
+  },
+  {
+   "idx": 5,
+   "raw": "warm grade does the rest",
+   "dur": 2.616,
+   "atempo": 1.137,
+   "start": 13.22,
+   "beat": 5,
+   "f": "/home/z/my-project/p4work/p50/vo/food_1_5.wav"
+  },
+  {
+   "idx": 6,
+   "raw": "it reads $4,000",
+   "dur": 2.88,
+   "atempo": 1.2,
+   "start": 15.82,
+   "beat": 6,
+   "f": "/home/z/my-project/p4work/p50/vo/food_1_6.wav"
+  },
+  {
+   "idx": 7,
+   "raw": "that's the trick",
+   "dur": 1.872,
+   "atempo": 0.851,
+   "start": 18.52,
+   "beat": 7,
+   "f": "/home/z/my-project/p4work/p50/vo/food_1_7.wav"
+  },
+  {
+   "idx": 8,
+   "raw": "costs nothing. reads $4,000.",
+   "dur": 3.744,
+   "atempo": 1.387,
+   "start": 23.22,
+   "beat": 9,
+   "f": "/home/z/my-project/p4work/p50/vo/food_1_8.wav"
+  }
+ ],
+ "beats": [
+  {
+   "t": 2.6,
+   "whip": "right",
+   "zoom": [
+    1.02,
+    1.16
+   ],
+   "kind": "type",
+   "src": [
+    0.0,
+    2.6
+   ],
+   "type": [
+    "COSTS",
+    "NOTHING"
+   ],
+   "vo": 0,
+   "halftone": "halftone_accent.png",
+   "glitch": "glitch_1.png",
+   "zoomout_next": false,
+   "stickers": [
+    [
+     "stick_clapper.png",
+     [
+      70,
+      1470
+     ],
+     0.4
+    ],
+    [
+     "stick_star.png",
+     [
+      80,
+      520
+     ],
+     0.35
+    ]
+   ],
+   "labels": [
+    [
+     "label_i0.png",
+     [
+      48,
+      1600
+     ],
+     0.35
+    ]
+   ]
+  },
+  {
+   "t": 2.6,
+   "whip": "left",
+   "zoom": [
+    1.03,
+    1.14
+   ],
+   "kind": "type",
+   "src": [
+    2.65,
+    2.6
+   ],
+   "type": [
+    "SIDE LIGHT",
+    "ONLY"
+   ],
+   "vo": 1,
+   "halftone": "halftone_accent.png",
+   "glitch": null,
+   "zoomout_next": false,
+   "stickers": [
+    [
+     "stick_play.png",
+     [
+      850,
+      1290
+     ],
+     0.4
+    ]
+   ],
+   "labels": []
+  },
+  {
+   "t": 2.5,
+   "whip": "right",
+   "zoom": [
+    1.03,
+    1.14
+   ],
+   "kind": "type",
+   "src": [
+    5.3,
+    2.5
+   ],
+   "type": [
+    "READS",
+    "$4,000"
+   ],
+   "vo": 2,
+   "halftone": null,
+   "glitch": null,
+   "zoomout_next": true,
+   "stickers": [
+    [
+     "stick_rocket.png",
+     [
+      80,
+      520
+     ],
+     0.4
+    ],
+    [
+     "stick_bolt.png",
+     [
+      830,
+      760
+     ],
+     0.35
+    ]
+   ],
+   "labels": [
+    [
+     "label_i2.png",
+     [
+      48,
+      1780
+     ],
+     0.3
+    ]
+   ]
+  },
+  {
+   "t": 2.8,
+   "whip": "left",
+   "zoom": [
+    1.03,
+    1.14
+   ],
+   "kind": "cards",
+   "src": [
+    7.85,
+    2.8000000000000003
+   ],
+   "vo": 3,
+   "connector": true,
+   "stickers": [
+    [
+     "stick_clapper.png",
+     [
+      880,
+      1660
+     ],
+     0.4
+    ]
+   ],
+   "labels": [
+    [
+     "label_i3.png",
+     [
+      48,
+      1780
+     ],
+     0.35
+    ]
+   ],
+   "cards": [
+    [
+     "card_0.png",
+     [
+      240,
+      1560
+     ],
+     0.12
+    ],
+    [
+     "card_1.png",
+     [
+      760,
+      1500
+     ],
+     0.42
+    ]
+   ],
+   "connector_pair": [
+    "card_0.png",
+    "card_1.png"
+   ]
+  },
+  {
+   "t": 2.6,
+   "whip": "right",
+   "zoom": [
+    1.03,
+    1.14
+   ],
+   "kind": "phone",
+   "src": [
+    0.0,
+    2.6
+   ],
+   "vo": 4,
+   "phone": [
+    150,
+    600,
+    780,
+    1050
+   ],
+   "stickers": [
+    [
+     "stick_play.png",
+     [
+      830,
+      760
+     ],
+     0.4
+    ]
+   ]
+  },
+  {
+   "t": 2.6,
+   "whip": "left",
+   "zoom": [
+    1.16,
+    1.02
+   ],
+   "kind": "insert",
+   "src": null,
+   "vo": 5,
+   "glitch": "glitch_2.png",
+   "pill": [
+    "READS $4,000",
+    [
+     330,
+     1880
+    ],
+    1.55
+   ],
+   "impact": true,
+   "phone": [
+    240,
+    980,
+    600,
+    880
+   ]
+  },
+  {
+   "t": 2.7,
+   "whip": "right",
+   "zoom": [
+    1.03,
+    1.14
+   ],
+   "kind": "cards",
+   "src": [
+    2.65,
+    2.7
+   ],
+   "vo": 6,
+   "connector": true,
+   "stickers": [
+    [
+     "stick_clapper.png",
+     [
+      70,
+      1470
+     ],
+     0.4
+    ]
+   ],
+   "labels": [],
+   "cards": [
+    [
+     "card_2.png",
+     [
+      480,
+      1660
+     ],
+     0.12
+    ],
+    [
+     "card_0.png",
+     [
+      240,
+      1560
+     ],
+     0.42
+    ]
+   ],
+   "connector_pair": [
+    "card_2.png",
+    "card_0.png"
+   ]
+  },
+  {
+   "t": 2.5,
+   "whip": "left",
+   "zoom": [
+    1.03,
+    1.14
+   ],
+   "kind": "type",
+   "src": [
+    5.4,
+    2.5
+   ],
+   "type": [
+    "ONE WINDOW",
+    "ZERO GEAR"
+   ],
+   "vo": 7,
+   "halftone": "halftone_accent.png",
+   "glitch": null,
+   "zoomout_next": false,
+   "stickers": [
+    [
+     "stick_play.png",
+     [
+      850,
+      1290
+     ],
+     0.4
+    ],
+    [
+     "stick_arrow.png",
+     [
+      880,
+      1660
+     ],
+     0.35
+    ]
+   ],
+   "labels": [
+    [
+     "label_i1.png",
+     [
+      48,
+      1600
+     ],
+     0.5
+    ]
+   ]
+  },
+  {
+   "t": 2.2,
+   "whip": "left",
+   "zoom": [
+    1.03,
+    1.14
+   ],
+   "kind": "phone",
+   "src": [
+    1.0,
+    2.2
+   ],
+   "vo": null,
+   "echo": true,
+   "phone": [
+    150,
+    580,
+    780,
+    1120
+   ],
+   "glitch": "glitch_4.png",
+   "stickers": [
+    [
+     "stick_rocket.png",
+     [
+      80,
+      520
+     ],
+     0.4
+    ]
+   ]
+  },
+  {
+   "t": 3.0,
+   "whip": "right",
+   "zoom": [
+    1.18,
+    1.02
+   ],
+   "kind": "type",
+   "src": [
+    0.0,
+    3.0
+   ],
+   "type": [
+    "ONE MORE",
+    "TIME"
+   ],
+   "vo": 8,
+   "payoff": true,
+   "halftone": "halftone_accent.png",
+   "glitch": "glitch_1.png",
+   "stickers": [
+    [
+     "stick_clapper.png",
+     [
+      880,
+      1660
+     ],
+     0.4
+    ],
+    [
+     "stick_star.png",
+     [
+      60,
+      1620
+     ],
+     0.35
+    ]
+   ],
+   "labels": []
+  }
+ ],
+ "card_assets": [
+  {
+   "name": "card_0.png",
+   "label": "window light",
+   "src_t": 1.5,
+   "tilt": -6,
+   "w": 540,
+   "h": 660
+  },
+  {
+   "name": "card_1.png",
+   "label": "the crop",
+   "src_t": 5.5,
+   "tilt": 5,
+   "w": 540,
+   "h": 660
+  },
+  {
+   "name": "card_2.png",
+   "label": "the glints",
+   "src_t": 9.0,
+   "tilt": -3,
+   "w": 540,
+   "h": 660
+  }
+ ]
+}

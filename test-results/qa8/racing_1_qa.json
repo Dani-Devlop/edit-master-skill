@@ -1,0 +1,128 @@
+{
+ "vid": "racing_1",
+ "family": "F3",
+ "pass": true,
+ "checks": [
+  {
+   "name": "1080x1920 H.264",
+   "ok": true,
+   "detail": "h264 1080x1920"
+  },
+  {
+   "name": "AAC audio",
+   "ok": true,
+   "detail": "aac"
+  },
+  {
+   "name": "duration 25.5-27s",
+   "ok": true,
+   "detail": "26.4"
+  },
+  {
+   "name": "10 beats, every 1.5-3.0s",
+   "ok": true,
+   "detail": "[2.6, 2.7, 2.5, 2.7, 2.5, 2.5, 2.7, 2.5, 2.2, 3.0]"
+  },
+  {
+   "name": ">=4 layered elements per beat",
+   "ok": true,
+   "detail": "min=4"
+  },
+  {
+   "name": ">=1 photo card with pill label",
+   "ok": true,
+   "detail": "cards=4"
+  },
+  {
+   "name": ">=2 stickers per video",
+   "ok": true,
+   "detail": "unique stickers=6"
+  },
+  {
+   "name": ">=1 insert beat with phone typing",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "phone-UI typing reveal present",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "halftone present",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "connector draw-on present",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": ">=1 motion-blur whip transition",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": ">=1 pixel-glitch bite",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "zoom variety (zoomout/insert zoom)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "scrim depth separation (F3, honest no-matte)",
+   "ok": true,
+   "detail": "top 91 vs bottom 67"
+  },
+  {
+   "name": "type legible in world (F3)",
+   "ok": true,
+   "detail": "['b0@1.2', 'b1@1.5', 'b9@1.5']"
+  },
+  {
+   "name": "no element overlaps protected zone (count=0)",
+   "ok": true,
+   "detail": "overlaps=0 zone=(80, 40, 1000, 1030)"
+  },
+  {
+   "name": "spring/overshoot entrances (easeBack only)",
+   "ok": true,
+   "detail": "easeOutBack curve active for type/cards/stickers/phone"
+  },
+  {
+   "name": "brand palette consistent (accent/white/ink family type)",
+   "ok": true,
+   "detail": "accent 0.52 + white 0.00 + ink 0.47"
+  },
+  {
+   "name": "audio mix built (VO+ducked music+SFX)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "loudness -14 LUFS +/-0.5 (final, two-pass)",
+   "ok": true,
+   "detail": "final -14.1 LUFS TP -1.3 dBFS"
+  },
+  {
+   "name": "SFX schedule + entrance parity (C9)",
+   "ok": true,
+   "detail": "total=53 entrance sfx=38 entrances=38"
+  },
+  {
+   "name": "C1 matte fps=30 + flicker pass",
+   "ok": true,
+   "detail": "no matte: F3 scrim anchor (honest)"
+  }
+ ],
+ "matte_fps": null,
+ "final_lufs": -14.1,
+ "final_TP": -1.3,
+ "duration": 26.4,
+ "sfx_total": 53,
+ "entrances": 38
+}

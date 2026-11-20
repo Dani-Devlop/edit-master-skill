@@ -1,0 +1,17 @@
+id,category,family,depth_anchor,qa_gate,final_lufs,final_tp_dbfs,scorecard_avg,md5
+branding_1,Branding / Corporate,F2,masked-object,23/23,-14.1,-1.4,9.6,9bbdadef9fcbc9588a384c71a84fcfbe
+cars_2,Cars / Luxury,F3,world-pan-scrim,23/23,-14.2,-1.4,9.6,9f771883770b3e20a0d349f8e6e81234
+city_1,City / Urban,F3,world-pan-scrim,23/23,-14.2,-1.4,9.6,3c79ef6b727f563a581a4a5649bd6869
+education_1,Education,F1,masked-subject,23/23,-14.3,-1.4,9.6,3add27c01e859f7013d846734d23b477
+fashion_1,Fashion,F3,world-pan-scrim,23/23,-14.3,-1.4,9.6,d0c0006b25fbe950b238f41f52dc6c55
+fitness_1,Motivation / Fitness,F1,masked-subject,23/23,-14.2,-1.4,9.6,989af6a7c4f55444b4f8eb4df63875c9
+food_1,Food / Restaurant,F2,masked-object,23/23,-14.2,-1.4,9.6,f34506799ca55ff918c4e66dc127b163
+mindset_1,Mindset / Focus,F3,world-pan-scrim,23/23,-14.2,-1.4,9.6,c8ff96ad5a9279338b3334b25de0d08b
+music_1,Music,F3,world-pan-scrim,23/23,-14.2,-1.4,9.6,45b4ff71514c590d56b30817df8cb494
+nature_1,Nature,F3,world-pan-scrim,23/23,-14.2,-1.4,9.6,3e2c91af40c6fdfad4f86bdb94b4d4c7
+podcast_1,Podcast clip,F1,masked-subject,23/23,-14.2,-1.4,9.6,970290ca5794fd2a318b51ed92e9c9d6
+product_2,Product demo,F2,masked-object,23/23,-14.2,-1.4,9.6,e20a750d29587431903876ca3fecd0ec
+racing_1,Racing / Motorsport,F3,world-pan-scrim,23/23,-14.1,-1.3,9.6,95875a4d6826e12d44c0d3865f07878c
+talkinghead_1,Talking head,F1,masked-subject,23/23,-14.2,-1.4,9.6,fa8a85b9285fcd8efb03c9c57ee3f82f
+tech_1,Tech / Coding,F3,world-pan-scrim,23/23,-14.1,-1.4,9.6,0bef180f552c29012a2c6af9b5a46262
+travel_1,Travel,F3,world-pan-scrim,23/23,-14.3,-1.3,9.6,d399ae3c24b14636930259fdd7a0c725

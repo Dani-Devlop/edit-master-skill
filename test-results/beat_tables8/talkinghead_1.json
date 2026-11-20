@@ -1,0 +1,632 @@
+{
+ "vid": "talkinghead_1",
+ "cat": "TALKING-HEAD",
+ "family": "F1",
+ "accent": [
+  232,
+  120,
+  80
+ ],
+ "secondary": [
+  255,
+  210,
+  180
+ ],
+ "ink": [
+  24,
+  16,
+  12
+ ],
+ "type_fill": "white",
+ "extrude": "accent_dark",
+ "halftone": "accent",
+ "sticker_color": "accent",
+ "card_border": [
+  232,
+  120,
+  80
+ ],
+ "pill_bg": [
+  232,
+  120,
+  80
+ ],
+ "bg_tint": [
+  255,
+  244,
+  228,
+  14
+ ],
+ "cards_spec": [
+  [
+   "the guest",
+   1.5
+  ],
+  [
+   "the cut",
+   7.0
+  ],
+  [
+   "the flow",
+   12.0
+  ]
+ ],
+ "labels": [
+  "my name is",
+  "the socials",
+  "step 01",
+  "step 02"
+ ],
+ "sig_pill": "SPEAKER TAKEOVER",
+ "stickers": [
+  "bolt",
+  "play",
+  "headphones",
+  "clapper",
+  "arrow",
+  "star"
+ ],
+ "insert_prompt": "surreal 3D dream world, astronaut sitting on a giant floating smartphone screen among soft clouds, terracotta and cream palette, halftone dot texture sky, volumetric light, vertical, cinematic render, no text, no watermark",
+ "raw_dur": 18.6,
+ "total": 26.2,
+ "durs": [
+  2.6,
+  2.7,
+  2.6,
+  2.8,
+  2.6,
+  2.5,
+  2.7,
+  2.5,
+  2.2,
+  3.0
+ ],
+ "focal": {
+  "fx": 761.4514883346742,
+  "fy": 329.64,
+  "bbox": [
+   349.0,
+   91.0,
+   1176.0,
+   719.0
+  ],
+  "protected": [
+   497.86,
+   91.0,
+   1027.14,
+   279.4
+  ]
+ },
+ "protected": [
+  497.86,
+  91.0,
+  1027.14,
+  279.4
+ ],
+ "matte": true,
+ "matte_fps": 30,
+ "vo": [
+  {
+   "idx": 0,
+   "raw": "Why nobody finishes interview clips",
+   "dur": 2.544,
+   "atempo": 1.106,
+   "start": 0.12,
+   "beat": 0,
+   "f": "/home/z/my-project/p4work/p50/vo/talkinghead_1_0.wav"
+  },
+  {
+   "idx": 1,
+   "raw": "they talk too slow",
+   "dur": 2.28,
+   "atempo": 0.95,
+   "start": 2.72,
+   "beat": 1,
+   "f": "/home/z/my-project/p4work/p50/vo/talkinghead_1_1.wav"
+  },
+  {
+   "idx": 2,
+   "raw": "cut the dead air",
+   "dur": 1.968,
+   "atempo": 0.856,
+   "start": 5.42,
+   "beat": 2,
+   "f": "/home/z/my-project/p4work/p50/vo/talkinghead_1_2.wav"
+  },
+  {
+   "idx": 3,
+   "raw": "punch in on answers",
+   "dur": 2.256,
+   "atempo": 0.902,
+   "start": 8.02,
+   "beat": 3,
+   "f": "/home/z/my-project/p4work/p50/vo/talkinghead_1_3.wav"
+  },
+  {
+   "idx": 4,
+   "raw": "captions carry the skip",
+   "dur": 2.424,
+   "atempo": 1.054,
+   "start": 10.82,
+   "beat": 4,
+   "f": "/home/z/my-project/p4work/p50/vo/talkinghead_1_4.wav"
+  },
+  {
+   "idx": 5,
+   "raw": "thirty seconds max",
+   "dur": 2.376,
+   "atempo": 1.08,
+   "start": 13.42,
+   "beat": 5,
+   "f": "/home/z/my-project/p4work/p50/vo/talkinghead_1_5.wav"
+  },
+  {
+   "idx": 6,
+   "raw": "pace beats polish",
+   "dur": 2.28,
+   "atempo": 0.95,
+   "start": 15.92,
+   "beat": 6,
+   "f": "/home/z/my-project/p4work/p50/vo/talkinghead_1_6.wav"
+  },
+  {
+   "idx": 7,
+   "raw": "keep the lean-in",
+   "dur": 1.896,
+   "atempo": 0.862,
+   "start": 18.62,
+   "beat": 7,
+   "f": "/home/z/my-project/p4work/p50/vo/talkinghead_1_7.wav"
+  },
+  {
+   "idx": 8,
+   "raw": "now they finish your clips.",
+   "dur": 2.592,
+   "atempo": 0.96,
+   "start": 23.32,
+   "beat": 9,
+   "f": "/home/z/my-project/p4work/p50/vo/talkinghead_1_8.wav"
+  }
+ ],
+ "beats": [
+  {
+   "t": 2.6,
+   "whip": "right",
+   "zoom": [
+    1.02,
+    1.16
+   ],
+   "kind": "type",
+   "src": [
+    0.0,
+    2.6
+   ],
+   "type": [
+    "NOBODY",
+    "FINISHES"
+   ],
+   "vo": 0,
+   "halftone": "halftone_accent.png",
+   "glitch": "glitch_1.png",
+   "zoomout_next": false,
+   "stickers": [
+    [
+     "stick_play.png",
+     [
+      70,
+      1470
+     ],
+     0.7
+    ],
+    [
+     "stick_headphones.png",
+     [
+      80,
+      520
+     ],
+     0.8
+    ]
+   ],
+   "labels": [
+    [
+     "label_i0.png",
+     [
+      48,
+      1600
+     ],
+     0.35
+    ]
+   ]
+  },
+  {
+   "t": 2.7,
+   "whip": "left",
+   "zoom": [
+    1.03,
+    1.14
+   ],
+   "kind": "type",
+   "src": [
+    2.65,
+    2.7
+   ],
+   "type": [
+    "TALKS",
+    "TOO SLOW"
+   ],
+   "vo": 1,
+   "halftone": "halftone_accent.png",
+   "glitch": null,
+   "zoomout_next": false,
+   "stickers": [
+    [
+     "stick_clapper.png",
+     [
+      850,
+      1290
+     ],
+     0.7
+    ]
+   ],
+   "labels": []
+  },
+  {
+   "t": 2.6,
+   "whip": "right",
+   "zoom": [
+    1.03,
+    1.14
+   ],
+   "kind": "type",
+   "src": [
+    5.4,
+    2.6
+   ],
+   "type": [
+    "CUT",
+    "DEAD AIR"
+   ],
+   "vo": 2,
+   "halftone": null,
+   "glitch": null,
+   "zoomout_next": true,
+   "stickers": [
+    [
+     "stick_star.png",
+     [
+      80,
+      520
+     ],
+     0.7
+    ],
+    [
+     "stick_bolt.png",
+     [
+      830,
+      760
+     ],
+     0.8
+    ]
+   ],
+   "labels": [
+    [
+     "label_i2.png",
+     [
+      48,
+      1780
+     ],
+     0.3
+    ]
+   ]
+  },
+  {
+   "t": 2.8,
+   "whip": "left",
+   "zoom": [
+    1.03,
+    1.14
+   ],
+   "kind": "cards",
+   "src": [
+    8.05,
+    2.8000000000000003
+   ],
+   "vo": 3,
+   "connector": true,
+   "stickers": [
+    [
+     "stick_play.png",
+     [
+      880,
+      1660
+     ],
+     0.7
+    ]
+   ],
+   "labels": [
+    [
+     "label_i3.png",
+     [
+      48,
+      1780
+     ],
+     0.35
+    ]
+   ],
+   "cards": [
+    [
+     "card_0.png",
+     [
+      350,
+      1300
+     ],
+     0.12
+    ],
+    [
+     "card_1.png",
+     [
+      720,
+      1460
+     ],
+     0.42
+    ]
+   ],
+   "connector_pair": [
+    "card_0.png",
+    "card_1.png"
+   ]
+  },
+  {
+   "t": 2.6,
+   "whip": "right",
+   "zoom": [
+    1.03,
+    1.14
+   ],
+   "kind": "phone",
+   "src": [
+    10.9,
+    2.6
+   ],
+   "vo": 4,
+   "phone": [
+    150,
+    600,
+    780,
+    1050
+   ],
+   "stickers": [
+    [
+     "stick_clapper.png",
+     [
+      830,
+      760
+     ],
+     0.7
+    ]
+   ]
+  },
+  {
+   "t": 2.5,
+   "whip": "left",
+   "zoom": [
+    1.16,
+    1.02
+   ],
+   "kind": "insert",
+   "src": null,
+   "vo": 5,
+   "glitch": "glitch_2.png",
+   "pill": [
+    "SPEAKER TAKEOVER",
+    [
+     330,
+     1880
+    ],
+    1.55
+   ],
+   "impact": true,
+   "phone": [
+    240,
+    980,
+    600,
+    880
+   ]
+  },
+  {
+   "t": 2.7,
+   "whip": "right",
+   "zoom": [
+    1.03,
+    1.14
+   ],
+   "kind": "cards",
+   "src": [
+    13.55,
+    2.7
+   ],
+   "vo": 6,
+   "connector": true,
+   "stickers": [
+    [
+     "stick_play.png",
+     [
+      70,
+      1470
+     ],
+     0.7
+    ]
+   ],
+   "labels": [],
+   "cards": [
+    [
+     "card_2.png",
+     [
+      330,
+      1560
+     ],
+     0.12
+    ],
+    [
+     "card_0.png",
+     [
+      350,
+      1300
+     ],
+     0.42
+    ]
+   ],
+   "connector_pair": [
+    "card_2.png",
+    "card_0.png"
+   ]
+  },
+  {
+   "t": 2.5,
+   "whip": "left",
+   "zoom": [
+    1.03,
+    1.14
+   ],
+   "kind": "type",
+   "src": [
+    0.0,
+    2.5
+   ],
+   "type": [
+    "KEEP THE",
+    "LEAN-IN"
+   ],
+   "vo": 7,
+   "halftone": "halftone_accent.png",
+   "glitch": null,
+   "zoomout_next": false,
+   "stickers": [
+    [
+     "stick_clapper.png",
+     [
+      850,
+      1290
+     ],
+     0.7
+    ],
+    [
+     "stick_arrow.png",
+     [
+      880,
+      1660
+     ],
+     0.8
+    ]
+   ],
+   "labels": [
+    [
+     "label_i1.png",
+     [
+      48,
+      1600
+     ],
+     0.5
+    ]
+   ]
+  },
+  {
+   "t": 2.2,
+   "whip": "left",
+   "zoom": [
+    1.03,
+    1.14
+   ],
+   "kind": "phone",
+   "src": [
+    1.0,
+    2.2
+   ],
+   "vo": null,
+   "echo": true,
+   "phone": [
+    150,
+    580,
+    780,
+    1120
+   ],
+   "glitch": "glitch_4.png",
+   "stickers": [
+    [
+     "stick_star.png",
+     [
+      80,
+      520
+     ],
+     0.7
+    ]
+   ]
+  },
+  {
+   "t": 3.0,
+   "whip": "right",
+   "zoom": [
+    1.18,
+    1.02
+   ],
+   "kind": "type",
+   "src": [
+    0.0,
+    3.0
+   ],
+   "type": [
+    "REWIND",
+    null
+   ],
+   "vo": 8,
+   "payoff": true,
+   "halftone": "halftone_accent.png",
+   "glitch": "glitch_1.png",
+   "stickers": [
+    [
+     "stick_play.png",
+     [
+      880,
+      1660
+     ],
+     0.7
+    ],
+    [
+     "stick_headphones.png",
+     [
+      60,
+      1620
+     ],
+     0.8
+    ]
+   ],
+   "labels": []
+  }
+ ],
+ "card_assets": [
+  {
+   "name": "card_0.png",
+   "label": "the guest",
+   "src_t": 1.5,
+   "tilt": -6,
+   "w": 540,
+   "h": 660
+  },
+  {
+   "name": "card_1.png",
+   "label": "the cut",
+   "src_t": 7.0,
+   "tilt": 5,
+   "w": 540,
+   "h": 660
+  },
+  {
+   "name": "card_2.png",
+   "label": "the flow",
+   "src_t": 12.0,
+   "tilt": -3,
+   "w": 540,
+   "h": 660
+  }
+ ]
+}

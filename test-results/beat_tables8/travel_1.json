@@ -1,0 +1,632 @@
+{
+ "vid": "travel_1",
+ "cat": "TRAVEL",
+ "family": "F3",
+ "accent": [
+  255,
+  170,
+  80
+ ],
+ "secondary": [
+  255,
+  236,
+  210
+ ],
+ "ink": [
+  30,
+  18,
+  12
+ ],
+ "type_fill": "accent",
+ "extrude": "accent_dark",
+ "halftone": "accent",
+ "sticker_color": "accent",
+ "card_border": [
+  255,
+  170,
+  80
+ ],
+ "pill_bg": [
+  255,
+  170,
+  80
+ ],
+ "bg_tint": [
+  255,
+  235,
+  210,
+  14
+ ],
+ "cards_spec": [
+  [
+   "the road",
+   1.5
+  ],
+  [
+   "the turn",
+   5.0
+  ],
+  [
+   "the raw",
+   8.5
+  ]
+ ],
+ "labels": [
+  "passport stamp",
+  "engine metronome",
+  "step 01",
+  "step 02"
+ ],
+ "sig_pill": "ROUTE 1 OPEN",
+ "stickers": [
+  "rocket",
+  "star",
+  "arrow",
+  "play",
+  "bolt",
+  "headphones"
+ ],
+ "insert_prompt": "surreal 3D dream world, coastal road at sunset looping over a floating warm island with a vintage suitcase and orange sky clouds, sunset palette, vertical, cinematic render, no text, no watermark",
+ "raw_dur": 11.93,
+ "total": 25.9,
+ "durs": [
+  2.6,
+  2.6,
+  2.5,
+  2.7,
+  2.5,
+  2.6,
+  2.7,
+  2.5,
+  2.2,
+  3.0
+ ],
+ "focal": {
+  "fx": 797.3306754110736,
+  "fy": 351.62,
+  "bbox": [
+   701.0,
+   200.0,
+   905.0,
+   599.0
+  ],
+  "protected": [
+   737.72,
+   200.0,
+   868.28,
+   319.7
+  ]
+ },
+ "protected": [
+  737.72,
+  200.0,
+  868.28,
+  319.7
+ ],
+ "matte": false,
+ "matte_fps": null,
+ "vo": [
+  {
+   "idx": 0,
+   "raw": "Ride this road before they pave it",
+   "dur": 2.376,
+   "atempo": 1.033,
+   "start": 0.12,
+   "beat": 0,
+   "f": "/home/z/my-project/p4work/p50/vo/travel_1_0.wav"
+  },
+  {
+   "idx": 1,
+   "raw": "before they pave it",
+   "dur": 2.088,
+   "atempo": 0.908,
+   "start": 2.72,
+   "beat": 1,
+   "f": "/home/z/my-project/p4work/p50/vo/travel_1_1.wav"
+  },
+  {
+   "idx": 2,
+   "raw": "empty road",
+   "dur": 1.872,
+   "atempo": 0.851,
+   "start": 5.32,
+   "beat": 2,
+   "f": "/home/z/my-project/p4work/p50/vo/travel_1_2.wav"
+  },
+  {
+   "idx": 3,
+   "raw": "engine as metronome",
+   "dur": 2.28,
+   "atempo": 0.95,
+   "start": 7.82,
+   "beat": 3,
+   "f": "/home/z/my-project/p4work/p50/vo/travel_1_3.wav"
+  },
+  {
+   "idx": 4,
+   "raw": "cut on the turns",
+   "dur": 2.088,
+   "atempo": 0.949,
+   "start": 10.52,
+   "beat": 4,
+   "f": "/home/z/my-project/p4work/p50/vo/travel_1_4.wav"
+  },
+  {
+   "idx": 5,
+   "raw": "go now",
+   "dur": 1.872,
+   "atempo": 0.85,
+   "start": 13.02,
+   "beat": 5,
+   "f": "/home/z/my-project/p4work/p50/vo/travel_1_5.wav"
+  },
+  {
+   "idx": 6,
+   "raw": "curves cut the edit",
+   "dur": 2.16,
+   "atempo": 0.9,
+   "start": 15.62,
+   "beat": 6,
+   "f": "/home/z/my-project/p4work/p50/vo/travel_1_6.wav"
+  },
+  {
+   "idx": 7,
+   "raw": "last ride raw",
+   "dur": 2.016,
+   "atempo": 0.916,
+   "start": 18.32,
+   "beat": 7,
+   "f": "/home/z/my-project/p4work/p50/vo/travel_1_7.wav"
+  },
+  {
+   "idx": 8,
+   "raw": "before they pave it.",
+   "dur": 2.088,
+   "atempo": 0.85,
+   "start": 23.02,
+   "beat": 9,
+   "f": "/home/z/my-project/p4work/p50/vo/travel_1_8.wav"
+  }
+ ],
+ "beats": [
+  {
+   "t": 2.6,
+   "whip": "right",
+   "zoom": [
+    1.02,
+    1.16
+   ],
+   "kind": "type",
+   "src": [
+    0.0,
+    2.6
+   ],
+   "type": [
+    "BEFORE THEY",
+    "PAVE IT"
+   ],
+   "vo": 0,
+   "halftone": "halftone_accent.png",
+   "glitch": "glitch_1.png",
+   "zoomout_next": false,
+   "stickers": [
+    [
+     "stick_bolt.png",
+     [
+      70,
+      1470
+     ],
+     0.25
+    ],
+    [
+     "stick_headphones.png",
+     [
+      80,
+      1620
+     ],
+     0.35
+    ]
+   ],
+   "labels": [
+    [
+     "label_i0.png",
+     [
+      48,
+      1600
+     ],
+     0.35
+    ]
+   ]
+  },
+  {
+   "t": 2.6,
+   "whip": "left",
+   "zoom": [
+    1.03,
+    1.14
+   ],
+   "kind": "type",
+   "src": [
+    2.65,
+    2.6
+   ],
+   "type": [
+    "EMPTY",
+    "ROAD"
+   ],
+   "vo": 1,
+   "halftone": "halftone_accent.png",
+   "glitch": null,
+   "zoomout_next": false,
+   "stickers": [
+    [
+     "stick_rocket.png",
+     [
+      850,
+      1290
+     ],
+     0.25
+    ]
+   ],
+   "labels": []
+  },
+  {
+   "t": 2.5,
+   "whip": "right",
+   "zoom": [
+    1.03,
+    1.14
+   ],
+   "kind": "type",
+   "src": [
+    5.3,
+    2.5
+   ],
+   "type": [
+    "GO",
+    "NOW"
+   ],
+   "vo": 2,
+   "halftone": null,
+   "glitch": null,
+   "zoomout_next": true,
+   "stickers": [
+    [
+     "stick_arrow.png",
+     [
+      80,
+      1620
+     ],
+     0.25
+    ],
+    [
+     "stick_play.png",
+     [
+      830,
+      1520
+     ],
+     0.35
+    ]
+   ],
+   "labels": [
+    [
+     "label_i2.png",
+     [
+      48,
+      1780
+     ],
+     0.3
+    ]
+   ]
+  },
+  {
+   "t": 2.7,
+   "whip": "left",
+   "zoom": [
+    1.02,
+    1.1
+   ],
+   "kind": "cards",
+   "src": [
+    7.85,
+    2.7
+   ],
+   "vo": 3,
+   "connector": true,
+   "stickers": [
+    [
+     "stick_bolt.png",
+     [
+      880,
+      1660
+     ],
+     0.25
+    ]
+   ],
+   "labels": [
+    [
+     "label_i3.png",
+     [
+      48,
+      1780
+     ],
+     0.35
+    ]
+   ],
+   "cards": [
+    [
+     "card_0.png",
+     [
+      330,
+      1560
+     ],
+     0.12
+    ],
+    [
+     "card_1.png",
+     [
+      730,
+      1620
+     ],
+     0.42
+    ]
+   ],
+   "connector_pair": [
+    "card_0.png",
+    "card_1.png"
+   ]
+  },
+  {
+   "t": 2.5,
+   "whip": "right",
+   "zoom": [
+    1.03,
+    1.14
+   ],
+   "kind": "phone",
+   "src": [
+    0.4,
+    2.5
+   ],
+   "vo": 4,
+   "phone": [
+    240,
+    1080,
+    600,
+    800
+   ],
+   "stickers": [
+    [
+     "stick_rocket.png",
+     [
+      830,
+      1520
+     ],
+     0.25
+    ]
+   ]
+  },
+  {
+   "t": 2.6,
+   "whip": "left",
+   "zoom": [
+    1.16,
+    1.02
+   ],
+   "kind": "insert",
+   "src": null,
+   "vo": 5,
+   "glitch": "glitch_2.png",
+   "pill": [
+    "ROUTE 1 OPEN",
+    [
+     330,
+     1880
+    ],
+    1.55
+   ],
+   "impact": true,
+   "phone": [
+    240,
+    1080,
+    600,
+    800
+   ]
+  },
+  {
+   "t": 2.7,
+   "whip": "right",
+   "zoom": [
+    1.02,
+    1.1
+   ],
+   "kind": "cards",
+   "src": [
+    2.95,
+    2.7
+   ],
+   "vo": 6,
+   "connector": true,
+   "stickers": [
+    [
+     "stick_bolt.png",
+     [
+      70,
+      1470
+     ],
+     0.25
+    ]
+   ],
+   "labels": [],
+   "cards": [
+    [
+     "card_2.png",
+     [
+      520,
+      1730
+     ],
+     0.12
+    ],
+    [
+     "card_0.png",
+     [
+      330,
+      1560
+     ],
+     0.42
+    ]
+   ],
+   "connector_pair": [
+    "card_2.png",
+    "card_0.png"
+   ]
+  },
+  {
+   "t": 2.5,
+   "whip": "left",
+   "zoom": [
+    1.03,
+    1.14
+   ],
+   "kind": "type",
+   "src": [
+    5.7,
+    2.5
+   ],
+   "type": [
+    "LAST RIDE",
+    "RAW"
+   ],
+   "vo": 7,
+   "halftone": "halftone_accent.png",
+   "glitch": null,
+   "zoomout_next": false,
+   "stickers": [
+    [
+     "stick_rocket.png",
+     [
+      850,
+      1290
+     ],
+     0.25
+    ],
+    [
+     "stick_star.png",
+     [
+      880,
+      1660
+     ],
+     0.35
+    ]
+   ],
+   "labels": [
+    [
+     "label_i1.png",
+     [
+      48,
+      1600
+     ],
+     0.5
+    ]
+   ]
+  },
+  {
+   "t": 2.2,
+   "whip": "left",
+   "zoom": [
+    1.03,
+    1.14
+   ],
+   "kind": "phone",
+   "src": [
+    1.0,
+    2.2
+   ],
+   "vo": null,
+   "echo": true,
+   "phone": [
+    240,
+    1080,
+    600,
+    800
+   ],
+   "glitch": "glitch_4.png",
+   "stickers": [
+    [
+     "stick_arrow.png",
+     [
+      80,
+      1620
+     ],
+     0.25
+    ]
+   ]
+  },
+  {
+   "t": 3.0,
+   "whip": "right",
+   "zoom": [
+    1.18,
+    1.02
+   ],
+   "kind": "type",
+   "src": [
+    0.0,
+    3.0
+   ],
+   "type": [
+    "RUN IT",
+    "BACK"
+   ],
+   "vo": 8,
+   "payoff": true,
+   "halftone": "halftone_accent.png",
+   "glitch": "glitch_1.png",
+   "stickers": [
+    [
+     "stick_bolt.png",
+     [
+      880,
+      1660
+     ],
+     0.25
+    ],
+    [
+     "stick_headphones.png",
+     [
+      60,
+      1730
+     ],
+     0.35
+    ]
+   ],
+   "labels": []
+  }
+ ],
+ "card_assets": [
+  {
+   "name": "card_0.png",
+   "label": "the road",
+   "src_t": 1.5,
+   "tilt": -6,
+   "w": 470,
+   "h": 580
+  },
+  {
+   "name": "card_1.png",
+   "label": "the turn",
+   "src_t": 5.0,
+   "tilt": 5,
+   "w": 470,
+   "h": 580
+  },
+  {
+   "name": "card_2.png",
+   "label": "the raw",
+   "src_t": 8.5,
+   "tilt": -3,
+   "w": 470,
+   "h": 580
+  }
+ ]
+}

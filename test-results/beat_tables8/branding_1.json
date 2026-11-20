@@ -1,0 +1,632 @@
+{
+ "vid": "branding_1",
+ "cat": "BRANDING",
+ "family": "F2",
+ "accent": [
+  212,
+  175,
+  55
+ ],
+ "secondary": [
+  230,
+  230,
+  235
+ ],
+ "ink": [
+  20,
+  18,
+  12
+ ],
+ "type_fill": "accent",
+ "extrude": "accent_dark",
+ "halftone": "accent",
+ "sticker_color": "accent",
+ "card_border": [
+  212,
+  175,
+  55
+ ],
+ "pill_bg": [
+  212,
+  175,
+  55
+ ],
+ "bg_tint": [
+  255,
+  240,
+  200,
+  12
+ ],
+ "cards_spec": [
+  [
+   "the silhouette",
+   1.5
+  ],
+  [
+   "the sun",
+   5.5
+  ],
+  [
+   "the skyline",
+   10.0
+  ]
+ ],
+ "labels": [
+  "AURUM & CO",
+  "backlight is free",
+  "step 01",
+  "step 02"
+ ],
+ "sig_pill": "GOLD COUNTER x12",
+ "stickers": [
+  "star",
+  "arrow",
+  "rocket",
+  "clapper",
+  "play",
+  "bolt"
+ ],
+ "insert_prompt": "surreal 3D dream world, golden silhouette statue on a marble rooftop island above a charcoal city, warm gold backlight rays, gold and charcoal palette, halftone texture sky, vertical, cinematic render, no text, no watermark",
+ "raw_dur": 15.56,
+ "total": 26.1,
+ "durs": [
+  2.6,
+  2.7,
+  2.5,
+  2.7,
+  2.5,
+  2.6,
+  2.8,
+  2.5,
+  2.2,
+  3.0
+ ],
+ "focal": {
+  "fx": 607.0380652897416,
+  "fy": 418.3,
+  "bbox": [
+   407.0,
+   234.0,
+   833.0,
+   719.0
+  ],
+  "protected": [
+   483.68,
+   234.0,
+   756.32,
+   379.5
+  ]
+ },
+ "protected": [
+  483.68,
+  234.0,
+  756.32,
+  379.5
+ ],
+ "matte": true,
+ "matte_fps": 30,
+ "vo": [
+  {
+   "idx": 0,
+   "raw": "90% of brand videos skip this shot",
+   "dur": 2.952,
+   "atempo": 1.283,
+   "start": 0.12,
+   "beat": 0,
+   "f": "/home/z/my-project/p4work/p50/vo/branding_1_0.wav"
+  },
+  {
+   "idx": 1,
+   "raw": "silhouettes sell scale",
+   "dur": 2.472,
+   "atempo": 1.03,
+   "start": 2.72,
+   "beat": 1,
+   "f": "/home/z/my-project/p4work/p50/vo/branding_1_1.wav"
+  },
+  {
+   "idx": 2,
+   "raw": "shoot into the sun",
+   "dur": 2.16,
+   "atempo": 0.982,
+   "start": 5.42,
+   "beat": 2,
+   "f": "/home/z/my-project/p4work/p50/vo/branding_1_2.wav"
+  },
+  {
+   "idx": 3,
+   "raw": "wardrobe stays dark",
+   "dur": 2.424,
+   "atempo": 1.01,
+   "start": 7.92,
+   "beat": 3,
+   "f": "/home/z/my-project/p4work/p50/vo/branding_1_3.wav"
+  },
+  {
+   "idx": 4,
+   "raw": "grade steel and amber",
+   "dur": 2.424,
+   "atempo": 1.102,
+   "start": 10.62,
+   "beat": 4,
+   "f": "/home/z/my-project/p4work/p50/vo/branding_1_4.wav"
+  },
+  {
+   "idx": 5,
+   "raw": "brands notice the difference",
+   "dur": 2.568,
+   "atempo": 1.117,
+   "start": 13.12,
+   "beat": 5,
+   "f": "/home/z/my-project/p4work/p50/vo/branding_1_5.wav"
+  },
+  {
+   "idx": 6,
+   "raw": "backlight is free",
+   "dur": 2.112,
+   "atempo": 0.85,
+   "start": 15.72,
+   "beat": 6,
+   "f": "/home/z/my-project/p4work/p50/vo/branding_1_6.wav"
+  },
+  {
+   "idx": 7,
+   "raw": "own the skyline",
+   "dur": 2.112,
+   "atempo": 0.96,
+   "start": 18.52,
+   "beat": 7,
+   "f": "/home/z/my-project/p4work/p50/vo/branding_1_7.wav"
+  },
+  {
+   "idx": 8,
+   "raw": "now you own that shot.",
+   "dur": 2.424,
+   "atempo": 0.898,
+   "start": 23.22,
+   "beat": 9,
+   "f": "/home/z/my-project/p4work/p50/vo/branding_1_8.wav"
+  }
+ ],
+ "beats": [
+  {
+   "t": 2.6,
+   "whip": "right",
+   "zoom": [
+    1.02,
+    1.16
+   ],
+   "kind": "type",
+   "src": [
+    0.0,
+    2.6
+   ],
+   "type": [
+    "SKIP",
+    "THIS SHOT"
+   ],
+   "vo": 0,
+   "halftone": "halftone_accent.png",
+   "glitch": "glitch_1.png",
+   "zoomout_next": false,
+   "stickers": [
+    [
+     "stick_rocket.png",
+     [
+      70,
+      1470
+     ],
+     0.55
+    ],
+    [
+     "stick_clapper.png",
+     [
+      80,
+      520
+     ],
+     0.5
+    ]
+   ],
+   "labels": [
+    [
+     "label_i0.png",
+     [
+      48,
+      1600
+     ],
+     0.35
+    ]
+   ]
+  },
+  {
+   "t": 2.7,
+   "whip": "left",
+   "zoom": [
+    1.03,
+    1.14
+   ],
+   "kind": "type",
+   "src": [
+    2.65,
+    2.7
+   ],
+   "type": [
+    "SILHOUETTES",
+    "SELL SCALE"
+   ],
+   "vo": 1,
+   "halftone": "halftone_accent.png",
+   "glitch": null,
+   "zoomout_next": false,
+   "stickers": [
+    [
+     "stick_play.png",
+     [
+      850,
+      1290
+     ],
+     0.55
+    ]
+   ],
+   "labels": []
+  },
+  {
+   "t": 2.5,
+   "whip": "right",
+   "zoom": [
+    1.03,
+    1.14
+   ],
+   "kind": "type",
+   "src": [
+    5.4,
+    2.5
+   ],
+   "type": [
+    "OWN THE",
+    "SKYLINE"
+   ],
+   "vo": 2,
+   "halftone": null,
+   "glitch": null,
+   "zoomout_next": true,
+   "stickers": [
+    [
+     "stick_star.png",
+     [
+      80,
+      520
+     ],
+     0.55
+    ],
+    [
+     "stick_arrow.png",
+     [
+      830,
+      760
+     ],
+     0.5
+    ]
+   ],
+   "labels": [
+    [
+     "label_i2.png",
+     [
+      48,
+      1780
+     ],
+     0.3
+    ]
+   ]
+  },
+  {
+   "t": 2.7,
+   "whip": "left",
+   "zoom": [
+    1.03,
+    1.14
+   ],
+   "kind": "cards",
+   "src": [
+    7.95,
+    2.7
+   ],
+   "vo": 3,
+   "connector": true,
+   "stickers": [
+    [
+     "stick_rocket.png",
+     [
+      880,
+      1660
+     ],
+     0.55
+    ]
+   ],
+   "labels": [
+    [
+     "label_i3.png",
+     [
+      48,
+      1780
+     ],
+     0.35
+    ]
+   ],
+   "cards": [
+    [
+     "card_0.png",
+     [
+      240,
+      1560
+     ],
+     0.12
+    ],
+    [
+     "card_1.png",
+     [
+      760,
+      1500
+     ],
+     0.42
+    ]
+   ],
+   "connector_pair": [
+    "card_0.png",
+    "card_1.png"
+   ]
+  },
+  {
+   "t": 2.5,
+   "whip": "right",
+   "zoom": [
+    1.03,
+    1.14
+   ],
+   "kind": "phone",
+   "src": [
+    10.7,
+    2.5
+   ],
+   "vo": 4,
+   "phone": [
+    150,
+    600,
+    780,
+    1050
+   ],
+   "stickers": [
+    [
+     "stick_play.png",
+     [
+      830,
+      760
+     ],
+     0.55
+    ]
+   ]
+  },
+  {
+   "t": 2.6,
+   "whip": "left",
+   "zoom": [
+    1.16,
+    1.02
+   ],
+   "kind": "insert",
+   "src": null,
+   "vo": 5,
+   "glitch": "glitch_2.png",
+   "pill": [
+    "GOLD COUNTER x12",
+    [
+     330,
+     1880
+    ],
+    1.55
+   ],
+   "impact": true,
+   "phone": [
+    240,
+    980,
+    600,
+    880
+   ]
+  },
+  {
+   "t": 2.8,
+   "whip": "right",
+   "zoom": [
+    1.03,
+    1.14
+   ],
+   "kind": "cards",
+   "src": [
+    0.4,
+    2.8000000000000003
+   ],
+   "vo": 6,
+   "connector": true,
+   "stickers": [
+    [
+     "stick_rocket.png",
+     [
+      70,
+      1470
+     ],
+     0.55
+    ]
+   ],
+   "labels": [],
+   "cards": [
+    [
+     "card_2.png",
+     [
+      480,
+      1660
+     ],
+     0.12
+    ],
+    [
+     "card_0.png",
+     [
+      240,
+      1560
+     ],
+     0.42
+    ]
+   ],
+   "connector_pair": [
+    "card_2.png",
+    "card_0.png"
+   ]
+  },
+  {
+   "t": 2.5,
+   "whip": "left",
+   "zoom": [
+    1.03,
+    1.14
+   ],
+   "kind": "type",
+   "src": [
+    3.25,
+    2.5
+   ],
+   "type": [
+    "SHOOT INTO",
+    "THE SUN"
+   ],
+   "vo": 7,
+   "halftone": "halftone_accent.png",
+   "glitch": null,
+   "zoomout_next": false,
+   "stickers": [
+    [
+     "stick_play.png",
+     [
+      850,
+      1290
+     ],
+     0.55
+    ],
+    [
+     "stick_bolt.png",
+     [
+      880,
+      1660
+     ],
+     0.5
+    ]
+   ],
+   "labels": [
+    [
+     "label_i1.png",
+     [
+      48,
+      1600
+     ],
+     0.5
+    ]
+   ]
+  },
+  {
+   "t": 2.2,
+   "whip": "left",
+   "zoom": [
+    1.03,
+    1.14
+   ],
+   "kind": "phone",
+   "src": [
+    1.0,
+    2.2
+   ],
+   "vo": null,
+   "echo": true,
+   "phone": [
+    150,
+    580,
+    780,
+    1120
+   ],
+   "glitch": "glitch_4.png",
+   "stickers": [
+    [
+     "stick_star.png",
+     [
+      80,
+      520
+     ],
+     0.55
+    ]
+   ]
+  },
+  {
+   "t": 3.0,
+   "whip": "right",
+   "zoom": [
+    1.18,
+    1.02
+   ],
+   "kind": "type",
+   "src": [
+    0.0,
+    3.0
+   ],
+   "type": [
+    "ONE MORE",
+    "TIME"
+   ],
+   "vo": 8,
+   "payoff": true,
+   "halftone": "halftone_accent.png",
+   "glitch": "glitch_1.png",
+   "stickers": [
+    [
+     "stick_rocket.png",
+     [
+      880,
+      1660
+     ],
+     0.55
+    ],
+    [
+     "stick_clapper.png",
+     [
+      60,
+      1620
+     ],
+     0.5
+    ]
+   ],
+   "labels": []
+  }
+ ],
+ "card_assets": [
+  {
+   "name": "card_0.png",
+   "label": "the silhouette",
+   "src_t": 1.5,
+   "tilt": -6,
+   "w": 540,
+   "h": 660
+  },
+  {
+   "name": "card_1.png",
+   "label": "the sun",
+   "src_t": 5.5,
+   "tilt": 5,
+   "w": 540,
+   "h": 660
+  },
+  {
+   "name": "card_2.png",
+   "label": "the skyline",
+   "src_t": 10.0,
+   "tilt": -3,
+   "w": 540,
+   "h": 660
+  }
+ ]
+}

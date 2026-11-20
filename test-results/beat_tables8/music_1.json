@@ -1,0 +1,632 @@
+{
+ "vid": "music_1",
+ "cat": "MUSIC",
+ "family": "F3",
+ "accent": [
+  170,
+  90,
+  255
+ ],
+ "secondary": [
+  255,
+  170,
+  60
+ ],
+ "ink": [
+  16,
+  8,
+  26
+ ],
+ "type_fill": "accent",
+ "extrude": "accent_dark",
+ "halftone": "accent",
+ "sticker_color": "accent",
+ "card_border": [
+  170,
+  90,
+  255
+ ],
+ "pill_bg": [
+  170,
+  90,
+  255
+ ],
+ "bg_tint": [
+  240,
+  225,
+  255,
+  10
+ ],
+ "cards_spec": [
+  [
+   "the rig",
+   1.5
+  ],
+  [
+   "the beat",
+   5.5
+  ],
+  [
+   "the drop",
+   10.0
+  ]
+ ],
+ "labels": [
+  "128 BPM",
+  "cut on the beat",
+  "step 01",
+  "step 02"
+ ],
+ "sig_pill": "128 BPM LIVE",
+ "stickers": [
+  "play",
+  "star",
+  "arrow",
+  "headphones",
+  "bolt",
+  "rocket"
+ ],
+ "insert_prompt": "surreal 3D dream world, concert stage floating on a purple cloud with giant amber waveform ribbons and crowd silhouettes below, stage light beams, purple and amber palette, vertical, cinematic render, no text, no watermark",
+ "raw_dur": 16.64,
+ "total": 25.9,
+ "durs": [
+  2.6,
+  2.6,
+  2.5,
+  2.7,
+  2.6,
+  2.5,
+  2.7,
+  2.5,
+  2.2,
+  3.0
+ ],
+ "focal": {
+  "fx": 696.6596827746756,
+  "fy": 369.32,
+  "bbox": [
+   448.0,
+   155.0,
+   950.0,
+   719.0
+  ],
+  "protected": [
+   538.36,
+   155.0,
+   859.64,
+   324.2
+  ]
+ },
+ "protected": [
+  538.36,
+  155.0,
+  859.64,
+  324.2
+ ],
+ "matte": false,
+ "matte_fps": null,
+ "vo": [
+  {
+   "idx": 0,
+   "raw": "Steal this nightclub light rig",
+   "dur": 2.328,
+   "atempo": 1.012,
+   "start": 0.12,
+   "beat": 0,
+   "f": "/home/z/my-project/p4work/p50/vo/music_1_0.wav"
+  },
+  {
+   "idx": 1,
+   "raw": "steal the rig",
+   "dur": 2.016,
+   "atempo": 0.877,
+   "start": 2.72,
+   "beat": 1,
+   "f": "/home/z/my-project/p4work/p50/vo/music_1_1.wav"
+  },
+  {
+   "idx": 2,
+   "raw": "backlight first",
+   "dur": 2.064,
+   "atempo": 0.938,
+   "start": 5.32,
+   "beat": 2,
+   "f": "/home/z/my-project/p4work/p50/vo/music_1_2.wav"
+  },
+  {
+   "idx": 3,
+   "raw": "cut on the beat",
+   "dur": 1.872,
+   "atempo": 0.85,
+   "start": 7.82,
+   "beat": 3,
+   "f": "/home/z/my-project/p4work/p50/vo/music_1_3.wav"
+  },
+  {
+   "idx": 4,
+   "raw": "grade magenta",
+   "dur": 1.992,
+   "atempo": 0.866,
+   "start": 10.52,
+   "beat": 4,
+   "f": "/home/z/my-project/p4work/p50/vo/music_1_4.wav"
+  },
+  {
+   "idx": 5,
+   "raw": "energy up",
+   "dur": 1.872,
+   "atempo": 0.851,
+   "start": 13.12,
+   "beat": 5,
+   "f": "/home/z/my-project/p4work/p50/vo/music_1_5.wav"
+  },
+  {
+   "idx": 6,
+   "raw": "crowd cuts free",
+   "dur": 2.16,
+   "atempo": 0.9,
+   "start": 15.62,
+   "beat": 6,
+   "f": "/home/z/my-project/p4work/p50/vo/music_1_6.wav"
+  },
+  {
+   "idx": 7,
+   "raw": "ride the drop",
+   "dur": 1.896,
+   "atempo": 0.862,
+   "start": 18.32,
+   "beat": 7,
+   "f": "/home/z/my-project/p4work/p50/vo/music_1_7.wav"
+  },
+  {
+   "idx": 8,
+   "raw": "now steal the rig.",
+   "dur": 2.256,
+   "atempo": 0.85,
+   "start": 23.02,
+   "beat": 9,
+   "f": "/home/z/my-project/p4work/p50/vo/music_1_8.wav"
+  }
+ ],
+ "beats": [
+  {
+   "t": 2.6,
+   "whip": "right",
+   "zoom": [
+    1.02,
+    1.16
+   ],
+   "kind": "type",
+   "src": [
+    0.0,
+    2.6
+   ],
+   "type": [
+    "STEAL",
+    "THE RIG"
+   ],
+   "vo": 0,
+   "halftone": "halftone_accent.png",
+   "glitch": "glitch_1.png",
+   "zoomout_next": false,
+   "stickers": [
+    [
+     "stick_play.png",
+     [
+      70,
+      1470
+     ],
+     0.25
+    ],
+    [
+     "stick_star.png",
+     [
+      80,
+      1620
+     ],
+     0.65
+    ]
+   ],
+   "labels": [
+    [
+     "label_i0.png",
+     [
+      48,
+      1600
+     ],
+     0.35
+    ]
+   ]
+  },
+  {
+   "t": 2.6,
+   "whip": "left",
+   "zoom": [
+    1.03,
+    1.14
+   ],
+   "kind": "type",
+   "src": [
+    2.65,
+    2.6
+   ],
+   "type": [
+    "BACKLIGHT",
+    "FIRST"
+   ],
+   "vo": 1,
+   "halftone": "halftone_accent.png",
+   "glitch": null,
+   "zoomout_next": false,
+   "stickers": [
+    [
+     "stick_arrow.png",
+     [
+      850,
+      1290
+     ],
+     0.25
+    ]
+   ],
+   "labels": []
+  },
+  {
+   "t": 2.5,
+   "whip": "right",
+   "zoom": [
+    1.03,
+    1.14
+   ],
+   "kind": "type",
+   "src": [
+    5.3,
+    2.5
+   ],
+   "type": [
+    "RIDE THE",
+    "DROP"
+   ],
+   "vo": 2,
+   "halftone": null,
+   "glitch": null,
+   "zoomout_next": true,
+   "stickers": [
+    [
+     "stick_bolt.png",
+     [
+      80,
+      1620
+     ],
+     0.25
+    ],
+    [
+     "stick_rocket.png",
+     [
+      830,
+      1520
+     ],
+     0.65
+    ]
+   ],
+   "labels": [
+    [
+     "label_i2.png",
+     [
+      48,
+      1780
+     ],
+     0.3
+    ]
+   ]
+  },
+  {
+   "t": 2.7,
+   "whip": "left",
+   "zoom": [
+    1.02,
+    1.1
+   ],
+   "kind": "cards",
+   "src": [
+    7.85,
+    2.7
+   ],
+   "vo": 3,
+   "connector": true,
+   "stickers": [
+    [
+     "stick_play.png",
+     [
+      880,
+      1660
+     ],
+     0.25
+    ]
+   ],
+   "labels": [
+    [
+     "label_i3.png",
+     [
+      48,
+      1780
+     ],
+     0.35
+    ]
+   ],
+   "cards": [
+    [
+     "card_0.png",
+     [
+      330,
+      1560
+     ],
+     0.12
+    ],
+    [
+     "card_1.png",
+     [
+      730,
+      1620
+     ],
+     0.42
+    ]
+   ],
+   "connector_pair": [
+    "card_0.png",
+    "card_1.png"
+   ]
+  },
+  {
+   "t": 2.6,
+   "whip": "right",
+   "zoom": [
+    1.03,
+    1.14
+   ],
+   "kind": "phone",
+   "src": [
+    10.6,
+    2.6
+   ],
+   "vo": 4,
+   "phone": [
+    240,
+    1080,
+    600,
+    800
+   ],
+   "stickers": [
+    [
+     "stick_arrow.png",
+     [
+      830,
+      1520
+     ],
+     0.25
+    ]
+   ]
+  },
+  {
+   "t": 2.5,
+   "whip": "left",
+   "zoom": [
+    1.16,
+    1.02
+   ],
+   "kind": "insert",
+   "src": null,
+   "vo": 5,
+   "glitch": "glitch_2.png",
+   "pill": [
+    "128 BPM LIVE",
+    [
+     330,
+     1880
+    ],
+    1.55
+   ],
+   "impact": true,
+   "phone": [
+    240,
+    1080,
+    600,
+    800
+   ]
+  },
+  {
+   "t": 2.7,
+   "whip": "right",
+   "zoom": [
+    1.02,
+    1.1
+   ],
+   "kind": "cards",
+   "src": [
+    13.25,
+    2.7
+   ],
+   "vo": 6,
+   "connector": true,
+   "stickers": [
+    [
+     "stick_play.png",
+     [
+      70,
+      1470
+     ],
+     0.25
+    ]
+   ],
+   "labels": [],
+   "cards": [
+    [
+     "card_2.png",
+     [
+      520,
+      1730
+     ],
+     0.12
+    ],
+    [
+     "card_0.png",
+     [
+      330,
+      1560
+     ],
+     0.42
+    ]
+   ],
+   "connector_pair": [
+    "card_2.png",
+    "card_0.png"
+   ]
+  },
+  {
+   "t": 2.5,
+   "whip": "left",
+   "zoom": [
+    1.03,
+    1.14
+   ],
+   "kind": "type",
+   "src": [
+    0.4,
+    2.5
+   ],
+   "type": [
+    "CROWD CUTS",
+    "FREE"
+   ],
+   "vo": 7,
+   "halftone": "halftone_accent.png",
+   "glitch": null,
+   "zoomout_next": false,
+   "stickers": [
+    [
+     "stick_arrow.png",
+     [
+      850,
+      1290
+     ],
+     0.25
+    ],
+    [
+     "stick_headphones.png",
+     [
+      880,
+      1660
+     ],
+     0.65
+    ]
+   ],
+   "labels": [
+    [
+     "label_i1.png",
+     [
+      48,
+      1600
+     ],
+     0.5
+    ]
+   ]
+  },
+  {
+   "t": 2.2,
+   "whip": "left",
+   "zoom": [
+    1.03,
+    1.14
+   ],
+   "kind": "phone",
+   "src": [
+    1.0,
+    2.2
+   ],
+   "vo": null,
+   "echo": true,
+   "phone": [
+    240,
+    1080,
+    600,
+    800
+   ],
+   "glitch": "glitch_4.png",
+   "stickers": [
+    [
+     "stick_bolt.png",
+     [
+      80,
+      1620
+     ],
+     0.25
+    ]
+   ]
+  },
+  {
+   "t": 3.0,
+   "whip": "right",
+   "zoom": [
+    1.18,
+    1.02
+   ],
+   "kind": "type",
+   "src": [
+    0.0,
+    3.0
+   ],
+   "type": [
+    "REWIND",
+    null
+   ],
+   "vo": 8,
+   "payoff": true,
+   "halftone": "halftone_accent.png",
+   "glitch": "glitch_1.png",
+   "stickers": [
+    [
+     "stick_play.png",
+     [
+      880,
+      1660
+     ],
+     0.25
+    ],
+    [
+     "stick_star.png",
+     [
+      60,
+      1730
+     ],
+     0.65
+    ]
+   ],
+   "labels": []
+  }
+ ],
+ "card_assets": [
+  {
+   "name": "card_0.png",
+   "label": "the rig",
+   "src_t": 1.5,
+   "tilt": -6,
+   "w": 470,
+   "h": 580
+  },
+  {
+   "name": "card_1.png",
+   "label": "the beat",
+   "src_t": 5.5,
+   "tilt": 5,
+   "w": 470,
+   "h": 580
+  },
+  {
+   "name": "card_2.png",
+   "label": "the drop",
+   "src_t": 10.0,
+   "tilt": -3,
+   "w": 470,
+   "h": 580
+  }
+ ]
+}

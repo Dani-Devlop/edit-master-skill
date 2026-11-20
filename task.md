@@ -91,3 +91,19 @@ Repository: https://github.com/Dani-Devlop/edit-master-skill
 - [x] 4.5.5 Batch re-edit remaining 24 videos to premium standard
 - [x] 4.5.6 Update test-results docs (scores.csv, notes.md, README.md)
 - [x] 4.5.7 Commit + push with badge policy audit
+
+## Phase 5.0 — Reference-Match Polish + Category Rollout
+- [x] 5.0.1 G1: descender padding on every text layer + text-only QA frame proof (no glyph touches box edge)
+- [x] 5.0.2 G2: full-bleed default renderer (PiP rounded card = exactly 1 beat, <=3s)
+- [x] 5.0.3 G3: word-by-word kinetic captions (per-word pop, accent keyword italic)
+- [x] 5.0.4 G4: TTS voiceover track + music sidechain duck to -18dB under VO
+- [x] 5.0.5 G5: 2.5D parallax insert beat + AI-generated category insert per rep
+- [x] 5.0.6 G6: zoom-through, mask-wipe, light-leak transitions + match-cut on beat drops
+- [x] 5.0.7 G7: eased speed ramps (smooth piecewise setpts, 0.4x beauty)
+- [x] 5.0.8 G8: per-category style sheets applied + docs/STYLES.md
+- [x] 5.0.9 G9: hook footage motion at frame 1 (punch-in + parallax push)
+- [x] 5.0.10 food_1 v3 benchmark + 10-dim scorecard >=9 + Telegram approval package
+- [x] 5.0.11 16 category reps rendered + delivered with scorecard captions
+- [x] 5.0.12 30s supercut montage (best 2s per category) delivered
+- [x] 5.0.13 Update scores.csv + notes.md + docs/STYLES.md + SKILL.md lessons
+- [x] 5.0.14 Commit + push main + badge audit + final 100% report

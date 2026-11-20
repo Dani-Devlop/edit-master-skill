@@ -619,3 +619,37 @@ Copy `templates/voice.md` from this repo to your agent's config location and
 fill it in. Every phase reads it. Ten minutes there is worth more than any
 prompt: a script in the wrong voice is unreadable on camera, and a caption in
 the wrong voice reads like a brand.
+
+
+## Lessons learned (Phase 5.0 - reference-match polish)
+1. **Descender-padding rule**: never trust em-box metrics for text layers.
+   Render text by anchoring the measured ink bbox (textbbox of the full
+   string) inside a padded canvas and QA-assert a min ink-to-edge margin on
+   all four sides for EVERY caption word, panel and callout. Italic serif
+   descenders (g/y/p/j, $) were clipping at the box bottom before this.
+2. **Full-bleed default rule**: reference reels fill 9:16 with footage.
+   Letterboxed "card" layouts read as amateur. Default to full-frame
+   keyframed crops (zoompan punch-ins, Ken Burns); allow a designed
+   background + rounded card ONLY as one deliberate picture-in-picture beat
+   (<= 3s) per video.
+3. **Word-sync rule**: phrase-level caption pops look static next to
+   reference reels. Pop each word on its own beat (scale 0.88->1, blur 5->0,
+   ~5 frames), keyword in the accent italic, aligned to the VO line's spoken
+   duration.
+4. **VO rule**: silent stock footage makes mute-story edits that cannot
+   match VO-driven references. Generate narration (edge-tts natural en-US
+   voice), fit lines to beat windows (TTS rate -> atempo, max ~1.4), and
+   sidechain-duck the music bed ~-18dB under speech.
+5. **Category style sheets**: one global template reads wrong for every
+   niche. Per category: palette (accent + bg gradient), body/keyword fonts,
+   grade chain, caption scrim, signature graphics kit, particle system,
+   transition flavor. See docs/STYLES.md.
+6. **Motion rules that survived contact with the references**: footage must
+   move at frame 1 (punch-in + pan push on the hook), ramps must be eased
+   (piecewise smoothstep setpts, not step changes), and B-roll needs a 2.5D
+   parallax or generated insert beat - alternate crops alone are not enough.
+7. **ffmpeg pitfalls hit in production**: colorbalance has only
+   rs/gs/bs rm/gm/bm rh/gh/bh options (no mg/ms); filtergraph labels are
+   single-use (asplit before reusing a VO bus); pow(a,b) commas can break
+   filter option parsing (use multiplication); -nostdin everywhere or ffmpeg
+   hangs on the interactive prompt.

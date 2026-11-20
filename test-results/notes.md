@@ -363,3 +363,56 @@ source forces window reuse even in v2).
   at crf 18); every other video is 12-36MB. All are 1080x1920 H.264+AAC.
 - QA gate is enforced in code (scripts/p45_premium.py qa_gate): a video that
   fails any of the 11 checks is not delivered.
+
+
+# Phase 5.0: Reference-Match Polish + Category Rollout (2026-11-20)
+
+All nine gaps from the Phase 4.5 benchmark were closed (G1-G9), then one
+representative video per category was re-rendered with its own style sheet.
+
+## Methods
+- G1 text: every layer is rendered by anchoring the TRUE ink bbox
+  (PIL textbbox incl. descenders) inside a 10px-padded canvas; QA asserts no
+  ink pixel within 3px of any edge on every caption word, panel and callout.
+  Proof frame: p4work/p50/proof_g1.png (also sent to Telegram).
+- G2 full-bleed: all 10 beats use full-frame keyframed crops; the rounded
+  PiP card survives only as beat 6 (2.6s <= 3s) on the designed background.
+- G3 word-sync: captions pop word-by-word (scale 0.88->1, blur 5->0,
+  alpha ramp, 0.167s each), timed against the actual VO line durations.
+- G4 VO: edge-tts en-US-ChristopherNeural, 9 lines per video (hook, 7
+  captions, payoff), fit chain TTS 1.0 -> +25% -> atempo <=1.4 (recorded per
+  line in vo_schedule.json); music bed (0.62) sidechain-compressed by the VO
+  (threshold 0.02, ratio 8, attack 22ms, release 380ms) ~= -18dB under speech.
+- G5 parallax: beat 8 splits a still into a blurred scaled background and a
+  sharp feathered-ellipse foreground moving at different zoom rates (2.5D
+  feathered-layer parallax; no ML depth map - stated honestly). AI insert
+  images were attempted for all 16 categories; the image API stayed
+  rate-limited (429), so beat 7 uses the documented deep-crop punch cutaway.
+- G6 transitions: zoom-through clip (accelerating 1.0->1.42 on the hook's
+  last frame), mask-wipe clip between beats 7-8 (variants: linear, page for
+  education, passport for travel, shutter for fashion), light-leak RGBA
+  overlay on payoff entry, match-cut drop accent (impact SFX at ramp entry).
+- G7 ramps: 8-piece eased setpts curves - beauty 1.0->0.4->1.0 smoothstep,
+  energy 1.5->0.6 - no step jumps.
+- G8 styles: 16 sheets in docs/STYLES.md (palette, body/kw fonts driven
+  through variable-font axes, grade chain, scrim, kit, particles).
+  Honest substitutions: Playfair for Didot (license), Caveat script,
+  gm=-0.05 colorbalance for the magenta drift.
+- G9 hook: footage punch 130->108 eased over 12 frames + lateral pan push
+  from frame 1, hook card pop, riser+impact.
+
+## Results (16 reps)
+- QA gate: 16/16 PASS (26.8s, 1080x1920 H.264+AAC, badge-policy compliant push).
+- Scorecard: overall 9.88 avg (dims 9-10 each; lowest dim = transitions 9,
+  because zoom-through/mask-wipe are 0.4s clips by design).
+- scores.csv updated for the 16 reps only; the 9 non-reps keep their v2
+  scores (not re-rendered in this phase). Full-dataset avg now 9.63.
+- Supercut finale: test-results/supercut_phase5_16cats.mp4 (32s, label pills,
+  whoosh per cut).
+
+## Honest limits kept
+- Sources are silent: VO is synthetic narration, not diegetic audio.
+- Word-sync aligns per VO line (word i pops at start + i/n * spoken span),
+  not per-phoneme.
+- Parallax is feathered-layer, not depth-map true 3D.
+- mindset_1 was re-encoded (CRF 24) to fit Telegram's 50MB send limit.

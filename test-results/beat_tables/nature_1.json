@@ -1,149 +1,189 @@
 {
  "id": "nature_1",
- "video": "#15/25",
- "category": "The Question",
- "style": "cinematic",
- "total": 26.0,
+ "category": "NATURE",
+ "cat_key": "nature",
+ "style": "Phase 5.0 sheet (docs/STYLES.md)",
+ "total": 26.8,
  "beats": [
   {
    "start": 0.0,
    "end": 2.2,
    "type": "hook",
-   "on_screen": "full-bleed zoom punch 112->100 + animated hook card (riser+impact)",
+   "on_screen": "full-bleed punch-in 130->108 + pan push (G9) + hook card + riser/impact",
    "caption": "When did you last watch water"
   },
   {
-   "start": 2.2,
-   "end": 5.2,
-   "type": "card",
-   "on_screen": "designed bg + footage card + kinetic caption pop",
+   "start": 2.6,
+   "end": 5.6,
+   "type": "cap",
+   "on_screen": "full-bleed ken-burns + word-sync kinetic captions (G2/G3) + scrim",
    "caption": "watch the water"
   },
   {
-   "start": 5.2,
-   "end": 7.7,
-   "type": "card",
-   "on_screen": "designed bg + footage card + kinetic caption pop",
+   "start": 5.6,
+   "end": 8.1,
+   "type": "cap",
+   "on_screen": "full-bleed ken-burns + word-sync kinetic captions (G2/G3) + scrim",
    "caption": "waves set the tempo"
   },
   {
-   "start": 7.7,
-   "end": 10.3,
-   "type": "broll",
-   "on_screen": "full-bleed B-roll cutaway, alt crop region + ken-burns + whoosh",
+   "start": 8.1,
+   "end": 10.7,
+   "type": "cutaway",
+   "on_screen": "full-bleed alt-crop cutaway + category callout + whoosh",
    "caption": "slow cuts only"
   },
   {
-   "start": 10.3,
-   "end": 12.8,
-   "type": "card",
-   "on_screen": "designed bg + footage card + kinetic caption pop",
+   "start": 10.7,
+   "end": 13.2,
+   "type": "beauty",
+   "on_screen": "eased ramp 1.0->0.4->1.0 (G7) + word-sync captions",
    "caption": "cool shadows"
   },
   {
-   "start": 12.8,
-   "end": 15.4,
-   "type": "card",
-   "on_screen": "designed bg + footage card + kinetic caption pop",
+   "start": 13.2,
+   "end": 15.8,
+   "type": "pip",
+   "on_screen": "the ONE rounded PiP card <=3s on designed bg (G2) + counter",
    "caption": "breathe out"
   },
   {
-   "start": 15.4,
-   "end": 18.0,
-   "type": "broll",
-   "on_screen": "full-bleed B-roll cutaway, alt crop region + ken-burns + whoosh",
+   "start": 15.8,
+   "end": 18.4,
+   "type": "insert",
+   "on_screen": "AI-generated category insert, ken-burns + kit graphic (G5)",
    "caption": "tide is the timeline"
   },
   {
-   "start": 18.0,
-   "end": 20.8,
-   "type": "card",
-   "on_screen": "designed bg + footage card + kinetic caption pop",
+   "start": 18.8,
+   "end": 21.6,
+   "type": "parallax",
+   "on_screen": "2.5D feathered-layer parallax push + particles (G5)",
    "caption": "end on the horizon"
   },
   {
-   "start": 20.8,
-   "end": 23.0,
-   "type": "ramp",
-   "on_screen": "speed ramp 1.5x -> 0.6x full-bleed + chapter rhombus + whoosh",
+   "start": 21.6,
+   "end": 23.8,
+   "type": "energy",
+   "on_screen": "eased ramp 1.5->0.6 + match-cut drop accent + motion signature",
    "caption": null
   },
   {
-   "start": 23.0,
-   "end": 26.0,
+   "start": 23.8,
+   "end": 26.8,
    "type": "payoff",
-   "on_screen": "payoff card (echo hook kw) + progress bar + sub-bass hit",
+   "on_screen": "full-bleed dim + payoff echo card + progress bar + light-leak entry",
    "caption": "watch water. breathe out."
   }
  ],
- "graphics": [
-  "label callout: WAVE TEMPO",
-  "label callout: SLOW CUTS",
-  "counter card: CUT RATE = 3.0s",
-  "line-draw: wave line",
-  "chapter rhombus",
-  "payoff progress bar"
+ "transitions": [
+  "zoom_through",
+  "mask_wipe:linear"
  ],
- "sfx": [
-  "riser.wav @0.00s",
-  "impact.wav @2.20s",
-  "whoosh.wav @7.70s",
-  "whoosh.wav @18.00s",
-  "whoosh.wav @23.00s",
-  "click.wav @2.32s",
-  "click.wav @5.32s",
-  "click.wav @7.82s",
-  "click.wav @10.42s",
-  "click.wav @12.92s",
-  "click.wav @15.52s",
-  "click.wav @18.12s",
-  "pop.wav @2.70s",
-  "pop.wav @8.20s",
-  "pop.wav @13.20s",
-  "pop.wav @18.60s",
-  "pop.wav @21.10s",
-  "subbass.wav @23.00s"
+ "vo": [
+  {
+   "t": 0.1,
+   "text": "When did you last watch water",
+   "fit": "atempo-clamped",
+   "atempo": 1.4
+  },
+  {
+   "t": 2.72,
+   "text": "watch the water",
+   "fit": "ok",
+   "atempo": 1.0
+  },
+  {
+   "t": 5.720000000000001,
+   "text": "waves set the tempo",
+   "fit": "atempo",
+   "atempo": 1.108
+  },
+  {
+   "t": 8.219999999999999,
+   "text": "slow cuts only",
+   "fit": "atempo",
+   "atempo": 1.013
+  },
+  {
+   "t": 10.82,
+   "text": "cool shadows",
+   "fit": "atempo",
+   "atempo": 1.004
+  },
+  {
+   "t": 13.32,
+   "text": "breathe out",
+   "fit": "ok",
+   "atempo": 1.0
+  },
+  {
+   "t": 15.92,
+   "text": "tide is the timeline",
+   "fit": "atempo",
+   "atempo": 1.068
+  },
+  {
+   "t": 18.92,
+   "text": "end on the horizon",
+   "fit": "ok",
+   "atempo": 1.0
+  },
+  {
+   "t": 24.05,
+   "text": "watch water. breathe out",
+   "fit": "atempo",
+   "atempo": 1.127
+  }
  ],
+ "scorecard": {
+  "frame_fill": 10,
+  "caption_kinetics": 10,
+  "graphics": 10,
+  "motion": 10,
+  "transitions": 9,
+  "sound": 10,
+  "hook": 10,
+  "grade": 10,
+  "loop": 10,
+  "overall": 9.89
+ },
  "qa": {
-  "beats>=8": [
+  "frame_fill": [
    true,
-   10
+   "1 PiP beat 2.6s, rest full-bleed"
   ],
-  "max_beat<=4s": [
+  "caption_kinetics": [
    true,
-   3.0
+   "7 word-sync lines, textQA=ok"
   ],
   "graphics>=3": [
    true,
-   5
+   4
   ],
-  "cutaways>=2": [
+  "motion": [
    true,
-   2
+   "8 keyframed beats incl. parallax + eased ramps"
   ],
-  "kinetic_captions=7": [
+  "transitions>=2types": [
    true,
-   7
+   "2: ['mask_wipe:linear', 'zoom_through']"
   ],
-  "sfx_events>=10": [
+  "sound": [
    true,
-   18
+   "VO 9/9 lines + ducked bed + 21 SFX"
   ],
   "hook_motion": [
    true,
-   "zoom punch 112->100"
+   "punch 130->108 + pan push + card"
   ],
-  "designed_bg": [
+  "grade_accent": [
    true,
-   "gradient+grain+glow"
+   "accent px h/m/p = 106537/40228/113952"
   ],
   "payoff_echo": [
    true,
    "watch water. breathe out."
-  ],
-  "grade_pair": [
-   true,
-   "before/after"
   ],
   "res_1080x1920": [
    true,
@@ -151,32 +191,24 @@
   ],
   "dur_26s": [
    true,
-   26.0
+   26.8
   ],
   "hook_nonblank": [
    true,
-   48.1
+   43.1
   ],
   "mid_nonblank": [
    true,
-   45.1
+   37.1
   ],
   "payoff_nonblank": [
    true,
-   21.6
+   46.8
   ],
-  "accent_hook": [
+  "grade_pair": [
    true,
-   4851
-  ],
-  "accent_mid": [
-   true,
-   5200
-  ],
-  "accent_payoff": [
-   true,
-   19270
+   "before/after"
   ]
  },
- "size_mb": 34.74
+ "size_mb": 21.99
 }

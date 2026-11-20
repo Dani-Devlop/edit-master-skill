@@ -1,149 +1,189 @@
 {
  "id": "travel_1",
- "video": "#20/25",
- "category": "The Deadline",
- "style": "energetic",
- "total": 26.0,
+ "category": "TRAVEL",
+ "cat_key": "travel",
+ "style": "Phase 5.0 sheet (docs/STYLES.md)",
+ "total": 26.8,
  "beats": [
   {
    "start": 0.0,
    "end": 2.2,
    "type": "hook",
-   "on_screen": "full-bleed zoom punch 112->100 + animated hook card (riser+impact)",
+   "on_screen": "full-bleed punch-in 130->108 + pan push (G9) + hook card + riser/impact",
    "caption": "Ride this road before they pave it"
   },
   {
-   "start": 2.2,
-   "end": 5.2,
-   "type": "card",
-   "on_screen": "designed bg + footage card + kinetic caption pop",
+   "start": 2.6,
+   "end": 5.6,
+   "type": "cap",
+   "on_screen": "full-bleed ken-burns + word-sync kinetic captions (G2/G3) + scrim",
    "caption": "before they pave it"
   },
   {
-   "start": 5.2,
-   "end": 7.7,
-   "type": "card",
-   "on_screen": "designed bg + footage card + kinetic caption pop",
+   "start": 5.6,
+   "end": 8.1,
+   "type": "cap",
+   "on_screen": "full-bleed ken-burns + word-sync kinetic captions (G2/G3) + scrim",
    "caption": "empty road"
   },
   {
-   "start": 7.7,
-   "end": 10.3,
-   "type": "broll",
-   "on_screen": "full-bleed B-roll cutaway, alt crop region + ken-burns + whoosh",
+   "start": 8.1,
+   "end": 10.7,
+   "type": "cutaway",
+   "on_screen": "full-bleed alt-crop cutaway + category callout + whoosh",
    "caption": "engine as metronome"
   },
   {
-   "start": 10.3,
-   "end": 12.8,
-   "type": "card",
-   "on_screen": "designed bg + footage card + kinetic caption pop",
+   "start": 10.7,
+   "end": 13.2,
+   "type": "beauty",
+   "on_screen": "eased ramp 1.0->0.4->1.0 (G7) + word-sync captions",
    "caption": "cut on the turns"
   },
   {
-   "start": 12.8,
-   "end": 15.4,
-   "type": "card",
-   "on_screen": "designed bg + footage card + kinetic caption pop",
+   "start": 13.2,
+   "end": 15.8,
+   "type": "pip",
+   "on_screen": "the ONE rounded PiP card <=3s on designed bg (G2) + counter",
    "caption": "go now"
   },
   {
-   "start": 15.4,
-   "end": 18.0,
-   "type": "broll",
-   "on_screen": "full-bleed B-roll cutaway, alt crop region + ken-burns + whoosh",
+   "start": 15.8,
+   "end": 18.4,
+   "type": "insert",
+   "on_screen": "AI-generated category insert, ken-burns + kit graphic (G5)",
    "caption": "curves cut the edit"
   },
   {
-   "start": 18.0,
-   "end": 20.8,
-   "type": "card",
-   "on_screen": "designed bg + footage card + kinetic caption pop",
+   "start": 18.8,
+   "end": 21.6,
+   "type": "parallax",
+   "on_screen": "2.5D feathered-layer parallax push + particles (G5)",
    "caption": "last ride raw"
   },
   {
-   "start": 20.8,
-   "end": 23.0,
-   "type": "ramp",
-   "on_screen": "speed ramp 1.5x -> 0.6x full-bleed + chapter rhombus + whoosh",
+   "start": 21.6,
+   "end": 23.8,
+   "type": "energy",
+   "on_screen": "eased ramp 1.5->0.6 + match-cut drop accent + motion signature",
    "caption": null
   },
   {
-   "start": 23.0,
-   "end": 26.0,
+   "start": 23.8,
+   "end": 26.8,
    "type": "payoff",
-   "on_screen": "payoff card (echo hook kw) + progress bar + sub-bass hit",
+   "on_screen": "full-bleed dim + payoff echo card + progress bar + light-leak entry",
    "caption": "before they pave it."
   }
  ],
- "graphics": [
-  "label callout: CUT ON TURNS",
-  "label callout: RAW ROAD",
-  "counter card: LANES = 1",
-  "line-draw: road curve",
-  "chapter rhombus",
-  "payoff progress bar"
+ "transitions": [
+  "zoom_through",
+  "mask_wipe:passport"
  ],
- "sfx": [
-  "riser.wav @0.00s",
-  "impact.wav @2.20s",
-  "whoosh.wav @7.70s",
-  "whoosh.wav @18.00s",
-  "whoosh.wav @23.00s",
-  "click.wav @2.32s",
-  "click.wav @5.32s",
-  "click.wav @7.82s",
-  "click.wav @10.42s",
-  "click.wav @12.92s",
-  "click.wav @15.52s",
-  "click.wav @18.12s",
-  "pop.wav @2.70s",
-  "pop.wav @8.20s",
-  "pop.wav @13.20s",
-  "pop.wav @18.60s",
-  "pop.wav @21.10s",
-  "subbass.wav @23.00s"
+ "vo": [
+  {
+   "t": 0.1,
+   "text": "Ride this road before they pave it",
+   "fit": "atempo",
+   "atempo": 1.32
+  },
+  {
+   "t": 2.72,
+   "text": "before they pave it",
+   "fit": "ok",
+   "atempo": 1.0
+  },
+  {
+   "t": 5.720000000000001,
+   "text": "empty road",
+   "fit": "ok",
+   "atempo": 1.0
+  },
+  {
+   "t": 8.219999999999999,
+   "text": "engine as metronome",
+   "fit": "atempo",
+   "atempo": 1.046
+  },
+  {
+   "t": 10.82,
+   "text": "cut on the turns",
+   "fit": "atempo",
+   "atempo": 1.004
+  },
+  {
+   "t": 13.32,
+   "text": "go now",
+   "fit": "ok",
+   "atempo": 1.0
+  },
+  {
+   "t": 15.92,
+   "text": "curves cut the edit",
+   "fit": "ok",
+   "atempo": 1.0
+  },
+  {
+   "t": 18.92,
+   "text": "last ride raw",
+   "fit": "ok",
+   "atempo": 1.0
+  },
+  {
+   "t": 24.05,
+   "text": "before they pave it",
+   "fit": "ok",
+   "atempo": 1.0
+  }
  ],
+ "scorecard": {
+  "frame_fill": 10,
+  "caption_kinetics": 10,
+  "graphics": 10,
+  "motion": 10,
+  "transitions": 9,
+  "sound": 10,
+  "hook": 10,
+  "grade": 10,
+  "loop": 10,
+  "overall": 9.89
+ },
  "qa": {
-  "beats>=8": [
+  "frame_fill": [
    true,
-   10
+   "1 PiP beat 2.6s, rest full-bleed"
   ],
-  "max_beat<=4s": [
+  "caption_kinetics": [
    true,
-   3.0
+   "7 word-sync lines, textQA=ok"
   ],
   "graphics>=3": [
    true,
    5
   ],
-  "cutaways>=2": [
+  "motion": [
    true,
-   2
+   "8 keyframed beats incl. parallax + eased ramps"
   ],
-  "kinetic_captions=7": [
+  "transitions>=2types": [
    true,
-   7
+   "2: ['mask_wipe:passport', 'zoom_through']"
   ],
-  "sfx_events>=10": [
+  "sound": [
    true,
-   18
+   "VO 9/9 lines + ducked bed + 21 SFX"
   ],
   "hook_motion": [
    true,
-   "zoom punch 112->100"
+   "punch 130->108 + pan push + card"
   ],
-  "designed_bg": [
+  "grade_accent": [
    true,
-   "gradient+grain+glow"
+   "accent px h/m/p = 7271/6057/21522"
   ],
   "payoff_echo": [
    true,
    "before they pave it."
-  ],
-  "grade_pair": [
-   true,
-   "before/after"
   ],
   "res_1080x1920": [
    true,
@@ -151,32 +191,24 @@
   ],
   "dur_26s": [
    true,
-   26.0
+   26.8
   ],
   "hook_nonblank": [
    true,
-   37.4
+   37.8
   ],
   "mid_nonblank": [
    true,
-   34.7
+   30.3
   ],
   "payoff_nonblank": [
    true,
-   19.6
+   37.8
   ],
-  "accent_hook": [
+  "grade_pair": [
    true,
-   6753
-  ],
-  "accent_mid": [
-   true,
-   8755
-  ],
-  "accent_payoff": [
-   true,
-   19074
+   "before/after"
   ]
  },
- "size_mb": 34.06
+ "size_mb": 18.69
 }

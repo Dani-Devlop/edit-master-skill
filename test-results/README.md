@@ -123,3 +123,11 @@ payoff echo, grade pair, 1080x1920@30 H.264+AAC) - **25/25 PASS**.
   conversion (blur fill is now banned); add
   caption cadence guidance per platform; consider ducking music under any
   speech segment automatically.
+
+
+## Phase 5.0 category rollout (2026-11-20)
+16 category reps re-rendered to the reference-match standard: one per niche,
+each with its own sheet from docs/STYLES.md. QA 16/16 PASS, scorecard avg
+9.88. Beat tables in beat_tables/<vid>.json carry the per-video scorecard,
+VO schedule and transition list. Grade before/after pairs updated in
+grades/. Supercut: supercut_phase5_16cats.mp4.

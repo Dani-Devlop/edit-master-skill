@@ -45,39 +45,39 @@ Repository: https://github.com/Dani-Devlop/edit-master-skill
 - [ ] 2.18 Commit & push Phase 2
 
 ## Phase 3: Download 25 Real Videos
-- [ ] 3.1 Cars / Luxury (2 videos)
-- [ ] 3.2 Racing / Motorsport (2 videos)
-- [ ] 3.3 Branding / Corporate (2 videos)
-- [ ] 3.4 Talking Head / Interview (2 videos)
-- [ ] 3.5 Motivation / Fitness (2 videos)
-- [ ] 3.6 Mindset / Focus (1 video)
-- [ ] 3.7 Education / Learning (2 videos)
-- [ ] 3.8 City / Urban (2 videos)
-- [ ] 3.9 Nature / Landscape (1 video)
-- [ ] 3.10 Food / Restaurant (2 videos)
-- [ ] 3.11 Tech / Coding (2 videos)
-- [ ] 3.12 Travel / Destination (2 videos)
-- [ ] 3.13 Fashion / Style (1 video)
-- [ ] 3.14 Music / Performance (1 video)
-- [ ] 3.15 Product Demo (2 videos)
-- [ ] 3.16 Podcast Clip (1 video)
+- [x] 3.1 Cars / Luxury (2 videos)
+- [x] 3.2 Racing / Motorsport (2 videos)
+- [x] 3.3 Branding / Corporate (2 videos)
+- [x] 3.4 Talking Head / Interview (2 videos)
+- [x] 3.5 Motivation / Fitness (2 videos)
+- [x] 3.6 Mindset / Focus (1 video)
+- [x] 3.7 Education / Learning (2 videos)
+- [x] 3.8 City / Urban (2 videos)
+- [x] 3.9 Nature / Landscape (1 video)
+- [x] 3.10 Food / Restaurant (2 videos)
+- [x] 3.11 Tech / Coding (2 videos)
+- [x] 3.12 Travel / Destination (2 videos)
+- [x] 3.13 Fashion / Style (1 video)
+- [x] 3.14 Music / Performance (1 video)
+- [x] 3.15 Product Demo (2 videos)
+- [x] 3.16 Podcast Clip (1 video)
 
 ## Phase 4: Edit All 25 Videos
-- [ ] 4.1 Apply hook formula per category
-- [ ] 4.2 Trim, color grade, add music
-- [ ] 4.3 Add captions + hook cards (safe zones)
-- [ ] 4.4 Export 1080x1920 vertical H.264+AAC
-- [ ] 4.5 Score each 1-10 (hook/pacing/captions/sound/color/overall)
+- [x] 4.1 Apply hook formula per category
+- [x] 4.2 Trim, color grade, add music
+- [x] 4.3 Add captions + hook cards (safe zones)
+- [x] 4.4 Export 1080x1920 vertical H.264+AAC
+- [x] 4.5 Score each 1-10 (hook/pacing/captions/sound/color/overall)
 
 ## Phase 5: Test Documentation
-- [ ] 5.1 Create sources.txt (all download URLs)
-- [ ] 5.2 Create test-results/README.md (summary stats)
-- [ ] 5.3 Create test-results/scores.csv (per-video breakdown)
-- [ ] 5.4 Create test-results/notes.md (detailed analysis)
-- [ ] 5.5 Move all 25 edited videos to test-results/videos/
+- [x] 5.1 Create sources.txt (all download URLs)
+- [x] 5.2 Create test-results/README.md (summary stats)
+- [x] 5.3 Create test-results/scores.csv (per-video breakdown)
+- [x] 5.4 Create test-results/notes.md (detailed analysis)
+- [x] 5.5 Move all 25 edited videos to test-results/videos/
 
 ## Phase 6: Final Commit & Telegram Delivery
-- [ ] 6.1 Send all 25 edited videos to Telegram with caption
+- [x] 6.1 Send all 25 edited videos to Telegram with caption
 - [ ] 6.2 Commit Phase 3-5 (task.md, sources.txt, test-results/)
 - [ ] 6.3 Push to main
 - [ ] 6.4 Badge audit after push: 0 unverified (Step D)

@@ -1,0 +1,237 @@
+# Video Sources for Edit Master Skill Testing
+Generated: 2026-11-20 00:00:16 UTC
+Total: 25 videos (final edit matrix)
+Primary source: Mixkit (https://mixkit.co/free-stock-video/)
+License: Mixkit Stock Video Free License (commercial use, no attribution required)
+
+Note: 27 candidates were downloaded across all 16 categories. The task
+spec headline requires 25 videos while its category table sums to 27;
+the final matrix of 25 keeps every category covered, with Cars/Luxury
+and Product Demo contributing one video each. The two extra candidates
+(car interior detail, orange-juice pour) remain in raw_videos/ unused.
+
+## 1. Cars / Luxury
+- File: raw_videos/cars_2.mp4
+- Source: https://assets.mixkit.co/videos/35205/35205-720.mp4
+- Mixkit item: https://mixkit.co/free-stock-video/luxury-sports-car-in-nature-35205/
+- Title: luxury sports car in nature
+- Duration: 13.4s | Resolution: 1280x720
+- Downloaded: 2026-11-19 23:24:45 UTC
+- License: Mixkit Stock Video Free License
+
+## 2. Racing / Motorsport
+- File: raw_videos/racing_1.mp4
+- Source: https://assets.mixkit.co/videos/28781/28781-720.mp4
+- Mixkit item: https://mixkit.co/free-stock-video/rally-car-driving-through-a-dirt-road-in-the-forest-28781/
+- Title: rally car driving through a dirt road in the forest
+- Duration: 14.3s | Resolution: 1280x720
+- Downloaded: 2026-11-19 23:24:50 UTC
+- License: Mixkit Stock Video Free License
+
+## 3. Racing / Motorsport
+- File: raw_videos/racing_2.mp4
+- Source: https://assets.mixkit.co/videos/11950/11950-720.mp4
+- Mixkit item: https://mixkit.co/free-stock-video/bikes-racing-on-a-dirt-track-11950/
+- Title: bikes racing on a dirt track
+- Duration: 39.6s | Resolution: 1280x720
+- Downloaded: 2026-11-19 23:56:41 UTC
+- License: Mixkit Stock Video Free License
+
+## 4. Branding / Corporate
+- File: raw_videos/branding_1.mp4
+- Source: https://assets.mixkit.co/videos/13218/13218-720.mp4
+- Mixkit item: https://mixkit.co/free-stock-video/silhouette-of-business-people-talking-by-highrise-window-13218/
+- Title: silhouette of business people talking by highrise window
+- Duration: 15.6s | Resolution: 1280x720
+- Downloaded: 2026-11-19 23:24:56 UTC
+- License: Mixkit Stock Video Free License
+
+## 5. Branding / Corporate
+- File: raw_videos/branding_2.mp4
+- Source: https://assets.mixkit.co/videos/221/221-720.mp4
+- Mixkit item: https://mixkit.co/free-stock-video/reflection-of-a-screen-in-glasses-221/
+- Title: reflection of a screen in glasses
+- Duration: 20.1s | Resolution: 1280x720
+- Downloaded: 2026-11-19 23:24:57 UTC
+- License: Mixkit Stock Video Free License
+
+## 6. Talking Head / Interview
+- File: raw_videos/talkinghead_1.mp4
+- Source: https://assets.mixkit.co/videos/14041/14041-720.mp4
+- Mixkit item: https://mixkit.co/free-stock-video/man-talking-in-a-video-conference-call-14041/
+- Title: man talking in a video conference call
+- Duration: 18.6s | Resolution: 1280x720
+- Downloaded: 2026-11-19 23:25:00 UTC
+- License: Mixkit Stock Video Free License
+
+## 7. Talking Head / Interview
+- File: raw_videos/talkinghead_2.mp4
+- Source: https://assets.mixkit.co/videos/12892/12892-720.mp4
+- Mixkit item: https://mixkit.co/free-stock-video/young-business-people-listen-to-lecture-in-conference-room-12892/
+- Title: young business people listen to lecture in conference room
+- Duration: 6.6s | Resolution: 1280x720
+- Downloaded: 2026-11-19 23:56:43 UTC
+- License: Mixkit Stock Video Free License
+
+## 8. Motivation / Fitness
+- File: raw_videos/fitness_1.mp4
+- Source: https://assets.mixkit.co/videos/50972/50972-720.mp4
+- Mixkit item: https://mixkit.co/free-stock-video/a-young-woman-takes-a-breath-before-continuing-with-her-50972/
+- Title: a young woman takes a breath before continuing with her
+- Duration: 17.1s | Resolution: 1280x720
+- Downloaded: 2026-11-19 23:25:10 UTC
+- License: Mixkit Stock Video Free License
+
+## 9. Motivation / Fitness
+- File: raw_videos/fitness_2.mp4
+- Source: https://assets.mixkit.co/videos/52079/52079-720.mp4
+- Mixkit item: https://mixkit.co/free-stock-video/a-young-muscular-man-training-at-the-gym-with-the-52079/
+- Title: a young muscular man training at the gym with the
+- Duration: 6.5s | Resolution: 720x1280
+- Downloaded: 2026-11-19 23:25:11 UTC
+- License: Mixkit Stock Video Free License
+
+## 10. Mindset / Focus
+- File: raw_videos/mindset_1.mp4
+- Source: https://assets.mixkit.co/videos/15017/15017-720.mp4
+- Mixkit item: https://mixkit.co/free-stock-video/woman-meditating-at-the-coast-15017/
+- Title: woman meditating at the coast
+- Duration: 16.5s | Resolution: 1280x720
+- Downloaded: 2026-11-19 23:25:15 UTC
+- License: Mixkit Stock Video Free License
+
+## 11. Education / Learning
+- File: raw_videos/education_1.mp4
+- Source: https://assets.mixkit.co/videos/14956/14956-720.mp4
+- Mixkit item: https://mixkit.co/free-stock-video/young-man-drawing-at-his-desk-14956/
+- Title: young man drawing at his desk
+- Duration: 11.3s | Resolution: 1280x720
+- Downloaded: 2026-11-19 23:25:23 UTC
+- License: Mixkit Stock Video Free License
+
+## 12. Education / Learning
+- File: raw_videos/education_2.mp4
+- Source: https://assets.mixkit.co/videos/28321/28321-720.mp4
+- Mixkit item: https://mixkit.co/free-stock-video/frustrated-student-at-his-school-studying-his-notes-28321/
+- Title: frustrated student at his school studying his notes
+- Duration: 22.1s | Resolution: 1280x720
+- Downloaded: 2026-11-19 23:25:23 UTC
+- License: Mixkit Stock Video Free License
+
+## 13. City / Urban
+- File: raw_videos/city_1.mp4
+- Source: https://assets.mixkit.co/videos/11/11-720.mp4
+- Mixkit item: https://mixkit.co/free-stock-video/aerial-view-of-city-traffic-at-night-11/
+- Title: aerial view of city traffic at night
+- Duration: 12.5s | Resolution: 1280x720
+- Downloaded: 2026-11-19 23:25:32 UTC
+- License: Mixkit Stock Video Free License
+
+## 14. City / Urban
+- File: raw_videos/city_2.mp4
+- Source: https://assets.mixkit.co/videos/1606/1606-720.mp4
+- Mixkit item: https://mixkit.co/free-stock-video/city-train-driving-under-a-bridge-1606/
+- Title: city train driving under a bridge
+- Duration: 20.0s | Resolution: 1280x720
+- Downloaded: 2026-11-19 23:25:33 UTC
+- License: Mixkit Stock Video Free License
+
+## 15. Nature / Landscape
+- File: raw_videos/nature_1.mp4
+- Source: https://assets.mixkit.co/videos/1954/1954-720.mp4
+- Mixkit item: https://mixkit.co/free-stock-video/sea-waves-in-a-little-bay-1954/
+- Title: sea waves in a little bay
+- Duration: 15.3s | Resolution: 1280x720
+- Downloaded: 2026-11-19 23:25:38 UTC
+- License: Mixkit Stock Video Free License
+
+## 16. Food / Restaurant
+- File: raw_videos/food_1.mp4
+- Source: https://assets.mixkit.co/videos/10419/10419-720.mp4
+- Mixkit item: https://mixkit.co/free-stock-video/fresh-sliced-fruit-placed-on-a-table-10419/
+- Title: fresh sliced fruit placed on a table
+- Duration: 12.0s | Resolution: 1280x720
+- Downloaded: 2026-11-19 23:25:41 UTC
+- License: Mixkit Stock Video Free License
+
+## 17. Food / Restaurant
+- File: raw_videos/food_2.mp4
+- Source: https://assets.mixkit.co/videos/10420/10420-720.mp4
+- Mixkit item: https://mixkit.co/free-stock-video/fresh-vegetables-on-a-wooden-board-close-up-view-10420/
+- Title: fresh vegetables on a wooden board close up view
+- Duration: 12.0s | Resolution: 1280x720
+- Downloaded: 2026-11-19 23:25:42 UTC
+- License: Mixkit Stock Video Free License
+
+## 18. Tech / Coding
+- File: raw_videos/tech_1.mp4
+- Source: https://assets.mixkit.co/videos/12748/12748-720.mp4
+- Mixkit item: https://mixkit.co/free-stock-video/world-map-in-a-digital-world-12748/
+- Title: world map in a digital world
+- Duration: 15.0s | Resolution: 1280x720
+- Downloaded: 2026-11-19 23:25:44 UTC
+- License: Mixkit Stock Video Free License
+
+## 19. Tech / Coding
+- File: raw_videos/tech_2.mp4
+- Source: https://assets.mixkit.co/videos/23282/23282-720.mp4
+- Mixkit item: https://mixkit.co/free-stock-video/bluish-data-center-hallway-23282/
+- Title: bluish data center hallway
+- Duration: 14.3s | Resolution: 1280x720
+- Downloaded: 2026-11-19 23:25:45 UTC
+- License: Mixkit Stock Video Free License
+
+## 20. Travel / Destination
+- File: raw_videos/travel_1.mp4
+- Source: https://assets.mixkit.co/videos/39912/39912-720.mp4
+- Mixkit item: https://mixkit.co/free-stock-video/man-traveling-by-motorcycle-on-an-empty-road-39912/
+- Title: man traveling by motorcycle on an empty road
+- Duration: 11.9s | Resolution: 1280x720
+- Downloaded: 2026-11-19 23:25:51 UTC
+- License: Mixkit Stock Video Free License
+
+## 21. Travel / Destination
+- File: raw_videos/travel_2.mp4
+- Source: https://assets.mixkit.co/videos/40102/40102-720.mp4
+- Mixkit item: https://mixkit.co/free-stock-video/panorama-from-the-window-of-an-airplane-at-dusk-40102/
+- Title: panorama from the window of an airplane at dusk
+- Duration: 26.4s | Resolution: 1280x720
+- Downloaded: 2026-11-19 23:25:52 UTC
+- License: Mixkit Stock Video Free License
+
+## 22. Fashion / Style
+- File: raw_videos/fashion_1.mp4
+- Source: https://assets.mixkit.co/videos/23327/23327-720.mp4
+- Mixkit item: https://mixkit.co/free-stock-video/hand-selecting-through-clothes-23327/
+- Title: hand selecting through clothes
+- Duration: 9.9s | Resolution: 1280x720
+- Downloaded: 2026-11-19 23:25:59 UTC
+- License: Mixkit Stock Video Free License
+
+## 23. Music / Performance
+- File: raw_videos/music_1.mp4
+- Source: https://assets.mixkit.co/videos/303/303-720.mp4
+- Mixkit item: https://mixkit.co/free-stock-video/couple-dancing-in-nightclub-303/
+- Title: couple dancing in nightclub
+- Duration: 16.6s | Resolution: 1280x720
+- Downloaded: 2026-11-19 23:26:08 UTC
+- License: Mixkit Stock Video Free License
+
+## 24. Product Demo
+- File: raw_videos/product_2.mp4
+- Source: https://assets.mixkit.co/videos/144/144-720.mp4
+- Mixkit item: https://mixkit.co/free-stock-video/hands-shown-texting-on-a-smartphone-144/
+- Title: hands shown texting on a smartphone
+- Duration: 16.3s | Resolution: 1280x720
+- Downloaded: 2026-11-19 23:56:59 UTC
+- License: Mixkit Stock Video Free License
+
+## 25. Podcast Clip
+- File: raw_videos/podcast_1.mp4
+- Source: https://assets.mixkit.co/videos/2947/2947-720.mp4
+- Mixkit item: https://mixkit.co/free-stock-video/presenters-recording-a-podcast-2947/
+- Title: presenters recording a podcast
+- Duration: 10.3s | Resolution: 1280x720
+- Downloaded: 2026-11-19 23:26:15 UTC
+- License: Mixkit Stock Video Free License
+

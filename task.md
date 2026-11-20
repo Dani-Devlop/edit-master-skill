@@ -117,4 +117,4 @@ Repository: https://github.com/Dani-Devlop/edit-master-skill
 - [x] 8.0.6 Benchmark: TALKING-HEAD full re-edit + beat table + QA gate + scorecard -> Telegram (WAIT approval)
 - [x] 8.0.7 16-category rollout (after approval) with docs/STYLES.md palettes
 - [x] 8.0.8 Supercut v3 (30-32s) + SKILL.md R1-R12 section + docs/STYLES.md + test-results update
-- [ ] 8.0.9 Commit + push main (badge policy) + badge audit + Wavely 100% final report
+- [x] 8.0.9 Commit + push main (badge policy) + badge audit + Wavely 100% final report

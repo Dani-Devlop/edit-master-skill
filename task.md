@@ -89,5 +89,5 @@ Repository: https://github.com/Dani-Devlop/edit-master-skill
 - [x] 4.5.3 QA gate pass on benchmark + Telegram delivery with beat table + score
 - [x] 4.5.4 Old-vs-new comparison clip (first 5s side-by-side)
 - [x] 4.5.5 Batch re-edit remaining 24 videos to premium standard
-- [ ] 4.5.6 Update test-results docs (scores.csv, notes.md, README.md)
-- [ ] 4.5.7 Commit + push with badge policy audit
+- [x] 4.5.6 Update test-results docs (scores.csv, notes.md, README.md)
+- [x] 4.5.7 Commit + push with badge policy audit

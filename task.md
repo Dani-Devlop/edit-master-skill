@@ -42,7 +42,7 @@ Repository: https://github.com/Dani-Devlop/edit-master-skill
 - [x] 2.15 .github/workflows/ci.yml (markdown lint, link check, SKILL.md structure)
 - [x] 2.16 .github/workflows/release.yml (auto-release on tag)
 - [x] 2.17 Makefile (install, test, docs, clean targets)
-- [ ] 2.18 Commit & push Phase 2
+- [x] 2.18 Commit & push Phase 2
 
 ## Phase 3: Download 25 Real Videos
 - [x] 3.1 Cars / Luxury (2 videos)

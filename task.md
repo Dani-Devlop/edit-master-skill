@@ -78,7 +78,7 @@ Repository: https://github.com/Dani-Devlop/edit-master-skill
 
 ## Phase 6: Final Commit & Telegram Delivery
 - [x] 6.1 Send all 25 edited videos to Telegram with caption
-- [ ] 6.2 Commit Phase 3-5 (task.md, sources.txt, test-results/)
-- [ ] 6.3 Push to main
-- [ ] 6.4 Badge audit after push: 0 unverified (Step D)
+- [x] 6.2 Commit Phase 3-5 (task.md, sources.txt, test-results/)
+- [x] 6.3 Push to main
+- [x] 6.4 Badge audit after push: 0 unverified (Step D)
 - [ ] 6.5 Send final Wavely 100% report to Telegram

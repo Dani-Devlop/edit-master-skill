@@ -1,0 +1,110 @@
+{
+ "video": "/home/z/my-project/p8work/render8/travel_1/final_tg.mp4",
+ "sha256_file": "c2305618b8c543b88d8ac053db17e7a0a284f710593030319b4ddcad2c2755a9",
+ "checks": [
+  {
+   "name": "G6 no dead frames + composed frame 0",
+   "ok": false,
+   "detail": "dead=0 frames0_luma=7.1 std=20.7"
+  },
+  {
+   "name": "G8a whip on every comp change (events >= planned beats - 2)",
+   "ok": false,
+   "detail": "events=5 planned_beats=10 sustained=[69, 57, 57, 70, 60]"
+  },
+  {
+   "name": "G8b >=1 recursive zoom-through",
+   "ok": true,
+   "detail": "event@0.07s scale=0.28"
+  },
+  {
+   "name": "G8c >=1 invert/negative bite",
+   "ok": true,
+   "detail": "frame 4 @0.13s luma=8.2 std=20.7"
+  },
+  {
+   "name": "G9 no consecutive comps similarity>0.9",
+   "ok": true,
+   "detail": "pairs=4 bad=[]"
+  },
+  {
+   "name": "G2 hook words legible @2s",
+   "ok": true,
+   "detail": "hook=['BEFORE THEY', 'PAVE IT'] matched=2/2 @t=2.0 words_seen=5"
+  },
+  {
+   "name": "G3 giant word <=0.92W",
+   "ok": false,
+   "detail": "measured=['PAVE IT@0.3:1.00W', 'ROAD@2.9:1.00W', 'NOW@5.5:1.00W', 'RAW@8.0:1.00W'] bad=['PAVE IT@0.3:1.00', 'ROAD@2.9:1.00', 'NOW@5.5:1.00']"
+  },
+  {
+   "name": "G4 card labels untruncated + no dup card hashes",
+   "ok": false,
+   "detail": "cards=1 dup_hashes=0 bad=['the turn:label-ocr-missing', 'the raw:label-ocr-missing']"
+  },
+  {
+   "name": "G5 phone text contrast>=4.5 + not over Mode B footage",
+   "ok": false,
+   "detail": "phone=0 bad=['beat3@7.7:plate-over-footage', 'beat4@10.4:plate-over-footage', 'beat5@12.9:plate-over-footage', 'beat6@15.5:plate-over-footage']"
+  },
+  {
+   "name": "G7 captions OCR-present on message beats",
+   "ok": false,
+   "detail": "caption_beats=10 sampled=6 bad=['t5.2:no-caption-ocr', 't10.4:no-caption-ocr']"
+  },
+  {
+   "name": "G10 payoff + end card + loop echo in last 4s",
+   "ok": false,
+   "detail": "payoff=['RUN IT', 'BACK'] endcard_seen=False loop=RUN words=35"
+  },
+  {
+   "name": "G11 occlusion pixel-verified + matte fps==output fps + face-overlap 0",
+   "ok": true,
+   "detail": "occ_bad=[] face_bad=[] matte_fps=None out_fps=30"
+  },
+  {
+   "name": "G12 -14 LUFS +/-0.5, TP<=-1.5, SFX events==entrances",
+   "ok": false,
+   "detail": "lufs=-14.3 tp=-1.3 onsets=71 entrances=53 matched=37 unmatched_onsets=34"
+  },
+  {
+   "name": "G13 family palette present on every beat",
+   "ok": true,
+   "detail": "beats=10 bad=[]"
+  },
+  {
+   "name": "G14 family signature element present",
+   "ok": true,
+   "detail": "starburst_near_lines=99"
+  },
+  {
+   "name": "G1 zero halftone/grid over footage-or-subject (Mode B beats)",
+   "ok": true,
+   "detail": "violations=[]"
+  }
+ ],
+ "npass": 8,
+ "n": 16,
+ "overall_pass": false,
+ "measured": {
+  "lufs": -14.3,
+  "tp": -1.3,
+  "fps": 30.0,
+  "dur": 26.4,
+  "w": 1080,
+  "h": 1920,
+  "events": [
+   0.07,
+   12.9,
+   15.5,
+   20.7,
+   22.9
+  ],
+  "hook": [
+   "BEFORE THEY",
+   "PAVE IT"
+  ],
+  "family": "F3"
+ },
+ "gate_sha256": "a177eae31fc9f94275befefac08503c89b54fedbfe515d7f24b4128920901cca"
+}

@@ -1,0 +1,113 @@
+{
+ "video": "/home/z/my-project/p11work/render11/product_2/final.mp4",
+ "sha256_file": "10f0590eb16ef5f7f7d1839d788d2b6baadc665cb6852232a2bef468392c807c",
+ "checks": [
+  {
+   "name": "G6 no dead frames + composed frame 0",
+   "ok": true,
+   "detail": "dead=0 frames0_luma=45.7 std=34.4"
+  },
+  {
+   "name": "G8a whip on every comp change (events >= planned beats - 2)",
+   "ok": true,
+   "detail": "events=8 planned_beats=10 win_frames=[8, 8, 6, 7, 6, 5, 7, 8]"
+  },
+  {
+   "name": "G8b >=1 recursive zoom-through",
+   "ok": true,
+   "detail": "frame72->97 scale=0.02"
+  },
+  {
+   "name": "G8c >=1 invert/negative bite",
+   "ok": true,
+   "detail": "frame 75 @2.50s luma=25.5 std=26.1"
+  },
+  {
+   "name": "G9 no consecutive comps similarity>0.9",
+   "ok": true,
+   "detail": "pairs=7 bad=[]"
+  },
+  {
+   "name": "G2 hook words legible @2s",
+   "ok": true,
+   "detail": "hook=['NO MORE', 'WHITE'] matched=2/2 @t=1.2 words_seen=12"
+  },
+  {
+   "name": "G3 giant word <=0.92W (declared band + in-band glyph span)",
+   "ok": true,
+   "detail": "measured=['WHITE@0:span=0.30W', 'SCALE@2.5:span=0.39W', 'ALIVE@7.6:span=0.14W', 'WHITE@10.1:span=0.23W', 'SCALE@12.6:span=0.39W', 'SELLS@15.2:span=0.11W'] bad=[]"
+  },
+  {
+   "name": "G4 card labels untruncated + no dup card hashes",
+   "ok": true,
+   "detail": "cards=3 dup_hashes=0 bad=[]"
+  },
+  {
+   "name": "G5 phone text contrast>=4.5 + not over Mode B footage",
+   "ok": true,
+   "detail": "phone=1 bad=[]"
+  },
+  {
+   "name": "G7 captions OCR-present on message beats",
+   "ok": true,
+   "detail": "caption_beats=5 sampled=5 bad=[]"
+  },
+  {
+   "name": "G10 payoff + end card + loop echo in last 4s",
+   "ok": true,
+   "detail": "payoff=['ONE MORE', 'TIME'] ocr=True endcard_seen=True loop=WHITE ocr_seen=True pixel_loop=True words=23"
+  },
+  {
+   "name": "G11 occlusion pixel-verified + matte fps==output fps + face-overlap 0",
+   "ok": true,
+   "detail": "occ_bad=[] face_bad=[] matte_fps=30 out_fps=30"
+  },
+  {
+   "name": "G12 -14 LUFS +/-0.5, TP<=-1.5, SFX events==entrances",
+   "ok": true,
+   "detail": "lufs=-14.5 tp=-1.5 onsets=22 entrances=18 matched=18 unmatched_onsets=4"
+  },
+  {
+   "name": "G13 family palette present on every beat",
+   "ok": true,
+   "detail": "beats=10 bad=[]"
+  },
+  {
+   "name": "G14 family signature element present",
+   "ok": true,
+   "detail": "typewriter=True chars 19->49 plate=0.00"
+  },
+  {
+   "name": "G1 zero halftone/grid over footage-or-subject (Mode B beats)",
+   "ok": true,
+   "detail": "violations=[]"
+  }
+ ],
+ "npass": 16,
+ "n": 16,
+ "overall_pass": true,
+ "measured": {
+  "lufs": -14.5,
+  "tp": -1.5,
+  "fps": 30.0,
+  "dur": 25.1,
+  "w": 1080,
+  "h": 1920,
+  "events": [
+   2.5,
+   5.0,
+   7.6,
+   10.1,
+   12.6,
+   15.2,
+   20.3,
+   22.7
+  ],
+  "hook": [
+   "NO MORE",
+   "WHITE"
+  ],
+  "family": "F2"
+ },
+ "gate_sha256": "749e28bc3d79cba2fb22a2c903e3966296e62c3212bd839d4c593ff2e60c568b"
+}

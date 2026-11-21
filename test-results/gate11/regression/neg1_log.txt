@@ -1,0 +1,29 @@
+STAGE probe done
+GATE neg1_final.mp4 540x960@30.0 4.0s
+STAGE series start
+STAGE series done 120
+FAIL G6 no dead frames + composed frame 0 | dead=0 frames0_luma=240.9 std=1.2
+FAIL G8a whip on every comp change (events >= planned beats - 2) | events=1 planned_beats=1 win_frames=[0]
+STAGE zoom start
+FAIL G8b >=1 recursive zoom-through | none found
+FAIL G8c >=1 invert/negative bite | none
+OK   G9 no consecutive comps similarity>0.9 | pairs=0 bad=[]
+FAIL G2 hook words legible @2s | hook=['HOOK'] matched=0/1 @t=1.0 words_seen=0
+FAIL G3 giant word <=0.92W (declared band + in-band glyph span) | measured=[] bad=[]
+FAIL G4 card labels untruncated + no dup card hashes | cards=0 dup_hashes=0 bad=[]
+FAIL G5 phone text contrast>=4.5 + not over Mode B footage | phone=0 bad=['beat0@0.0:plate-over-footage']
+FAIL G7 captions OCR-present on message beats | caption_beats=1 sampled=1 bad=['t0.0:no-caption-ocr']
+FAIL G10 payoff + end card + loop echo in last 4s | payoff=['RUN'] endcard_seen=False loop=HOOK words=0
+OK   G11 occlusion pixel-verified + matte fps==output fps + face-overlap 0 | occ_bad=[] face_bad=[] matte_fps=None out_fps=30
+STAGE audio start
+/home/z/my-project/scripts/p11_gate.py:145: UserWarning: PySoundFile failed. Trying audioread instead.
+  y, _ = librosa.load(path, sr=sr, mono=True)
+/home/z/.venv/lib/python3.12/site-packages/librosa/core/audio.py:184: FutureWarning: librosa.core.audio.__audioread_load
+	Deprecated as of librosa version 0.10.0.
+	It will be removed in librosa version 1.0.
+  y, sr_native = __audioread_load(path, offset, duration, dtype)
+FAIL G12 -14 LUFS +/-0.5, TP<=-1.5, SFX events==entrances | lufs=-13.2 tp=-2.0 onsets=2 entrances=1 matched=1 unmatched_onsets=1
+FAIL G13 family palette present on every beat | beats=1 bad=['beat0@0.0:0.000']
+FAIL G14 family signature element present | tape=False bracket_quads=0
+FAIL G1 zero halftone/grid over footage-or-subject (Mode B beats) | violations=['beat0@0.3:score=0.25', 'beat0@0.9:score=0.25', 'beat0@1.5:score=0.25']
+SUMMARY 2/16 PASS overall=FAIL

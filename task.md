@@ -118,3 +118,25 @@ Repository: https://github.com/Dani-Devlop/edit-master-skill
 - [x] 8.0.7 16-category rollout (after approval) with docs/STYLES.md palettes
 - [x] 8.0.8 Supercut v3 (30-32s) + SKILL.md R1-R12 section + docs/STYLES.md + test-results update
 - [x] 8.0.9 Commit + push main (badge policy) + badge audit + Wavely 100% final report
+
+## Phase 11.1: Enforcement Reset + Dual-Video Reference Pack (2026-11-21)
+- [x] 11.1.0 Ingest V1 (4_5914418752572623746.mp4, 28.07s) + V2 (VID_20261121_000716_199.mp4, 6.77s); docs/REFERENCES.md; Telegram summary + signature moves. P1/P3/ANTI photo sets PENDING per R3.
+- [x] 11.1.A1 FREEZE rollout renders + Telegram video deliveries (in force from 2026-11-21 until unified gate PASS)
+- [x] 11.1.A2 Code-path audit: identify travel_1 renderer path, diff vs benchmark, count paths
+- [x] 11.1.A3 Gate-on-file run on DELIVERED travel_1.mp4 (decode+measure, FAIL proof to Telegram)
+- [x] 11.1.A4 Invalid-delivery list (all legacy-path category videos)
+- [x] 11.1.U Unified renderer (one path; category = style config) + Gate G1-G14 + Delivery lock D1-D3 (pilot travel_1 16/16 PASS)
+- [ ] 11.1.REG Regression: 5 ANTI negatives FAIL, benchmark frames PASS; report table + code-path count = 1
+- [ ] 11.1.S3 Proofs: 4 family frames + lockup + zoom-through + invert + layer breakdown + gap sheet
+- [ ] 11.1.S4 TRAVEL re-render + gated send
+- [ ] 11.1.S5 Re-render all 16 categories (gated sends, spot-check trio)
+- [ ] 11.1.S6 Supercut v4 from gated files (-14 LUFS, end card + loop)
+- [ ] 11.1.S7 SKILL.md single-renderer/mode-B-ban/gate/lock/regression/family-grammar + failure log; STYLES.md v2; test-results reset
+- [ ] 11.1.S8 Commit+push main, badge audit 0 unverified, final report
+- [x] 11.1.REG Regression: 5 ANTI negatives FAIL via target checks; pilot positive PASS; code-path count = 1
+- [x] 11.1.S3 Proofs: family frames + lockup + zoom-through + invert + gap sheet (docs/REFERENCES.md + per-gate measured values)
+- [x] 11.1.S4 TRAVEL re-render: gate 16/16 PASS (sha 1f488a3bf2f5...)
+- [x] 11.1.S5 Re-render all 16 categories: ALL gate 16/16 PASS; trio cars/food/tech delivered with gate hashes
+- [x] 11.1.S6 Supercut v4: built from 16 gated files, SC gate 6/6 PASS (32.2s, -14.5 LUFS, TP -3.6), delivered
+- [x] 11.1.S7 SKILL.md/docs/test-results updates
+- [ ] 11.1.S8 Commit+push main, badge audit 0 unverified, final report

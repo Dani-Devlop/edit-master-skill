@@ -202,3 +202,34 @@ zoom-through exit -> b3 card cascade + connector -> b4 phone typing ->
 b5 AI surreal insert + pill + impact -> b6 cards + connector -> b7 signature
 type -> b8 echo phone (hook words retype) -> b9 payoff (loop the hook).
 Every beat ends with a graphics-only whip blur (subject/object stays sharp).
+
+---
+
+# STYLES v2 — Phase 11.1 family system (VIDEO-2 reference wins)
+
+16 categories map onto four VIDEO-2 families (all Mode A canvas compositions unless the
+category's footage has no matte-able subject — then message beats run Mode B footage-first
+per the Mode rules). Category identity = copy + cards + insert world + signature motion;
+palette/type = family system.
+
+| Category | Family | Canvas | Accent | Signature graphics |
+| --- | --- | --- | --- | --- |
+| talkinghead_1 | F1 | white 245,246,242 | neon-yellow 190,245,40 | tape + corner brackets + scramble-decode |
+| podcast_1 | F1 | white | neon-yellow | tape + brackets + scramble |
+| education_1 | F1 | white | neon-yellow | tape + brackets + scramble + vertical word-stack |
+| fitness_1 | F1 | white | neon-yellow | tape + brackets + v-stack + pixel blocks |
+| food_1 | F2 | navy 14,28,62 | blue 88,148,255 | glass phone panel + typewriter + orbit task cards |
+| product_2 | F2 | navy | blue | glass panel + typewriter + orbit cards |
+| tech_1 | F2 | navy | blue | glass panel + typewriter + orbit cards |
+| branding_1 | F2 | navy | blue | glass panel + typewriter + orbit cards |
+| racing_1 | F3 | maroon 46,10,20 | red-pink 255,92,110 | pixel-mono type + starburst draw-on + pixel particles |
+| cars_2 | F3 | maroon | red-pink | pixel-mono + starburst + particles |
+| city_1 | F3 | maroon | red-pink | pixel-mono + starburst + particles |
+| music_1 | F3 | maroon | red-pink | pixel-mono + starburst + particles |
+| fashion_1 | F4 | light-gray 238,238,241 | pink 250,112,142 | odometer + blob mascots + icon rows |
+| mindset_1 | F4 | light-gray | pink | odometer + mascots + icon rows |
+| travel_1 | F4 | light-gray (insert backdrops on canvas beats) | pink | odometer + mascots + icon rows |
+| nature_1 | F4 | light-gray | pink | odometer + mascots + icon rows |
+
+Superseded: the Phase-5.0 per-category palettes and the Phase-8 F1/F2/F3 matte-vs-scrim
+depth families (the 6 footage-first scrim renders measured in the A3 audit are invalid).

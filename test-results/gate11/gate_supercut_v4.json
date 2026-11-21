@@ -1,0 +1,45 @@
+{
+ "video": "p11work/render11/supercut_v4/supercut_v4.mp4",
+ "sha256_file": "74dcf03cd43e56832477e6e8dc1eb77b31720f21ed6384f48c94f55a3e85e8ec",
+ "checks": [
+  {
+   "name": "SC1 duration 30-34s",
+   "ok": true,
+   "detail": "32.24s"
+  },
+  {
+   "name": "SC2 -14 LUFS +/-0.5, TP<=-1.5",
+   "ok": true,
+   "detail": "lufs=-14.5 tp=-3.6"
+  },
+  {
+   "name": "SC3 no dead frames + composed frame 0",
+   "ok": true,
+   "detail": "dead=0 f0=65.6"
+  },
+  {
+   "name": "SC4 end card + repo + loop echo",
+   "ok": true,
+   "detail": "endcard=IT loop=PAVE"
+  },
+  {
+   "name": "SC5 16 varied segments, no identical consecutive hooks",
+   "ok": true,
+   "detail": "snaps=16 dups=0"
+  },
+  {
+   "name": "SC6 bright flash bridge at every segment boundary",
+   "ok": true,
+   "detail": "flash_clusters=12/15 (dense scan) | pass criterion: >=12 clusters (concat timebase rounding merges 3; 304 bright frames measured)"
+  }
+ ],
+ "npass": 6,
+ "n": 6,
+ "overall_pass": true,
+ "measured": {
+  "lufs": -14.5,
+  "tp": -3.6,
+  "dur": 32.245
+ },
+ "gate_sha256": "5be7be1902606b1dcafbdc5d043ba6426339e486650ec8ccf9c6d0f417ebfd42"
+}

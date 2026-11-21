@@ -1,0 +1,114 @@
+{
+ "video": "/home/z/my-project/p11work/render11/fitness_1/final.mp4",
+ "sha256_file": "e379d42e9d905be9638663b065b931d15d279efde398c858ed72bb59c8066d78",
+ "checks": [
+  {
+   "name": "G6 no dead frames + composed frame 0",
+   "ok": true,
+   "detail": "dead=0 frames0_luma=217.4 std=60.0"
+  },
+  {
+   "name": "G8a whip on every comp change (events >= planned beats - 2)",
+   "ok": true,
+   "detail": "events=9 planned_beats=10 win_frames=[6, 8, 8, 6, 5, 8, 6, 6, 6]"
+  },
+  {
+   "name": "G8b >=1 recursive zoom-through",
+   "ok": true,
+   "detail": "frame523->549 scale=0.61"
+  },
+  {
+   "name": "G8c >=1 invert/negative bite",
+   "ok": true,
+   "detail": "frame 75 @2.50s luma=18.2 std=18.7"
+  },
+  {
+   "name": "G9 no consecutive comps similarity>0.9",
+   "ok": true,
+   "detail": "pairs=8 bad=[]"
+  },
+  {
+   "name": "G2 hook words legible @2s",
+   "ok": true,
+   "detail": "hook=['DO NOT', 'POST IT'] matched=2/2 @t=1.2 words_seen=8"
+  },
+  {
+   "name": "G3 giant word <=0.92W (declared band + in-band glyph span)",
+   "ok": true,
+   "detail": "measured=['POST IT@0:span=0.39W', 'THE EXHALE@2.5:span=0.41W', 'POST IT@7.6:span=0.26W', 'POST IT@10.1:span=0.34W', 'THE EXHALE@12.6:span=0.41W', 'THE AESTHETIC@15.2:span=0.34W'] bad=[]"
+  },
+  {
+   "name": "G4 card labels untruncated + no dup card hashes",
+   "ok": true,
+   "detail": "cards=3 dup_hashes=0 bad=[]"
+  },
+  {
+   "name": "G5 phone text contrast>=4.5 + not over Mode B footage",
+   "ok": true,
+   "detail": "phone=1 bad=[]"
+  },
+  {
+   "name": "G7 captions OCR-present on message beats",
+   "ok": true,
+   "detail": "caption_beats=5 sampled=5 bad=[]"
+  },
+  {
+   "name": "G10 payoff + end card + loop echo in last 4s",
+   "ok": true,
+   "detail": "payoff=['RUN IT', 'BACK'] ocr=False endcard_seen=True loop=POST IT ocr_seen=True pixel_loop=True words=27"
+  },
+  {
+   "name": "G11 occlusion pixel-verified + matte fps==output fps + face-overlap 0",
+   "ok": true,
+   "detail": "occ_bad=[] face_bad=[] matte_fps=30 out_fps=30"
+  },
+  {
+   "name": "G12 -14 LUFS +/-0.5, TP<=-1.5, SFX events==entrances",
+   "ok": true,
+   "detail": "lufs=-14.5 tp=-1.5 onsets=22 entrances=18 matched=18 unmatched_onsets=4"
+  },
+  {
+   "name": "G13 family palette present on every beat",
+   "ok": true,
+   "detail": "beats=10 bad=[]"
+  },
+  {
+   "name": "G14 family signature element present",
+   "ok": true,
+   "detail": "tape=True bracket_quads=4"
+  },
+  {
+   "name": "G1 zero halftone/grid over footage-or-subject (Mode B beats)",
+   "ok": true,
+   "detail": "violations=[]"
+  }
+ ],
+ "npass": 16,
+ "n": 16,
+ "overall_pass": true,
+ "measured": {
+  "lufs": -14.5,
+  "tp": -1.5,
+  "fps": 30.0,
+  "dur": 25.1,
+  "w": 1080,
+  "h": 1920,
+  "events": [
+   2.5,
+   5.0,
+   7.6,
+   10.1,
+   12.6,
+   15.2,
+   17.7,
+   20.3,
+   22.7
+  ],
+  "hook": [
+   "DO NOT",
+   "POST IT"
+  ],
+  "family": "F1"
+ },
+ "gate_sha256": "504f458287f0dea104e880ce8ff2f4acd8824216712b26559f9ee62ce1ac5082"
+}

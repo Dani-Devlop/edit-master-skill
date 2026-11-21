@@ -728,3 +728,89 @@ phone UI -> pill callout -> glitch overlay -> whip blur on graphics only.
    FOOTAGE (water surfaces, dark screens and wide landscapes fail). Probe 4
    frames first (fg fraction 8-62%, bbox >= 30%x25%, IoU >= 0.34), decide the
    depth anchor from data, and publish the anchor plan before batch rendering.
+
+---
+
+## Phase 11.1 — Single Renderer, Gate-on-File, Delivery Lock (enforcement spec)
+
+### 11.1.1 ONE renderer path
+Every video comes from `scripts/p11_render.py` (category delta = style config only).
+Retired: all per-category legacy scripts (lost in the Phase-8 sandbox recycle — see
+`test-results/gate11/A2_codepath_audit.md`). Code-path count = 1. Supercut and travel
+re-render use the same path.
+
+### 11.1.2 Mode rules (REFERENCE WINS over earlier spec)
+- **Mode A (clean canvas)**: monochrome canvas + cut-out subject 30–55%H bottom-center +
+  contact shadow; halftone/ghost/light-leak/grain textures on the CANVAS ONLY.
+- **Mode B (real scene)**: NO halftone / pixel-grid / ghost overlay on footage AT ALL.
+  Only grade + rim glow, dark lockup plate (text must stay readable and measurable),
+  cards/doodles beside or above the subject, lower-third captions.
+- Families F1–F4 (VIDEO-2 grammar) are Mode A compositions; categories whose footage has
+  no matte-able subject (measured: salient coverage < 0.15) auto-switch message beats to
+  Mode B — the decision is logged in each `render_log.txt`.
+- Giant type is composited UNDER the subject matte (never painted over a face).
+  This is the Phase-8 fake-occlusion lesson, enforced structurally.
+
+### 11.1.3 Family motion grammar (VIDEO-2 measured constants)
+| Family | Signature | Motion constants |
+| --- | --- | --- |
+| F1 white+neon-yellow | highlighter tape + corner brackets + scramble-decode | scramble resolve <= 0.5s, tape slide-in 0.4s |
+| F2 navy glass | phone-UI glass panel + typewriter reveal + orbiting task cards | typewriter 0.45s/line, orbit drift ~0.5 rad/s (slow) |
+| F3 maroon pixel | pixel-mono type + node starburst draw-on + particles | starburst staggered 0.45s draw-on (12 arms), particles 26px grid |
+| F4 light-gray+pink | odometer rolling counter + blob mascots + icon rows | odometer roll 0.9s, settle legible >= 0.6s, mascot pop 0.3s overshoot |
+
+Family palettes (V2): F1 white + neon-yellow (190,245,40); F2 navy + blue (88,148,255);
+F3 maroon + red-pink (255,92,110); F4 light-gray + pink (250,112,142).
+
+### 11.1.4 Gate-on-file (G1–G14)
+The gate (`scripts/p11_gate.py`) decodes the FINAL mp4 and measures — never trusts intent:
+- G1 zero halftone/grid over Mode B footage (FFT-autocorr dot score > 0.12 fails;
+  calibration: legacy halftone peak 0.163, clean refs <= 0.018)
+- G2 hook words legible at ~2s (declared band OCR + occlusion pixel-fallback)
+- G3 giant word <= 0.92W (declared band width + in-band glyph span + Mode A overflow guard)
+- G4 card labels untruncated (upscaled pill-strip OCR), no duplicate card dHashes
+- G5 phone text contrast >= 4.5:1 (per-word dark-core WCAG), never over Mode B footage
+  (bright plate + >=2 readable words, card-center exclusion)
+- G6 no dead frames (luma<6 & std<3), frame 0 composed
+- G7 captions OCR on message beats (declared caption band, dark-plate localization,
+  white-text polarity, glyph-count filter)
+- G8 whip on every comp change (events >= beats-2; >=4 frames in a 0.3s window above
+  max(0.12*peak, 8) — a hard cut is a single spike), >=1 zoom-through (ORB affine
+  scale), >=1 invert bite (dark frame with inverted echo)
+- G9 no consecutive comps with frame-hash similarity > 0.9
+- G10 payoff + end card + loop echo in the last 4s (OCR + pixel-evidence fallbacks)
+- G11 occlusion pixel-verified, matte fps == output fps, face-overlap 0
+  (subject bbox excluded from accent masks before overlap tests)
+- G12 -14 LUFS +/-0.5 and TP <= -1.5 dBTP on the final file (ffmpeg ebur128) +
+  SFX onset parity (librosa strong onsets vs declared events; threshold 4.0 on the
+  soft-clipped mix)
+- G13 family palette present on every beat (accent-hue fraction >= 0.006)
+- G14 family signature present (F1 tape+brackets, F2 typewriter glass panel, F3
+  starburst line-cluster, F4 odometer temporal profile)
+Any FAIL = exit non-zero, quarantine, NO delivery. Gate JSON records the file sha256
+and its own sha256; the delivery caption repeats both.
+
+### 11.1.5 Delivery lock (D1–D3)
+- D1 a send requires gate JSON whose file-sha matches the artifact AND overall PASS.
+- D2 the supercut concatenates only PASS-gated files (asserted in the build script).
+- D3 every Telegram video caption carries the gate PASS line + hashes.
+
+### 11.1.6 Regression suite (must stay green before any rollout)
+Five ANTI negatives, each MUST fail its target check (archived in
+`test-results/gate11/regression/`): halftone-on-footage -> G1; full-bleed type -> G3
+overflow; duplicate cards -> G4 dup hashes; low-contrast phone text -> G5; dead frame
+0 -> G6. Positive case: the unified-renderer pilot must pass 16/16.
+
+### 11.1.7 Failure log (honest incidents, Phase 11.1)
+| # | Incident | Root cause | Fix |
+| --- | --- | --- | --- |
+| F-1 | Legacy delivered travel_1.mp4 failed 8/16 measured checks although legacy QA claimed 23/23 | legacy QA asserted intent, not pixels ("halftone present" on a file measuring 0.0-0.16) | gate-on-file replaces intent QA |
+| F-2 | First unified render garbled every canvas/insert beat (tiled ghosts, content shift) | RGBA 4-byte frames piped into a 3-byte rgb24 encoder | write `frame[:,:,:3]` only |
+| F-3 | travel_1 first pilot had no measurable giant type overflow although the legacy QA's "halftone present" had passed | halftone was code-presence only; never pixel-measured | pixel detectors with calibrated thresholds |
+| F-4 | F3 overflow guard false-fired on the maroon canvas (accent hue == canvas hue) | hue-only accent mask | value floor 150 in the overflow mask |
+| F-5 | Whip tails measured ~8-10 gray levels on dark canvases -> below the 12%-of-peak threshold | streak coverage too low; flash decayed smoothly | 30-streak field + alternating flash flicker (per-frame delta ~12 on any luma) |
+| F-6 | tesseract failed on huge white-on-dark captions (plate + subject blob segmentation) | page segmentation on noisy strip | plate-localized detection + white-text polarity + glyph-count filter |
+| F-7 | Payoff "REWIND" and occluded hook giants unreadable by OCR | accent-on-ink text + subject occlusion | declared-band pixel-evidence fallbacks (accent coverage / glyph coverage) |
+| F-8 | Onset parity failed (34-71 unmatched onsets) | pad chords beat + noise-sweep texture; fix_frames misalignment | octave-only quiet pad, clean sine-sweep whoosh + sub-thump, direct frames_to_time |
+| F-9 | Loudnorm landed at -15.3/-15.6 LUFS | crest factor too high (sine pads), linear gain TP-limited | soft-clip density + compressor chain + dynamic loudnorm |
+| F-10 | travel repeat renders were required 6 times before first 16/16 PASS | all of the above | regression suite + gate now catch each class |

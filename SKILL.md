@@ -814,3 +814,59 @@ overflow; duplicate cards -> G4 dup hashes; low-contrast phone text -> G5; dead 
 | F-8 | Onset parity failed (34-71 unmatched onsets) | pad chords beat + noise-sweep texture; fix_frames misalignment | octave-only quiet pad, clean sine-sweep whoosh + sub-thump, direct frames_to_time |
 | F-9 | Loudnorm landed at -15.3/-15.6 LUFS | crest factor too high (sine pads), linear gain TP-limited | soft-clip density + compressor chain + dynamic loudnorm |
 | F-10 | travel repeat renders were required 6 times before first 16/16 PASS | all of the above | regression suite + gate now catch each class |
+
+
+---
+
+## Phase 14.1 — LEAP ARCHITECTURE + CLEAN CHAT SURFACE (default baseline, L0-L9 + C)
+
+### L0 PRO baseline (from run #1)
+- Load presets/<genre>.json before planning; presets carry composition, lockup, caption, grade,
+  audio, gates at best-achieved level. New runs LOAD, never rediscover.
+- Style DNA: docs/STYLES.md v3 + docs/REFERENCES.md family grammars.
+- Technique encyclopedia with WHEN-to-use: docs/TECHNIQUES.md.
+- Self-critique gate (G27): 10 measured dims, ALL >=9 before delivery, else re-render.
+
+### L1 Karaoke captions (default with real vox)
+- Active word = accent + 1.2x scale; spoken dimmed (0.55); upcoming full-white; sweep follows voice.
+- Timing: whisper word timestamps (PyAV pin 12.3.0 lesson); phrase groups 2-6 words; sweep loops
+  per sentence until sentence changes (K2). Stutter = echo bounce. NEVER invent lyrics; ASR-derived
+  text displayed as heard, brand mishears normalized + logged.
+- No-vox sources: beat-keyword captions synced to bed grid (honest label, never "lyrics").
+
+### L2 Audio/music/copyright
+- Keep original audio when present; TTS only on explicit command (M1).
+- Silent sources: synth bed in-run per genre BPM/energy (original work, no copyright exposure);
+  log decision + coverage. SFX events == entrances, ducked -6dB.
+- Two-pass/iterative loudnorm to -14 LUFS ±0.5, TP <= -1.5 (crest_guard compressor for synthetic
+  percussive beds; AAC TP overshoot headroom -2.5dB limiter).
+
+### L3 Onboarding
+- Detect genre from footage; propose family+palette+energy+music plan in ONE batched message;
+  proceed non-blocking; log proposal. End card default clean no-brand + repo pill + loop echo.
+
+### L4 Multi-platform
+- 9:16 primary by default; variants (1:1, 4:5) rendered per request/flagship; safe-zones gated (G26).
+
+### L5 Source gate
+- Score raw (resolution/fps/stability/clarity/lighting/audio) >= 6/10; below = enhance or replace;
+  log score + action (G25).
+
+### L6 Resource learning
+- Stock banks + licenses -> docs/RESOURCES.md; refresh on command or gap. yt-dlp may be
+  bot-blocked on datacenter IPs — fall back to licensed stock, log method honestly.
+
+### L7/L8 Enforcement additions
+- Unified renderer p14_render.py (one path, preset-driven, variant-aware, sequential fetch).
+- Gate-on-file p14_gate.py: G1-G14 letterbox-aware + G23 karaoke + G24 music coverage +
+  G25 source quality + G26 safe zones + G27 self-critique + G28 chat-surface. Delivery lock D1-D3.
+- G8 detector = visual spikes UNION beat-chrome (pill) spikes (single-scene sources).
+- G9 = beat-midpoint composition distance (not consecutive frames).
+- G6 = TRUE bars (edge strip max luma < 4) + lifted-black renderer floor so film grain/dark
+  footage is never mistaken for bars.
+
+### C Clean chat surface (BINDING)
+- C1 never surface TEMP/edit-* files in chat; C2 TEMP only in /tmp/ems-work/<run_id>/ (outside
+  repo + host-indexed dirs); C3 full descriptive deliverable filenames; C4 chat carries at most
+  final artifact links + task.md + report; C6 delete /tmp/ems-work/<run_id>/ after delivery.
+- Telegram = video delivery channel; chat = links + reports only (C7).

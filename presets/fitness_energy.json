@@ -1,0 +1,109 @@
+{
+ "name": "mv_darkmono",
+ "genre": "fitness",
+ "family": "F1 white+neon-yellow (Mode B in-scene)",
+ "mode": "B",
+ "reference": "gritty B&W rap MV, volt accent on grade + type only",
+ "palette": {
+  "base": "source",
+  "accent_rgb": [
+   190,
+   245,
+   40
+  ],
+  "accent_name": "neon-yellow",
+  "color_pop": "n/a"
+ },
+ "type": {
+  "headline_font": "DejaVuSans-Bold",
+  "hook_style": "type-slam lockup, occlusion behind head via freeze-frame matte (rembg u2net), scrim fallback honest",
+  "max_width_frac": 0.86,
+  "scramble_resolve_s": 0.5
+ },
+ "captions": {
+  "engine": "beat-keyword",
+  "keywords": [
+   "NO EXCUSES",
+   "ONE MORE REP",
+   "EARN IT",
+   "STRONGER",
+   "GO HARD"
+  ],
+  "band_frac": [
+   0.76,
+   0.9
+  ],
+  "font_px": 58,
+  "stroke_px": 3,
+  "active_scale": 1.2,
+  "dim_frac": 0.55,
+  "phrase_words": [
+   2,
+   6
+  ],
+  "stutter_echo": true
+ },
+ "techniques": {
+  "freeze_slam_at_hook": true,
+  "speed_ramps": "0.5x/1.8x eased on rep/motion peaks",
+  "whip_between_beats": true,
+  "zoom_through_min": 1,
+  "invert_bite_min": 1,
+  "splice_grain_bites_max_s": 0.15,
+  "punch_ins": true
+ },
+ "cards": {
+  "style": "tilted cascade + highlighter tape pills",
+  "pills": "rep counters / keywords",
+  "position": "side or above, face-safe"
+ },
+ "audio": {
+  "original_kept": false,
+  "tts": false,
+  "loudnorm_target": [
+   -14,
+   0.5,
+   -1.5
+  ],
+  "sfx": [
+   "whoosh",
+   "thump",
+   "splice"
+  ],
+  "sfx_duck_db": -6,
+  "sfx_events_equal_entrances": true
+ },
+ "music_plan": {
+  "decision": "source silent -> generated original bed @100 BPM (driving kick+bass, energy 0.8)",
+  "copyright_coverage": "self-generated bed, 100% coverage, no safe-window"
+ },
+ "beats": {
+  "count": [
+   7,
+   9
+  ],
+  "length_s": [
+   18,
+   24
+  ],
+  "max_beat_s": 4.0
+ },
+ "end_card": {
+  "loop_echo": true,
+  "repo_pill": "github.com/Dani-Devlop/edit-master-skill",
+  "brand": "clean no-brand"
+ },
+ "platforms": [
+  "9:16 primary"
+ ],
+ "gates": [
+  "G1-G14",
+  "G7 keyword-band",
+  "G8 bed-grid \u00b180ms >=80%",
+  "G23",
+  "G24",
+  "G25",
+  "G26",
+  "G27"
+ ]
+}

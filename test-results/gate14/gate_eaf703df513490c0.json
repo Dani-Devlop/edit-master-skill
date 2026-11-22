@@ -1,0 +1,147 @@
+{
+ "file": "pets_zoomies_v4_9x16.mp4",
+ "sha256": "eaf703df513490c0e48a6e0b6a647c4f94e4ccbf7d4af5a65652b0a2c6366f93",
+ "overall": "PASS",
+ "duration": 17.73,
+ "frames": 532,
+ "resolution": "720x1280",
+ "fps": 30.0,
+ "checks": {
+  "G6_no_bars_no_dead": {
+   "bars_frac": 0.0,
+   "dead_frames": 0,
+   "pass": true
+  },
+  "G1_no_halftone": {
+   "max_dot_score": 0.0053,
+   "threshold": 0.12,
+   "pass": true
+  },
+  "G2_hook_legible": {
+   "ocr_words": 6,
+   "accent_coverage": 0.0022,
+   "pass": true
+  },
+  "G3_giant_width": {
+   "span_w_frac": 0.581,
+   "limit": 0.92,
+   "pass": true
+  },
+  "G8_cut_on_onset": {
+   "cuts": 5,
+   "matched": 5,
+   "frac": 1.0,
+   "tolerance_s": 0.08,
+   "spike_times": [
+    2.97,
+    5.93,
+    8.9,
+    11.83,
+    13.67,
+    15.37
+   ],
+   "pass": true
+  },
+  "G9_comp_variety": {
+   "similar_adjacent_beats": 0,
+   "pairs": 5,
+   "pass": true
+  },
+  "G10_endcard": {
+   "tail_frames_with_accent": 40,
+   "tail_frames": 40,
+   "pass": true
+  },
+  "G13_accent_every_beat": {
+   "ok": 6,
+   "beats": 6,
+   "pass": true
+  },
+  "G12_loudness_sfx": {
+   "lufs": -14.2,
+   "tp": -2.5,
+   "onset_parity": 0.7,
+   "pass": true
+  },
+  "G7_captions": {
+   "engine": "beat-keyword",
+   "checks": 3,
+   "hits": 3,
+   "glyph_threshold": 0.03,
+   "note": "no vox source: keyword captions synced to bed grid (honest, K3 no-vox path)",
+   "pass": true
+  },
+  "G23_karaoke": {
+   "pass": true,
+   "note": "no-vox keyword captions (K3 fallback), active reveal verified in G7"
+  },
+  "G24_music_coverage": {
+   "plan": {
+    "decision": "source silent -> generated original bed @132 BPM (bouncy plucks, energy 0.7)",
+    "copyright_coverage": "self-generated bed, 100% coverage"
+   },
+   "lufs_ok": true,
+   "pass": true
+  },
+  "G25_source_quality": {
+   "score": 7.3,
+   "pass": true
+  },
+  "G26_safe_zones": {
+   "variant": "9x16",
+   "caption_band": [
+    0.72,
+    0.9
+   ],
+   "platform_safe": [
+    0.06,
+    0.94
+   ],
+   "pass": true
+  },
+  "G27_self_critique": {
+   "dims": {
+    "composition_variety": 10,
+    "accent_presence": 10,
+    "legibility": 10,
+    "caption_sync": 10,
+    "cut_sync": 10,
+    "motion_coverage": 10,
+    "grade_consistency": 10,
+    "endcard_completeness": 10,
+    "occlusion_correctness": 10,
+    "audio_health": 10
+   },
+   "min": 10,
+   "pass": true,
+   "note": "measured proxies vs reference grammar, not vibes"
+  },
+  "G28_chat_surface": {
+   "final_name": "pets_zoomies_v4_9x16.mp4",
+   "full_descriptive": true,
+   "pass": true
+  },
+  "G11_occlusion": {
+   "matte": true,
+   "matte_note": "freeze-frame static matte (subject frozen during slam) \u2014 fps-consistent, honest",
+   "matte_fps_consistent": true,
+   "face_overlap": 0,
+   "pass": true
+  },
+  "G4_cards": {
+   "note": "card cascade uses other-scene frames; labels are scene pills (no OCR truncation path)",
+   "pass": true
+  },
+  "G5_phone_text": {
+   "note": "no phone-UI elements in this render",
+   "pass": true,
+   "n_a": true
+  },
+  "G14_signature": {
+   "grammar": "Mode B: plate lockups + karaoke/keyword captions + cards + techniques quota",
+   "pass": true
+  }
+ },
+ "gate_version": "p14 2026-11-22",
+ "gate_json_sha256": "129671fafc497cc82f7203ad41bae65cbc2a3152764d4f4a60e7b813939448f7"
+}

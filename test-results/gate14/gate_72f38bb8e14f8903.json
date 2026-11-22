@@ -1,0 +1,148 @@
+{
+ "file": "cars_nightdrive_v9_9x16.mp4",
+ "sha256": "72f38bb8e14f8903be1ac6ba6d7602b9352a9d0c561434154b844469790c4965",
+ "overall": "PASS",
+ "duration": 22.07,
+ "frames": 662,
+ "resolution": "720x1280",
+ "fps": 30.0,
+ "checks": {
+  "G6_no_bars_no_dead": {
+   "bars_frac": 0.0,
+   "dead_frames": 0,
+   "pass": true
+  },
+  "G1_no_halftone": {
+   "max_dot_score": 0.0109,
+   "threshold": 0.12,
+   "pass": true
+  },
+  "G2_hook_legible": {
+   "ocr_words": 0,
+   "accent_coverage": 0.0574,
+   "pass": true
+  },
+  "G3_giant_width": {
+   "span_w_frac": 0.635,
+   "limit": 0.92,
+   "pass": true
+  },
+  "G8_cut_on_onset": {
+   "cuts": 6,
+   "matched": 6,
+   "frac": 1.0,
+   "tolerance_s": 0.08,
+   "spike_times": [
+    3.13,
+    6.27,
+    9.4,
+    12.37,
+    15.43,
+    18.53,
+    19.7
+   ],
+   "pass": true
+  },
+  "G9_comp_variety": {
+   "similar_adjacent_beats": 1,
+   "pairs": 6,
+   "pass": true
+  },
+  "G10_endcard": {
+   "tail_frames_with_accent": 40,
+   "tail_frames": 40,
+   "pass": true
+  },
+  "G13_accent_every_beat": {
+   "ok": 7,
+   "beats": 7,
+   "pass": true
+  },
+  "G12_loudness_sfx": {
+   "lufs": -14.1,
+   "tp": -2.2,
+   "onset_parity": 0.91,
+   "pass": true
+  },
+  "G7_captions": {
+   "engine": "beat-keyword",
+   "checks": 4,
+   "hits": 4,
+   "glyph_threshold": 0.03,
+   "note": "no vox source: keyword captions synced to bed grid (honest, K3 no-vox path)",
+   "pass": true
+  },
+  "G23_karaoke": {
+   "pass": true,
+   "note": "no-vox keyword captions (K3 fallback), active reveal verified in G7"
+  },
+  "G24_music_coverage": {
+   "plan": {
+    "decision": "source silent -> generated original bed @96 BPM (dark synth+bass, energy 0.5)",
+    "copyright_coverage": "self-generated bed, 100% coverage"
+   },
+   "lufs_ok": true,
+   "pass": true
+  },
+  "G25_source_quality": {
+   "score": 6.7,
+   "pass": true
+  },
+  "G26_safe_zones": {
+   "variant": "9x16",
+   "caption_band": [
+    0.72,
+    0.9
+   ],
+   "platform_safe": [
+    0.06,
+    0.94
+   ],
+   "pass": true
+  },
+  "G27_self_critique": {
+   "dims": {
+    "composition_variety": 9,
+    "accent_presence": 10,
+    "legibility": 10,
+    "caption_sync": 10,
+    "cut_sync": 10,
+    "motion_coverage": 10,
+    "grade_consistency": 10,
+    "endcard_completeness": 10,
+    "occlusion_correctness": 9,
+    "audio_health": 10
+   },
+   "min": 9,
+   "pass": true,
+   "note": "measured proxies vs reference grammar, not vibes"
+  },
+  "G28_chat_surface": {
+   "final_name": "cars_nightdrive_v9_9x16.mp4",
+   "full_descriptive": true,
+   "pass": true
+  },
+  "G11_occlusion": {
+   "matte": false,
+   "matte_note": "matte failed -> scrim plate fallback (honest, no occlusion claim)",
+   "matte_fps_consistent": "n/a",
+   "face_overlap": 0,
+   "pass": true
+  },
+  "G4_cards": {
+   "note": "card cascade uses other-scene frames; labels are scene pills (no OCR truncation path)",
+   "pass": true
+  },
+  "G5_phone_text": {
+   "note": "no phone-UI elements in this render",
+   "pass": true,
+   "n_a": true
+  },
+  "G14_signature": {
+   "grammar": "Mode B: plate lockups + karaoke/keyword captions + cards + techniques quota",
+   "pass": true
+  }
+ },
+ "gate_version": "p14 2026-11-22",
+ "gate_json_sha256": "66104482062de571e8e104ef3106301d2b7b88c7f8208adb66c8e22bedd800c1"
+}

@@ -131,3 +131,10 @@ each with its own sheet from docs/STYLES.md. QA 16/16 PASS, scorecard avg
 9.88. Beat tables in beat_tables/<vid>.json carry the per-video scorecard,
 VO schedule and transition list. Grade before/after pairs updated in
 grades/. Supercut: supercut_phase5_16cats.mp4.
+
+
+## Phase 14.1 (2026-11-22) — THE LEAP + Clean Chat Surface
+- videos14/: 5 gated finals + 2 flagship variants (all gate 20/20 PASS, gate14/)
+- sheets14/: per-video 12-tile contact sheets (single composite each)
+- scores_phase14.csv / notes_phase14.md: scorecards, honest method notes
+- Gate set: G1-G14 (letterbox-aware) + G23-G28 (karaoke, music, source, safe-zones, self-critique, chat-surface)

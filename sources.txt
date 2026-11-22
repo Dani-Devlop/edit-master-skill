@@ -235,3 +235,36 @@ and Product Demo contributing one video each. The two extra candidates
 - Downloaded: 2026-11-19 23:26:15 UTC
 - License: Mixkit Stock Video Free License
 
+
+## Phase 14.1 T-1 Attached MV Raw
+- File: upload/4_6051789922870758373 (1).mp4 (manager-attached, not redistributed)
+- Duration: 27.9s | Resolution: 720x900 (letterboxed 644x502 inside, de-barred to full-bleed 9:16)
+- Audio: original music+rap kept (whisper small word-timestamps, ASR-derived captions)
+- Downloaded: 2026-11-21 (attachment) | License: manager-provided for testing only
+
+## Phase 14.1 T-2 Fitness
+- File: raws/t2_fitness.mp4
+- Source: https://mixkit.co/free-stock-video/fitness/ item 52080 (https://assets.mixkit.co/videos/52080/52080-1080.mp4)
+- Duration: 16.7s | Resolution: 1080x1920 | Silent source (no audio stream)
+- Downloaded: 2026-11-22 (Mixkit) | License: Mixkit Stock Video Free License (royalty-free, no attribution required)
+
+## Phase 14.1 T-3 Food
+- File: raws/t3_food.mp4
+- Source: Mixkit item 10428 (https://assets.mixkit.co/videos/10428/10428-1080.mp4)
+- Duration: 15.0s | Resolution: 1080x1920 | Silent source
+- Downloaded: 2026-11-22 | License: Mixkit Stock Video Free License
+
+## Phase 14.1 T-4 Cars
+- File: raws/t4_car.mp4
+- Source: Mixkit item 4633 (https://assets.mixkit.co/videos/4633/4633-1080.mp4)
+- Duration: 22.1s | Resolution: 1920x1080 (subject-centered 9:16 crop) | Silent source
+- Content note: daytime scenic road -> day-for-night grade applied for NIGHT DRIVE theme coherence
+- Downloaded: 2026-11-22 | License: Mixkit Stock Video Free License
+
+## Phase 14.1 T-5 Pets
+- File: raws/t5_dog.mp4
+- Source: Mixkit item 1548 (https://assets.mixkit.co/videos/1548/1548-1080.mp4)
+- Duration: 14.8s | Resolution: 1080x1920 | Silent source
+- Downloaded: 2026-11-22 | License: Mixkit Stock Video Free License
+- Method note: yt-dlp (Instagram/YT Shorts) attempted first -> blocked by bot-check on datacenter IP;
+  per-spec honest fallback to royalty-free stock with logged licenses (above).

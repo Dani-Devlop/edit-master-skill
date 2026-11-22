@@ -1,0 +1,109 @@
+{
+ "name": "mv_darkmono",
+ "genre": "pets",
+ "family": "F4 pink playful variant (Mode B in-scene)",
+ "mode": "B",
+ "reference": "gritty B&W rap MV, volt accent on grade + type only",
+ "palette": {
+  "base": "source",
+  "accent_rgb": [
+   255,
+   176,
+   46
+  ],
+  "accent_name": "sunny-orange",
+  "color_pop": "n/a"
+ },
+ "type": {
+  "headline_font": "DejaVuSans-Bold",
+  "hook_style": "type-slam lockup, occlusion behind head via freeze-frame matte (rembg u2net), scrim fallback honest",
+  "max_width_frac": 0.86,
+  "scramble_resolve_s": 0.5
+ },
+ "captions": {
+  "engine": "beat-keyword",
+  "keywords": [
+   "GOOD BOY",
+   "FETCH",
+   "ZOOMIES",
+   "SO FAST",
+   "BEST DAY"
+  ],
+  "band_frac": [
+   0.76,
+   0.9
+  ],
+  "font_px": 58,
+  "stroke_px": 3,
+  "active_scale": 1.2,
+  "dim_frac": 0.55,
+  "phrase_words": [
+   2,
+   6
+  ],
+  "stutter_echo": true
+ },
+ "techniques": {
+  "freeze_slam_at_hook": true,
+  "speed_ramps": "1.6x zoomies bursts, 0.4x on leap apex",
+  "whip_between_beats": true,
+  "zoom_through_min": 1,
+  "invert_bite_min": 1,
+  "splice_grain_bites_max_s": 0.15,
+  "punch_ins": true
+ },
+ "cards": {
+  "style": "odometer pills + paw stickers + orbit cards",
+  "pills": "keywords",
+  "position": "side or above, face-safe"
+ },
+ "audio": {
+  "original_kept": false,
+  "tts": false,
+  "loudnorm_target": [
+   -14,
+   0.5,
+   -1.5
+  ],
+  "sfx": [
+   "whoosh",
+   "thump",
+   "splice"
+  ],
+  "sfx_duck_db": -6,
+  "sfx_events_equal_entrances": true
+ },
+ "music_plan": {
+  "decision": "source silent -> generated original bed @132 BPM (bouncy plucks, energy 0.7)",
+  "copyright_coverage": "self-generated bed, 100% coverage"
+ },
+ "beats": {
+  "count": [
+   6,
+   8
+  ],
+  "length_s": [
+   16,
+   22
+  ],
+  "max_beat_s": 4.0
+ },
+ "end_card": {
+  "loop_echo": true,
+  "repo_pill": "github.com/Dani-Devlop/edit-master-skill",
+  "brand": "clean no-brand"
+ },
+ "platforms": [
+  "9:16 primary"
+ ],
+ "gates": [
+  "G1-G14",
+  "G7 keyword-band",
+  "G8 bed-grid \u00b180ms >=80%",
+  "G23",
+  "G24",
+  "G25",
+  "G26",
+  "G27"
+ ]
+}

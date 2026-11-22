@@ -140,3 +140,18 @@ Repository: https://github.com/Dani-Devlop/edit-master-skill
 - [x] 11.1.S6 Supercut v4: built from 16 gated files, SC gate 6/6 PASS (32.2s, -14.5 LUFS, TP -3.6), delivered
 - [x] 11.1.S7 SKILL.md/docs/test-results updates
 - [x] 11.1.S8 Commit+push main (3c4bc0e), badge audit 0 unverified, final report
+
+
+## Phase 14.1: THE LEAP + Clean Chat Surface (2026-11-22)
+- [x] 14.1.1 Pull main (ccab76e), banks loaded (PRO baseline, DNA, techniques)
+- [x] 14.1.2 Preset bank presets/ (5 genres) + docs/TECHNIQUES.md + docs/RESOURCES.md + STYLES.md v3
+- [x] 14.1.3 /tmp/ems-work workspace (C2); ingest 5 raws + L5 source gate (T-1 8.5, T-2 6.9, T-3 6.9, T-4 6.7, T-5 7.3 — all PASS)
+- [x] 14.1.4 yt-dlp blocked (bot-check) -> honest Mixkit fallback, licenses logged (sources.txt)
+- [x] 14.1.5 Onboarding proposal batched + non-blocking (O1)
+- [x] 14.1.6 Unified renderer v14 (one path: karaoke K1-K6, matte occlusion, ramps, whip, zoom-through, invert bite, grain bites, endcard+loop, variants)
+- [x] 14.1.7 Gate G1-G14 + G23-G28 on-file, delivery lock D1-D3 (7 files PASS: T-1 x3 variants + T-2..T-5)
+- [x] 14.1.8 Telegram deliveries x5 + captions with gate hashes/scorecards/music plans/source scores
+- [x] 14.1.9 Chat surface clean (C1-C7): finals in download/ full names; TEMP confined + deleted
+- [x] 14.1.10 Supercut SKIPPED (musical clash, logged per step 7)
+- [x] 14.1.11 SKILL.md L0-L9+C baseline encoded; test-results reset (gate14/videos14/sheets14/scores/notes)
+- [x] 14.1.12 Commit + push main + badge audit 0 unverified + final report

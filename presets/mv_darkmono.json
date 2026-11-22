@@ -1,0 +1,61 @@
+{
+  "name": "mv_darkmono",
+  "genre": "music_video",
+  "family": "F3 DARK MONO variant",
+  "mode": "B",
+  "reference": "gritty B&W rap MV, volt accent on grade + type only",
+  "palette": {
+    "base": "bw",
+    "accent_rgb": [189, 255, 0],
+    "accent_name": "volt",
+    "color_pop": "keep-source-color on color insert beats (church/money)"
+  },
+  "type": {
+    "headline_font": "DejaVuSans-Bold",
+    "hook_style": "type-slam lockup, occlusion behind head via freeze-frame matte (rembg u2net), scrim fallback honest",
+    "max_width_frac": 0.86,
+    "scramble_resolve_s": 0.5
+  },
+  "captions": {
+    "engine": "whisper-word-sync",
+    "band_frac": [0.74, 0.90],
+    "font_px": 56,
+    "stroke_px": 3,
+    "active_scale": 1.2,
+    "dim_frac": 0.55,
+    "phrase_words": [2, 6],
+    "stutter_echo": true,
+    "never_invent": true,
+    "asr_normalizations_logged": ["Sam Pellegrino -> San Pellegrino (brand mishear, conf<0.5)"]
+  },
+  "techniques": {
+    "freeze_slam_at_hook": true,
+    "speed_ramps": "0.4x/1.6x eased on running/motion beats",
+    "whip_between_beats": true,
+    "zoom_through_min": 1,
+    "invert_bite_min": 1,
+    "splice_grain_bites_max_s": 0.15,
+    "punch_ins": true
+  },
+  "cards": {
+    "style": "tilted cascade, frames from OTHER scenes only (never the master scene)",
+    "pills": "scene-label / lyric keyword",
+    "position": "side or above, face-safe"
+  },
+  "audio": {
+    "original_kept": true,
+    "tts": false,
+    "loudnorm_target": [-14, 0.5, -1.5],
+    "sfx": ["whoosh", "glitch", "splice", "thump"],
+    "sfx_duck_db": -6,
+    "sfx_events_equal_entrances": true
+  },
+  "music_plan": {
+    "decision": "keep original mix (music+rap) — no overlay music",
+    "copyright_coverage": "original audio, full length, no safe-window conflict"
+  },
+  "beats": {"count": [8, 12], "length_s": [25, 36], "max_beat_s": 4.0},
+  "end_card": {"loop_echo": true, "repo_pill": "github.com/Dani-Devlop/edit-master-skill", "brand": "clean no-brand"},
+  "platforms": ["9:16 primary", "1:1", "4:5"],
+  "gates": ["G1-G14 letterbox-aware", "G7 whisper ±120ms", "G8 onset ±80ms >=80%", "G23", "G24", "G25", "G26", "G27"]
+}

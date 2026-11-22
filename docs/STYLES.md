@@ -233,3 +233,17 @@ palette/type = family system.
 
 Superseded: the Phase-5.0 per-category palettes and the Phase-8 F1/F2/F3 matte-vs-scrim
 depth families (the 6 footage-first scrim renders measured in the A3 audit are invalid).
+
+
+---
+
+## v3 — Style-DNA additions (Phase 14.1, 2026-11-22 06:47 UTC)
+
+- **MV DARK MONO (F3 variant)**: B&W lifted-blacks base + volt accent (189,255,0); color-pop
+  inserts keep source color; grain/scanline bites <=0.15s; karaoke volt active word.
+- **Fitness energy (F1 Mode B)**: source color + neon-yellow (190,245,40); mirrored odd beats.
+- **Food fresh (F4 Mode B)**: pink (250,112,142); odometer ingredient pills.
+- **Cars night drive (F2 Mode B)**: glass-blue (88,148,255) + day-for-night grade when footage is daytime.
+- **Pets playful (F4 variant)**: sunny-orange (255,176,46); paw stickers, odometer counters.
+- Caption grammar: 76px+stroke equivalent (56-64px @720w), band 0.72-0.90H, underline chrome,
+  beat pill + progress bar = family chrome (G13 guarantee >=0.006 accent fraction).

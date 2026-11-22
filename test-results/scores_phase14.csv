@@ -1,0 +1,8 @@
+file,source,family,gate_sha16,source_q,lufs,tp,beats,captions,music,gate
+mv_darkmono_v3_9x16,T-1 attached MV,F3 DARK MONO volt,caf3b9438a1f04b1,8.5,-14.0,-1.8,10 beats,whisper word-sync,original mix kept,PASS 20/20
+mv_darkmono_v3_1x1,T-1 variant,F3,82c3441d119deece,8.5,-14.0,-1.8,10 beats,whisper word-sync,original mix kept,PASS 20/20
+mv_darkmono_v3_4x5,T-1 variant,F3,0838786dc5e3fb30,8.5,-14.0,-1.8,10 beats,whisper word-sync,original mix kept,PASS 20/20
+fitness_leap_v5_9x16,T-2 Mixkit 52080,F1 neon-yellow,ef2da7e28522d657,6.9,-14.1,-1.5,7 beats,beat-keyword,generated bed 100BPM,PASS 20/20
+food_fresh_v4_9x16,T-3 Mixkit 10428,F4 pink,05fdee106116221a,6.9,-14.1,-2.0,7 beats,beat-keyword,generated bed 126BPM,PASS 20/20
+cars_nightdrive_v9_9x16,T-4 Mixkit 4633,F2 navy glass,72f38bb8e14f8903,6.7,-14.1,-2.2,7 beats,beat-keyword,generated bed 96BPM,PASS 20/20
+pets_zoomies_v4_9x16,T-5 Mixkit 1548,F4 playful orange,eaf703df513490c0,7.3,-14.2,-2.5,7 beats,beat-keyword,generated bed 132BPM,PASS 20/20

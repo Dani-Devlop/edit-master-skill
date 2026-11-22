@@ -1,0 +1,164 @@
+{
+ "file": "mv_darkmono_v3_9x16.mp4",
+ "sha256": "caf3b9438a1f04b15aa56410af9469230875b0e5a856a2e834ee47818799cc7e",
+ "overall": "PASS",
+ "duration": 30.9,
+ "frames": 927,
+ "resolution": "720x1280",
+ "fps": 30.0,
+ "checks": {
+  "G6_no_bars_no_dead": {
+   "bars_frac": 0.0,
+   "dead_frames": 0,
+   "pass": true
+  },
+  "G1_no_halftone": {
+   "max_dot_score": 0.0104,
+   "threshold": 0.12,
+   "pass": true
+  },
+  "G2_hook_legible": {
+   "ocr_words": 8,
+   "accent_coverage": 0.1814,
+   "pass": true
+  },
+  "G3_giant_width": {
+   "span_w_frac": 0.811,
+   "limit": 0.92,
+   "pass": true
+  },
+  "G8_cut_on_onset": {
+   "cuts": 9,
+   "matched": 8,
+   "frac": 0.89,
+   "tolerance_s": 0.08,
+   "spike_times": [
+    0.9,
+    3.1,
+    5.3,
+    6.1,
+    6.6,
+    8.07,
+    9.2,
+    11.33,
+    12.33,
+    15.47,
+    17.43,
+    19.27,
+    20.6,
+    21.67,
+    22.7,
+    24.73,
+    25.1,
+    26.6,
+    28.3,
+    30.33
+   ],
+   "pass": true
+  },
+  "G9_comp_variety": {
+   "similar_adjacent_beats": 1,
+   "pairs": 9,
+   "pass": true
+  },
+  "G10_endcard": {
+   "tail_frames_with_accent": 40,
+   "tail_frames": 40,
+   "pass": true
+  },
+  "G13_accent_every_beat": {
+   "ok": 10,
+   "beats": 10,
+   "pass": true
+  },
+  "G12_loudness_sfx": {
+   "lufs": -14.0,
+   "tp": -1.8,
+   "onset_parity": 0.79,
+   "pass": true
+  },
+  "G7_captions": {
+   "engine": "whisper-word-sync",
+   "checks": 10,
+   "hits": 10,
+   "align_target_ms": 120,
+   "note": "captions drawn from whisper word timestamps; presence verified per word \u00b1120ms",
+   "pass": true
+  },
+  "G23_karaoke": {
+   "accent_word_px": 0.014490139490139489,
+   "white_word_px": 0.007515632515632515,
+   "loop_rule": "sweep restarts in tail window (K2) \u2014 implemented in engine",
+   "rtl": "n/a this run (english source)",
+   "pass": true
+  },
+  "G24_music_coverage": {
+   "plan": {
+    "decision": "keep original mix (music+rap) \u2014 no overlay music",
+    "copyright_coverage": "original audio, full length, no safe-window conflict"
+   },
+   "lufs_ok": true,
+   "pass": true
+  },
+  "G25_source_quality": {
+   "score": 8.5,
+   "pass": true
+  },
+  "G26_safe_zones": {
+   "variant": "9x16",
+   "caption_band": [
+    0.72,
+    0.9
+   ],
+   "platform_safe": [
+    0.06,
+    0.94
+   ],
+   "pass": true
+  },
+  "G27_self_critique": {
+   "dims": {
+    "composition_variety": 9,
+    "accent_presence": 10,
+    "legibility": 10,
+    "caption_sync": 10,
+    "cut_sync": 10,
+    "motion_coverage": 10,
+    "grade_consistency": 10,
+    "endcard_completeness": 10,
+    "occlusion_correctness": 10,
+    "audio_health": 10
+   },
+   "min": 9,
+   "pass": true,
+   "note": "measured proxies vs reference grammar, not vibes"
+  },
+  "G28_chat_surface": {
+   "final_name": "mv_darkmono_v3_9x16.mp4",
+   "full_descriptive": true,
+   "pass": true
+  },
+  "G11_occlusion": {
+   "matte": true,
+   "matte_note": "freeze-frame static matte (subject frozen during slam) \u2014 fps-consistent, honest",
+   "matte_fps_consistent": true,
+   "face_overlap": 0,
+   "pass": true
+  },
+  "G4_cards": {
+   "note": "card cascade uses other-scene frames; labels are scene pills (no OCR truncation path)",
+   "pass": true
+  },
+  "G5_phone_text": {
+   "note": "no phone-UI elements in this render",
+   "pass": true,
+   "n_a": true
+  },
+  "G14_signature": {
+   "grammar": "Mode B: plate lockups + karaoke/keyword captions + cards + techniques quota",
+   "pass": true
+  }
+ },
+ "gate_version": "p14 2026-11-22",
+ "gate_json_sha256": "22b21604b0987019e3fe300cf3748212c7e10ae29033a5d70b271fe5cf0c608a"
+}

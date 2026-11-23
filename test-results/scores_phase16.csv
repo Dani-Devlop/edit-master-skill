@@ -1,0 +1,8 @@
+video,variant,min_axis,weakest_axis,gate_sha256_16,refine_iterations
+food_fresh,9x16,9.5,A11_onset_cut,ec50d221d52958cc,0
+cars_nightdrive,9x16,9.5,A11_onset_cut,62d8e00b52f38c00,0
+pets_playful,9x16,9.5,A11_onset_cut,b3e4787cb32a888e,0
+fitness_energy,9x16,9.5,A11_onset_cut,99c29abb54a8b60e,0
+mv_darkmono_9x16,9x16,9.7,A2_karaoke_sync,9c54f01743514b00,0
+mv_darkmono_4x5,4x5,9.7,A2_karaoke_sync,b1720e6b0c24db98,0
+mv_darkmono_1x1,1x1,9.7,A2_karaoke_sync,447420d5aa3d0858,0

@@ -870,3 +870,113 @@ overflow; duplicate cards -> G4 dup hashes; low-contrast phone text -> G5; dead 
   repo + host-indexed dirs); C3 full descriptive deliverable filenames; C4 chat carries at most
   final artifact links + task.md + report; C6 delete /tmp/ems-work/<run_id>/ after delivery.
 - Telegram = video delivery channel; chat = links + reports only (C7).
+# Phase 16.0 — THE TWENTY-PILLAR LEAP (current default baseline)
+
+Supersedes Phase 14.1 (L0–L9 + C remain in force where not contradicted).
+Pro-grade in ONE run: proof-first (V0), 20 mandatory pillars each with a
+measured gate, an auto-refine loop, and a delivery lock. Nothing ships on
+assertion — every gate reads the FINAL file bytes.
+
+## V0 — PROOF-FIRST PROTOCOL (before ANY full render)
+
+No full render starts until all four proofs pass and are sent to Telegram (live):
+
+- **V0.1 KARAOKE STRIP** — 8 frames over one sentence: full-sentence-always,
+  active accent +1.2x, spoken dim ~45%, upcoming white, loop restart; NO
+  typewriter/partial/single-letter; Persian RTL row (Vazirmatn/Kalameh, bidi).
+  Engine asserts pixel-measured: full_sentence_always / active_accent_in_box /
+  dim_below_upcoming / loop_restart_word0.
+- **V0.2 PRESET MANIFEST** — presets/*.json + sha256 table; load target preset;
+  if missing derive from best recipe and commit; hash logged in captions/gates.
+- **V0.3 HARNESS DEMO** — 20-axis self-critique on a known delivery vs reference
+  stats; the score sheet must MEASURE (weakest axis exposed), not assert.
+- **V0.4 NEGATIVES** — regression clips MUST FAIL: typewriter → karaoke constancy
+  gate; empty-bar @frame-0 → composed-frame gate; halftone-on-footage → texture
+  gate. Fix the engine/harness until all proofs pass. A leaked negative means the
+  gate is decorative — repair it, recalibrate, re-run.
+
+## THE 20 PILLARS (spec + gate; ANY gate FAIL = no delivery)
+
+| # | Pillar | Gate (measured on FINAL file) |
+|---|---|---|
+| P1 | Karaoke captions: full sentence always, 2–6 words/line ≤2 lines, active=accent+1.2x+glow, spoken dim ~45%, upcoming white, sweep loops until sentence change, whisper word-ts (vox) or beat map, ±120ms, multilingual + Persian RTL, subject-aware safe zone, bilingual OFF default | G-P1 karaoke state machine (constancy ≥0.75 start-vs-mid coverage, accent-in-box, dim ratio <0.62, loop restart, active-scale ≥1.10x, RTL) |
+| P2 | Typographic craft: mixed-scale lockups, variable-weight, optical kerning, kinetic hierarchy, ghost echo, tapes/brackets SEMANTIC only | G-P2 hook lockup ≤0.92W legible t=0..2s; mixed scale present |
+| P3 | Depth & occlusion: matte fps == output fps, giant type UNDER matte (pixel-verified), cards OVER, contact shadow, 2.5D parallax | G-P3 occlusion pixel check, matte fps match, layer order |
+| P4 | Composition: ≥3 distinct comps, Mode A cut-out 30–55%H or Mode B graded, headroom, no dead margins, frame-1 COMPOSED | G-P4 comp variety ≥3 modes, frame-0 composed (no empty bar), dead-margin scan |
+| P5 | Motion: bezier easings, overshoot+settle, stagger, motion-blur on fast moves, punch-in 100→110% per emphasis, eased ramps 0.4x/1.6x, freeze+slam, match-cuts | G-P5 easing non-linear, punch-in coverage, ramp easing, smear on fast moves |
+| P6 | Transitions: whip-blur+scale-punch+whoosh at EVERY comp change, ≥1 recursive zoom-through, ≥1 invert bite ≤0.15s, family mask-wipe/light-leak/glitch, no hard cuts, blur never multi-second | G-P6 whip/flash/smear at every change (hard_cuts==0), invert seen |
+| P7 | Color: curve/LUT chain, skin protection, halation, source-matched grain, vignette, GRADE JUMP vs raw with before/after pair, family palette consistent | G-P7 measurable grade delta + before/after pair + accent presence >60% frames |
+| P8 | Stakes graphics: REAL numbers only (BPM/reps/price/time/angle), odometer settle ≥0.6s, orbit cards, starburst, numbered tabs, polaroid cascades REAL different content, NOT beat-index-only | G-P8 accent cards ≥2 frames, untruncated, real-number flag, no beat-index-only |
+| P9 | Insert worlds: AI surreal or honest stock+parallax; phone-UI only over insert/canvas; typing ≥60px bold, contrast ≥4.5:1 | G-P9 phone placement, contrast ≥4.5, insert graded |
+| P10 | Audio: keep original vox/music; TTS only on command or no-audio-and-needed; music decision + COPYRIGHT coverage window; layered SFX MEDIUM-LOW; sidechain duck −18dB; riser/impact on slams; silence-dropout before slam; two-pass loudnorm −14 LUFS ±0.5, TP ≤ −1.5 dBTP; SFX events == entrances | G-P10 measured LUFS/TP in spec, coverage honored, SFX parity, duck applied |
+| P11 | Rhythm: cut on action/beat/lyric-stress, J/L-cuts, hook→stake→proof→payoff→loop, open loops, pattern interrupts, breathing beats, no consecutive identical comps, drop-sync ±80ms, ≥80% cuts on onset ±80ms | G-P11 onset-cut ≥80% ±80ms, drop-slam ±80ms, no adjacent repeats |
+| P12 | Auto-refine: frame-pair critique vs reference (20 axes) → weakest axis → TARGETED fix → re-render affected beats only → re-gate; iterate until ALL ≥9.5 (max 4 iterations, then HONEST gap report); score sheet ships with every delivery | G-P12 all 20 axes ≥9.5 or honest gap report after 4 iterations |
+| P13 | Preset/DNA/encyclopedia: preset hash logged, STYLE-DNA bank, technique encyclopedia with when-to-use for EVERY technique | G-P13 preset hash logged; when_to_use strings in manifest |
+| P14 | Source-quality gate: score raw (res/fps/stability/subject/light/audio) ≥6/10 else enhance-or-replace, never bad-edit-bad-source | G-P14 source score ≥6 or documented enhance/replace |
+| P15 | Multi-platform mastering: IG Reels/YT Shorts/TikTok/Telegram/LinkedIn (+1:1/4:5), per-platform safe zones/caption size/length, H.264+AAC bt709, bitrate + loudness per platform, COVER/poster frame exported per video | G-P15 per-variant safe zones/codec/loudness + cover frame |
+| P16 | Safety & polish QA: flicker, matte edge chatter, WCAG ≥4.5, strobe <3Hz, no truncated labels, no duplicate cards, no dead/black frames, no empty elements at t0 | G-P16 flicker/chatter/contrast/strobe/truncation/dead/empty all clean |
+| P17 | Resource-learning: search public SFX/transition/music packs + viral breakdowns; techniques+URLs+LICENSE into docs/RESOURCES.md + asset bank (royalty-free/CC/licensed only); apply at right moments | G-P17 license logged for every banked asset used |
+| P18 | Onboarding: detect genre, PROPOSE family+palette+energy+music (one batched msg), confirm/override non-blocking; defaults ALL platforms, no-brand end card (loop echo + family pill), auto palette/length/energy, bilingual OFF, TTS per P10 | G-P18 proposal logged; overrides respected |
+| P19 | Reproducibility: render manifest per video (input hashes, preset hash, seed, tool versions, beat table, gate json, refine log); deterministic re-render possible | G-P19 manifest complete + deterministic |
+| P20 | Enforcement+hygiene+surface: ONE renderer path, gate-on-file from FINAL mp4, delivery lock (gate sha == file sha AND PASS), regression negatives, TEMP in /tmp/ems-work/<run>/ deleted after render+gate+delivery, KEEP-LIST only, .gitignore TEMP, 0-dirs verify + freed MB, no TEMP in chat, full descriptive names, Wavely live 20-min (NEVER scheduled) | G-P20 gate sha lock, negatives FAIL as expected, TEMP 0, chat clean, no scheduled sends |
+
+Gate results are written as `gate_<sha256>.json` with per-pillar measured values.
+
+## KARAOKE STATE MACHINE (normative)
+
+States over a sentence window [w0..wn]: every word fully visible at all times.
+active = word whose [start,end) contains t (±120ms): accent color, 1.2x scale, glow.
+spoken (index < active): dim ~45% luma. upcoming (index > active): full white.
+After wn.end, if the window continues, sweep LOOPS: accent returns to w0.
+Sentence change re-derives the window. NO typewriter, partial reveal, or
+single-letter states ever. Index source: whisper word timestamps (real vox) or
+beat map (no vox). RTL: Persian/Arabic via Vazirmatn/Kalameh with raqm bidi
+shaping; logical word 0 renders rightmost; state indices stay logical.
+
+## MANIFEST SCHEMA (per video, P19)
+
+```json
+{
+  "video": "<full descriptive name>.mp4",
+  "input_hashes": {"raw": "<sha256>", "attachments": ["<sha256>"]},
+  "preset": "<name>.json", "preset_sha256": "<sha256>",
+  "seed": <int>, "tool_versions": {"python": "...", "opencv": "...", "ffmpeg": "..."},
+  "beat_table": [{"i": 0, "start": 0.0, "end": 2.5, "comp": "base", "src": [a, b],
+                   "elements": ["..."], "when_to_use": "..."}],
+  "cut_times": [...], "comps": [...],
+  "cap_engine": "whisper-word-sync | beat-keyword", "words_manifest": [...],
+  "music_plan": {"decision": "...", "copyright_coverage": "..."},
+  "comp_fallback_beats": [...],
+  "refine_iterations": <n>, "critique": "<20-axis json>",
+  "gate_json": "gate_<sha256>.json", "source_quality": <score>,
+  "resource_licenses": ["..."]
+}
+```
+
+## EXECUTION ORDER (default)
+
+1 Pull latest main, report hash, load/verify banks.
+2 V0 proofs → Telegram; fix engine/harness until green; NO full render before proofs.
+3 Build/refresh encyclopedia + presets + resource bank (P17).
+4 Ingest raws; P14 source gate; log scores.
+5 Onboarding proposals (batched, non-blocking).
+6 Per video: preset load → onboarding → plan → render → G-P1..G-P20 → P12 refine
+  → master variants + cover → gated delivery via Telegram (caption: TEST_CAPTION
+  + gate hash + preset hash + 20-axis scorecard + music plan + source score +
+  manifest link). Chat carries only final links + task.md + reports.
+7 Supercut only at a batch milestone.
+8 Encode this protocol into SKILL.md; presets/, docs v4, test-results committed.
+9 Cleanup TEMP + /tmp/ems-work; verify chat surface clean; commit+push main;
+  badge audit (Verified or no badge — NEVER Unverified).
+10 Wavely live reports every 20 min of real work time (LIVE ONLY — never scheduled);
+    final report: V0 status, per-video scorecards + refine counts, source scores,
+    music plans, gate + preset hashes, LUFS/matte-fps, freed MB, chat cleanliness,
+    commit hashes, resource-bank size.
+
+## HONESTY RULES (binding)
+
+Name blockers + substitutes. Never invent lyrics/licenses. Never ship typewriter
+as karaoke. Never claim LEAP without V0 proofs. Never deliver ungated or below
+the refine threshold without an honest gap report. Never keep TEMP. Never schedule
+messages. Never surface edit-* / TEMP artifacts in chat. Tokens stay silent.
+Only the configured account and branch are touched.

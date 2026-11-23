@@ -1,0 +1,27 @@
+{
+ "run": "T_food_v16",
+ "genre": "food",
+ "proposal": {
+  "family": "F4 light-gray+pink (Mode B in-scene)",
+  "palette_accent": [
+   250,
+   112,
+   142
+  ],
+  "energy": 0.7,
+  "music_plan": "source silent -> generated original bed @126 BPM (bright plucks+bass, energy 0.6)",
+  "platforms": [
+   "9:16 primary"
+  ]
+ },
+ "defaults": {
+  "bilingual": false,
+  "tts": false,
+  "brand_end_card": false,
+  "loop_echo": true,
+  "palette": "auto from preset"
+ },
+ "ask": "confirm or override \u2014 non-blocking proceed",
+ "overrides_applied": {},
+ "status": "proceeded-with-defaults (no reply within window)"
+}

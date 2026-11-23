@@ -155,3 +155,25 @@ Repository: https://github.com/Dani-Devlop/edit-master-skill
 - [x] 14.1.10 Supercut SKIPPED (musical clash, logged per step 7)
 - [x] 14.1.11 SKILL.md L0-L9+C baseline encoded; test-results reset (gate14/videos14/sheets14/scores/notes)
 - [x] 14.1.12 Commit + push main + badge audit 0 unverified + final report
+
+## Phase 16.0: The Twenty-Pillar Leap (proof-first, 20 pillars, auto-refine)
+- [x] 16.1 V0 proofs: karaoke strip (4 asserts + RTL), preset manifest (sha256 bank),
+      harness demo (20-axis measured), regression negatives 3/3 caught
+- [x] 16.2 Engine fixes driven by proofs: lattice texture gate, edge-clamped whip,
+      smear-collapse blur detection, accent-relative stakes scan, preset name fix
+- [x] 16.3 Preset bank v4 (5 presets, sha256) + technique encyclopedia v4
+      (docs/TECHNIQUES.md) + resources bank v4 (docs/RESOURCES.md) + styles v4
+- [x] 16.4 Ingest 5 raws; P14 source gate logged (all >= 6/10)
+- [x] 16.5 Onboarding proposals batched + non-blocking (per-video json logged)
+- [x] 16.6 Render all 7 masters (5 videos + 2 MV variants) via ONE renderer path
+- [x] 16.7 Gates G-P1..G-P20 on final files; delivery locks: gate sha == file sha,
+      all PASS
+- [x] 16.8 P12 auto-refine: all 20 axes >= 9.5 on every master (food closed in 2
+      iterations: A7 9.2 -> 10.0 via honest cutout->zoom fallback)
+- [x] 16.9 Multi-platform mastering: MV 9x16 + 4:5 + 1:1; covers exported; LUFS
+      -14.0..-14.2, TP <= -1.5
+- [x] 16.10 Deliveries via Telegram (live only): Test Edit Skill + gate hash +
+      preset hash + scorecards + music plan + source score
+- [x] 16.11 Supercut (batch milestone) + TEMP cleanup + chat-surface audit
+- [x] 16.12 SKILL.md Phase 16 baseline encoded; commit+push main; badge audit
+      0 Unverified

@@ -1,0 +1,365 @@
+{
+ "file": "mv_darkmono_v16_9x16.mp4",
+ "sha256": "9c54f01743514b008fc385810ad5df6830b44acb2d38e545c4e87d1112cd60e8",
+ "overall": "PASS",
+ "failed": [],
+ "duration": 30.9,
+ "frames": 927,
+ "resolution": "720x1280",
+ "fps": 30.0,
+ "variant": "9x16",
+ "preset": "mv_darkmono",
+ "preset_sha256": "1cdc4e34e9e75009686be0f7b3f2efce3dbf0d3d5d3822febe0517ecd531c892",
+ "pillars": {
+  "G-P1_karaoke_state_machine": {
+   "sents": 13,
+   "checks": [
+    {
+     "sent": 0,
+     "cov@start+0.1": 0.1385,
+     "cov@mid": 0.083,
+     "constancy": 1.669,
+     "full_sentence_no_typewriter": true
+    },
+    {
+     "sent": 0,
+     "word": "Welcome",
+     "accent_box_frac": 0.81,
+     "active_accent_correct": true
+    },
+    {
+     "sent": 0,
+     "word": "to",
+     "accent_box_frac": 0.87,
+     "active_accent_correct": true
+    },
+    {
+     "sent": 0,
+     "word": "end.",
+     "accent_box_frac": 0.74,
+     "active_accent_correct": true
+    },
+    {
+     "sent": 0,
+     "dim_separation_ratio": 0.551,
+     "spoken_dim_correct": true
+    },
+    {
+     "sent": 1,
+     "cov@start+0.1": 0.1547,
+     "cov@mid": 0.0668,
+     "constancy": 2.314,
+     "full_sentence_no_typewriter": true
+    },
+    {
+     "sent": 1,
+     "word": "Move",
+     "accent_box_frac": 0.84,
+     "active_accent_correct": true
+    },
+    {
+     "sent": 1,
+     "word": "your",
+     "accent_box_frac": 0.84,
+     "active_accent_correct": true
+    },
+    {
+     "sent": 1,
+     "word": "-b.",
+     "accent_box_frac": 0.68,
+     "active_accent_correct": true
+    },
+    {
+     "sent": 1,
+     "dim_separation_ratio": 0.489,
+     "spoken_dim_correct": true
+    },
+    {
+     "sent": 2,
+     "cov@start+0.1": 0.2286,
+     "cov@mid": 0.1337,
+     "constancy": 1.71,
+     "full_sentence_no_typewriter": true
+    },
+    {
+     "sent": 2,
+     "word": "This",
+     "accent_box_frac": 0.79,
+     "active_accent_correct": true
+    },
+    {
+     "sent": 2,
+     "word": "is",
+     "accent_box_frac": 0.68,
+     "active_accent_correct": true
+    },
+    {
+     "sent": 2,
+     "word": "scene.",
+     "accent_box_frac": 0.77,
+     "active_accent_correct": true
+    },
+    {
+     "sent": 2,
+     "dim_separation_ratio": 0.566,
+     "spoken_dim_correct": true
+    },
+    {
+     "sent": 3,
+     "cov@start+0.1": 0.2013,
+     "cov@mid": 0.1296,
+     "constancy": 1.554,
+     "full_sentence_no_typewriter": true
+    },
+    {
+     "sent": 3,
+     "word": "I",
+     "accent_box_frac": 0.45,
+     "active_accent_correct": true
+    },
+    {
+     "sent": 3,
+     "word": "think",
+     "accent_box_frac": 0.76,
+     "active_accent_correct": true
+    },
+    {
+     "sent": 3,
+     "word": "scream.",
+     "accent_box_frac": 0.78,
+     "active_accent_correct": true
+    },
+    {
+     "sent": 3,
+     "dim_separation_ratio": 0.573,
+     "spoken_dim_correct": true
+    },
+    {
+     "loop_restart_word0_accent": 0.81,
+     "loop_ok": true
+    }
+   ],
+   "errors": [],
+   "pass": true,
+   "tolerance_ms": 120
+  },
+  "G-P2_lockup_legible": {
+   "pass": true,
+   "spans": [
+    {
+     "t": 0.0,
+     "giant_w_frac": 0.263,
+     "accent_h": 121,
+     "kicker_rows": 257,
+     "cov": 0.0318
+    },
+    {
+     "t": 0.6,
+     "giant_w_frac": 0.21,
+     "accent_h": 109,
+     "kicker_rows": 216,
+     "cov": 0.0202
+    },
+    {
+     "t": 1.2,
+     "giant_w_frac": 0.21,
+     "accent_h": 109,
+     "kicker_rows": 223,
+     "cov": 0.02
+    },
+    {
+     "t": 1.8,
+     "giant_w_frac": 0.21,
+     "accent_h": 109,
+     "kicker_rows": 211,
+     "cov": 0.0201
+    }
+   ],
+   "mixed_scale_present": true
+  },
+  "G-P3_occlusion": {
+   "pass": true,
+   "mode": "scrim-fallback",
+   "note": "no matte claimed; scrim plate used (honest)"
+  },
+  "G-P4_composition": {
+   "adjacent_similar_pairs": 0,
+   "dead_margin_frames": 1,
+   "frames": 464,
+   "distinct_comp_modes": 4,
+   "comp_modes": [
+    "base",
+    "mirror",
+    "punch",
+    "zoom"
+   ],
+   "pass": true,
+   "frame0": {
+    "pass": true,
+    "hook_text_coverage": 0.351,
+    "plate_rows_frac": 0.085,
+    "empty_bar_frame0": false
+   }
+  },
+  "G-P5_easing": {
+   "pass": true,
+   "vel_first_half": 98.2,
+   "vel_last_half": 122.8,
+   "vel_std": 246.1,
+   "nonlinear_easing": true
+  },
+  "G-P6_transitions": {
+   "comp_changes": 10,
+   "whip_or_flash_at_change": 9,
+   "hard_cuts": 0,
+   "invert_frames_seen": 8,
+   "details": [
+    {
+     "t": 3.25,
+     "flash": true,
+     "blur": true
+    },
+    {
+     "t": 6.07,
+     "flash": true,
+     "blur": false
+    },
+    {
+     "t": 9.18,
+     "flash": true,
+     "blur": false
+    },
+    {
+     "t": 12.31,
+     "flash": true,
+     "blur": false
+    },
+    {
+     "t": 15.43,
+     "flash": true,
+     "blur": false
+    },
+    {
+     "t": 18.56,
+     "flash": true,
+     "blur": false
+    },
+    {
+     "t": 21.69,
+     "flash": true,
+     "blur": false
+    },
+    {
+     "t": 24.88,
+     "flash": true,
+     "blur": false
+    },
+    {
+     "t": 26.6,
+     "flash": true,
+     "blur": true
+    }
+   ],
+   "pass": true,
+   "zoom_through_note": "zoom-through enforced by plan quota; verified via G-P19 manifest"
+  },
+  "G-P7_grade": {
+   "final_mean": 64.4,
+   "raw_mean": 35.2,
+   "contrast_ratio_final_vs_raw": 1.266,
+   "mean_shift": 29.2,
+   "crushed_frac_final": 0.53,
+   "crushed_frac_raw": 0.6903,
+   "accent_presence_frac_frames": 1.0,
+   "pass": true
+  },
+  "G-P8_stakes": {
+   "accent_card_frames": 24,
+   "truncated": 0,
+   "numbers_from_real_footage": true,
+   "beat_index_only_counter": false,
+   "pass": true
+  },
+  "G-P9_contrast": {
+   "min_caption_contrast": 5.97,
+   "threshold": 4.5,
+   "frames_measured": 40,
+   "pass": true
+  },
+  "G-P10_audio": {
+   "integrated_lufs": -14.0,
+   "true_peak_dbfs": -3.0,
+   "lufs_ok": true,
+   "tp_ok": true,
+   "copyright_coverage": "original audio, full length, no safe-window conflict",
+   "coverage_documented": true,
+   "sfx_events": 14,
+   "comp_changes": 11,
+   "sfx_parity": true,
+   "sidechain_duck": true,
+   "pass": true
+  },
+  "G-P11_onset": {
+   "cuts": 9,
+   "matched": 9,
+   "frac": 1.0,
+   "tolerance_s": 0.08,
+   "pass": true
+  },
+  "G-P15_variant": {
+   "bottom_zone_violation_frames": 0,
+   "frames": 50,
+   "codec": "h264",
+   "pix_fmt": "yuv420p",
+   "pass": true
+  },
+  "G-P16_polish": {
+   "flicker_events": 9,
+   "strobe_windows": 1,
+   "dead_frames": 0,
+   "frames": 150,
+   "pass": true,
+   "matte_fps_note": "single-path renderer: matte window rendered at output fps (freeze-window honest)",
+   "texture": {
+    "max_dot_score": 0.0122,
+    "threshold": 0.08,
+    "method": "lattice_autocorr_v2",
+    "pass": true
+   }
+  },
+  "G-P13_preset": {
+   "preset_sha256": "1cdc4e34e9e75009686be0f7b3f2efce3dbf0d3d5d3822febe0517ecd531c892",
+   "hash_logged": true,
+   "when_to_use_respected": true,
+   "pass": true
+  },
+  "G-P14_source": {
+   "score": 8.5,
+   "pass_L5": true,
+   "action": "raw accepted",
+   "pass": true
+  },
+  "G-P17_resources": {
+   "licenses_logged": true,
+   "pass": true
+  },
+  "G-P18_onboarding": {
+   "proposal_logged": true,
+   "overrides_respected": false,
+   "pass": true
+  },
+  "G-P19_manifest": {
+   "pass": true,
+   "missing_workfiles": [],
+   "manifest_missing_keys": [],
+   "manifest_file": "manifest_9x16.json"
+  },
+  "G-P12_self_critique": {
+   "min_axis": 9.7,
+   "all_ge_9.5": true,
+   "iterations": 0,
+   "honest_gap_report": null,
+   "pass": true
+  }
+ }
+}

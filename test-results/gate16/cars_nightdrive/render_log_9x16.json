@@ -1,0 +1,85 @@
+{
+ "preset": "cars_nightdrive",
+ "variant": "9x16",
+ "out": "cars_nightdrive_v16_9x16.mp4",
+ "ow": 720,
+ "oh": 1280,
+ "fps": 30,
+ "duration": 22.08,
+ "n_beats": 7,
+ "cut_times": [
+  0.0,
+  3.0,
+  6.0,
+  9.5,
+  12.5,
+  15.5,
+  18.5,
+  19.68
+ ],
+ "hook_text": "NIGHT DRIVE",
+ "cap_engine": "beat-keyword",
+ "n_words": 12,
+ "events": [
+  {
+   "t": 0.0,
+   "sfx": "whoosh"
+  },
+  {
+   "t": 0.06,
+   "sfx": "thump"
+  },
+  {
+   "t": 3.0,
+   "sfx": "whoosh"
+  },
+  {
+   "t": 5.5,
+   "sfx": "whoosh"
+  },
+  {
+   "t": 6.0,
+   "sfx": "whoosh"
+  },
+  {
+   "t": 9.5,
+   "sfx": "whoosh"
+  },
+  {
+   "t": 12.5,
+   "sfx": "whoosh"
+  },
+  {
+   "t": 12.7,
+   "sfx": "glitch"
+  },
+  {
+   "t": 15.5,
+   "sfx": "whoosh"
+  },
+  {
+   "t": 18.5,
+   "sfx": "whoosh"
+  },
+  {
+   "t": 18.8,
+   "sfx": "thump"
+  }
+ ],
+ "matte_occlusion": false,
+ "loudnorm": {
+  "integrated_lufs": -14.1,
+  "true_peak_dbfs": -2.9,
+  "attempts": 1
+ },
+ "comp_fallback_beats": [
+  3
+ ],
+ "source_quality": 6.0,
+ "music_plan": {
+  "decision": "source silent -> generated original bed @96 BPM (dark synth+bass, energy 0.5)",
+  "copyright_coverage": "self-generated bed, 100% coverage"
+ },
+ "renderer": "p16_render.py (single path)",
+ "code_path": "p16_render.py"
+}

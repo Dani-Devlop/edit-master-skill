@@ -1,0 +1,109 @@
+{
+ "axes": {
+  "A1_hook_composition": 10.0,
+  "A2_karaoke_sync": 9.7,
+  "A3_caption_contrast": 10.0,
+  "A4_active_scale": 9.7,
+  "A5_dim_gradation": 10.0,
+  "A6_subject_safety": 10.0,
+  "A7_comp_variety": 10.0,
+  "A8_dead_margin": 10.0,
+  "A9_transition_coverage": 10.0,
+  "A10_easing": 10.0,
+  "A11_onset_cut": 9.5,
+  "A12_grade_strength": 10.0,
+  "A13_palette": 10.0,
+  "A14_stakes": 10.0,
+  "A15_motion_blur": 10.0,
+  "A16_temporal_stability": 10.0,
+  "A17_loudness": 10.0,
+  "A18_endcard": 10.0,
+  "A19_texture": 10.0,
+  "A20_delivery_polish": 10.0
+ },
+ "weakest": "A11_onset_cut",
+ "weakest_value": 9.5,
+ "detail": {
+  "A1": {
+   "pass": true,
+   "hook_text_coverage": 0.9365,
+   "plate_rows_frac": 0.037,
+   "empty_bar_frame0": false
+  },
+  "A3": {
+   "min_caption_contrast": 5.81,
+   "threshold": 4.5,
+   "frames_measured": 40,
+   "pass": true
+  },
+  "A4": {
+   "note": "single-word sentence \u2014 scale shown via engine (V0.1 proved)"
+  },
+  "A5": {
+   "spoken_lum": 111.6,
+   "upcoming_lum": 237.2,
+   "dim_separation": 0.529
+  },
+  "A6": {
+   "high_luma_in_band_frac": 0.0
+  },
+  "A7": {
+   "distinct_modes": 4,
+   "sim_adjacent": 0,
+   "beats": 7
+  },
+  "A8": {
+   "dead_frames": 0,
+   "n": 180
+  },
+  "A9": {
+   "whip": 6,
+   "hard": 0,
+   "changes": 7
+  },
+  "A10": {
+   "vel_std": 72.9,
+   "n": 15
+  },
+  "A12": {
+   "contrast_ratio": 1.36,
+   "mean_shift": -26.0
+  },
+  "A13": {
+   "accent_presence": 1.0
+  },
+  "A14": {
+   "accent_card_frames": 21,
+   "truncated": 0,
+   "note": "stakes chrome (real ENERGY%/BPM pill) + odometer/orbit/starburst beats"
+  },
+  "A15": {
+   "move_early_edge": 1.89,
+   "move_late_edge": 2.91,
+   "smear_ratio": 0.65,
+   "n_early": 3,
+   "n_late": 9
+  },
+  "A16": {
+   "flicker_outside_transitions": 0,
+   "n": 180
+  },
+  "A17": {
+   "lufs": -14.2,
+   "tp": -3.2
+  },
+  "A18": {
+   "tail_accent_frac": 1.0
+  },
+  "A19": {
+   "max_dot_score": 0.0194,
+   "threshold": 0.08,
+   "method": "lattice_autocorr_v2",
+   "pass": true
+  },
+  "A20": {
+   "dead_frames": 0
+  }
+ },
+ "iterations": 0
+}

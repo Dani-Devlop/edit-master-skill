@@ -1,0 +1,27 @@
+{
+ "run": "T_cars_v16",
+ "genre": "cars",
+ "proposal": {
+  "family": "F2 navy glass (Mode B in-scene)",
+  "palette_accent": [
+   88,
+   148,
+   255
+  ],
+  "energy": 0.7,
+  "music_plan": "source silent -> generated original bed @96 BPM (dark synth+bass, energy 0.5)",
+  "platforms": [
+   "9:16 primary"
+  ]
+ },
+ "defaults": {
+  "bilingual": false,
+  "tts": false,
+  "brand_end_card": false,
+  "loop_echo": true,
+  "palette": "auto from preset"
+ },
+ "ask": "confirm or override \u2014 non-blocking proceed",
+ "overrides_applied": {},
+ "status": "proceeded-with-defaults (no reply within window)"
+}

@@ -1,0 +1,225 @@
+{
+ "variant": "9x16",
+ "ow": 720,
+ "oh": 1280,
+ "fps": 30,
+ "n_beats": 7,
+ "cut_times": [
+  0.0,
+  3.0,
+  6.0,
+  9.5,
+  12.5,
+  15.5,
+  18.5,
+  19.68
+ ],
+ "total": 22.08,
+ "cap_engine": "beat-keyword",
+ "words_manifest": [
+  {
+   "w": "NIGHT",
+   "start": 0.0,
+   "end": 0.8
+  },
+  {
+   "w": "DRIVE.",
+   "start": 0.8,
+   "end": 1.6
+  },
+  {
+   "w": "FULL",
+   "start": 3.0,
+   "end": 3.8
+  },
+  {
+   "w": "SEND.",
+   "start": 3.8,
+   "end": 4.6
+  },
+  {
+   "w": "NO",
+   "start": 6.0,
+   "end": 6.8
+  },
+  {
+   "w": "BRAKES.",
+   "start": 6.8,
+   "end": 7.6
+  },
+  {
+   "w": "MIDNIGHT.",
+   "start": 9.5,
+   "end": 11.1
+  },
+  {
+   "w": "GO.",
+   "start": 12.5,
+   "end": 14.1
+  },
+  {
+   "w": "NIGHT",
+   "start": 15.5,
+   "end": 16.3
+  },
+  {
+   "w": "DRIVE.",
+   "start": 16.3,
+   "end": 17.1
+  },
+  {
+   "w": "FULL",
+   "start": 18.5,
+   "end": 19.09
+  },
+  {
+   "w": "SEND.",
+   "start": 19.09,
+   "end": 19.68
+  }
+ ],
+ "rtl": false,
+ "font_px": 58,
+ "band_px": [
+  972,
+  1049
+ ],
+ "accent_rgb": [
+  88,
+  148,
+  255
+ ],
+ "hook_text": "NIGHT DRIVE",
+ "hook_window": [
+  0.0,
+  0.5
+ ],
+ "hook_y_frac": 0.2,
+ "hook_scrim": false,
+ "matte_ok": false,
+ "cap_probe_t": 3.0,
+ "events": [
+  {
+   "t": 0.0,
+   "sfx": "whoosh"
+  },
+  {
+   "t": 0.06,
+   "sfx": "thump"
+  },
+  {
+   "t": 3.0,
+   "sfx": "whoosh"
+  },
+  {
+   "t": 5.5,
+   "sfx": "whoosh"
+  },
+  {
+   "t": 6.0,
+   "sfx": "whoosh"
+  },
+  {
+   "t": 9.5,
+   "sfx": "whoosh"
+  },
+  {
+   "t": 12.5,
+   "sfx": "whoosh"
+  },
+  {
+   "t": 12.7,
+   "sfx": "glitch"
+  },
+  {
+   "t": 15.5,
+   "sfx": "whoosh"
+  },
+  {
+   "t": 18.5,
+   "sfx": "whoosh"
+  },
+  {
+   "t": 18.8,
+   "sfx": "thump"
+  }
+ ],
+ "duck_applied": true,
+ "music_plan": {
+  "decision": "source silent -> generated original bed @96 BPM (dark synth+bass, energy 0.5)",
+  "copyright_coverage": "self-generated bed, 100% coverage"
+ },
+ "preset_name": "cars_nightdrive",
+ "preset_sha256": "ea1982c35a5dab856b5d9e547e50bfbf5ada2f3f4d2bf539347e6fb11154e363",
+ "technique_log": [
+  {
+   "beat": 0,
+   "technique": "freeze+type-slam lockup",
+   "when_to_use": "t=0 hook \u2014 instant stake + composed frame-1"
+  },
+  {
+   "beat": 1,
+   "technique": "recursive zoom-through",
+   "when_to_use": "after hook \u2014 dive into tilted card/scene for momentum"
+  },
+  {
+   "beat": 2,
+   "technique": "eased speed-ramp + odometer",
+   "when_to_use": "motion beat \u2014 ramp creates surge; odometer counts real quantity"
+  },
+  {
+   "beat": 3,
+   "technique": "orbit cards High/Med/Low",
+   "when_to_use": "comparison/verdict beat over cutout canvas"
+  },
+  {
+   "beat": 4,
+   "technique": "invert bite <=0.15s",
+   "when_to_use": "pattern interrupt at retention-risk midpoint"
+  },
+  {
+   "beat": 6,
+   "technique": "starburst draw-on + highlighter tape",
+   "when_to_use": "payoff \u2014 semantic emphasis on the promise word"
+  }
+ ],
+ "resource_licenses": {
+  "Vazirmatn": "OFL 1.1 (SIL Open Font License) \u2014 /tmp/ems-work/p16/assets",
+  "faster-whisper small": "MIT (Systran/faster-whisper-small)",
+  "music bed": "original in-run synthesis (numpy) \u2014 no third-party audio",
+  "source raws": "see sources.txt / work manifest"
+ },
+ "stakes_numbers_real": true,
+ "beat_index_only": false,
+ "overrides": {
+  "applied": false
+ },
+ "energy_by_beat": [
+  35,
+  35,
+  35,
+  35,
+  35,
+  35,
+  35
+ ],
+ "bpm": 120.0,
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 22.08,
+   "color": true
+  }
+ ],
+ "comps": [
+  "base",
+  "punch",
+  "mirror",
+  "cutout",
+  "base",
+  "punch",
+  "mirror"
+ ],
+ "renderer": "p16_render.py (single path)",
+ "asr_normalizations_logged": []
+}

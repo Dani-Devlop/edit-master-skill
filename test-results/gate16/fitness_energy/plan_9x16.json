@@ -1,0 +1,240 @@
+{
+ "variant": "9x16",
+ "ow": 720,
+ "oh": 1280,
+ "fps": 30,
+ "n_beats": 7,
+ "cut_times": [
+  0.0,
+  3.0,
+  5.5,
+  8.5,
+  11.5,
+  14.0,
+  15.5,
+  17.325
+ ],
+ "total": 19.725,
+ "cap_engine": "beat-keyword",
+ "words_manifest": [
+  {
+   "w": "NO",
+   "start": 0.0,
+   "end": 0.8
+  },
+  {
+   "w": "EXCUSES.",
+   "start": 0.8,
+   "end": 1.6
+  },
+  {
+   "w": "ONE",
+   "start": 3.0,
+   "end": 3.533
+  },
+  {
+   "w": "MORE",
+   "start": 3.533,
+   "end": 4.067
+  },
+  {
+   "w": "REP.",
+   "start": 4.067,
+   "end": 4.6
+  },
+  {
+   "w": "EARN",
+   "start": 5.5,
+   "end": 6.3
+  },
+  {
+   "w": "IT.",
+   "start": 6.3,
+   "end": 7.1
+  },
+  {
+   "w": "STRONGER.",
+   "start": 8.5,
+   "end": 10.1
+  },
+  {
+   "w": "GO",
+   "start": 11.5,
+   "end": 12.3
+  },
+  {
+   "w": "HARD.",
+   "start": 12.3,
+   "end": 13.1
+  },
+  {
+   "w": "NO",
+   "start": 14.0,
+   "end": 14.75
+  },
+  {
+   "w": "EXCUSES.",
+   "start": 14.75,
+   "end": 15.5
+  },
+  {
+   "w": "ONE",
+   "start": 15.5,
+   "end": 16.033
+  },
+  {
+   "w": "MORE",
+   "start": 16.033,
+   "end": 16.567
+  },
+  {
+   "w": "REP.",
+   "start": 16.567,
+   "end": 17.1
+  }
+ ],
+ "rtl": false,
+ "font_px": 58,
+ "band_px": [
+  972,
+  1049
+ ],
+ "accent_rgb": [
+  190,
+  245,
+  40
+ ],
+ "hook_text": "NO EXCUSES",
+ "hook_window": [
+  0.0,
+  0.5
+ ],
+ "hook_y_frac": 0.2,
+ "hook_scrim": false,
+ "matte_ok": false,
+ "cap_probe_t": 3.0,
+ "events": [
+  {
+   "t": 0.0,
+   "sfx": "whoosh"
+  },
+  {
+   "t": 0.06,
+   "sfx": "thump"
+  },
+  {
+   "t": 3.0,
+   "sfx": "whoosh"
+  },
+  {
+   "t": 5.0,
+   "sfx": "whoosh"
+  },
+  {
+   "t": 5.5,
+   "sfx": "whoosh"
+  },
+  {
+   "t": 8.5,
+   "sfx": "whoosh"
+  },
+  {
+   "t": 11.5,
+   "sfx": "whoosh"
+  },
+  {
+   "t": 11.7,
+   "sfx": "glitch"
+  },
+  {
+   "t": 14.0,
+   "sfx": "whoosh"
+  },
+  {
+   "t": 15.5,
+   "sfx": "whoosh"
+  },
+  {
+   "t": 15.8,
+   "sfx": "thump"
+  }
+ ],
+ "duck_applied": true,
+ "music_plan": {
+  "decision": "source silent -> generated original bed @100 BPM (driving kick+bass, energy 0.8)",
+  "copyright_coverage": "self-generated bed, 100% coverage, no safe-window"
+ },
+ "preset_name": "fitness_energy",
+ "preset_sha256": "01ea6336dac2fd669a74c9b5eca34b22c6889fe2f0d651b3f52b432ae7790f9a",
+ "technique_log": [
+  {
+   "beat": 0,
+   "technique": "freeze+type-slam lockup",
+   "when_to_use": "t=0 hook \u2014 instant stake + composed frame-1"
+  },
+  {
+   "beat": 1,
+   "technique": "recursive zoom-through",
+   "when_to_use": "after hook \u2014 dive into tilted card/scene for momentum"
+  },
+  {
+   "beat": 2,
+   "technique": "eased speed-ramp + odometer",
+   "when_to_use": "motion beat \u2014 ramp creates surge; odometer counts real quantity"
+  },
+  {
+   "beat": 3,
+   "technique": "orbit cards High/Med/Low",
+   "when_to_use": "comparison/verdict beat over cutout canvas"
+  },
+  {
+   "beat": 4,
+   "technique": "invert bite <=0.15s",
+   "when_to_use": "pattern interrupt at retention-risk midpoint"
+  },
+  {
+   "beat": 6,
+   "technique": "starburst draw-on + highlighter tape",
+   "when_to_use": "payoff \u2014 semantic emphasis on the promise word"
+  }
+ ],
+ "resource_licenses": {
+  "Vazirmatn": "OFL 1.1 (SIL Open Font License) \u2014 /tmp/ems-work/p16/assets",
+  "faster-whisper small": "MIT (Systran/faster-whisper-small)",
+  "music bed": "original in-run synthesis (numpy) \u2014 no third-party audio",
+  "source raws": "see sources.txt / work manifest"
+ },
+ "stakes_numbers_real": true,
+ "beat_index_only": false,
+ "overrides": {
+  "applied": false
+ },
+ "energy_by_beat": [
+  35,
+  35,
+  35,
+  35,
+  35,
+  35,
+  35
+ ],
+ "bpm": 120.0,
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 16.725,
+   "color": true
+  }
+ ],
+ "comps": [
+  "base",
+  "punch",
+  "mirror",
+  "cutout",
+  "base",
+  "punch",
+  "mirror"
+ ],
+ "renderer": "p16_render.py (single path)",
+ "asr_normalizations_logged": []
+}

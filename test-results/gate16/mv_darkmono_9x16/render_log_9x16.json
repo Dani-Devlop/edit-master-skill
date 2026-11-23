@@ -1,0 +1,98 @@
+{
+ "preset": "mv_darkmono",
+ "variant": "9x16",
+ "out": "mv_darkmono_v16_9x16.mp4",
+ "ow": 720,
+ "oh": 1280,
+ "fps": 30,
+ "duration": 30.91,
+ "n_beats": 10,
+ "cut_times": [
+  0.0,
+  3.251,
+  6.072,
+  9.183,
+  12.307,
+  15.43,
+  18.564,
+  21.687,
+  24.88,
+  26.598,
+  28.51
+ ],
+ "hook_text": "WELCOME TO THE PARTY WHERE EVERYBODY DIES AT",
+ "cap_engine": "whisper-word-sync",
+ "n_words": 81,
+ "events": [
+  {
+   "t": 0.0,
+   "sfx": "whoosh"
+  },
+  {
+   "t": 0.06,
+   "sfx": "thump"
+  },
+  {
+   "t": 3.251,
+   "sfx": "whoosh"
+  },
+  {
+   "t": 5.572,
+   "sfx": "whoosh"
+  },
+  {
+   "t": 6.072,
+   "sfx": "whoosh"
+  },
+  {
+   "t": 9.183,
+   "sfx": "whoosh"
+  },
+  {
+   "t": 12.307,
+   "sfx": "whoosh"
+  },
+  {
+   "t": 12.507,
+   "sfx": "glitch"
+  },
+  {
+   "t": 15.43,
+   "sfx": "whoosh"
+  },
+  {
+   "t": 18.564,
+   "sfx": "whoosh"
+  },
+  {
+   "t": 21.687,
+   "sfx": "whoosh"
+  },
+  {
+   "t": 24.88,
+   "sfx": "whoosh"
+  },
+  {
+   "t": 26.598,
+   "sfx": "whoosh"
+  },
+  {
+   "t": 26.898,
+   "sfx": "thump"
+  }
+ ],
+ "matte_occlusion": false,
+ "loudnorm": {
+  "integrated_lufs": -14.0,
+  "true_peak_dbfs": -3.0,
+  "attempts": 2
+ },
+ "comp_fallback_beats": [],
+ "source_quality": 8.5,
+ "music_plan": {
+  "decision": "keep original mix (music+rap) \u2014 no overlay music",
+  "copyright_coverage": "original audio, full length, no safe-window conflict"
+ },
+ "renderer": "p16_render.py (single path)",
+ "code_path": "p16_render.py"
+}

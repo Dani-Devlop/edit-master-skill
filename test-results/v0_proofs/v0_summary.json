@@ -1,0 +1,16 @@
+{
+ "asserts": {
+  "full_sentence_always": true,
+  "active_accent_in_box": true,
+  "dim_below_upcoming": true,
+  "loop_restart_word0": true
+ },
+ "rtl": true,
+ "negatives": {
+  "neg_typewriter": true,
+  "neg_emptybar_frame0": true,
+  "neg_halftone_footage": true
+ },
+ "critique_min_axis": 3.0,
+ "weakest": "A19_texture"
+}

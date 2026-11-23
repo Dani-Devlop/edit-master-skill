@@ -1,0 +1,40 @@
+{
+ "generated": "phase 16.0 V0.2",
+ "presets": {
+  "cars_nightdrive.json": {
+   "sha256": "ea1982c35a5dab856b5d9e547e50bfbf5ada2f3f4d2bf539347e6fb11154e363",
+   "name": "cars_nightdrive",
+   "genre": "cars",
+   "mode": "B"
+  },
+  "fitness_energy.json": {
+   "sha256": "01ea6336dac2fd669a74c9b5eca34b22c6889fe2f0d651b3f52b432ae7790f9a",
+   "name": "fitness_energy",
+   "genre": "fitness",
+   "mode": "B"
+  },
+  "food_fresh.json": {
+   "sha256": "63bbd1d42414d48770d7f9f47cadd9de0dd929250acbd1cea1311a546b70d46e",
+   "name": "food_fresh",
+   "genre": "food",
+   "mode": "B"
+  },
+  "mv_darkmono.json": {
+   "sha256": "1cdc4e34e9e75009686be0f7b3f2efce3dbf0d3d5d3822febe0517ecd531c892",
+   "name": "mv_darkmono",
+   "genre": "music_video",
+   "mode": "B"
+  },
+  "pets_playful.json": {
+   "sha256": "540ecc17a13bcde6ca2f92091a2e50d6a82e091a648ccdd62e18196394f08e75",
+   "name": "pets_playful",
+   "genre": "pets",
+   "mode": "B"
+  }
+ },
+ "target_loaded": {
+  "preset": "mv_darkmono.json",
+  "sha256_16": "1cdc4e34e9e75009",
+  "loaded_ok": true
+ }
+}

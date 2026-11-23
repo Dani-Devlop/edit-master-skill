@@ -247,3 +247,67 @@ depth families (the 6 footage-first scrim renders measured in the A3 audit are i
 - **Pets playful (F4 variant)**: sunny-orange (255,176,46); paw stickers, odometer counters.
 - Caption grammar: 76px+stroke equivalent (56-64px @720w), band 0.72-0.90H, underline chrome,
   beat pill + progress bar = family chrome (G13 guarantee >=0.006 accent fraction).
+# STYLES v4 — Phase 16.0 LEAP family addendum
+
+Appended 2026-11-24 to the Phase 5.0 category sheets above. These five LEAP family
+sheets are the preset bank (presets/*.json, sha256-logged in every gate json).
+The renderer loads one preset per run (G-P13); onboarding may override platform /
+palette / end-card / bilingual / TTS / genre / length (P18).
+
+## F3 — DARK MONO (music_video, `mv_darkmono.json`)
+
+- Reference: gritty B&W rap MV, volt accent on grade + type only
+- Palette: B&W base `bw` + accent `rgb(189,255,0)` volt; color-pop: keep source color
+  on color inserts only
+- Grade: high-contrast B&W curve, crushed-black floor, grain 4.2 matched to source,
+  vignette 0.20, halation on highlights
+- Captions: whisper-word-sync karaoke (volt accent active 1.2x), band 0.74–0.90,
+  font 56px, stroke 3
+- Signature kit: freeze+slam hook with occlusion, ghost echo, selection brackets,
+  invert bite ≤0.15s, glitch bites, whip edge-clamp
+- Modes: 9:16 primary + 1:1 + 4:5
+
+## F4 — LIGHT GRAY + PINK (food, `food_fresh.json`)
+
+- Palette: light-gray canvas + accent `rgb(250,112,142)` pink (soft family — G-P8
+  card scan uses accent-relative saturation floor)
+- Grade: bright airy curve, warm highlights, gentle contrast 1.06–1.10
+- Captions: beat-keyword lines (no vox), pink underline accents, band 0.76+
+- Signature kit: odometer (BPM/real quantities), starburst payoff, highlighter tape,
+  light-leak on Mode A entrance, speed-ramp on pour/sizzle
+- Modes: 9:16 primary
+
+## ENERGY (fitness, `fitness_energy.json`)
+
+- Palette: dark slate + electric accent, high-energy cuts
+- Grade: contrast 1.12, saturation 1.08, sweat-highlight bloom
+- Captions: beat-keyword (no vox), punch-in on every emphasis word
+- Signature kit: rep odometer from motion cycles, orbit cards High/Med/Low,
+  speed-ramp 0.4x/1.6x on movement peaks, whip between comps
+- Modes: 9:16 primary
+
+## NIGHT DRIVE (cars, `cars_nightdrive.json`)
+
+- Palette: midnight panel + electric accent
+- Grade: day-for-night on daytime source, cyan rim-light cast, halation on
+  headlight highlights, scanline bites ≤0.15s
+- Captions: beat-keyword, mono-italic accent words
+- Signature kit: speed lines, gear pill, glitch entrance, whip edge-clamp
+- Modes: 9:16 primary (16:9 source letterbox-aware)
+
+## PLAYFUL (pets, `pets_playful.json`)
+
+- Palette: warm cream + amber accent (hue-adjacent fur protected — card scan
+  excludes desaturated fur by strict-hue + fill-ratio)
+- Grade: bright, saturated 1.10, warm bias
+- Captions: beat-keyword, bouncy ease-out-back entrances
+- Signature kit: zoomies speed-ramp, polaroid cascade with real different frames,
+  odometer treats, starburst payoff
+- Modes: 9:16 primary
+
+## P7 color-science chain (all families)
+
+curves/LUT → skin-tone protection → halation/bloom on highlights → grain matched
+to source (σ4.2 default) → subtle vignette 0.20 → per-family palette consistency
+check (accent present in >60% of sampled frames, G-P7). GRADE JUMP vs raw is
+measured per video with a before/after pair in the scoresheet.

@@ -1,0 +1,20 @@
+{
+ "resolution": 2.0,
+ "fps": 0.8,
+ "stability": 1.5,
+ "subject_clarity": 0.6,
+ "lighting": 1.5,
+ "audio_usability": 0.5,
+ "total_10": 6.9,
+ "pass_L5": true,
+ "measured": {
+  "mean_motion_diff": 15.95,
+  "mean_sharpness": 18.9,
+  "mean_luma": 62.2,
+  "lufs_integrated": -70.0,
+  "true_peak_dbfs": null
+ },
+ "notes": [
+  "color source"
+ ]
+}

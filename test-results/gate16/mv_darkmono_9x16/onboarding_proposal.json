@@ -1,0 +1,29 @@
+{
+ "run": "T1_mv_darkmono_v16",
+ "genre": "music_video",
+ "proposal": {
+  "family": "F3 DARK MONO variant",
+  "palette_accent": [
+   189,
+   255,
+   0
+  ],
+  "energy": 0.7,
+  "music_plan": "keep original mix (music+rap) \u2014 no overlay music",
+  "platforms": [
+   "9:16 primary",
+   "1:1",
+   "4:5"
+  ]
+ },
+ "defaults": {
+  "bilingual": false,
+  "tts": false,
+  "brand_end_card": false,
+  "loop_echo": true,
+  "palette": "auto from preset"
+ },
+ "ask": "confirm or override \u2014 non-blocking proceed",
+ "overrides_applied": {},
+ "status": "proceeded-with-defaults (no reply within window)"
+}

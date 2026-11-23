@@ -1,0 +1,85 @@
+{
+ "preset": "food_fresh",
+ "variant": "9x16",
+ "out": "food_fresh_v16_9x16.mp4",
+ "ow": 720,
+ "oh": 1280,
+ "fps": 30,
+ "duration": 18.0,
+ "n_beats": 7,
+ "cut_times": [
+  0.0,
+  2.5,
+  5.0,
+  7.5,
+  10.5,
+  13.0,
+  14.0,
+  15.6
+ ],
+ "hook_text": "FRESH",
+ "cap_engine": "beat-keyword",
+ "n_words": 8,
+ "events": [
+  {
+   "t": 0.0,
+   "sfx": "whoosh"
+  },
+  {
+   "t": 0.06,
+   "sfx": "thump"
+  },
+  {
+   "t": 2.5,
+   "sfx": "whoosh"
+  },
+  {
+   "t": 4.5,
+   "sfx": "whoosh"
+  },
+  {
+   "t": 5.0,
+   "sfx": "whoosh"
+  },
+  {
+   "t": 7.5,
+   "sfx": "whoosh"
+  },
+  {
+   "t": 10.5,
+   "sfx": "whoosh"
+  },
+  {
+   "t": 10.7,
+   "sfx": "glitch"
+  },
+  {
+   "t": 13.0,
+   "sfx": "whoosh"
+  },
+  {
+   "t": 14.0,
+   "sfx": "whoosh"
+  },
+  {
+   "t": 14.3,
+   "sfx": "thump"
+  }
+ ],
+ "matte_occlusion": false,
+ "loudnorm": {
+  "integrated_lufs": -14.2,
+  "true_peak_dbfs": -3.2,
+  "attempts": 1
+ },
+ "comp_fallback_beats": [
+  3
+ ],
+ "source_quality": 6.9,
+ "music_plan": {
+  "decision": "source silent -> generated original bed @126 BPM (bright plucks+bass, energy 0.6)",
+  "copyright_coverage": "self-generated bed, 100% coverage"
+ },
+ "renderer": "p16_render.py (single path)",
+ "code_path": "p16_render.py"
+}

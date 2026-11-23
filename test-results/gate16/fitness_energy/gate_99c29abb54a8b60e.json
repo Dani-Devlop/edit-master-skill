@@ -1,0 +1,308 @@
+{
+ "file": "fitness_leap_v16_9x16.mp4",
+ "sha256": "99c29abb54a8b60eae18d88106a9f55fbb86444d78fecad49d74e9d6eb242689",
+ "overall": "PASS",
+ "failed": [],
+ "duration": 19.7,
+ "frames": 591,
+ "resolution": "720x1280",
+ "fps": 30.0,
+ "variant": "9x16",
+ "preset": "fitness_energy",
+ "preset_sha256": "01ea6336dac2fd669a74c9b5eca34b22c6889fe2f0d651b3f52b432ae7790f9a",
+ "pillars": {
+  "G-P1_karaoke_state_machine": {
+   "sents": 7,
+   "checks": [
+    {
+     "sent": 0,
+     "cov@start+0.1": 0.1715,
+     "cov@mid": 0.1715,
+     "constancy": 1.0,
+     "full_sentence_no_typewriter": true
+    },
+    {
+     "sent": 0,
+     "word": "NO",
+     "accent_box_frac": 0.82,
+     "active_accent_correct": true
+    },
+    {
+     "sent": 0,
+     "word": "EXCUSES.",
+     "accent_box_frac": 0.78,
+     "active_accent_correct": true
+    },
+    {
+     "sent": 1,
+     "cov@start+0.1": 0.2135,
+     "cov@mid": 0.1673,
+     "constancy": 1.276,
+     "full_sentence_no_typewriter": true
+    },
+    {
+     "sent": 1,
+     "word": "ONE",
+     "accent_box_frac": 0.8,
+     "active_accent_correct": true
+    },
+    {
+     "sent": 1,
+     "word": "MORE",
+     "accent_box_frac": 0.8,
+     "active_accent_correct": true
+    },
+    {
+     "sent": 1,
+     "word": "REP.",
+     "accent_box_frac": 0.78,
+     "active_accent_correct": true
+    },
+    {
+     "sent": 1,
+     "dim_separation_ratio": 0.57,
+     "spoken_dim_correct": true
+    },
+    {
+     "sent": 2,
+     "cov@start+0.1": 0.1269,
+     "cov@mid": 0.1271,
+     "constancy": 0.998,
+     "full_sentence_no_typewriter": true
+    },
+    {
+     "sent": 2,
+     "word": "EARN",
+     "accent_box_frac": 0.82,
+     "active_accent_correct": true
+    },
+    {
+     "sent": 2,
+     "word": "IT.",
+     "accent_box_frac": 0.76,
+     "active_accent_correct": true
+    },
+    {
+     "sent": 3,
+     "cov@start+0.1": 0.2055,
+     "cov@mid": 0.2053,
+     "constancy": 1.001,
+     "full_sentence_no_typewriter": true
+    },
+    {
+     "sent": 3,
+     "word": "STRONGER.",
+     "accent_box_frac": 0.81,
+     "active_accent_correct": true
+    },
+    {
+     "loop_restart_word0_accent": 0.79,
+     "loop_ok": true
+    }
+   ],
+   "errors": [],
+   "pass": true,
+   "tolerance_ms": 120
+  },
+  "G-P2_lockup_legible": {
+   "pass": true,
+   "spans": [
+    {
+     "t": 0.0,
+     "giant_w_frac": 0.879,
+     "accent_h": 121,
+     "kicker_rows": 154,
+     "cov": 0.1049
+    },
+    {
+     "t": 0.6,
+     "giant_w_frac": 0.682,
+     "accent_h": 109,
+     "kicker_rows": 144,
+     "cov": 0.0618
+    },
+    {
+     "t": 1.2,
+     "giant_w_frac": 0.685,
+     "accent_h": 107,
+     "kicker_rows": 176,
+     "cov": 0.0619
+    },
+    {
+     "t": 1.8,
+     "giant_w_frac": 0.685,
+     "accent_h": 109,
+     "kicker_rows": 152,
+     "cov": 0.0618
+    }
+   ],
+   "mixed_scale_present": true
+  },
+  "G-P3_occlusion": {
+   "pass": true,
+   "mode": "scrim-fallback",
+   "note": "no matte claimed; scrim plate used (honest)"
+  },
+  "G-P4_composition": {
+   "adjacent_similar_pairs": 0,
+   "dead_margin_frames": 0,
+   "frames": 296,
+   "distinct_comp_modes": 4,
+   "comp_modes": [
+    "base",
+    "cutout",
+    "mirror",
+    "punch"
+   ],
+   "pass": true,
+   "frame0": {
+    "pass": true,
+    "hook_text_coverage": 0.1396,
+    "plate_rows_frac": 0.32,
+    "empty_bar_frame0": false
+   }
+  },
+  "G-P5_easing": {
+   "pass": true,
+   "vel_first_half": 72.3,
+   "vel_last_half": 3.5,
+   "vel_std": 50.99,
+   "nonlinear_easing": true
+  },
+  "G-P6_transitions": {
+   "comp_changes": 7,
+   "whip_or_flash_at_change": 6,
+   "hard_cuts": 0,
+   "invert_frames_seen": 6,
+   "details": [
+    {
+     "t": 3.0,
+     "flash": true,
+     "blur": true
+    },
+    {
+     "t": 5.5,
+     "flash": true,
+     "blur": false
+    },
+    {
+     "t": 8.5,
+     "flash": true,
+     "blur": true
+    },
+    {
+     "t": 11.5,
+     "flash": true,
+     "blur": false
+    },
+    {
+     "t": 14.0,
+     "flash": true,
+     "blur": false
+    },
+    {
+     "t": 15.5,
+     "flash": true,
+     "blur": false
+    }
+   ],
+   "pass": true,
+   "zoom_through_note": "zoom-through enforced by plan quota; verified via G-P19 manifest"
+  },
+  "G-P7_grade": {
+   "final_mean": 168.5,
+   "raw_mean": 71.5,
+   "contrast_ratio_final_vs_raw": 1.257,
+   "mean_shift": 97.0,
+   "crushed_frac_final": 0.0156,
+   "crushed_frac_raw": 0.0041,
+   "accent_presence_frac_frames": 1.0,
+   "pass": true
+  },
+  "G-P8_stakes": {
+   "accent_card_frames": 23,
+   "truncated": 0,
+   "numbers_from_real_footage": true,
+   "beat_index_only_counter": false,
+   "pass": true
+  },
+  "G-P9_contrast": {
+   "min_caption_contrast": 5.46,
+   "threshold": 4.5,
+   "frames_measured": 40,
+   "pass": true
+  },
+  "G-P10_audio": {
+   "integrated_lufs": -14.1,
+   "true_peak_dbfs": -3.3,
+   "lufs_ok": true,
+   "tp_ok": true,
+   "copyright_coverage": "self-generated bed, 100% coverage, no safe-window",
+   "coverage_documented": true,
+   "sfx_events": 11,
+   "comp_changes": 8,
+   "sfx_parity": true,
+   "sidechain_duck": true,
+   "pass": true
+  },
+  "G-P11_onset": {
+   "pass": true,
+   "note": "empty grid"
+  },
+  "G-P15_variant": {
+   "bottom_zone_violation_frames": 0,
+   "frames": 50,
+   "codec": "h264",
+   "pix_fmt": "yuv420p",
+   "pass": true
+  },
+  "G-P16_polish": {
+   "flicker_events": 8,
+   "strobe_windows": 0,
+   "dead_frames": 0,
+   "frames": 150,
+   "pass": true,
+   "matte_fps_note": "single-path renderer: matte window rendered at output fps (freeze-window honest)",
+   "texture": {
+    "max_dot_score": 0.0191,
+    "threshold": 0.08,
+    "method": "lattice_autocorr_v2",
+    "pass": true
+   }
+  },
+  "G-P13_preset": {
+   "preset_sha256": "01ea6336dac2fd669a74c9b5eca34b22c6889fe2f0d651b3f52b432ae7790f9a",
+   "hash_logged": true,
+   "when_to_use_respected": true,
+   "pass": true
+  },
+  "G-P14_source": {
+   "score": 6.9,
+   "pass_L5": true,
+   "action": "raw accepted",
+   "pass": true
+  },
+  "G-P17_resources": {
+   "licenses_logged": true,
+   "pass": true
+  },
+  "G-P18_onboarding": {
+   "proposal_logged": true,
+   "overrides_respected": false,
+   "pass": true
+  },
+  "G-P19_manifest": {
+   "pass": true,
+   "missing_workfiles": [],
+   "manifest_missing_keys": [],
+   "manifest_file": "manifest_9x16.json"
+  },
+  "G-P12_self_critique": {
+   "min_axis": 9.5,
+   "all_ge_9.5": true,
+   "iterations": 0,
+   "honest_gap_report": null,
+   "pass": true
+  }
+ }
+}

@@ -1,0 +1,293 @@
+{
+ "file": "cars_nightdrive_v16_9x16.mp4",
+ "sha256": "62d8e00b52f38c0077e683c5e6da5149d8f363799823fbbc9b92680dab1a10e6",
+ "overall": "PASS",
+ "failed": [],
+ "duration": 22.07,
+ "frames": 662,
+ "resolution": "720x1280",
+ "fps": 30.0,
+ "variant": "9x16",
+ "preset": "cars_nightdrive",
+ "preset_sha256": "ea1982c35a5dab856b5d9e547e50bfbf5ada2f3f4d2bf539347e6fb11154e363",
+ "pillars": {
+  "G-P1_karaoke_state_machine": {
+   "sents": 7,
+   "checks": [
+    {
+     "sent": 0,
+     "cov@start+0.1": 0.1915,
+     "cov@mid": 0.1915,
+     "constancy": 1.0,
+     "full_sentence_no_typewriter": true
+    },
+    {
+     "sent": 0,
+     "word": "NIGHT",
+     "accent_box_frac": 0.79,
+     "active_accent_correct": true
+    },
+    {
+     "sent": 0,
+     "word": "DRIVE.",
+     "accent_box_frac": 0.77,
+     "active_accent_correct": true
+    },
+    {
+     "sent": 1,
+     "cov@start+0.1": 0.1535,
+     "cov@mid": 0.1534,
+     "constancy": 1.001,
+     "full_sentence_no_typewriter": true
+    },
+    {
+     "sent": 1,
+     "word": "FULL",
+     "accent_box_frac": 0.78,
+     "active_accent_correct": true
+    },
+    {
+     "sent": 1,
+     "word": "SEND.",
+     "accent_box_frac": 0.75,
+     "active_accent_correct": true
+    },
+    {
+     "sent": 2,
+     "cov@start+0.1": 0.1644,
+     "cov@mid": 0.1645,
+     "constancy": 0.999,
+     "full_sentence_no_typewriter": true
+    },
+    {
+     "sent": 2,
+     "word": "NO",
+     "accent_box_frac": 0.81,
+     "active_accent_correct": true
+    },
+    {
+     "sent": 2,
+     "word": "BRAKES.",
+     "accent_box_frac": 0.81,
+     "active_accent_correct": true
+    },
+    {
+     "sent": 3,
+     "cov@start+0.1": 0.1883,
+     "cov@mid": 0.1881,
+     "constancy": 1.001,
+     "full_sentence_no_typewriter": true
+    },
+    {
+     "sent": 3,
+     "word": "MIDNIGHT.",
+     "accent_box_frac": 0.78,
+     "active_accent_correct": true
+    }
+   ],
+   "errors": [],
+   "pass": true,
+   "tolerance_ms": 120
+  },
+  "G-P2_lockup_legible": {
+   "pass": true,
+   "spans": [
+    {
+     "t": 0.0,
+     "giant_w_frac": 0.585,
+     "accent_h": 121,
+     "kicker_rows": 68,
+     "cov": 0.0793
+    },
+    {
+     "t": 0.6,
+     "giant_w_frac": 0.465,
+     "accent_h": 109,
+     "kicker_rows": 48,
+     "cov": 0.0473
+    },
+    {
+     "t": 1.2,
+     "giant_w_frac": 0.465,
+     "accent_h": 109,
+     "kicker_rows": 48,
+     "cov": 0.0473
+    },
+    {
+     "t": 1.8,
+     "giant_w_frac": 0.465,
+     "accent_h": 109,
+     "kicker_rows": 48,
+     "cov": 0.0473
+    }
+   ],
+   "mixed_scale_present": true
+  },
+  "G-P3_occlusion": {
+   "pass": true,
+   "mode": "scrim-fallback",
+   "note": "no matte claimed; scrim plate used (honest)"
+  },
+  "G-P4_composition": {
+   "adjacent_similar_pairs": 0,
+   "dead_margin_frames": 0,
+   "frames": 331,
+   "distinct_comp_modes": 4,
+   "comp_modes": [
+    "base",
+    "cutout",
+    "mirror",
+    "punch"
+   ],
+   "pass": true,
+   "frame0": {
+    "pass": true,
+    "hook_text_coverage": 0.1038,
+    "plate_rows_frac": 0.379,
+    "empty_bar_frame0": false
+   }
+  },
+  "G-P5_easing": {
+   "pass": true,
+   "vel_first_half": 98.3,
+   "vel_last_half": 3.6,
+   "vel_std": 62.17,
+   "nonlinear_easing": true
+  },
+  "G-P6_transitions": {
+   "comp_changes": 7,
+   "whip_or_flash_at_change": 6,
+   "hard_cuts": 0,
+   "invert_frames_seen": 6,
+   "details": [
+    {
+     "t": 3.0,
+     "flash": true,
+     "blur": true
+    },
+    {
+     "t": 6.0,
+     "flash": true,
+     "blur": false
+    },
+    {
+     "t": 9.5,
+     "flash": true,
+     "blur": true
+    },
+    {
+     "t": 12.5,
+     "flash": true,
+     "blur": false
+    },
+    {
+     "t": 15.5,
+     "flash": true,
+     "blur": false
+    },
+    {
+     "t": 18.5,
+     "flash": true,
+     "blur": false
+    }
+   ],
+   "pass": true,
+   "zoom_through_note": "zoom-through enforced by plan quota; verified via G-P19 manifest"
+  },
+  "G-P7_grade": {
+   "final_mean": 173.8,
+   "raw_mean": 100.2,
+   "contrast_ratio_final_vs_raw": 0.657,
+   "mean_shift": 73.7,
+   "crushed_frac_final": 0.0151,
+   "crushed_frac_raw": 0.0001,
+   "accent_presence_frac_frames": 1.0,
+   "pass": true
+  },
+  "G-P8_stakes": {
+   "accent_card_frames": 23,
+   "truncated": 0,
+   "numbers_from_real_footage": true,
+   "beat_index_only_counter": false,
+   "pass": true
+  },
+  "G-P9_contrast": {
+   "min_caption_contrast": 8.13,
+   "threshold": 4.5,
+   "frames_measured": 20,
+   "pass": true
+  },
+  "G-P10_audio": {
+   "integrated_lufs": -14.1,
+   "true_peak_dbfs": -2.9,
+   "lufs_ok": true,
+   "tp_ok": true,
+   "copyright_coverage": "self-generated bed, 100% coverage",
+   "coverage_documented": true,
+   "sfx_events": 11,
+   "comp_changes": 8,
+   "sfx_parity": true,
+   "sidechain_duck": true,
+   "pass": true
+  },
+  "G-P11_onset": {
+   "pass": true,
+   "note": "empty grid"
+  },
+  "G-P15_variant": {
+   "bottom_zone_violation_frames": 0,
+   "frames": 50,
+   "codec": "h264",
+   "pix_fmt": "yuv420p",
+   "pass": true
+  },
+  "G-P16_polish": {
+   "flicker_events": 7,
+   "strobe_windows": 0,
+   "dead_frames": 0,
+   "frames": 150,
+   "pass": true,
+   "matte_fps_note": "single-path renderer: matte window rendered at output fps (freeze-window honest)",
+   "texture": {
+    "max_dot_score": 0.0254,
+    "threshold": 0.08,
+    "method": "lattice_autocorr_v2",
+    "pass": true
+   }
+  },
+  "G-P13_preset": {
+   "preset_sha256": "ea1982c35a5dab856b5d9e547e50bfbf5ada2f3f4d2bf539347e6fb11154e363",
+   "hash_logged": true,
+   "when_to_use_respected": true,
+   "pass": true
+  },
+  "G-P14_source": {
+   "score": 6.0,
+   "pass_L5": true,
+   "action": "raw accepted",
+   "pass": true
+  },
+  "G-P17_resources": {
+   "licenses_logged": true,
+   "pass": true
+  },
+  "G-P18_onboarding": {
+   "proposal_logged": true,
+   "overrides_respected": false,
+   "pass": true
+  },
+  "G-P19_manifest": {
+   "pass": true,
+   "missing_workfiles": [],
+   "manifest_missing_keys": [],
+   "manifest_file": "manifest_9x16.json"
+  },
+  "G-P12_self_critique": {
+   "min_axis": 9.5,
+   "all_ge_9.5": true,
+   "iterations": 0,
+   "honest_gap_report": null,
+   "pass": true
+  }
+ }
+}

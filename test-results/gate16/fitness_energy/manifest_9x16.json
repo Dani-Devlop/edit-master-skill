@@ -1,0 +1,137 @@
+{
+ "video": "fitness_energy",
+ "variant": "9x16",
+ "input_sha256": "0f23201d828f0d47315cfd7f14d55f60cf7a97581d651472f745c8cc5eba9ae1",
+ "preset_sha256": "01ea6336dac2fd669a74c9b5eca34b22c6889fe2f0d651b3f52b432ae7790f9a",
+ "preset_name": "fitness_energy",
+ "seed": 16,
+ "tool_versions": {
+  "python": "3.12.16",
+  "numpy": "2.1.3",
+  "opencv": "4.13.0",
+  "pillow": "11.3.0"
+ },
+ "beat_table": [
+  {
+   "i": 0,
+   "start": 0.0,
+   "end": 3.0,
+   "src": [
+    0.5,
+    3.5
+   ],
+   "comp": "base",
+   "elements": [
+    "hook_lockup",
+    "freeze_slam",
+    "occlusion",
+    "shake",
+    "brackets",
+    "punch_in_emphasis"
+   ]
+  },
+  {
+   "i": 1,
+   "start": 3.0,
+   "end": 5.5,
+   "src": [
+    1.2,
+    3.7
+   ],
+   "comp": "punch",
+   "elements": [
+    "zoom_through",
+    "punch_in_emphasis"
+   ]
+  },
+  {
+   "i": 2,
+   "start": 5.5,
+   "end": 8.5,
+   "src": [
+    1.9,
+    4.9
+   ],
+   "comp": "mirror",
+   "elements": [
+    "speed_ramp",
+    "odometer",
+    "punch_in_emphasis"
+   ]
+  },
+  {
+   "i": 3,
+   "start": 8.5,
+   "end": 11.5,
+   "src": [
+    2.6,
+    5.6
+   ],
+   "comp": "cutout",
+   "elements": [
+    "orbit_cards",
+    "contact_shadow",
+    "punch_in_emphasis"
+   ]
+  },
+  {
+   "i": 4,
+   "start": 11.5,
+   "end": 14.0,
+   "src": [
+    3.3,
+    5.8
+   ],
+   "comp": "base",
+   "elements": [
+    "invert_bite",
+    "punch_in_emphasis"
+   ]
+  },
+  {
+   "i": 5,
+   "start": 14.0,
+   "end": 15.5,
+   "src": [
+    4.0,
+    5.5
+   ],
+   "comp": "punch",
+   "elements": [
+    "punch_in_emphasis"
+   ]
+  },
+  {
+   "i": 6,
+   "start": 15.5,
+   "end": 17.325,
+   "src": [
+    4.7,
+    6.525
+   ],
+   "comp": "mirror",
+   "elements": [
+    "payoff_starburst",
+    "tape",
+    "punch_in_emphasis"
+   ]
+  }
+ ],
+ "gate_json": null,
+ "refine_iterations": 0,
+ "renderer": "p16_render.py",
+ "whisper_words_sha256": "3967a05a545ffc2b950db23ab8afb1a3f83e8ba72c9f60467ed2109d63768924",
+ "source_quality": 6.9,
+ "music_plan": {
+  "decision": "source silent -> generated original bed @100 BPM (driving kick+bass, energy 0.8)",
+  "copyright_coverage": "self-generated bed, 100% coverage, no safe-window"
+ },
+ "asr_normalizations_logged": [],
+ "cover_t": 11.53,
+ "loudnorm": {
+  "integrated_lufs": -14.1,
+  "true_peak_dbfs": -3.3,
+  "attempts": 1
+ },
+ "total": 19.725
+}

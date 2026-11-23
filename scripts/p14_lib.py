@@ -147,16 +147,25 @@ def add_vignette(img_np, strength=0.35):
 def invert_bite(img_np):
     return 255 - img_np
 
-def whip_streak(img_np, direction=1, intensity=1.0, flash=0.0):
-    """horizontal streak blur + flicker flash (F-5: ensure >=12 luma delta)."""
-    im = Image.fromarray(img_np.astype(np.uint8))
+def whip_streak(img_np, direction=1, intensity=1.0, flash=0.0, gain=75.0):
+    """horizontal streak blur + flicker flash; gain tuned so bright scenes still
+    show a measurable whip-bright event at comp changes (P6).
+    Edge-CLAMPED shift (v2, 2026-11-24): np.roll wrapped the opposite frame edge
+    into view, dragging the vignette-darkened border across the frame as an ugly
+    dark band on bright scenes — replicate the leading edge instead."""
+    im = Image.fromarray(np.clip(img_np, 0, 255).astype(np.uint8))
     k = int(9 + 18 * intensity)
     im = im.filter(ImageFilter.BoxBlur(3))
     arr = np.asarray(im).astype(np.float32)
     shifted = np.roll(arr, direction * k, axis=1)
+    if direction > 0:
+        shifted[:, :k] = arr[:, [0]]
+    else:
+        shifted[:, -k:] = arr[:, [-1]]
     out = 0.55 * arr + 0.45 * shifted
     if flash > 0:
-        out = out + 55 * flash
+        # screen-blend flash: lifts bright scenes without hard clipping (pro whip-bright)
+        out = 255.0 - (255.0 - out) * (1.0 - min(0.75, flash * gain / 100.0))
     return np.clip(out, 0, 255)
 
 def zoom_through_crop(img_np, z, blur=True):
@@ -339,7 +348,8 @@ def two_pass_loudnorm(in_wav_or_mp4, out_path, target_i=-14.0, tp=-1.5, lra=11.0
     tmp = out_path + ".iter.aac"
     lim_db = -2.5
     ln_tp = -3.4
-    pre = "acompressor=threshold=-12dB:ratio=4:attack=2:release=90," if crest_guard else ""
+    pre = ("acompressor=threshold=-15dB:ratio=6:attack=2:release=60,"
+           "acompressor=threshold=-10dB:ratio=3:attack=3:release=120,") if crest_guard else ""
     af = (f"{pre}loudnorm=I={target_i}:TP={ln_tp}:LRA={lra},"
           f"alimiter=limit={10 ** (lim_db / 20):.4f}:attack=1:release=80:level=false")
     subprocess.run(["ffmpeg", "-y", "-v", "error", "-i", cur, "-af", af,

@@ -1,0 +1,694 @@
+{
+ "variant": "1x1",
+ "ow": 720,
+ "oh": 720,
+ "fps": 30,
+ "n_beats": 10,
+ "cut_times": [
+  0.0,
+  3.251,
+  6.072,
+  9.183,
+  12.307,
+  15.43,
+  18.564,
+  21.687,
+  24.88,
+  26.598,
+  28.51
+ ],
+ "total": 30.91,
+ "cap_engine": "whisper-word-sync",
+ "words_manifest": [
+  {
+   "w": "Welcome",
+   "start": 0.0,
+   "end": 0.5,
+   "prob": 0.333
+  },
+  {
+   "w": "to",
+   "start": 0.5,
+   "end": 0.92,
+   "prob": 0.963
+  },
+  {
+   "w": "the",
+   "start": 0.92,
+   "end": 1.12,
+   "prob": 0.949
+  },
+  {
+   "w": "party",
+   "start": 1.12,
+   "end": 1.78,
+   "prob": 0.948
+  },
+  {
+   "w": "where",
+   "start": 1.78,
+   "end": 2.16,
+   "prob": 0.656
+  },
+  {
+   "w": "everybody",
+   "start": 2.16,
+   "end": 2.6,
+   "prob": 0.951
+  },
+  {
+   "w": "dies",
+   "start": 2.6,
+   "end": 3.42,
+   "prob": 0.924
+  },
+  {
+   "w": "at",
+   "start": 3.42,
+   "end": 3.84,
+   "prob": 0.973
+  },
+  {
+   "w": "the",
+   "start": 3.84,
+   "end": 4.08,
+   "prob": 0.989
+  },
+  {
+   "w": "end.",
+   "start": 4.08,
+   "end": 4.36,
+   "prob": 0.996
+  },
+  {
+   "w": "Move",
+   "start": 4.36,
+   "end": 4.68,
+   "prob": 0.266
+  },
+  {
+   "w": "your",
+   "start": 4.68,
+   "end": 4.92,
+   "prob": 0.898
+  },
+  {
+   "w": "b",
+   "start": 4.92,
+   "end": 5.12,
+   "prob": 0.3
+  },
+  {
+   "w": "-b",
+   "start": 5.12,
+   "end": 5.46,
+   "prob": 0.36
+  },
+  {
+   "w": "-b",
+   "start": 5.46,
+   "end": 5.46,
+   "prob": 0.901
+  },
+  {
+   "w": "-b",
+   "start": 5.46,
+   "end": 5.46,
+   "prob": 0.64
+  },
+  {
+   "w": "-b.",
+   "start": 5.46,
+   "end": 5.64,
+   "prob": 0.536
+  },
+  {
+   "w": "This",
+   "start": 5.64,
+   "end": 5.92,
+   "prob": 0.95
+  },
+  {
+   "w": "is",
+   "start": 5.92,
+   "end": 6.26,
+   "prob": 0.991
+  },
+  {
+   "w": "about",
+   "start": 6.26,
+   "end": 6.6,
+   "prob": 0.228
+  },
+  {
+   "w": "to",
+   "start": 6.6,
+   "end": 6.86,
+   "prob": 0.994
+  },
+  {
+   "w": "be",
+   "start": 6.86,
+   "end": 7.1,
+   "prob": 0.988
+  },
+  {
+   "w": "a",
+   "start": 7.1,
+   "end": 7.38,
+   "prob": 0.939
+  },
+  {
+   "w": "homicide",
+   "start": 7.38,
+   "end": 7.8,
+   "prob": 0.882
+  },
+  {
+   "w": "scene.",
+   "start": 7.8,
+   "end": 8.32,
+   "prob": 0.993
+  },
+  {
+   "w": "I",
+   "start": 8.32,
+   "end": 8.66,
+   "prob": 0.512
+  },
+  {
+   "w": "think",
+   "start": 8.66,
+   "end": 8.96,
+   "prob": 0.982
+  },
+  {
+   "w": "you",
+   "start": 8.96,
+   "end": 9.32,
+   "prob": 0.989
+  },
+  {
+   "w": "are",
+   "start": 9.32,
+   "end": 9.56,
+   "prob": 0.78
+  },
+  {
+   "w": "not",
+   "start": 9.56,
+   "end": 9.86,
+   "prob": 0.949
+  },
+  {
+   "w": "me",
+   "start": 9.86,
+   "end": 10.18,
+   "prob": 0.702
+  },
+  {
+   "w": "when",
+   "start": 10.18,
+   "end": 10.5,
+   "prob": 0.943
+  },
+  {
+   "w": "I",
+   "start": 10.5,
+   "end": 10.72,
+   "prob": 0.966
+  },
+  {
+   "w": "scream.",
+   "start": 10.72,
+   "end": 11.04,
+   "prob": 0.993
+  },
+  {
+   "w": "Welcome",
+   "start": 11.04,
+   "end": 11.62,
+   "prob": 0.3
+  },
+  {
+   "w": "to",
+   "start": 11.62,
+   "end": 12.02,
+   "prob": 0.791
+  },
+  {
+   "w": "another",
+   "start": 12.02,
+   "end": 12.4,
+   "prob": 0.987
+  },
+  {
+   "w": "day.",
+   "start": 12.4,
+   "end": 12.94,
+   "prob": 0.972
+  },
+  {
+   "w": "to",
+   "start": 12.94,
+   "end": 13.5,
+   "prob": 0.533
+  },
+  {
+   "w": "another",
+   "start": 13.5,
+   "end": 13.82,
+   "prob": 0.996
+  },
+  {
+   "w": "plot",
+   "start": 13.82,
+   "end": 14.3,
+   "prob": 0.952
+  },
+  {
+   "w": "on",
+   "start": 14.3,
+   "end": 14.54,
+   "prob": 0.968
+  },
+  {
+   "w": "my",
+   "start": 14.54,
+   "end": 14.72,
+   "prob": 0.998
+  },
+  {
+   "w": "mind.",
+   "start": 14.72,
+   "end": 15.06,
+   "prob": 0.996
+  },
+  {
+   "w": "cuz",
+   "start": 15.06,
+   "end": 15.24,
+   "prob": 0.308
+  },
+  {
+   "w": "I",
+   "start": 15.24,
+   "end": 15.42,
+   "prob": 0.97
+  },
+  {
+   "w": "gots",
+   "start": 15.42,
+   "end": 15.7,
+   "prob": 0.767
+  },
+  {
+   "w": "to",
+   "start": 15.7,
+   "end": 15.8,
+   "prob": 0.988
+  },
+  {
+   "w": "get",
+   "start": 15.8,
+   "end": 16.02,
+   "prob": 0.995
+  },
+  {
+   "w": "paid.",
+   "start": 16.02,
+   "end": 16.48,
+   "prob": 0.994
+  },
+  {
+   "w": "I'd",
+   "start": 16.48,
+   "end": 16.88,
+   "prob": 0.85
+  },
+  {
+   "w": "rather",
+   "start": 16.88,
+   "end": 17.1,
+   "prob": 0.998
+  },
+  {
+   "w": "get",
+   "start": 17.1,
+   "end": 17.38,
+   "prob": 0.995
+  },
+  {
+   "w": "paid",
+   "start": 17.38,
+   "end": 17.86,
+   "prob": 0.991
+  },
+  {
+   "w": "than",
+   "start": 17.86,
+   "end": 18.12,
+   "prob": 0.81
+  },
+  {
+   "w": "laid.",
+   "start": 18.12,
+   "end": 18.6,
+   "prob": 0.88
+  },
+  {
+   "w": "If",
+   "start": 18.6,
+   "end": 18.92,
+   "prob": 0.268
+  },
+  {
+   "w": "life",
+   "start": 18.92,
+   "end": 19.14,
+   "prob": 0.983
+  },
+  {
+   "w": "had",
+   "start": 19.14,
+   "end": 19.4,
+   "prob": 0.96
+  },
+  {
+   "w": "me",
+   "start": 19.4,
+   "end": 19.54,
+   "prob": 0.991
+  },
+  {
+   "w": "lemons",
+   "start": 19.54,
+   "end": 19.9,
+   "prob": 0.942
+  },
+  {
+   "w": "than",
+   "start": 19.9,
+   "end": 20.12,
+   "prob": 0.576
+  },
+  {
+   "w": "the",
+   "start": 20.12,
+   "end": 20.24,
+   "prob": 0.394
+  },
+  {
+   "w": "sam.",
+   "start": 20.24,
+   "end": 20.54,
+   "prob": 0.159
+  },
+  {
+   "w": "Pellegrino",
+   "start": 20.54,
+   "end": 21.26,
+   "prob": 0.724
+  },
+  {
+   "w": "lemonade.",
+   "start": 21.26,
+   "end": 21.86,
+   "prob": 0.961
+  },
+  {
+   "w": "Bacca",
+   "start": 21.86,
+   "end": 22.76,
+   "prob": 0.371
+  },
+  {
+   "w": "rock",
+   "start": 22.76,
+   "end": 22.98,
+   "prob": 0.697
+  },
+  {
+   "w": "glasses",
+   "start": 22.98,
+   "end": 23.38,
+   "prob": 0.988
+  },
+  {
+   "w": "with",
+   "start": 23.38,
+   "end": 23.6,
+   "prob": 0.986
+  },
+  {
+   "w": "chips",
+   "start": 23.6,
+   "end": 23.86,
+   "prob": 0.991
+  },
+  {
+   "w": "on",
+   "start": 23.86,
+   "end": 24.22,
+   "prob": 0.997
+  },
+  {
+   "w": "it.",
+   "start": 24.22,
+   "end": 24.38,
+   "prob": 0.994
+  },
+  {
+   "w": "Wimmy",
+   "start": 24.38,
+   "end": 24.84,
+   "prob": 0.345
+  },
+  {
+   "w": "Neenpasta",
+   "start": 24.84,
+   "end": 25.48,
+   "prob": 0.379
+  },
+  {
+   "w": "on",
+   "start": 25.48,
+   "end": 25.7,
+   "prob": 0.959
+  },
+  {
+   "w": "my",
+   "start": 25.7,
+   "end": 25.84,
+   "prob": 0.99
+  },
+  {
+   "w": "clean.",
+   "start": 25.84,
+   "end": 26.18,
+   "prob": 0.928
+  },
+  {
+   "w": "Anamela",
+   "start": 26.18,
+   "end": 26.8,
+   "prob": 0.253
+  },
+  {
+   "w": "Mista",
+   "start": 26.8,
+   "end": 27.16,
+   "prob": 0.466
+  },
+  {
+   "w": "plates.",
+   "start": 27.16,
+   "end": 27.52,
+   "prob": 0.865
+  }
+ ],
+ "rtl": false,
+ "font_px": 56,
+ "band_px": [
+  532,
+  633
+ ],
+ "accent_rgb": [
+  189,
+  255,
+  0
+ ],
+ "hook_text": "WELCOME TO THE PARTY WHERE EVERYBODY DIES AT",
+ "hook_window": [
+  0.0,
+  0.5
+ ],
+ "hook_y_frac": 0.2,
+ "hook_scrim": false,
+ "matte_ok": false,
+ "cap_probe_t": 3.0,
+ "events": [
+  {
+   "t": 0.0,
+   "sfx": "whoosh"
+  },
+  {
+   "t": 0.06,
+   "sfx": "thump"
+  },
+  {
+   "t": 3.251,
+   "sfx": "whoosh"
+  },
+  {
+   "t": 5.572,
+   "sfx": "whoosh"
+  },
+  {
+   "t": 6.072,
+   "sfx": "whoosh"
+  },
+  {
+   "t": 9.183,
+   "sfx": "whoosh"
+  },
+  {
+   "t": 12.307,
+   "sfx": "whoosh"
+  },
+  {
+   "t": 12.507,
+   "sfx": "glitch"
+  },
+  {
+   "t": 15.43,
+   "sfx": "whoosh"
+  },
+  {
+   "t": 18.564,
+   "sfx": "whoosh"
+  },
+  {
+   "t": 21.687,
+   "sfx": "whoosh"
+  },
+  {
+   "t": 24.88,
+   "sfx": "whoosh"
+  },
+  {
+   "t": 26.598,
+   "sfx": "whoosh"
+  },
+  {
+   "t": 26.898,
+   "sfx": "thump"
+  }
+ ],
+ "duck_applied": true,
+ "music_plan": {
+  "decision": "keep original mix (music+rap) \u2014 no overlay music",
+  "copyright_coverage": "original audio, full length, no safe-window conflict"
+ },
+ "preset_name": "mv_darkmono",
+ "preset_sha256": "1cdc4e34e9e75009686be0f7b3f2efce3dbf0d3d5d3822febe0517ecd531c892",
+ "technique_log": [
+  {
+   "beat": 0,
+   "technique": "freeze+type-slam lockup",
+   "when_to_use": "t=0 hook \u2014 instant stake + composed frame-1"
+  },
+  {
+   "beat": 1,
+   "technique": "recursive zoom-through",
+   "when_to_use": "after hook \u2014 dive into tilted card/scene for momentum"
+  },
+  {
+   "beat": 2,
+   "technique": "eased speed-ramp + odometer",
+   "when_to_use": "motion beat \u2014 ramp creates surge; odometer counts real quantity"
+  },
+  {
+   "beat": 3,
+   "technique": "orbit cards High/Med/Low",
+   "when_to_use": "comparison/verdict beat over cutout canvas"
+  },
+  {
+   "beat": 4,
+   "technique": "invert bite <=0.15s",
+   "when_to_use": "pattern interrupt at retention-risk midpoint"
+  },
+  {
+   "beat": 9,
+   "technique": "starburst draw-on + highlighter tape",
+   "when_to_use": "payoff \u2014 semantic emphasis on the promise word"
+  }
+ ],
+ "resource_licenses": {
+  "Vazirmatn": "OFL 1.1 (SIL Open Font License) \u2014 /tmp/ems-work/p16/assets",
+  "faster-whisper small": "MIT (Systran/faster-whisper-small)",
+  "music bed": "original in-run synthesis (numpy) \u2014 no third-party audio",
+  "source raws": "see sources.txt / work manifest"
+ },
+ "stakes_numbers_real": true,
+ "beat_index_only": false,
+ "overrides": {
+  "applied": false
+ },
+ "energy_by_beat": [
+  35,
+  35,
+  35,
+  35,
+  35,
+  35,
+  35,
+  35,
+  35,
+  35
+ ],
+ "bpm": 178.21,
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 5.07,
+   "color": false
+  },
+  {
+   "start": 5.07,
+   "end": 8.27,
+   "color": false
+  },
+  {
+   "start": 8.27,
+   "end": 12.0,
+   "color": false
+  },
+  {
+   "start": 12.0,
+   "end": 20.8,
+   "color": false
+  },
+  {
+   "start": 20.8,
+   "end": 27.91,
+   "color": true
+  }
+ ],
+ "comps": [
+  "base",
+  "punch",
+  "mirror",
+  "zoom",
+  "base",
+  "punch",
+  "mirror",
+  "zoom",
+  "base",
+  "punch"
+ ],
+ "renderer": "p16_render.py (single path)",
+ "asr_normalizations_logged": [
+  "Pellegrino kept verbatim (brand ASR normalization logged, never invent)"
+ ]
+}

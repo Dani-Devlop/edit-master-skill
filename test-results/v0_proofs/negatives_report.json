@@ -1,0 +1,28 @@
+{
+ "neg_typewriter": {
+  "check": "G-P1 full-sentence constancy",
+  "cov@0.2s": 0.0166,
+  "cov@0.9s": 0.0567,
+  "constancy": 0.292,
+  "gate_caught": true,
+  "verdict": "FAIL caught (correct)"
+ },
+ "neg_emptybar_frame0": {
+  "check": "G-P4 composed frame-0",
+  "pass": false,
+  "hook_text_coverage": 0.0,
+  "plate_rows_frac": 0.906,
+  "empty_bar_frame0": true,
+  "gate_caught": true,
+  "verdict": "FAIL caught (correct)"
+ },
+ "neg_halftone_footage": {
+  "check": "texture gate (halftone on footage)",
+  "max_dot_score": 0.4686,
+  "threshold": 0.08,
+  "method": "lattice_autocorr_v2",
+  "pass": false,
+  "gate_caught": true,
+  "verdict": "FAIL caught (correct)"
+ }
+}

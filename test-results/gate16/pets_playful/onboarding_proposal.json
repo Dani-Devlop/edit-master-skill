@@ -1,0 +1,27 @@
+{
+ "run": "T_pets_v16",
+ "genre": "pets",
+ "proposal": {
+  "family": "F4 pink playful variant (Mode B in-scene)",
+  "palette_accent": [
+   255,
+   176,
+   46
+  ],
+  "energy": 0.7,
+  "music_plan": "source silent -> generated original bed @132 BPM (bouncy plucks, energy 0.7)",
+  "platforms": [
+   "9:16 primary"
+  ]
+ },
+ "defaults": {
+  "bilingual": false,
+  "tts": false,
+  "brand_end_card": false,
+  "loop_echo": true,
+  "palette": "auto from preset"
+ },
+ "ask": "confirm or override \u2014 non-blocking proceed",
+ "overrides_applied": {},
+ "status": "proceeded-with-defaults (no reply within window)"
+}

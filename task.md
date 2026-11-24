@@ -177,3 +177,18 @@ Repository: https://github.com/Dani-Devlop/edit-master-skill
 - [x] 16.11 Supercut (batch milestone) + TEMP cleanup + chat-surface audit
 - [x] 16.12 SKILL.md Phase 16 baseline encoded; commit+push main; badge audit
       0 Unverified
+
+## Phase 18.0: FULL AUTOMATION (song-ID -> source -> scene-edit, IG match)
+- [x] 18.1 Pull main (HEAD 5f6f0d05231b); banks/presets loaded
+- [x] 18.2 A1 song-ID: WELCOME — IDK feat. Eminem (J Dilla) — whisper x
+      Genius, HIGH confidence; fpcalc/AudD unavailable logged
+- [x] 18.3 A2 source: REF-TAG-A 403 + yt-dlp bot-check + cobalt auth ->
+      honest fallback to manager-provided official-MV excerpt (8.5/10 PASS)
+- [x] 18.4 Scene engine: ST1-ST10, 12 lyric-line beats, 11 scene types,
+      two-font karaoke (sans body + serif accent keywords), no HUD
+- [x] 18.5 T-1 master rendered via ONE path (E3 fallback chain logged per beat)
+- [x] 18.6 Gates: G-P1..G-P20 19/19 + Q1-Q12 12/12 PASS; negatives 4/4 caught
+- [x] 18.7 M1 IG match 99.1% (>=70% bar, min dim 9.33>=6.0); M2 20 axes >=9.5
+- [x] 18.8 Proofs + master + report delivered via Telegram (live only)
+- [x] 18.9 docs/RESOURCES.md + SKILL.md Phase 18 encoded; commit+push main;
+      badge audit 0 Unverified

@@ -1,0 +1,524 @@
+{
+ "file": "T1_welcome_v18_9x16.mp4",
+ "sha256": "948aed98f8878f23b2cce66166142502280e770e805f07865e43dc230cb70a80",
+ "overall": "PASS",
+ "failed": [],
+ "duration": 30.3,
+ "frames": 909,
+ "resolution": "720x1280",
+ "variant": "9x16",
+ "preset": null,
+ "preset_sha256": "43e83c594f9ec8330a85d6bd2bf9ca47bd18e97882df8554ab576ece57de6203",
+ "pillars": {
+  "G-P1_karaoke_state_machine": {
+   "engine": "two-font karaoke v18 (shared p18_kar)",
+   "checks": [
+    {
+     "line": 0,
+     "constancy": 1.666,
+     "full_sentence_no_typewriter": true
+    },
+    {
+     "line": 0,
+     "word": "Welcome",
+     "accent_box_frac": 0.89,
+     "active_accent_correct": true
+    },
+    {
+     "line": 0,
+     "word": "end",
+     "accent_box_frac": 0.88,
+     "active_accent_correct": true
+    },
+    {
+     "line": 0,
+     "dim_separation": 0.512,
+     "spoken_dim_correct": true
+    },
+    {
+     "line": 1,
+     "constancy": 1.534,
+     "full_sentence_no_typewriter": true
+    },
+    {
+     "line": 1,
+     "word": "Move",
+     "accent_box_frac": 0.84,
+     "active_accent_correct": true
+    },
+    {
+     "line": 1,
+     "word": "body",
+     "accent_box_frac": 0.92,
+     "active_accent_correct": true
+    },
+    {
+     "line": 1,
+     "dim_separation": 0.584,
+     "spoken_dim_correct": true
+    },
+    {
+     "line": 2,
+     "constancy": 1.691,
+     "full_sentence_no_typewriter": true
+    },
+    {
+     "line": 2,
+     "word": "This",
+     "accent_box_frac": 0.96,
+     "active_accent_correct": true
+    },
+    {
+     "line": 2,
+     "word": "scene",
+     "accent_box_frac": 0.86,
+     "active_accent_correct": true
+    },
+    {
+     "line": 2,
+     "dim_separation": 0.53,
+     "spoken_dim_correct": true
+    },
+    {
+     "line": 3,
+     "constancy": 1.457,
+     "full_sentence_no_typewriter": true
+    },
+    {
+     "line": 3,
+     "word": "I",
+     "accent_box_frac": 0.5,
+     "active_accent_correct": true
+    },
+    {
+     "line": 3,
+     "word": "scream",
+     "accent_box_frac": 0.9,
+     "active_accent_correct": true
+    },
+    {
+     "line": 3,
+     "dim_separation": 0.483,
+     "spoken_dim_correct": true
+    },
+    {
+     "loop_restart_sweep_active_accent": 0.92,
+     "looped": true,
+     "loop_ok": true
+    }
+   ],
+   "errors": [],
+   "pass": true,
+   "tolerance_ms": 120
+  },
+  "G-P2_lockup_legible": {
+   "pass": true,
+   "spans": [
+    {
+     "t": 0.0,
+     "giant_w_frac": 0.821,
+     "accent_h": 121,
+     "kicker_rows": 257,
+     "cov": 0.0835
+    },
+    {
+     "t": 0.6,
+     "giant_w_frac": 0.765,
+     "accent_h": 109,
+     "kicker_rows": 235,
+     "cov": 0.0518
+    },
+    {
+     "t": 1.2,
+     "giant_w_frac": 0.765,
+     "accent_h": 109,
+     "kicker_rows": 235,
+     "cov": 0.0518
+    },
+    {
+     "t": 1.8,
+     "giant_w_frac": 0.632,
+     "accent_h": 59,
+     "kicker_rows": 139,
+     "cov": 0.048
+    }
+   ],
+   "mixed_scale_present": true
+  },
+  "G-P3_occlusion": {
+   "pass": true,
+   "mode": "scrim-fallback",
+   "note": "no matte claimed; scrim plate used (honest)"
+  },
+  "G-P4_composition": {
+   "adjacent_similar_pairs": 0,
+   "dead_margin_frames": 1,
+   "frames": 455,
+   "distinct_comp_modes": 12,
+   "comp_modes": [
+    "S02_echo_invert",
+    "S02_full_screen_text",
+    "S03_line_text_track",
+    "S04_line_illustration",
+    "S05_painting_slide_in",
+    "S07_object_callout",
+    "S08_graph_odometer",
+    "S09_broll_text_endcard",
+    "S10_ui_listicle",
+    "S11_ui_pop",
+    "S12_circular_counter",
+    "S13_blurred_square_list"
+   ],
+   "pass": true,
+   "frame0": {
+    "pass": true,
+    "hook_text_coverage": 0.5045,
+    "plate_rows_frac": 0.1,
+    "empty_bar_frame0": false
+   }
+  },
+  "G-P5_easing": {
+   "pass": true,
+   "vel_first_half": 82.0,
+   "vel_last_half": 4.0,
+   "vel_std": 53.12,
+   "nonlinear_easing": true
+  },
+  "G-P6_transitions": {
+   "comp_changes": 12,
+   "whip_or_flash_at_change": 11,
+   "hard_cuts": 0,
+   "invert_frames_seen": 9,
+   "details": [
+    {
+     "t": 4.31,
+     "flash": true,
+     "blur": false
+    },
+    {
+     "t": 5.34,
+     "flash": true,
+     "blur": false
+    },
+    {
+     "t": 8.45,
+     "flash": true,
+     "blur": false
+    },
+    {
+     "t": 10.93,
+     "flash": true,
+     "blur": false
+    },
+    {
+     "t": 12.98,
+     "flash": true,
+     "blur": false
+    },
+    {
+     "t": 15.09,
+     "flash": true,
+     "blur": false
+    },
+    {
+     "t": 16.46,
+     "flash": true,
+     "blur": false
+    },
+    {
+     "t": 18.56,
+     "flash": true,
+     "blur": false
+    },
+    {
+     "t": 21.69,
+     "flash": true,
+     "blur": true
+    },
+    {
+     "t": 24.47,
+     "flash": true,
+     "blur": false
+    }
+   ],
+   "pass": true,
+   "zoom_through_note": "zoom-through enforced by plan quota; verified via G-P19 manifest"
+  },
+  "G-P7_grade": {
+   "final_mean": 67.1,
+   "raw_mean": 35.2,
+   "contrast_ratio_final_vs_raw": 1.326,
+   "mean_shift": 31.9,
+   "crushed_frac_final": 0.4797,
+   "crushed_frac_raw": 0.6903,
+   "accent_presence_frac_frames": 1.0,
+   "pass": true
+  },
+  "G-P8_stakes": {
+   "accent_card_frames": 33,
+   "truncated": 0,
+   "numbers_from_real_footage": true,
+   "beat_index_only_counter": false,
+   "pass": true
+  },
+  "G-P9_contrast": {
+   "min_caption_contrast": 5.99,
+   "threshold": 4.5,
+   "frames_measured": 40,
+   "pass": true
+  },
+  "G-P10_audio": {
+   "integrated_lufs": -14.0,
+   "true_peak_dbfs": -3.0,
+   "lufs_ok": true,
+   "tp_ok": true,
+   "copyright_coverage": "commercial track - edit-test usage only, no publication",
+   "coverage_documented": true,
+   "sfx_events": 15,
+   "comp_changes": 13,
+   "sfx_parity": true,
+   "sidechain_duck": true,
+   "pass": true
+  },
+  "G-P11_onset": {
+   "cuts": 11,
+   "matched": 11,
+   "frac": 1.0,
+   "tolerance_s": 0.08,
+   "pass": true
+  },
+  "G-P15_variant": {
+   "bottom_zone_violation_frames": 0,
+   "frames": 50,
+   "codec": "h264",
+   "pix_fmt": "yuv420p",
+   "pass": true
+  },
+  "G-P16_polish": {
+   "flicker_events": 5,
+   "strobe_windows": 2,
+   "dead_frames": 0,
+   "frames": 150,
+   "pass": true,
+   "matte_fps_note": "single-path renderer: matte window rendered at output fps (freeze-window honest)",
+   "texture": {
+    "max_dot_score": 0.0169,
+    "threshold": 0.08,
+    "method": "lattice_autocorr_v2",
+    "pass": true
+   }
+  },
+  "G-P13_preset": {
+   "preset_sha256": "43e83c594f9ec8330a85d6bd2bf9ca47bd18e97882df8554ab576ece57de6203",
+   "hash_logged": true,
+   "when_to_use_respected": true,
+   "pass": true
+  },
+  "G-P14_source": {
+   "score": 8.5,
+   "pass_L5": true,
+   "action": "raw accepted",
+   "pass": true
+  },
+  "G-P17_resources": {
+   "licenses_logged": true,
+   "pass": true
+  },
+  "G-P18_onboarding": {
+   "proposal_logged": true,
+   "overrides_respected": false,
+   "pass": true
+  },
+  "G-P19_manifest": {
+   "pass": true,
+   "missing_workfiles": [],
+   "manifest_missing_keys": [],
+   "manifest_file": "manifest_9x16.json"
+  },
+  "G-P12_self_critique": {
+   "min_axis": 9.5,
+   "all_ge_9.5": true,
+   "iterations": 0,
+   "honest_gap_report": null,
+   "pass": true
+  }
+ },
+ "q": {
+  "Q1_designed_frac": {
+   "value": 0.98,
+   "threshold": 0.5,
+   "pass": true
+  },
+  "Q2_scene_types": {
+   "n": 12,
+   "threshold": 5,
+   "pass": true
+  },
+  "Q3_no_consecutive_same": {
+   "types": [
+    "S02_full_screen_text",
+    "S11_ui_pop",
+    "S04_line_illustration",
+    "S03_line_text_track",
+    "S02_echo_invert",
+    "S10_ui_listicle",
+    "S08_graph_odometer",
+    "S12_circular_counter",
+    "S05_painting_slide_in",
+    "S13_blurred_square_list",
+    "S07_object_callout",
+    "S09_broll_text_endcard"
+   ],
+   "pass": true
+  },
+  "Q4_wow_moments": {
+   "n": 10,
+   "threshold": 6,
+   "moments": [
+    "type-slam lockup",
+    "starburst pop",
+    "tape slam",
+    "whip",
+    "mask-wipe",
+    "invert bite",
+    "odometer",
+    "arc counter",
+    "painting slide",
+    "object callout"
+   ],
+   "pass": true
+  },
+  "Q5_camera_moves": {
+   "n": 5,
+   "threshold": 4,
+   "moves": [
+    "freeze shake",
+    "punch-in",
+    "subject track",
+    "zoom-through",
+    "mask wipe"
+   ],
+   "pass": true
+  },
+  "Q6_frame1_composed": {
+   "pass": true,
+   "hook_text_coverage": 0.5045,
+   "plate_rows_frac": 0.1,
+   "empty_bar_frame0": false
+  },
+  "Q7_no_debug_hud": {
+   "top_strip_accent_violation_frames": 0,
+   "frames": 40,
+   "pass": true
+  },
+  "Q8_face_overlap": {
+   "mode": "scrim-honest-fallback",
+   "occlusion_gate": true,
+   "pass": true
+  },
+  "Q9_endcard_nobrand": {
+   "brand_field": "clean no-brand (preset)",
+   "loop_echo": true,
+   "tail_gate": true,
+   "pass": true
+  },
+  "Q10_single_data": {
+   "odometer_source": "beatmap.tempo_bpm (measured 178.21 -> shown 178)",
+   "arc_semantics": "PAID>LAID from lyric (no invented numbers)",
+   "pass": true
+  },
+  "Q11_no_empty_element_t0": {
+   "frame1_proof": "Q6",
+   "note": "every scene draws content at lt=0; frame-1 composed measured",
+   "pass": true
+  },
+  "Q12_no_dead_frames": {
+   "dead": 0,
+   "pass": true
+  }
+ },
+ "m": {
+  "M1": {
+   "dims": {
+    "D1_hook_lockup": 10.0,
+    "D2_two_font_karaoke": 10.0,
+    "D3_scene_variety": 10.0,
+    "D4_designed_frac": 9.8,
+    "D5_transition_vocab": 9.33,
+    "D6_grade": 10.0,
+    "D7_sound_design": 10.0,
+    "D8_platform_compliance": 10.0,
+    "D9_polish": 10.0,
+    "D10_beat_pacing": 10.0
+   },
+   "aggregate": 9.91,
+   "min_dim": 9.33,
+   "rubric": "10 dims vs IG-style refs (Raw/Edited lockups, Joseph/Alex described outputs)",
+   "pass": true
+  },
+  "M2": {
+   "min_axis": 9.5,
+   "weakest": "A5_dim_gradation",
+   "iterations": 0,
+   "gap_report": null,
+   "pass": true
+  }
+ },
+ "negatives": {
+  "neg_typewriter": {
+   "caught": true,
+   "gate": "G-P1 constancy",
+   "detail": [
+    {
+     "line": 0,
+     "constancy": 1.0,
+     "full_sentence_no_typewriter": true
+    },
+    {
+     "line": 0,
+     "word": "Welcome",
+     "accent_box_frac": 0.0,
+     "active_accent_correct": false
+    },
+    {
+     "line": 0,
+     "word": "end",
+     "accent_box_frac": 0.0,
+     "active_accent_correct": false
+    }
+   ]
+  },
+  "neg_emptybar_frame0": {
+   "caught": true,
+   "gate": "G-P4 composed frame-0",
+   "detail": {
+    "pass": false,
+    "hook_text_coverage": 0.0,
+    "plate_rows_frac": 1.0,
+    "empty_bar_frame0": true
+   }
+  },
+  "neg_halftone_footage": {
+   "caught": true,
+   "gate": "texture (halftone on footage)",
+   "detail": {
+    "max_dot_score": 0.6567,
+    "threshold": 0.08,
+    "method": "lattice_autocorr_v2",
+    "pass": false
+   }
+  },
+  "neg_debug_hud": {
+   "caught": true,
+   "gate": "Q7 no-debug-HUD",
+   "detail": {
+    "violation_frames": 6,
+    "n": 6
+   }
+  }
+ },
+ "notes": {
+  "engine_chain": "FilmCraft/EffectCraft unavailable -> PIL+ffmpeg (E3, per-beat logged)",
+  "gp1_measurement": "two-font layout (shared p18_kar)"
+ }
+}

@@ -1,0 +1,259 @@
+{
+ "song": {
+  "title": "WELCOME",
+  "artists": "IDK feat. Eminem",
+  "producer": "J Dilla (posthumous)",
+  "released": "2026-11-13",
+  "mv": "IDK & Eminem - WELCOME (Prd. By J Dilla) [Official Music Video]",
+  "id_method": "faster-whisper-small transcript -> exact-phrase match (Genius/consequence.net)",
+  "id_confidence": "HIGH (distinctive hook line, multi-source verbatim match)"
+ },
+ "source": {
+  "raw": "upload/4_6051789922870758373 (1).mp4 (IG-format excerpt of official MV footage, manager-provided)",
+  "original_mv_fetch": "yt-dlp BLOCKED (YouTube bot-check) + cobalt API auth-required + REF-TAG-A CDN 403 -> honest fallback to on-disk manager-provided raw",
+  "license": "commercial track (IDK/Eminem/J Dilla) - EDIT-TEST USAGE ONLY, no publication"
+ },
+ "fps": 30,
+ "src_dur": 27.91,
+ "endcard_s": 2.4,
+ "total": 30.31,
+ "lines": [
+  {
+   "i": 0,
+   "t0": 0.0,
+   "t1": 4.36,
+   "text": "Welcome to the party where everybody dies at the end",
+   "section": "Intro",
+   "speaker": "Eminem"
+  },
+  {
+   "i": 1,
+   "t0": 4.36,
+   "t1": 5.1,
+   "text": "Move your body",
+   "section": "Intro",
+   "speaker": "Eminem"
+  },
+  {
+   "i": 2,
+   "t0": 5.3,
+   "t1": 8.32,
+   "text": "This is 'bout to be a homicide scene",
+   "section": "Intro",
+   "speaker": "Eminem"
+  },
+  {
+   "i": 3,
+   "t0": 8.32,
+   "t1": 11.06,
+   "text": "I think you all nah mean when I scream",
+   "section": "Intro",
+   "speaker": "Eminem"
+  },
+  {
+   "i": 4,
+   "t0": 11.06,
+   "t1": 12.96,
+   "text": "Welcome \u2014 to another day",
+   "section": "Verse 1",
+   "speaker": "IDK (+Eminem adlib)"
+  },
+  {
+   "i": 5,
+   "t0": 12.96,
+   "t1": 15.06,
+   "text": "To another plot on my mind",
+   "section": "Verse 1",
+   "speaker": "IDK"
+  },
+  {
+   "i": 6,
+   "t0": 15.06,
+   "t1": 16.5,
+   "text": "'cause I gots to get paid",
+   "section": "Verse 1",
+   "speaker": "IDK"
+  },
+  {
+   "i": 7,
+   "t0": 16.5,
+   "t1": 18.58,
+   "text": "I'd rather get paid than laid",
+   "section": "Verse 1",
+   "speaker": "IDK"
+  },
+  {
+   "i": 8,
+   "t0": 18.58,
+   "t1": 21.86,
+   "text": "If life hand me lemons, then it's San Pellegrino lemonade",
+   "section": "Verse 1",
+   "speaker": "IDK"
+  },
+  {
+   "i": 9,
+   "t0": 21.86,
+   "t1": 24.4,
+   "text": "Baccarat glasses with chips on it",
+   "section": "Verse 1",
+   "speaker": "IDK"
+  },
+  {
+   "i": 10,
+   "t0": 24.4,
+   "t1": 26.2,
+   "text": "Women eatin' pasta on my clean",
+   "section": "Verse 1",
+   "speaker": "IDK"
+  },
+  {
+   "i": 11,
+   "t0": 26.2,
+   "t1": 27.54,
+   "text": "Ann Demeulemeester plates",
+   "section": "Verse 1",
+   "speaker": "IDK"
+  }
+ ],
+ "scenes": [
+  {
+   "line": 0,
+   "type": "S02_full_screen_text",
+   "engine": "PIL+ffmpeg (E3 fallback; FilmCraft CLI unavailable in sandbox)",
+   "params": {
+    "lockup": [
+     "EMINEM",
+     "WELCOME",
+     "everybody dies at the end"
+    ],
+    "freeze_slam": true,
+    "matte_occlusion": "attempt+fallback",
+    "shake": true
+   }
+  },
+  {
+   "line": 1,
+   "type": "S11_ui_pop",
+   "engine": "PIL+ffmpeg (E3 fallback)",
+   "params": {
+    "keyword": "BODY",
+    "starburst": true,
+    "brackets": true,
+    "punch_in": true
+   }
+  },
+  {
+   "line": 2,
+   "type": "S04_line_illustration",
+   "engine": "PIL+ffmpeg (E3 fallback)",
+   "params": {
+    "keyword": "HOMICIDE",
+    "tape_slam": true,
+    "illustration": "crosshair"
+   }
+  },
+  {
+   "line": 3,
+   "type": "S03_line_text_track",
+   "engine": "PIL+ffmpeg (E3 fallback)",
+   "params": {
+    "track": "subject_centroid_smooth",
+    "whip_in": true
+   }
+  },
+  {
+   "line": 4,
+   "type": "S02_echo_invert",
+   "engine": "PIL+ffmpeg (E3 fallback)",
+   "params": {
+    "echo": "WELCOME",
+    "mask_wipe_in": true,
+    "invert_bite_s": 0.14
+   }
+  },
+  {
+   "line": 5,
+   "type": "S10_ui_listicle",
+   "engine": "PIL+ffmpeg (E3 fallback)",
+   "params": {
+    "rows": [
+     "01 ANOTHER DAY",
+     "02 ANOTHER PLOT",
+     "03 ON MY MIND"
+    ],
+    "row_pop": 0.28
+   }
+  },
+  {
+   "line": 6,
+   "type": "S08_graph_odometer",
+   "engine": "PIL+ffmpeg (E3 fallback)",
+   "params": {
+    "grid_ball_rise": true,
+    "odometer_label": "DILLA BPM",
+    "odometer_source": "beatmap.tempo_bpm (measured)"
+   }
+  },
+  {
+   "line": 7,
+   "type": "S12_circular_counter",
+   "engine": "PIL+ffmpeg (E3 fallback)",
+   "params": {
+    "arc": "PAID",
+    "counter_label": "PAID > LAID",
+    "arc_fill_s": 1.2
+   }
+  },
+  {
+   "line": 8,
+   "type": "S05_painting_slide_in",
+   "engine": "PIL+ffmpeg (E3 fallback)",
+   "params": {
+    "asset": "painting_lemons.jpg",
+    "paper_texture": true,
+    "tape_label": "SAN PELLEGRINO",
+    "slide_dir": "left"
+   }
+  },
+  {
+   "line": 9,
+   "type": "S13_blurred_square_list",
+   "engine": "PIL+ffmpeg (E3 fallback)",
+   "params": {
+    "pills": [
+     "BACCARAT",
+     "GLASSES",
+     "CHIPS ON IT"
+    ],
+    "blur_backdrop": true
+   }
+  },
+  {
+   "line": 10,
+   "type": "S07_object_callout",
+   "engine": "PIL+ffmpeg (E3 fallback)",
+   "params": {
+    "arrow_to": "plate zone",
+    "label": "ANN DEMEULEMEESTER"
+   }
+  },
+  {
+   "line": 11,
+   "type": "S09_broll_text_endcard",
+   "engine": "PIL+ffmpeg (E3 fallback)",
+   "params": {
+    "text": "PLATES",
+    "end_card": {
+     "loop_echo": true,
+     "brand": "clean no-brand",
+     "repo_pill": "github.com/Dani-Devlop/edit-master-skill"
+    }
+   }
+  }
+ ],
+ "captions": {
+  "style": "two-font karaoke: tight bold sans body + serif accent keyword center-first, gaps smaller",
+  "sweep": "full sentence always, active=accent+1.2x, spoken dim 45%, upcoming white, loop until change",
+  "keywords_semantic_only": true
+ }
+}

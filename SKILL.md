@@ -980,3 +980,53 @@ as karaoke. Never claim LEAP without V0 proofs. Never deliver ungated or below
 the refine threshold without an honest gap report. Never keep TEMP. Never schedule
 messages. Never surface edit-* / TEMP artifacts in chat. Tokens stay silent.
 Only the configured account and branch are touched.
+
+## PHASE 18 BASELINE — FULL AUTOMATION SCENE ENGINE (2026-11-24, T1 proven)
+
+Input automation: fingerprint/ASR the reference audio (faster-whisper word
+timestamps -> exact-phrase lyric match on Genius; fpcalc/AcoustID or AudD when
+available), locate the original source (yt-dlp / official); on blocks fall back
+honestly to the user-provided raw and log method + confidence. License-log
+every source (edit-test usage only for commercial tracks).
+
+Scene engine (ST1..ST10), driven by a per-lyric-line scene plan:
+ST1 whisper transcript + cut list | ST2 scene plan (scene type + params +
+on-screen text + asset per line) | ST3 assets fetched/generated + license
+| ST4 scene build (pop/slide/draw-on/track/overshoot, bezier-eased) |
+ST5 two-font karaoke captions (tight bold sans body + serif accent keyword
+center-first, semantic keywords only; full sentence always, active accent
++1.2x, spoken dim 45%, sweep loop; NO typewriter) | ST6 camera (punch-in,
+subject-track, headroom, zoom-through) | ST7 grade (curve + skin protect +
+halation + grain + vignette; numeric safe zones; grade jump vs raw) |
+ST8 revise (contact sheet, muted hook variants, preview-only-changed) |
+ST9 cue-sheet sound (SFX == entrances, medium-low, ducked; music decision +
+copyright coverage window; two-pass loudnorm -14 LUFS +/-0.5, TP<=-1.5) |
+ST10 master (platform variants + cover + gates + delivery lock + manifest).
+
+Scene types S01-S19: A-roll captions, full-screen text, line+text
+(camera-track), line+illustration, painting slide-in, center/side
+illustration, object callout, glowing grid+ball graph, B-roll+text, UI
+listicle, UI pop, circular counter, blurred-square list, before/after,
+out-of-screen zoom, polaroid cascade, insert world, odometer, invert /
+mask-wipe / light-leak / starburst atoms.
+
+Quotas (Q1-Q12): >=50% designed runtime; >=5 scene types; no consecutive same
+type; >=6 wow moments; >=4 camera moves; whip at every comp change; >=1
+recursive zoom-through; >=1 invert bite; frame-1 composed; NO debug HUD in
+deliverable; face-overlap 0; end card NO-BRAND; single consistent data source
+for every number; no empty element at t0; no dead frames.
+
+Engine chain (E1-E5): FilmCraft (timeline/export) + EffectCraft/motionCraft
+(motion graphics) when available; per-component fallback EffectCraft ->
+Remotion -> HTML->frames -> PIL sequences -> ffmpeg composite; ONE unified
+renderer path; log the engine that produced each beat.
+
+Acceptance (M1-M4): 10-dim Instagram reference-match score, aggregate >=7.0
+AND no dim <6.0; 20-axis self-critique >=9.5 with <=4 targeted refine
+iterations (re-render affected beats only); below bar -> NO delivery, honest
+gap report; deliver only when M1+M2+quotas+gates all pass. Gates run on the
+FINAL file (decoded): gate_<sha256>.json must equal the delivered file hash.
+
+Phase 18 proof artifacts: test-results/phase18/ (component strip, karaoke
+sweep strip, HUD-removal pair, scene plan, cue sheet, asr corrections,
+song-ID/source log). Preset: presets/mv_welcome.json.

@@ -50,3 +50,25 @@ Every banked asset used in a delivery carries its license in the video manifest
   collapse, not an increase.
 - Accent-card detection: saturation floor must be accent-relative for soft palettes.
 - Matte-unavailable honest fallback: cutout beat → deep-zoom comp, logged in manifest.
+
+## Phase 18.0 resource bank (2026-11-24)
+- Song: WELCOME — IDK feat. Eminem, prod. J Dilla (2026-11-13). Commercial;
+  edit-test usage only, no publication. Identified via faster-whisper transcript
+  x Genius verbatim match (HIGH confidence).
+- Sources attempted: yt-dlp YouTube (blocked: bot-check), cobalt API
+  (auth-required), REF-TAG-A CDN (403). Fallback: manager-provided raw
+  (official MV footage excerpt) — all logged in test-results/phase18/.
+- Painting asset: Francisco de Zurbarán, "Still Life with Lemons, Oranges and
+  a Rose" (1633) — PUBLIC DOMAIN (artist d. 1664); retrieved via image-search
+  rehost (z-cdn mirror); PD status unchanged.
+- Editing-knowledge study links (techniques extracted into scene engine):
+  youtu.be/g9xoKm5DEeU (Joseph premium reels) | youtu.be/7g9Qm1e00zU +
+  youtu.be/AgUATWAOaKY (Dan Kieft) | youtu.be/sGt1ACELN4k (Jason Cooperson) |
+  youtu.be/z6zkeILNHL8 (HyperFrames) | youtu.be/pwGeWRlrU10 (Joseph 5-phase) |
+  youtu.be/03BNd8ygnq8 (Grow with Alex). Playback blocked in sandbox
+  (bot-check); techniques extracted from Phase 18 spec + prior phases.
+- Engines: filmcraft (storytold/filmcraft) + EffectCraft/motionCraft —
+  unavailable in sandbox; fallback chain per spec E3 (Remotion -> HTML->frames
+  -> PIL sequences -> ffmpeg) implemented in p18_render.py.
+- Fonts: DejaVu Sans/Serif Bold (Bitstream Vera license).
+- ASR: faster-whisper small (MIT); beatmap: librosa (ISC).

@@ -1,0 +1,107 @@
+{
+  "name": "mv_welcome_v19",
+  "genre": "music_video",
+  "family": "F3 DARK MONO variant (Phase 19 adopted-pipelines edition)",
+  "mode": "B",
+  "reference": "gritty B&W rap MV (IDK & Eminem - WELCOME, J Dilla beat), volt accent on grade + type",
+  "palette": {
+    "base": "bw",
+    "accent_rgb": [
+      189,
+      255,
+      0
+    ],
+    "accent_name": "volt",
+    "color_pop": "keep-source-color on church/money beats"
+  },
+  "type": {
+    "headline_font": "Montserrat ExtraBold (variable, OFL) \u2014 CV1",
+    "keyword_font": "Montserrat ExtraBold (same family; serif retired per CV3)",
+    "hook_style": "type-slam lockup, occlusion behind head via freeze-frame matte, scrim fallback honest",
+    "max_width_frac": 0.9
+  },
+  "captions": {
+    "engine": "whisper-word-sync x Genius-verbatim align (p18_plan lines reused) \u2014 caption SYSTEM v2 (p19_kar)",
+    "style": "CV1-CV7: bold sans body white, ONE active accent <=1.15x, spoken dim 45%, upcoming white, sweep LOOP until sentence change, karaoke progress underline only, no serif, no ghost glow, tracking 0.14em",
+    "band_frac": [
+      0.705,
+      0.795
+    ],
+    "font_px": 54,
+    "stroke_px": 3,
+    "active_scale": 1.15,
+    "dim_frac": 0.45,
+    "sweep_loop": true,
+    "word_tol_s": 0.12,
+    "never_invent": true,
+    "keywords": "semantic content words only (never to/the/and)"
+  },
+  "canvas": {
+    "policy": "AS2: designed canvas (darkmono gradient + grain + halftone + ghost ring) for S05/S08/S10/S12/S13; real footage elsewhere; blur-of-same-footage only <=0.3s transitions (GC3)",
+    "wipe": "AS3 feathered, no dead area",
+    "end_card": "AS3 NO-BRAND: loop echo + family pill only"
+  },
+  "assets": {
+    "policy": "AS1: no watermarked stock ever; whitelist public-domain/CC0/generated/manager-raw; heuristic watermark scan + proof-sheet visual audit (GC2)"
+  },
+  "scene_engine": "p19_render.py - S01-S19 scene-plan driven (ST2); engine chain E3 fallback logged per beat",
+  "techniques": {
+    "freeze_slam_at_hook": true,
+    "speed_ramps": true,
+    "whip_between_beats": true,
+    "zoom_through_min": 1,
+    "invert_bite_min": 1,
+    "mask_wipe_min": 1,
+    "punch_ins": true,
+    "painting_slide_in": "generated still-life card (p19_gen_paint.py), paper texture + camera slide-in (Joseph principle); public-domain CDN blocked \u2014 honest log"
+  },
+  "audio": {
+    "original_kept": true,
+    "tts": false,
+    "loudnorm_target": [
+      -14,
+      0.5,
+      -1.5
+    ],
+    "sfx": [
+      "whoosh",
+      "glitch",
+      "splice",
+      "thump",
+      "click",
+      "riser",
+      "tape_stop"
+    ],
+    "sfx_duck_db": "per-event level_db from cue sheet (-8..-14)",
+    "sfx_events_equal_entrances": true
+  },
+  "music_plan": {
+    "decision": "keep original mix (Eminem/IDK vocal + J Dilla beat) - no overlay music",
+    "copyright_coverage": "commercial track - edit-test usage only, no publication"
+  },
+  "beats": {
+    "count": [
+      10,
+      14
+    ],
+    "length_s": [
+      26,
+      33
+    ],
+    "max_beat_s": 4.0
+  },
+  "end_card": {
+    "loop_echo": true,
+    "family_pill": "F3 DARK MONO",
+    "brand": "no-brand (AS3)"
+  },
+  "platforms": [
+    "9:16 primary"
+  ],
+  "gates": [
+    "G-P1..G-P20 (p16_gate)",
+    "Q1-Q12 (p19_gate)",
+    "GC1-GC5 (p19_gate)",
+    "M1-M4 (10-dim IG match)"
+  ]
+}

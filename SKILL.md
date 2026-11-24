@@ -1030,3 +1030,60 @@ FINAL file (decoded): gate_<sha256>.json must equal the delivered file hash.
 Phase 18 proof artifacts: test-results/phase18/ (component strip, karaoke
 sweep strip, HUD-removal pair, scene plan, cue sheet, asr corrections,
 song-ID/source log). Preset: presets/mv_welcome.json.
+
+## Phase 19.0 — ADOPTED PRO PIPELINES (current baseline: Caption v2 + AS canvas/assets + GC gates)
+
+Adopted pipelines (all MIT, cloned + studied, techniques ported):
+- andrebrito16/skill-reels-editor — end-to-end reel pipeline: transcribe ->
+  silence cuts (pad-in 0.09s / pad-out 0.15s word tails) -> numeric-checked
+  grade -> rotoscopy/occlusion -> captions -> SFX -> IG safe area (top 300px /
+  bottom 480px / sides 130px @1080w) -> export (H.264 High, 2-pass VBR 12/16
+  Mbps, closed GOP, BT.709, AAC 48kHz, -14 LUFS, TP -1.5)
+- vshukla7/remotion-captions-themes — word-level karaoke + relation-based
+  layout engine (anchors/relations/collision) ported to p19_kar/p19_render
+- Maartenlouis/remotion-ads + haidrrrry/claude-remotion-skill — word-by-word
+  captions + motion-graphics rules (ease/stagger/hold) in scene params
+- Caption grammar refs: hyperframes.heygen.com/tools/animated-captions (17
+  named styles, every word timed to speech), submagic.co/ai-caption,
+  blitzcutai.com/blog/tiktok-fonts-capcut (native IG/TikTok grammar)
+
+Caption System v2 (scripts/p19_kar.py — CV1-CV7, replaces two-font v18):
+CV1 body = tight BOLD SANS (Montserrat ExtraBold, OFL variable font;
+repo-shipped assets/fonts/), WHITE, normal tracking 0.14em, never justified,
+1-3 words/line or tight sentence <=2 lines, lower-third on dark scrim.
+CV2 ONE active accent (accent color + <=1.15x); spoken dim ~45%; upcoming
+white; sweep LOOPS until sentence change; word timing via nearest-interval
+handover (symmetric <=120ms skew absorption); NEVER multiple simultaneous
+accents. CV3 serif/script retired from captions + scene text (lockups use the
+same sans family). CV4 no ghost double-text / glow (lockup echo = offset
+outline <=12% opacity, same baseline). CV5 centered relation-style block, no
+free-floating words. CV6 emphasis lands on content words only via sweep
+timing. CV7 underline = karaoke progress only, removed when window ends /
+end card.
+
+Asset + canvas rules (scripts/p19_assets.py + p19_canvas.py):
+AS1 zero watermarked stock — whitelist public-domain/CC0/generated/manager-raw;
+license registry + watermark scan (images + 3 video sample frames) + 2x tile
+close-up visual audit trail (visual_verdicts.json); gate FAIL on effective hit.
+AS2 scene bg = DESIGNED (gradient brand + grain + halftone dots + ghost ring)
+or real full-screen footage; blur-of-same-footage only <=0.3s transitions.
+AS3 feathered wipes (no dead area); end card NO-BRAND (loop echo + family pill
+only; repo-pill retired). AS4 paintings/illustrations public-domain or
+generated with texture + camera slide-in (Joseph principle).
+
+Gates (additive): GC1 caption v2 (no-serif font family from manifest + ONE
+accent column-run per caption band frame, 4:2:0 chroma-bleed merge 14px +
+tracking <=0.2em); GC2 zero effective watermark hits + registry complete;
+GC3 bg_kind census (footage/footage_invert_card/designed_darkmono/
+designed_paper, blur_bg_s <= 0.30); GC4 no repo-pill/crosshair in renderer
+source + no-brand preset + underline removed at tail; GC5 grade delta >= 3.0 +
+>=4 camera moves + recursive zoom-through + invert bite. Regression negatives
+8/8 MUST FAIL: typewriter, serif-wide caption, watermarked asset, blur-bg
+scene, multi-accent, debug HUD, empty frame-0, halftone-on-footage.
+
+Phase 19 proof artifacts: test-results/phase19/proofs/ (S1 caption strip
+8 frames, S2 asset audit, S3 canvas, S4 scene plan + quota, S5 cue sheet,
+S6 song-ID + source log, S7 engine/beat table). T-1 v19: gate
+be21f53186b67290 == file sha; M1 9.92 (min 9.33); 20/20 axes >= 9.5;
+critique test-results/phase19/critique_9x16.json. Preset:
+scripts/p19_preset_mv_welcome.json.

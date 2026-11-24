@@ -311,3 +311,22 @@ curves/LUT → skin-tone protection → halation/bloom on highlights → grain m
 to source (σ4.2 default) → subtle vignette 0.20 → per-family palette consistency
 check (accent present in >60% of sampled frames, G-P7). GRADE JUMP vs raw is
 measured per video with a before/after pair in the scoresheet.
+
+## Caption style v19 — "DarkMono Caption v2" (CV1-CV7, IG-native)
+- Family: Montserrat ExtraBold (variable OFL), white body, dark 3px stroke on
+  scrim plate; NO serif/script/mono in caption body.
+- Grammar: 1-3 words/line or tight sentence <=2 lines; centered relation-style
+  block; tracking 0.14em (normal); never justified; lower-third band
+  y 70.5-79.5% (fully above bottom-20% no-text zone).
+- States: upcoming = white; spoken = 45% dim gray; active = family accent
+  (volt) at 1.15x — exactly ONE per frame; sweep LOOPS until sentence change;
+  word sync via nearest-interval handover (<=120ms skew).
+- Progress underline: accent bar under band, width = sweep progress; removed
+  at window end and on end card.
+- Lockups (S02 hook): same sans family, giant pre-fit <=0.66W, echo ghost =
+  offset outline <=12% opacity same baseline; selection brackets only around
+  text, never around faces (CV7).
+- Pills: keyword ONLY (S03/S11/S13); no sentence pills; no crosshair/targeting
+  graphics anywhere near faces.
+- End card: NO-BRAND (AS3) — loop echo word + family pill ("F3 DARK MONO")
+  only; no repo URL; no brand text.

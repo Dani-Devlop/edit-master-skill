@@ -72,3 +72,28 @@ Every banked asset used in a delivery carries its license in the video manifest
   -> PIL sequences -> ffmpeg) implemented in p18_render.py.
 - Fonts: DejaVu Sans/Serif Bold (Bitstream Vera license).
 - ASR: faster-whisper small (MIT); beatmap: librosa (ISC).
+
+## Phase 19 additions — adopted pro pipelines (all cloned/studied, licenses verified)
+- github.com/andrebrito16/skill-reels-editor — MIT (c) 2026 André Brito.
+  Adopted: pipeline order, silence-cut padding (0.09/0.15s), IG safe area
+  (300/480/130px @1080w), export spec (H.264 High 2-pass VBR 12/16Mbps,
+  closed GOP, BT.709, AAC 48k, -14 LUFS TP -1.5), numeric-checked grading.
+- github.com/vshukla7/remotion-captions-themes — MIT (c) 2026 Vinayak Shukla.
+  Adopted: word-level karaoke + relation-based layout engine (anchors,
+  relations, collision) -> ported into p19_kar.py deterministic PIL layout.
+- github.com/Maartenlouis/remotion-ads — MIT (c) 2025 Maarten van Onoesen.
+  Adopted: word-by-word caption pacing + VO-sync patterns.
+- github.com/haidrrrry/claude-remotion-skill — MIT (c) 2025 haidrrrry.
+  Adopted: motion-graphics skill structure + Remotion motion rules.
+- Caption grammar (web refs, no code reuse): hyperframes.heygen.com/tools/
+  animated-captions (17 named caption styles; every word timed to speech;
+  below-chin above-UI placement), submagic.co/ai-caption (word-by-word
+  highlight styles, safe-zone placement), usevyra.com (Submagic alternative) + blitzcutai.com TikTok font
+  grammar (bold sans, white, 1-3 words, one active highlight).
+- Fonts: Montserrat variable + Inter variable (SIL OFL 1.1, google/fonts,
+  repo-shipped under assets/fonts/); DejaVu (Bitstream Vera) fallback.
+- ASR faster-whisper (MIT); beatmap librosa (ISC); opencv-python-headless
+  (Apache-2.0); PIL (HPND).
+- Asset policy AS1: only public-domain/CC0/generated/manager-raw. In this
+  sandbox Wikimedia/Met image CDNs were proxy-blocked (403) — still-life card
+  generated in-sandbox (p19_gen_paint.py, deterministic) and logged honestly.

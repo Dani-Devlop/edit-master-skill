@@ -1,0 +1,859 @@
+{
+ "variant": "9x16",
+ "ow": 720,
+ "oh": 1280,
+ "fps": 30,
+ "total": 30.31,
+ "preset": "mv_welcome_v19",
+ "preset_sha256": "155283284bee5d2636ed89906ecd2408a72f0be5c47bd56b1c86bb0c12bc7929",
+ "beats": [
+  {
+   "i": 0,
+   "start": 0.0,
+   "end": 4.307,
+   "scene_type": "S02_full_screen_text",
+   "engine": "PIL+ffmpeg (E3 fallback; FilmCraft CLI unavailable in sandbox)",
+   "text": "Welcome to the party where everybody dies at the end"
+  },
+  {
+   "i": 1,
+   "start": 4.307,
+   "end": 5.341,
+   "scene_type": "S11_ui_pop",
+   "engine": "PIL+ffmpeg (E3 fallback)",
+   "text": "Move your body"
+  },
+  {
+   "i": 2,
+   "start": 5.341,
+   "end": 8.452,
+   "scene_type": "S04_line_illustration",
+   "engine": "PIL+ffmpeg (E3 fallback)",
+   "text": "This is 'bout to be a homicide scene"
+  },
+  {
+   "i": 3,
+   "start": 8.452,
+   "end": 10.925,
+   "scene_type": "S03_line_text_track",
+   "engine": "PIL+ffmpeg (E3 fallback)",
+   "text": "I think you all nah mean when I scream"
+  },
+  {
+   "i": 4,
+   "start": 10.925,
+   "end": 12.98,
+   "scene_type": "S02_echo_invert",
+   "engine": "PIL+ffmpeg (E3 fallback)",
+   "text": "Welcome \u2014 to another day"
+  },
+  {
+   "i": 5,
+   "start": 12.98,
+   "end": 15.093,
+   "scene_type": "S10_ui_listicle",
+   "engine": "PIL+ffmpeg (E3 fallback)",
+   "text": "To another plot on my mind"
+  },
+  {
+   "i": 6,
+   "start": 15.093,
+   "end": 16.463,
+   "scene_type": "S08_graph_odometer",
+   "engine": "PIL+ffmpeg (E3 fallback)",
+   "text": "'cause I gots to get paid"
+  },
+  {
+   "i": 7,
+   "start": 16.463,
+   "end": 18.564,
+   "scene_type": "S12_circular_counter",
+   "engine": "PIL+ffmpeg (E3 fallback)",
+   "text": "I'd rather get paid than laid"
+  },
+  {
+   "i": 8,
+   "start": 18.564,
+   "end": 21.687,
+   "scene_type": "S05_painting_slide_in",
+   "engine": "PIL+ffmpeg (E3 fallback)",
+   "text": "If life hand me lemons, then it's San Pellegrino lemonade"
+  },
+  {
+   "i": 9,
+   "start": 21.687,
+   "end": 24.474,
+   "scene_type": "S13_blurred_square_list",
+   "engine": "PIL+ffmpeg (E3 fallback)",
+   "text": "Baccarat glasses with chips on it"
+  },
+  {
+   "i": 10,
+   "start": 24.474,
+   "end": 26.262,
+   "scene_type": "S07_object_callout",
+   "engine": "PIL+ffmpeg (E3 fallback)",
+   "text": "Women eatin' pasta on my clean"
+  },
+  {
+   "i": 11,
+   "start": 26.262,
+   "end": 27.91,
+   "scene_type": "S09_broll_text_endcard",
+   "engine": "PIL+ffmpeg (E3 fallback)",
+   "text": "Ann Demeulemeester plates"
+  }
+ ],
+ "scene_census": {
+  "types": [
+   "S02_echo_invert",
+   "S02_full_screen_text",
+   "S03_line_text_track",
+   "S04_line_illustration",
+   "S05_painting_slide_in",
+   "S07_object_callout",
+   "S08_graph_odometer",
+   "S09_broll_text_endcard",
+   "S10_ui_listicle",
+   "S11_ui_pop",
+   "S12_circular_counter",
+   "S13_blurred_square_list"
+  ],
+  "n_types": 12
+ },
+ "matte_occlusion": false,
+ "hook_scrim": false,
+ "hook_y_frac": 0.24,
+ "sfx_events": 15,
+ "captions_v2": {
+  "font": "Montserrat (variable) ExtraBold",
+  "active_scale": 1.15,
+  "track_em": 0.14,
+  "one_accent": true,
+  "no_serif": true,
+  "underline": "karaoke progress only",
+  "keywords_semantic": [
+   "BACCARAT",
+   "BODY",
+   "CHIPS",
+   "DAY",
+   "DEMEULEMEESTER",
+   "DIES",
+   "END",
+   "HOMICIDE",
+   "LAID",
+   "LEMONADE",
+   "LEMONS",
+   "MIND",
+   "PAID",
+   "PASTA",
+   "PELLEGRINO",
+   "PLATES",
+   "PLOT",
+   "SCENE",
+   "SCREAM",
+   "WELCOME"
+  ]
+ },
+ "gc_log": {
+  "0": {
+   "bg_kind": "footage",
+   "blur_bg_s": 0.0,
+   "camera": [
+    "freeze_slam"
+   ]
+  },
+  "1": {
+   "bg_kind": "footage",
+   "blur_bg_s": 0.0,
+   "camera": [
+    "punch_in"
+   ]
+  },
+  "2": {
+   "bg_kind": "footage",
+   "blur_bg_s": 0.0,
+   "camera": []
+  },
+  "3": {
+   "bg_kind": "footage",
+   "blur_bg_s": 0.0,
+   "camera": [
+    "subject_track",
+    "recursive_zoom_through"
+   ]
+  },
+  "4": {
+   "bg_kind": "footage_invert_card",
+   "blur_bg_s": 0.0,
+   "camera": [
+    "feathered_mask_wipe",
+    "invert_bite"
+   ],
+   "wipe_feathered": true
+  },
+  "5": {
+   "bg_kind": "designed_darkmono",
+   "blur_bg_s": 0.0,
+   "camera": []
+  },
+  "6": {
+   "bg_kind": "designed_darkmono",
+   "blur_bg_s": 0.0,
+   "camera": []
+  },
+  "7": {
+   "bg_kind": "designed_darkmono",
+   "blur_bg_s": 0.0,
+   "camera": []
+  },
+  "8": {
+   "bg_kind": "designed_paper",
+   "blur_bg_s": 0.0,
+   "camera": []
+  },
+  "9": {
+   "bg_kind": "designed_darkmono",
+   "blur_bg_s": 0.0,
+   "camera": []
+  },
+  "10": {
+   "bg_kind": "footage",
+   "blur_bg_s": 0.0,
+   "camera": []
+  },
+  "11": {
+   "bg_kind": "footage",
+   "blur_bg_s": 0.0,
+   "camera": []
+  }
+ },
+ "grade_delta_max": 19.56,
+ "camera_moves": [
+  "feathered_mask_wipe",
+  "freeze_slam",
+  "invert_bite",
+  "punch_in",
+  "recursive_zoom_through",
+  "subject_track"
+ ],
+ "canvas_policy": "AS2 designed canvas for S05/S08/S10/S12/S13; real footage elsewhere; zero blur-of-footage scene bg",
+ "hud": "none (Q11 debug-HUD removed)",
+ "engine_chain": "FilmCraft unavailable -> EffectCraft unavailable -> PIL+ffmpeg (E3 fallback, per-beat logged)",
+ "renderer": "p19_render.py (single path)",
+ "loudnorm": {
+  "integrated_lufs": -14.0,
+  "true_peak_dbfs": -3.1,
+  "attempts": 2
+ },
+ "source_quality": 8.5,
+ "resource_licenses": {
+  "WELCOME (IDK feat. Eminem, prod. J Dilla)": "commercial track - original excerpt from manager-provided raw; EDIT-TEST USAGE ONLY, no publication",
+  "still-life card": "generated in-sandbox (p19_gen_paint.py, seed 1633) - no third-party rights; public-domain CDN (Wikimedia/Met) proxy-blocked, logged honestly",
+  "Montserrat variable font": "SIL Open Font License 1.1 (google/fonts)",
+  "DejaVu fonts": "free (Bitstream Vera license)",
+  "faster-whisper": "MIT",
+  "Genius lyrics": "verbatim reference for ASR alignment (text only, no audio)",
+  "source chain": "yt-dlp blocked (YouTube bot-check); cobalt auth-required; REF-TAG-A CDN 403 (auth key expired 2026-11-24) -> honest fallback to manager-provided raw"
+ },
+ "asset_audit": {
+  "n_assets": 2,
+  "watermark_hits": [
+   "4_6051789922870758373 (1).mp4@0.42",
+   "4_6051789922870758373 (1).mp4@0.75"
+  ],
+  "watermark_hits_effective": [],
+  "visual_verdicts": {
+   "4_6051789922870758373 (1).mp4@0.42": "clean \u2014 agent visual audit of 2x tile crop in proof S2 (no watermark pixels found)",
+   "4_6051789922870758373 (1).mp4@0.75": "clean \u2014 agent visual audit of 2x tile crop in proof S2 (no watermark pixels found)"
+  },
+  "scan_files": [
+   "4_6051789922870758373 (1).mp4@0.08",
+   "4_6051789922870758373 (1).mp4@0.42",
+   "4_6051789922870758373 (1).mp4@0.75",
+   "painting_lemons.jpg"
+  ]
+ },
+ "band_px": [
+  902,
+  1017
+ ],
+ "font_px": 54,
+ "rtl": false,
+ "motion_beats": [
+  4.307,
+  15.093
+ ],
+ "cap_probe_t": 6.4,
+ "words_manifest": [
+  {
+   "w": "Welcome",
+   "start": 0.0,
+   "end": 0.71
+  },
+  {
+   "w": "to",
+   "start": 0.71,
+   "end": 0.913
+  },
+  {
+   "w": "the",
+   "start": 0.913,
+   "end": 1.217
+  },
+  {
+   "w": "party",
+   "start": 1.217,
+   "end": 1.724
+  },
+  {
+   "w": "where",
+   "start": 1.724,
+   "end": 2.231
+  },
+  {
+   "w": "everybody",
+   "start": 2.231,
+   "end": 3.143
+  },
+  {
+   "w": "dies",
+   "start": 3.143,
+   "end": 3.549
+  },
+  {
+   "w": "at",
+   "start": 3.549,
+   "end": 3.752
+  },
+  {
+   "w": "the",
+   "start": 3.752,
+   "end": 4.056
+  },
+  {
+   "w": "end",
+   "start": 4.056,
+   "end": 4.36
+  },
+  {
+   "w": "Move",
+   "start": 4.36,
+   "end": 4.607
+  },
+  {
+   "w": "your",
+   "start": 4.607,
+   "end": 4.853
+  },
+  {
+   "w": "body",
+   "start": 4.853,
+   "end": 5.1
+  },
+  {
+   "w": "This",
+   "start": 5.3,
+   "end": 5.717
+  },
+  {
+   "w": "is",
+   "start": 5.717,
+   "end": 5.925
+  },
+  {
+   "w": "'bout",
+   "start": 5.925,
+   "end": 6.446
+  },
+  {
+   "w": "to",
+   "start": 6.446,
+   "end": 6.654
+  },
+  {
+   "w": "be",
+   "start": 6.654,
+   "end": 6.862
+  },
+  {
+   "w": "a",
+   "start": 6.862,
+   "end": 6.966
+  },
+  {
+   "w": "homicide",
+   "start": 6.966,
+   "end": 7.799
+  },
+  {
+   "w": "scene",
+   "start": 7.799,
+   "end": 8.32
+  },
+  {
+   "w": "I",
+   "start": 8.32,
+   "end": 8.411
+  },
+  {
+   "w": "think",
+   "start": 8.411,
+   "end": 8.868
+  },
+  {
+   "w": "you",
+   "start": 8.868,
+   "end": 9.142
+  },
+  {
+   "w": "all",
+   "start": 9.142,
+   "end": 9.416
+  },
+  {
+   "w": "nah",
+   "start": 9.416,
+   "end": 9.69
+  },
+  {
+   "w": "mean",
+   "start": 9.69,
+   "end": 10.055
+  },
+  {
+   "w": "when",
+   "start": 10.055,
+   "end": 10.421
+  },
+  {
+   "w": "I",
+   "start": 10.421,
+   "end": 10.512
+  },
+  {
+   "w": "scream",
+   "start": 10.512,
+   "end": 11.06
+  },
+  {
+   "w": "Welcome",
+   "start": 11.06,
+   "end": 11.725
+  },
+  {
+   "w": "to",
+   "start": 11.82,
+   "end": 12.01
+  },
+  {
+   "w": "another",
+   "start": 12.01,
+   "end": 12.675
+  },
+  {
+   "w": "day",
+   "start": 12.675,
+   "end": 12.96
+  },
+  {
+   "w": "To",
+   "start": 12.96,
+   "end": 13.16
+  },
+  {
+   "w": "another",
+   "start": 13.16,
+   "end": 13.86
+  },
+  {
+   "w": "plot",
+   "start": 13.86,
+   "end": 14.26
+  },
+  {
+   "w": "on",
+   "start": 14.26,
+   "end": 14.46
+  },
+  {
+   "w": "my",
+   "start": 14.46,
+   "end": 14.66
+  },
+  {
+   "w": "mind",
+   "start": 14.66,
+   "end": 15.06
+  },
+  {
+   "w": "'cause",
+   "start": 15.06,
+   "end": 15.492
+  },
+  {
+   "w": "I",
+   "start": 15.492,
+   "end": 15.564
+  },
+  {
+   "w": "gots",
+   "start": 15.564,
+   "end": 15.852
+  },
+  {
+   "w": "to",
+   "start": 15.852,
+   "end": 15.996
+  },
+  {
+   "w": "get",
+   "start": 15.996,
+   "end": 16.212
+  },
+  {
+   "w": "paid",
+   "start": 16.212,
+   "end": 16.5
+  },
+  {
+   "w": "I'd",
+   "start": 16.5,
+   "end": 16.76
+  },
+  {
+   "w": "rather",
+   "start": 16.76,
+   "end": 17.28
+  },
+  {
+   "w": "get",
+   "start": 17.28,
+   "end": 17.54
+  },
+  {
+   "w": "paid",
+   "start": 17.54,
+   "end": 17.887
+  },
+  {
+   "w": "than",
+   "start": 17.887,
+   "end": 18.233
+  },
+  {
+   "w": "laid",
+   "start": 18.233,
+   "end": 18.58
+  },
+  {
+   "w": "If",
+   "start": 18.58,
+   "end": 18.717
+  },
+  {
+   "w": "life",
+   "start": 18.717,
+   "end": 18.99
+  },
+  {
+   "w": "hand",
+   "start": 18.99,
+   "end": 19.263
+  },
+  {
+   "w": "me",
+   "start": 19.263,
+   "end": 19.4
+  },
+  {
+   "w": "lemons,",
+   "start": 19.4,
+   "end": 19.878
+  },
+  {
+   "w": "then",
+   "start": 19.878,
+   "end": 20.152
+  },
+  {
+   "w": "it's",
+   "start": 20.152,
+   "end": 20.425
+  },
+  {
+   "w": "San",
+   "start": 20.425,
+   "end": 20.63
+  },
+  {
+   "w": "Pellegrino",
+   "start": 20.63,
+   "end": 21.313
+  },
+  {
+   "w": "lemonade",
+   "start": 21.313,
+   "end": 21.86
+  },
+  {
+   "w": "Baccarat",
+   "start": 21.86,
+   "end": 22.586
+  },
+  {
+   "w": "glasses",
+   "start": 22.586,
+   "end": 23.221
+  },
+  {
+   "w": "with",
+   "start": 23.221,
+   "end": 23.584
+  },
+  {
+   "w": "chips",
+   "start": 23.584,
+   "end": 24.037
+  },
+  {
+   "w": "on",
+   "start": 24.037,
+   "end": 24.219
+  },
+  {
+   "w": "it",
+   "start": 24.219,
+   "end": 24.4
+  },
+  {
+   "w": "Women",
+   "start": 24.4,
+   "end": 24.76
+  },
+  {
+   "w": "eatin'",
+   "start": 24.76,
+   "end": 25.192
+  },
+  {
+   "w": "pasta",
+   "start": 25.192,
+   "end": 25.552
+  },
+  {
+   "w": "on",
+   "start": 25.552,
+   "end": 25.696
+  },
+  {
+   "w": "my",
+   "start": 25.696,
+   "end": 25.84
+  },
+  {
+   "w": "clean",
+   "start": 25.84,
+   "end": 26.2
+  },
+  {
+   "w": "Ann",
+   "start": 26.2,
+   "end": 26.375
+  },
+  {
+   "w": "Demeulemeester",
+   "start": 26.375,
+   "end": 27.19
+  },
+  {
+   "w": "plates",
+   "start": 27.19,
+   "end": 27.54
+  }
+ ],
+ "cap_engine": "whisper-word-sync x Genius-verbatim (Caption System v2, CV1-CV7)",
+ "cut_times": [
+  0.0,
+  4.307,
+  5.341,
+  8.452,
+  10.925,
+  12.98,
+  15.093,
+  16.463,
+  18.564,
+  21.687,
+  24.474,
+  26.262,
+  30.31
+ ],
+ "comps": [
+  "S02_full_screen_text",
+  "S11_ui_pop",
+  "S04_line_illustration",
+  "S03_line_text_track",
+  "S02_echo_invert",
+  "S10_ui_listicle",
+  "S08_graph_odometer",
+  "S12_circular_counter",
+  "S05_painting_slide_in",
+  "S13_blurred_square_list",
+  "S07_object_callout",
+  "S09_broll_text_endcard"
+ ],
+ "events": [
+  {
+   "t": 0.0,
+   "sfx": "thump+impact"
+  },
+  {
+   "t": 0.9,
+   "sfx": "click"
+  },
+  {
+   "t": 4.36,
+   "sfx": "splice+click"
+  },
+  {
+   "t": 5.3,
+   "sfx": "whoosh+thump"
+  },
+  {
+   "t": 8.32,
+   "sfx": "whoosh"
+  },
+  {
+   "t": 11.06,
+   "sfx": "whoosh_short"
+  },
+  {
+   "t": 11.2,
+   "sfx": "glitch"
+  },
+  {
+   "t": 12.96,
+   "sfx": "click_x3"
+  },
+  {
+   "t": 15.06,
+   "sfx": "riser"
+  },
+  {
+   "t": 16.5,
+   "sfx": "thump"
+  },
+  {
+   "t": 17.6,
+   "sfx": "riser_soft"
+  },
+  {
+   "t": 18.58,
+   "sfx": "whoosh"
+  },
+  {
+   "t": 21.86,
+   "sfx": "click_x3"
+  },
+  {
+   "t": 24.4,
+   "sfx": "click"
+  },
+  {
+   "t": 25.6,
+   "sfx": "tape_stop_short"
+  }
+ ],
+ "music_plan": {
+  "decision": "keep original mix (Eminem/IDK vocal + J Dilla beat) - no overlay music",
+  "copyright_coverage": "commercial track - edit-test usage only, no publication"
+ },
+ "duck_applied": true,
+ "stakes_numbers_real": true,
+ "beat_index_only": false,
+ "technique_log": [
+  {
+   "beat": 0,
+   "technique": "S02_full_screen_text",
+   "when_to_use": "PIL+ffmpeg (E3 fallback; FilmCraft CLI unavailable in sandbox)",
+   "text": "Welcome to the party where everybody dies at the end"
+  },
+  {
+   "beat": 1,
+   "technique": "S11_ui_pop",
+   "when_to_use": "PIL+ffmpeg (E3 fallback)",
+   "text": "Move your body"
+  },
+  {
+   "beat": 2,
+   "technique": "S04_line_illustration",
+   "when_to_use": "PIL+ffmpeg (E3 fallback)",
+   "text": "This is 'bout to be a homicide scene"
+  },
+  {
+   "beat": 3,
+   "technique": "S03_line_text_track",
+   "when_to_use": "PIL+ffmpeg (E3 fallback)",
+   "text": "I think you all nah mean when I scream"
+  },
+  {
+   "beat": 4,
+   "technique": "S02_echo_invert",
+   "when_to_use": "PIL+ffmpeg (E3 fallback)",
+   "text": "Welcome \u2014 to another day"
+  },
+  {
+   "beat": 5,
+   "technique": "S10_ui_listicle",
+   "when_to_use": "PIL+ffmpeg (E3 fallback)",
+   "text": "To another plot on my mind"
+  },
+  {
+   "beat": 6,
+   "technique": "S08_graph_odometer",
+   "when_to_use": "PIL+ffmpeg (E3 fallback)",
+   "text": "'cause I gots to get paid"
+  },
+  {
+   "beat": 7,
+   "technique": "S12_circular_counter",
+   "when_to_use": "PIL+ffmpeg (E3 fallback)",
+   "text": "I'd rather get paid than laid"
+  },
+  {
+   "beat": 8,
+   "technique": "S05_painting_slide_in",
+   "when_to_use": "PIL+ffmpeg (E3 fallback)",
+   "text": "If life hand me lemons, then it's San Pellegrino lemonade"
+  },
+  {
+   "beat": 9,
+   "technique": "S13_blurred_square_list",
+   "when_to_use": "PIL+ffmpeg (E3 fallback)",
+   "text": "Baccarat glasses with chips on it"
+  },
+  {
+   "beat": 10,
+   "technique": "S07_object_callout",
+   "when_to_use": "PIL+ffmpeg (E3 fallback)",
+   "text": "Women eatin' pasta on my clean"
+  },
+  {
+   "beat": 11,
+   "technique": "S09_broll_text_endcard",
+   "when_to_use": "PIL+ffmpeg (E3 fallback)",
+   "text": "Ann Demeulemeester plates"
+  }
+ ],
+ "grade_probe_t": 3.0,
+ "grade_probe_src_t": 3.0,
+ "overrides": {
+  "applied": true,
+  "note": "manager pre-approved Phase 19 spec (CONFIG block)"
+ },
+ "hook_window": [
+  0.0,
+  0.52
+ ],
+ "sfx_n": 15
+}

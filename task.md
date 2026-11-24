@@ -192,3 +192,40 @@ Repository: https://github.com/Dani-Devlop/edit-master-skill
 - [x] 18.8 Proofs + master + report delivered via Telegram (live only)
 - [x] 18.9 docs/RESOURCES.md + SKILL.md Phase 18 encoded; commit+push main;
       badge audit 0 Unverified
+
+## Phase 19.0: ADOPT PROVEN PRO PIPELINES — captions/assets/canvas real fix (2026-11-24)
+- [x] 19.1 Pull main (HEAD 4010e41 = Phase 18 base); cloned + studied 4 adopted
+      repos: skill-reels-editor (pipeline base), remotion-captions-themes
+      (relation-layout karaoke), remotion-ads (word-by-word), claude-remotion-skill
+      (motion rules); HeyGen 16-style + Submagic caption grammar inventoried
+- [x] 19.2 Caption System v2 (p19_kar, CV1-CV7): Montserrat ExtraBold body (OFL),
+      ONE accent <=1.15x, spoken dim 45%, upcoming white, sweep LOOP, karaoke
+      progress underline only, NO serif body, NO ghost glow, tracking 0.14em,
+      nearest-interval word handover (absorbs <=120ms skew, no premature handover)
+- [x] 19.3 Asset system (p19_assets, AS1): whitelist-only sources, license
+      registry, watermark scan (images + video sample frames), 2x tile close-up
+      visual audit trail; public-domain CDNs proxy-blocked -> honest generated
+      still-life card (p19_gen_paint.py, seed 1633)
+- [x] 19.4 Canvas system (p19_canvas, AS2/AS3): designed darkmono gradient +
+      grain + halftone + ghost ring for S05/S08/S10/S12/S13 (zero blur-of-footage
+      scene bg), feathered wipes, NO-BRAND end card (loop echo + family pill)
+- [x] 19.5 Song-ID re-verified (A1): WELCOME — IDK feat. Eminem (prod. J Dilla),
+      fresh faster-whisper ingest + verbatim hook match, HIGH confidence;
+      source chain re-tested: REF-TAG-A 403 (auth key expired 2026-11-24) ->
+      yt-dlp bot-check -> cobalt auth -> honest fallback manager-provided raw
+- [x] 19.6 Proofs-first -> Telegram 7/7 (S1 caption strip 8 frames, S2 asset
+      audit, S3 canvas, S4 scene plan + quota, S5 cue sheet, S6 song-ID log,
+      S7 engine/beat table)
+- [x] 19.7 T-1 v19 rendered via ONE path (p19_render.py); auto-refine: A2
+      karaoke-sync 8.89 -> 10.0 (nearest-interval handover fix, 1 re-render);
+      critique 20/20 axes >= 9.5 (min 9.5)
+- [x] 19.8 Gates on FINAL file: G-P1..P20 20/20 + Q1-Q12 12/12 + GC1-GC5 5/5
+      PASS; M1 aggregate 9.92 (min dim 9.33; bar >= 7.0); negatives 8/8 caught
+      (typewriter, serif-wide, watermarked, blur-bg, multi-accent, HUD, empty-f0,
+      halftone); delivery lock gate sha16 be21f53186b67290 == file sha
+- [x] 19.9 Delivered to Telegram owner (LIVE-ONLY): master 36.4MB + cover +
+      scoresheet, caption "Test Edit Skill" + match 99% + scorecard + hashes
+- [x] 19.10 Docs: SKILL.md Phase 19 baseline + docs/RESOURCES.md adopted
+      pipelines (all MIT) + caption grammar refs + fonts OFL + STYLES caption v2
+- [x] 19.11 Commit + push main + badge audit 0 Unverified
+- [x] 19.12 Cleanup TEMP + staging; final report (freed MB, clean surface)

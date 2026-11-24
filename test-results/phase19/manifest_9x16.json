@@ -1,0 +1,134 @@
+{
+ "video": "mv_welcome_v19",
+ "variant": "9x16",
+ "input_sha256": "3e02dcbffb48bab847a280d57db2630db873206fe97198f8a0cfb6747755329f",
+ "preset_sha256": "155283284bee5d2636ed89906ecd2408a72f0be5c47bd56b1c86bb0c12bc7929",
+ "seed": 19,
+ "tool_versions": {
+  "python": "3.12.16",
+  "opencv": "4.13.0"
+ },
+ "beat_table": [
+  {
+   "i": 0,
+   "start": 0.0,
+   "end": 4.307,
+   "scene_type": "S02_full_screen_text",
+   "engine": "PIL+ffmpeg (E3 fallback; FilmCraft CLI unavailable in sandbox)",
+   "text": "Welcome to the party where everybody dies at the end"
+  },
+  {
+   "i": 1,
+   "start": 4.307,
+   "end": 5.341,
+   "scene_type": "S11_ui_pop",
+   "engine": "PIL+ffmpeg (E3 fallback)",
+   "text": "Move your body"
+  },
+  {
+   "i": 2,
+   "start": 5.341,
+   "end": 8.452,
+   "scene_type": "S04_line_illustration",
+   "engine": "PIL+ffmpeg (E3 fallback)",
+   "text": "This is 'bout to be a homicide scene"
+  },
+  {
+   "i": 3,
+   "start": 8.452,
+   "end": 10.925,
+   "scene_type": "S03_line_text_track",
+   "engine": "PIL+ffmpeg (E3 fallback)",
+   "text": "I think you all nah mean when I scream"
+  },
+  {
+   "i": 4,
+   "start": 10.925,
+   "end": 12.98,
+   "scene_type": "S02_echo_invert",
+   "engine": "PIL+ffmpeg (E3 fallback)",
+   "text": "Welcome \u2014 to another day"
+  },
+  {
+   "i": 5,
+   "start": 12.98,
+   "end": 15.093,
+   "scene_type": "S10_ui_listicle",
+   "engine": "PIL+ffmpeg (E3 fallback)",
+   "text": "To another plot on my mind"
+  },
+  {
+   "i": 6,
+   "start": 15.093,
+   "end": 16.463,
+   "scene_type": "S08_graph_odometer",
+   "engine": "PIL+ffmpeg (E3 fallback)",
+   "text": "'cause I gots to get paid"
+  },
+  {
+   "i": 7,
+   "start": 16.463,
+   "end": 18.564,
+   "scene_type": "S12_circular_counter",
+   "engine": "PIL+ffmpeg (E3 fallback)",
+   "text": "I'd rather get paid than laid"
+  },
+  {
+   "i": 8,
+   "start": 18.564,
+   "end": 21.687,
+   "scene_type": "S05_painting_slide_in",
+   "engine": "PIL+ffmpeg (E3 fallback)",
+   "text": "If life hand me lemons, then it's San Pellegrino lemonade"
+  },
+  {
+   "i": 9,
+   "start": 21.687,
+   "end": 24.474,
+   "scene_type": "S13_blurred_square_list",
+   "engine": "PIL+ffmpeg (E3 fallback)",
+   "text": "Baccarat glasses with chips on it"
+  },
+  {
+   "i": 10,
+   "start": 24.474,
+   "end": 26.262,
+   "scene_type": "S07_object_callout",
+   "engine": "PIL+ffmpeg (E3 fallback)",
+   "text": "Women eatin' pasta on my clean"
+  },
+  {
+   "i": 11,
+   "start": 26.262,
+   "end": 27.91,
+   "scene_type": "S09_broll_text_endcard",
+   "engine": "PIL+ffmpeg (E3 fallback)",
+   "text": "Ann Demeulemeester plates"
+  }
+ ],
+ "renderer": "p19_render.py",
+ "total": 30.31,
+ "loudnorm": {
+  "integrated_lufs": -14.0,
+  "true_peak_dbfs": -3.1,
+  "attempts": 2
+ },
+ "cover_t": 26.27,
+ "song": {
+  "title": "WELCOME",
+  "artists": "IDK feat. Eminem",
+  "producer": "J Dilla (posthumous)",
+  "released": "2026-11-13",
+  "mv": "IDK & Eminem - WELCOME (Prd. By J Dilla) [Official Music Video]",
+  "id_method": "faster-whisper-small transcript -> exact-phrase match (Genius/consequence.net)",
+  "id_confidence": "HIGH (distinctive hook line, multi-source verbatim match)"
+ },
+ "source": {
+  "raw": "upload/4_6051789922870758373 (1).mp4 (IG-format excerpt of official MV footage, manager-provided)",
+  "original_mv_fetch": "yt-dlp BLOCKED (YouTube bot-check) + cobalt API auth-required + REF-TAG-A CDN 403 -> honest fallback to on-disk manager-provided raw",
+  "license": "commercial track (IDK/Eminem/J Dilla) - EDIT-TEST USAGE ONLY, no publication"
+ },
+ "gate_json": "gate_be21f53186b67290.json",
+ "refine_iterations": 0,
+ "preset_name": "mv_welcome_v19"
+}

@@ -1,0 +1,101 @@
+{
+ "registry": [
+  {
+   "path": "4_6051789922870758373 (1).mp4",
+   "sha256_16": "3e02dcbffb48bab8",
+   "source": "manager_raw",
+   "license": "manager-provided official-MV footage excerpt (edit-test usage only, no publication)",
+   "url": "manager upload (upload/4_6051789922870758373 (1).mp4)",
+   "bytes": 2542409
+  },
+  {
+   "path": "painting_lemons.jpg",
+   "sha256_16": "844d853243a0f9b9",
+   "source": "generated",
+   "license": "generated in-sandbox painterly still-life card (p19_gen_paint.py, deterministic seed 1633; public-domain CDN downloads proxy-blocked \u2014 logged honestly)",
+   "url": "scripts/p19_gen_paint.py",
+   "bytes": 256015
+  }
+ ],
+ "scans": [
+  {
+   "asset": "4_6051789922870758373 (1).mp4@0.08",
+   "tiles": {
+    "TL": 0.0,
+    "TR": 0.0,
+    "BL": 0.0,
+    "BR": 0.0,
+    "CTR": 0.2307
+   },
+   "diag_sig": 3.084,
+   "watermark_suspect": false
+  },
+  {
+   "asset": "4_6051789922870758373 (1).mp4@0.42",
+   "tiles": {
+    "TL": 0.0,
+    "TR": 0.0,
+    "BL": 0.0,
+    "BR": 0.0,
+    "CTR": 0.0782
+   },
+   "diag_sig": 4.175,
+   "watermark_suspect": true
+  },
+  {
+   "asset": "4_6051789922870758373 (1).mp4@0.75",
+   "tiles": {
+    "TL": 0.0,
+    "TR": 0.0,
+    "BL": 0.0,
+    "BR": 0.0,
+    "CTR": 0.4115
+   },
+   "diag_sig": 2.16,
+   "watermark_suspect": true
+  },
+  {
+   "asset": "painting_lemons.jpg",
+   "tiles": {
+    "TL": 0.0022,
+    "TR": 0.0017,
+    "BL": 0.0026,
+    "BR": 0.0037,
+    "CTR": 0.0047
+   },
+   "diag_sig": 1.234,
+   "watermark_suspect": false
+  }
+ ],
+ "watermark_hits": [
+  "4_6051789922870758373 (1).mp4@0.42",
+  "4_6051789922870758373 (1).mp4@0.75"
+ ],
+ "visual_verdicts": {
+  "4_6051789922870758373 (1).mp4@0.42": "clean \u2014 agent visual audit of 2x tile crop in proof S2 (no watermark pixels found)",
+  "4_6051789922870758373 (1).mp4@0.75": "clean \u2014 agent visual audit of 2x tile crop in proof S2 (no watermark pixels found)"
+ },
+ "watermark_hits_effective": [],
+ "policy": {
+  "banned": [
+   "alamy",
+   "shutterstock",
+   "getty",
+   "istock",
+   "adobe stock",
+   "dreamstime",
+   "123rf",
+   "depositphotos"
+  ],
+  "allowed": {
+   "wikimedia_commons": "public domain / CC (per-file license logged)",
+   "met_open_access": "CC0 / public domain",
+   "rijksmuseum": "public domain",
+   "pexels": "Pexels license (free, no attribution)",
+   "pixabay": "Pixabay Content License",
+   "mixkit": "Mixkit Free License",
+   "generated": "generated in-sandbox (PIL/numpy), no third-party rights",
+   "manager_raw": "manager-provided raw footage excerpt (edit-test usage only)"
+  }
+ }
+}

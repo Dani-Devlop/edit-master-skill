@@ -1,0 +1,75 @@
+{
+ "S1": {
+  "frames": 8,
+  "one_accent_by_construction": true,
+  "active_scale": 1.15,
+  "track_em": 0.14
+ },
+ "S2": {
+  "n_assets": 2,
+  "watermark_hits": [
+   "4_6051789922870758373 (1).mp4@0.42",
+   "4_6051789922870758373 (1).mp4@0.75"
+  ]
+ },
+ "S3": {
+  "designed_kinds": [
+   "designed_darkmono",
+   "designed_paper"
+  ],
+  "blur_plate": "forbidden >0.3s"
+ },
+ "S4": {
+  "designed_scene_frac": 0.99,
+  "n_scene_types": 12,
+  "types": [
+   "S02_echo_invert",
+   "S02_full_screen_text",
+   "S03_line_text_track",
+   "S04_line_illustration",
+   "S05_painting_slide_in",
+   "S07_object_callout",
+   "S08_graph_odometer",
+   "S09_broll_text_endcard",
+   "S10_ui_listicle",
+   "S11_ui_pop",
+   "S12_circular_counter",
+   "S13_blurred_square_list"
+  ],
+  "no_consecutive_same": true,
+  "wow_moments": [
+   "type-slam lockup",
+   "starburst pop",
+   "tape slam",
+   "whip",
+   "mask-wipe",
+   "invert bite",
+   "odometer",
+   "arc counter",
+   "painting slide",
+   "object callout"
+  ],
+  "camera_moves": [
+   "freeze shake",
+   "punch-in",
+   "subject track",
+   "zoom-through",
+   "feathered mask wipe"
+  ],
+  "frame1_composed": true,
+  "end_card_no_brand": true
+ },
+ "S5": {
+  "events": 15,
+  "music": "original mix KEPT (Eminem/IDK vocal + Dilla beat) - no overl"
+ },
+ "S6": {
+  "song": "WELCOME",
+  "artists": "IDK feat. Eminem",
+  "method": "faster-whisper-small transcript -> exact-phrase match (Genius/consequence.net)"
+ },
+ "S7": {
+  "beats": 12,
+  "engine_used": "PIL+ffmpeg (E3 measured fallback)"
+ }
+}

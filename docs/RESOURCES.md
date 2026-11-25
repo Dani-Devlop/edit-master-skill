@@ -133,3 +133,19 @@ Every banked asset used in a delivery carries its license in the video manifest
 - Target reference: IG refs (DgIBQu2IRM1 eightsenses et al.) login-walled ->
   per R1 protocol the user screen-recording upload was used as the ONE target;
   decoded 0.5s beat map in docs/p21/INVENTORY_target.md.
+
+## Phase 22 additions (2026-11-26)
+- REPLICA display-clock method: per-quadrant frame-diff cut detection
+  (numpy, thr 6, 0.20s merge) on the user screen-recording
+  (VID_20261121_000716_199.mp4, 6.77s, user-provided — the ONE target per
+  R1 protocol); stretch rep_t = reel_t * 8.9/6.893 matched to
+  replica_sheet_v22.py comparison clock; r21 method-swap uses decoded reel
+  quadrant crops (ffmpeg crop=344x622) as footage layer — source = user's
+  own recording, no third-party assets added.
+- bpy 5.0.1 headless via recovered venv (Blender-as-pip-module, GPL +
+  Blender License; used only as a renderer subprocess, scene files in
+  components/3d/m1_type_slam/).
+- ffmpeg loudnorm 2-pass + alimiter chain (LGPL/GPL build, deb13u1) —
+  mastering chain documented in SKILL.md Phase 22 section.
+- No new third-party fonts/assets this phase; fonts remain OFL set in
+  assets/fonts/ (restored to repo-persistent path after sandbox recycle).

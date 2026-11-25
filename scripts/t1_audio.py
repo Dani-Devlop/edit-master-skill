@@ -5,7 +5,7 @@ import os, wave, json
 import numpy as np
 
 SR = 48000
-SCRATCH = "/tmp/my-project/p21work/scratch"
+SCRATCH = "/tmp/ems-work/p22/scratch12s"
 WAV = f"{SCRATCH}/target_audio.wav"
 DUR = 27.9
 N = int(SR * DUR)

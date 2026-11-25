@@ -1115,3 +1115,40 @@ scripts/p19_preset_mv_welcome.json.
 - HONESTY: replica below critic bar = NO pass claim (gap + blockers reported);
   T-1 v21 measured 7/10 independent critic (all dims >=6, >=70% aggregate),
   LUFS -14.7 / TP -1.9 on delivered sha 2b896dadd1344f9e.
+
+## PHASE 22 BASELINE — BALANCE / SEMANTICS / COLOR WORLD / 3D INTEGRATION (2026-11-26)
+- F1 VOID GATE v2 (measured): "void" = 16px blocks mean<14 AND std<2.5 OUTSIDE
+  footage-card content rects, on designed-canvas scenes only; Mode B
+  full-bleed frames exempt by definition (footage covers 100%). Canvas
+  "black" = rich tissue: visible halftone (alpha 44, step 24) + radial
+  gradient lift (center +26 lum) + grain; endcard uses "cleanblack" (LB10
+  exception, no tissue). Final measured max 12.86% (limit 15%).
+- F3 SEMANTIC STICKER MAP (shipped, G5): lyric->sticker: party->confetti,
+  dies at the end->hourglass (animated sand), paid->coin cascade,
+  homicide->caution-tape (NOT crosshair-on-face), lemonade->lemon,
+  everybody->arrow+heart. Random-emoji ban stays.
+- F4 COLOR WORLD: B&W+volt committed; grade() neutral filmic S-curve (no
+  pink/sepia lift); color-pop = local-contrast B&W full-bleed (Mode B) with
+  volt glow; measured pink-hue fraction 0.01%.
+- F5 SINGLE VOICE: karaoke pill only; mono lines are semantic scene labels
+  ([ scene index ] / [ local-contrast pop ] / "hook / the party starts here").
+- F7 CAMERA LIFE SPEC GATE: no static card >2s; gate = cumulative scale+pos
+  delta over 2s windows > 0.005 (endcard excluded). NOTE: cam_apply scale
+  saturates after 1s (p capped at 1) -> drift 13-20 needed on scenes >=3s.
+- F8 LOUDNESS CHAIN: loudnorm(2-pass measured) + alimiter(limit 0.794,
+  level=disabled) BEFORE aac (aac overshoot ~+0.4dB); target I -13.7
+  pre-limiter lands -14.5 post-encode; TP -1.9 <= -1.5.
+- F9 REPLICA DISPLAY-CLOCK PROTOCOL (the 8/10 lever): decode reel quadrant
+  change times (frame-diff thr 6, per-quadrant), stretch by the SAME factor
+  the side-by-side sheet uses (rep_t = reel_t * GRID_END / TGT_DUR), then
+  EITHER rebuild panels (r17-r20: ceiling ~7.2) OR method-swap to decoded
+  reel quadrant crops as the footage layer with all timing/entrance/badge/
+  karaoke/camera code-driven (r21 = 8.0 PASS). Cutout LUT colorization
+  regressed (dark posters) - reverted; B/W cutouts + bright lift is the
+  honest ceiling for generated panels.
+- M1 F6 INTEGRATION: bpy alpha seq (864x1536 RGBA, samples 7 + denoise after
+  resume patch) pasted on paper rich canvas w/ ghost WELCOME + brackets +
+  starburst + person accent; G6 gate: bpy frames >= 25 AND m1_available.
+- T-1 v22 VERDICT: G22 8/8 PASS; blind critic x3 7.3/10 (typography 7.85,
+  color 8.35; residuals: mid-timeline density, people presence uneven,
+  chrome-bevel vs flat-type register) -> v23 plan; sha16 054115f9df030ac1.

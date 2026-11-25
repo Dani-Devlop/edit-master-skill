@@ -1,0 +1,70 @@
+{
+ "G1_void": {
+  "frames_measured": 24,
+  "max": 0.1286,
+  "mean": 0.0235,
+  "worst": {
+   "t": 6.5,
+   "kind": "listicle",
+   "void": 0.1286
+  },
+  "metric": "flat-black blocks outside footage cards, designed scenes only",
+  "limit": 0.15,
+  "pass": true
+ },
+ "G2_pink": {
+  "frames_sampled": 28,
+  "max_frac": 0.0001,
+  "pass": true
+ },
+ "G3_camera": {
+  "log_points": 818,
+  "windows_2s": 8079,
+  "min_delta_2s": 0.0076,
+  "worst_window_t": 7.067,
+  "pass": true
+ },
+ "G4_voice": {
+  "engine_counts": {
+   "pil-transition": 19,
+   "pil": 746,
+   "bpy-alpha-seq": 72
+  },
+  "m1_available": true,
+  "pass": true
+ },
+ "G5_sticker_map": {
+  "map": {
+   "party": "confetti burst + app-icons",
+   "everybody": "arrow + heart accents",
+   "dies at the end": "hourglass (animated sand)",
+   "paid": "coin cascade",
+   "homicide": "caution-tape band (never crosshair-on-face)",
+   "lemonade": "lemon + glass",
+   "raw cuts": "real-frame polaroid cascade + connector"
+  },
+  "n_entries": 7,
+  "pass": true
+ },
+ "G6_3d": {
+  "bpy_frames": 72,
+  "accent_window_s": 2.4,
+  "m1_available": true,
+  "pass": true
+ },
+ "G7_glyph_proofs": {
+  "saved": [
+   "whip",
+   "zoomthrough",
+   "invert"
+  ],
+  "pass": true
+ },
+ "G8_loudness": {
+  "I_lufs": -14.5,
+  "TP_dbfs": -1.9,
+  "target": -14.0,
+  "tol": 0.5,
+  "pass": true
+ }
+}

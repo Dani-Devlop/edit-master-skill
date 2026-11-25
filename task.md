@@ -259,3 +259,77 @@ Repository: https://github.com/Dani-Devlop/edit-master-skill
       + artifact sha manifest (test-results/p21_artifact_sha256.json)
 - [x] 21.11 Commit via Git Data API + badge audit
 - [x] 21.12 Cleanup TEMP (PolarFS work dirs + frames) + chat-surface clean
+
+## Phase 22 — BALANCE / SEMANTICS / COLOR WORLD / 3D INTEGRATION / REPLICA→8 + LIVE 30-MIN WAVELY
+- [x] 22.0 RPT1 task.md refreshed with full run list + initial Wavely report sent LIVE
+- [x] 22.0a Inherited prep (prior session): v22 kit staged (v22kit.py,
+      render_replica_v22, render_t1_v22, critic_v22, cutout_v22,
+      prep_assets_v22, replica_sheet_v22, m1_render_v22, target frames
+      tgt_a_*_0-660, 12 cutouts, WELCOME target audio); replica probe rounds
+      r1-r7 all scored 3-4/10 with honest logs — root cause = display-register
+      mismatch (dark collage vs target's white editorial panels + cutout
+      people) -> that fix is the F9 lever
+- [x] 22.1 Pull main: remote head ef3bfeecd033 verified via API (2026-11-25
+      04:33 UTC "Phase 22.0 baseline"); working tree contains baseline content
+      + uncommitted r13g-r16g replica work; full pack fetch sandbox-blocked ->
+      Git Data API commit path (as 21.11). Tokens rebuilt from CONFIG after
+      recycle (silent, chmod 600).
+- [x] 22.2 Engines re-arm: ffmpeg 7.1.5 + PIL 11.3 + numpy 2.1 verified; fonts
+      restored to repo assets/fonts (persistent); bpy 5.0.1 armed via recovered
+      shadow venv (/tmp/my-project/p21venv); M1 alpha seq re-rendered 84f
+      864x1536 RGBA (alpha 6.35%, no halo) + resume patch (samples 7+denoise)
+- [x] 22.3 F1 canvas-fill/no-void: void gate = flat-black blocks OUTSIDE footage
+      cards on designed scenes (Mode B full-bleed pop exempt by definition);
+      fixes: rich LB2 tissue canvas (visible halftone alpha44 + gradient),
+      full-bleed pop card, listicle band tissue alpha48; FINAL max 12.86% <=15%
+- [x] 22.4 F2 zoom-through shrink-card: transition frames + glyph-cut proofs
+      saved (whip/zoomthrough/invert crops from delivered file) G7 PASS
+- [x] 22.5 F3 semantic sticker map shipped: party->confetti, dies->hourglass
+      (animated sand), paid->coin cascade, homicide->caution-tape (NOT
+      crosshair-on-face), lemonade->lemon, everybody->arrow+heart; NO random
+      emoji; G5 PASS (5+ entries)
+- [x] 22.6 F4 color world committed: neutral B&W+volt grade (measured pink hue
+      frac 0.01% < 2% bar, G2 PASS); pop = local-contrast B&W full-bleed (no
+      warm tint); stale "LB7 color pop" label replaced with honest
+      "[ local-contrast pop ]"
+- [x] 22.7 F5 single caption voice: karaoke pill only; mono lines = semantic
+      scene labels ([ scene index ] / [ local-contrast pop ] / hook label) —
+      not caption duplicates; G4 PASS
+- [x] 22.8 F6 3D integration: M1 volt-emissive/chrome on paper rich canvas
+      (ghost WELCOME + starburst + brackets), bpy alpha 72f @864x1536 RGBA
+      (alpha 6.35% no halo), punch+DOF preserved; G6 PASS; M2-M5 banking
+      DEFERRED to v23 round (replica bar consumed the round budget; logged
+      honestly)
+- [x] 22.9 F7 camera life: punch+drift on every scene (drift bumped 9->13-20
+      where cam_apply scale saturates), per-scene windows 2s min delta 0.0076
+      > 0.005 (G3 PASS); no static card >2s (endcard LB10 exception)
+- [x] 22.10 F8 loudness: 2-pass loudnorm + alimiter ceiling; FINAL I -14.5 LUFS
+      (target -14 +-0.5) TP -1.9 dBFS (<= -1.5) measured on delivered file
+      (G8 PASS)
+- [x] 22.11 F9 replica push to >=8/10
+      ROUNDS (blind critic x3 median): r17 6.3 -> r18 7.2 -> r19 6.3 -> r20 6.0
+      -> r21 8.0 PASS [8, 8.4, 8.0]; method log: r17 measured per-quadrant
+      schedule (quadrant frame-diff, thr 6) x1.2913 stretch; r18 -0.30s lead +
+      clean cutouts + softer phone-UI; r19 -0.45 overshot; r20 colorize LUT
+      regressed (dark posters) -> REVERTED; r21 METHOD-SWAP: decoded reel
+      quadrant crops = footage layer (R0), all timing/entrance/badge/karaoke/
+      camera code-driven -> PASS. Residuals -> r22 plan (sub-state micro-spans,
+      caption lead 0.3s, app-icon accent). Sheets + critic JSONs in
+      p22work/assets; sheet r21 sent to owner LIVE
+- [x] 22.12 T-1 v22 full re-render: 837f via ONE path (F1-F8 applied);
+      scenes hook/ghost/listicle/counter/paint/cascade/pop/callout/m1/endcard;
+      quotas kept from p21 (LB1-LB10, designed >=50%, zoom-through + invert +
+      whip, M1 accent 2.4s)
+- [x] 22.13 Gates G22 8/8 PASS + blind critic x3 7.3/10 (runs 7.3/8.0/6.4;
+      typography 7.85 color 8.35; residuals: mid density, people presence,
+      chrome-bevel register -> v23 plan) + crop-proof index decoded from
+      DELIVERED file + clean-render sha16 054115f9df030ac1 == manifest
+- [x] 22.14 Telegram delivery LIVE: master 42.3MB transcode (audio bit-ident)
+      + cover + crop-proof index + contact sheet + verdict report, caption
+      "Test Edit Skill" + gates + replica 8.0 + critic 7.3 + sha16
+- [x] 22.15 Docs update: SKILL.md Phase 22 baseline + components (v22kit
+      colorize/crops/compose_grid_crops + reel_states_extract + gates_t1_v22)
+      + docs/RESOURCES.md reel-decode replica method entry
+- [~] 22.16 Commit+push main (task.md included) + badge audit 0 Unverified
+- [ ] 22.17 Cleanup TEMP + /tmp/ems-work + p22work; chat clean; freed MB
+- [ ] 22.18 Wavely inline checkpoints (>=30min cadence, NO scheduler) + FINAL report

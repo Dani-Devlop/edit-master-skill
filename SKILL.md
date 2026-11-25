@@ -1087,3 +1087,31 @@ S6 song-ID + source log, S7 engine/beat table). T-1 v19: gate
 be21f53186b67290 == file sha; M1 9.92 (min 9.33); 20/20 axes >= 9.5;
 critique test-results/phase19/critique_9x16.json. Preset:
 scripts/p19_preset_mv_welcome.json.
+
+## Phase 21+3D — graphics-first replica + Blender 3D (current baseline)
+
+- GRAPHICS-FIRST RULE (R0): the edit itself is the entertainment; footage =
+  ONE layer (masked cut-out / polaroid / graded insert) never the base; canvas
+  designed + rich (halftone/ghost/grain/gradient); captions = one layer among
+  many. Engines: python-pil/numpy canvas+type engine (renderlib.py), Blender
+  bpy 5.0.1 headless for 3D accents (components/3d/), ffmpeg grade/audio/assemble.
+- REPLICA PROTOCOL (R2): inventory target per 0.5s -> executable code
+  components -> 12s replica with our audio -> frames-only INDEPENDENT critic
+  (side-by-side sheet) -> iterate <=5 rounds -> stop-loss: 2 failed rounds per
+  move = swap method. Evidence sheets ship to Telegram every round.
+- 3D MODULE (R9): bpy headless = primary driver (Cycles CPU, low samples,
+  denoise, film-transparent alpha seq 24-30fps, 3-5s signature moves, DOF).
+  M1 extruded-type slam banked: components/3d/m1_type_slam/ (script + strip +
+  alpha audit). 3D = accent layer, never whole video. Fallbacks honest
+  (pre-rendered CC0 bank / generative) — never fake 3D blobs.
+- CAPTIONS KARAOKE v2 runtime: lower-third plate y=0.885H, auto-fit 800px max
+  line, ONE active accent (1.12x + volt pill BEHIND word), spoken dim 45%,
+  sweep loop within line window, whisper word-ts ±120ms, semantic keywords only.
+- STRUCTURAL CLONE grammar: full-bleed 2x2 designed panel grid + center badge
+  + edge-touched people/photo cut-outs + thin volt highlight BEHIND keywords +
+  staggered quadrant entrances with scale floor (frame-1 composed).
+- AUDIO: cue-sheet SFX (synth bank: pop/whoosh/tick/riser/sub/impact) mapped
+  to every entrance; music duck -18dB; loudnorm 2-pass I=-14 TP<=-1.5.
+- HONESTY: replica below critic bar = NO pass claim (gap + blockers reported);
+  T-1 v21 measured 7/10 independent critic (all dims >=6, >=70% aggregate),
+  LUFS -14.7 / TP -1.9 on delivered sha 2b896dadd1344f9e.

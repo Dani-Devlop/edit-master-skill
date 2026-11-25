@@ -229,3 +229,33 @@ Repository: https://github.com/Dani-Devlop/edit-master-skill
       pipelines (all MIT) + caption grammar refs + fonts OFL + STYLES caption v2
 - [x] 19.11 Commit + push main + badge audit 0 Unverified
 - [x] 19.12 Cleanup TEMP + staging; final report (freed MB, clean surface)
+
+## Phase 21+3D — GRAPHICS-FIRST MOTION DESIGN + REFERENCE REPLICA + BLENDER
+- [x] 21.1 Pull main (remote head c18268bd; full 2.2GB pack blocked by sandbox
+      -> text tree mirrored via raw CDN, 295 files; disk purge 6.5GB stale tmpfs
+      shadow + delivered-mp4 dupes to restore writability)
+- [x] 21.2 Engines: bpy 5.0.1 (Blender headless), rembg u2net+isnet,
+      faster-whisper, yt-dlp, fonts (Playfair/SpaceMono/JetBrains OFL) staged
+- [x] 21.3 Proven bases cloned+studied (captions-themes karaoke port,
+      reels-editor pipeline+safe-area, remotion-ads, claude-remotion-skill)
+- [x] 21.4 R2 target inventory shipped (docs/p21/INVENTORY_target.md; IG
+      login-wall -> user screen-recording per R1 protocol)
+- [x] 21.5 M1 3D extruded-type slam banked (bpy Cycles alpha seq 84f, DOF,
+      test strip + alpha audit 0.0134 no halo) components/3d/m1_type_slam/
+- [x] 21.6 12s replica: 7 independent-critic rounds, 2 stop-loss method swaps
+      (density pass -> strict structural clone w/ 2x2 grid+badge+people);
+      final OVERALL 5/10 < 8 bar -> HONEST no-pass, blockers named, working
+      code + strips committed (renderlib, render_replica_12s, render_replica_v2)
+- [x] 21.7 T-1 master: WELCOME 27.9s, LB1-LB10 + karaoke v2 + grade + zoom-
+      through/invert/whip + M1 accent + cue-sheet SFX + loudnorm
+- [x] 21.8 Gates on final file: LUFS -14.7 TP -1.9, grade delta, designed
+      quota 58%, 7 wow, 5 camera moves, end card no-brand, frame-1 composed,
+      matte fps==30; independent critic 7/10 (all axes >=6, >=70% surrogate,
+      IG refs login-walled — documented)
+- [x] 21.9 Delivered LIVE to Telegram: master + cover + contact sheet +
+      scoresheet + crop-proof index + grade pair + M1 strip + reports
+      (caption "Test Edit Skill"; sha256-16 2b896dadd1344f9e == manifest)
+- [x] 21.10 Docs: RESOURCES/STYLES/REFERENCES Phase 21 sections + INVENTORY
+      + artifact sha manifest (test-results/p21_artifact_sha256.json)
+- [x] 21.11 Commit via Git Data API + badge audit
+- [x] 21.12 Cleanup TEMP (PolarFS work dirs + frames) + chat-surface clean

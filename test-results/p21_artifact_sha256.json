@@ -1,0 +1,11 @@
+{
+ "components/cutout.py": "539e3c98807eb18a",
+ "components/renderlib.py": "4f0db3d70bccce6e",
+ "components/3d/m1_type_slam/m1_render.py": "e1aea7eff7543ac3",
+ "components/3d/m1_type_slam/test_strip.jpg": "33e5daade54610b9",
+ "components/3d/m1_type_slam/m1_strip.py": "97c41d8c57094501",
+ "test-results/p21_m1_test_strip.jpg": "33e5daade54610b9",
+ "test-results/p21_replica_beats.json": "8306ee713d18de8d",
+ "test-results/p21_t1_engine_log.json": "74c1bb604af51fb2",
+ "test-results/p21_t1_cuesheet.json": "57e78f53575dd7c4"
+}

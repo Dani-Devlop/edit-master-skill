@@ -97,3 +97,39 @@ Every banked asset used in a delivery carries its license in the video manifest
 - Asset policy AS1: only public-domain/CC0/generated/manager-raw. In this
   sandbox Wikimedia/Met image CDNs were proxy-blocked (403) — still-life card
   generated in-sandbox (p19_gen_paint.py, deterministic) and logged honestly.
+
+## Phase 21+3D — graphics-first replica + Blender 3D module
+
+- Blender bpy 5.0.1 (GPL-2.0-or-later, Blender Foundation) — headless 3D via
+  pip wheel in sandbox; M1 extruded-type slam banked as components/3d/
+  m1_type_slam/ (m1_render.py, Cycles CPU low-samples, film-transparent alpha
+  sequence, DOF f/2.8). Blender-lab MCP (blender.org/lab/mcp-server) and
+  github.com/ahujasid/mcp-for-blender listed as interactive fallbacks; not
+  needed here (bpy IS the headless driver — honest engine log). blender-cli
+  (renezander030) repo unreachable from sandbox (auth prompt) — bpy used
+  instead. SceneCraft (arxiv.org/abs/2403.01248) — text->Blender python
+  knowledge base.
+- 3D asset policy: no external kit used this phase; geometry is generated
+  bpy primitives + repo-shipped fonts (extruded text). CC0 kits listed for
+  future: polyhaven.com, ambientcg.com, rendercrate.com. ArtCraft 3D Stage
+  (getartcraft.com/faq/3d-editor, github.com/storytold/artcraft) — used when
+  credits available; none consumed this phase (log).
+- rembg isnet-general-use / u2net (MIT, danielgatis/rembg; models Apache-2.0)
+  — person cut-outs (PL3 rotoscopy substitute). u2net fails on dark B&W
+  footage (0.03 coverage); isnet-general-use succeeds (stairwell figure).
+  matte fps == output fps: cutouts composited on every 30fps frame they
+  appear; coverage logged per scene in engine logs.
+- faster-whisper 1.2.1 (MIT, SYSTRAN) — song-ID transcription (E3): whisper
+  lyrics -> web verification: "WELCOME" = IDK feat. Eminem & J Dilla (Apple
+  Music id 6828648031; Musixmatch). yt-dlp 2026.11.23 (Unlicense) installed
+  for original-source fetch — YouTube fetch unavailable in sandbox (video
+  unavailable / no JS runtime) — honest fallback: user-supplied clip.
+- Fonts added: Playfair Display variable + Italic, Space Mono Regular/Bold,
+  JetBrains Mono variable (all SIL OFL 1.1, google/fonts) -> assets/fonts/.
+- Asset policy AS4 this phase: Wikimedia/Met CDNs proxy-blocked (HTTP 400/403
+  attempts logged) -> LB5 still-life GENERATED in-sandbox (z-ai image gen,
+  "Dutch Golden Age still life" prompt) — generated-asset path allowed by
+  AS4, no watermark, provenance logged in manifest.
+- Target reference: IG refs (DgIBQu2IRM1 eightsenses et al.) login-walled ->
+  per R1 protocol the user screen-recording upload was used as the ONE target;
+  decoded 0.5s beat map in docs/p21/INVENTORY_target.md.

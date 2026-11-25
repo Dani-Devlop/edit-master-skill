@@ -1,0 +1,83 @@
+{
+ "cue_sheet": [
+  {
+   "t": 0.0,
+   "sfx": "pop",
+   "dur": 0.5,
+   "maps_to": "hook entrance"
+  },
+  {
+   "t": 0.05,
+   "sfx": "riser",
+   "dur": 1.2,
+   "maps_to": "hook tension"
+  },
+  {
+   "t": 3.3,
+   "sfx": "whoosh",
+   "dur": 0.6,
+   "maps_to": "whip transition"
+  },
+  {
+   "t": 6.2,
+   "sfx": "tick",
+   "dur": 0.3,
+   "maps_to": "listicle reveal"
+  },
+  {
+   "t": 9.0,
+   "sfx": "impact",
+   "dur": 0.8,
+   "maps_to": "counter slam"
+  },
+  {
+   "t": 11.9,
+   "sfx": "whoosh",
+   "dur": 0.7,
+   "maps_to": "zoom-through"
+  },
+  {
+   "t": 14.8,
+   "sfx": "pop",
+   "dur": 0.4,
+   "maps_to": "polaroid slide-in"
+  },
+  {
+   "t": 17.6,
+   "sfx": "sub",
+   "dur": 1.0,
+   "maps_to": "invert bite drop"
+  },
+  {
+   "t": 20.4,
+   "sfx": "tick",
+   "dur": 0.3,
+   "maps_to": "callout draw"
+  },
+  {
+   "t": 23.2,
+   "sfx": "impact",
+   "dur": 0.9,
+   "maps_to": "M1 3D slam"
+  },
+  {
+   "t": 23.3,
+   "sfx": "sub",
+   "dur": 1.0,
+   "maps_to": "M1 sub drop"
+  },
+  {
+   "t": 25.6,
+   "sfx": "pop",
+   "dur": 0.4,
+   "maps_to": "end card settle"
+  }
+ ],
+ "music": {
+  "track": "WELCOME \u2014 IDK feat. Eminem & J Dilla",
+  "source": "user-supplied clip (27.91s), full-clip coverage window",
+  "bed_gain": "medium 0.42",
+  "duck_db": -18
+ },
+ "loudnorm": "2-pass -14 LUFS TP -1.5 (ffmpeg)"
+}

@@ -330,3 +330,28 @@ measured per video with a before/after pair in the scoresheet.
   graphics anywhere near faces.
 - End card: NO-BRAND (AS3) — loop echo word + family pill ("F3 DARK MONO")
   only; no repo URL; no brand text.
+
+## Phase 21 style extensions (replica grammar + T-1 lookbook)
+
+- STRUCTURAL CLONE (v2 replica engine): EVERY frame = full-bleed 2x2 designed
+  panel grid, black gutters, center volt serif-letter badge straddling seams,
+  people/photo cut-outs edge-touched in quadrants, quadrant entrance stagger
+  40-80ms with scale floor 0.74 (frame-1 composed), per-quadrant micro-motion
+  (bob/orb pulse/toggle slide/drift) — no static holds.
+- THIN HIGHLIGHT RULE: volt capsules render BEHIND exact keyword bbox
+  (tight, radius 6-18, alpha 200-235) — never as standalone floating chips;
+  rotated marker pills (-3..-9deg) only for tag stickers.
+- PIXEL DISPLAY register: chunky nearest-neighbor upscale words
+  (pixel_word, chunk 3-4px) for product/why/beat registers; serif Didone
+  reserved for editorial words; mono for annotations.
+- T-1 darkmono lookbook wiring: LB1 volt-behind-head + brackets + artist pill;
+  LB2 black halftone ghost quote; LB3 scene-index listicle (rhombus + bars +
+  active volt); LB4 counter panel (light numerals on navy card, volt trio);
+  LB5 generated still-life polaroid + drifting highlighter label; LB6 polaroid
+  cascade + volt connectors; LB7 teal-orange color-pop + rim glow + phone-UI
+  pill (ONLY in LB7); LB8 constellation + serif keyword + volt bar; LB9 whip
+  blur / recursive zoom-through / invert bite; LB10 black end card loop echo +
+  family pill (no brand, no URL).
+- KARAOKE v2 runtime constants: lower-third plate y=0.885H (text bottom
+  <=1440), auto-fit shrink to 800px max line, single active accent 1.12x with
+  volt pill, spoken dim 45%, sweep loops within line window (±120ms whisper ts).

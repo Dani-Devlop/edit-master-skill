@@ -137,3 +137,19 @@ a clean monochrome canvas (Mode A) with a small seated cut-out subject.
   here. Family motion stays video-evidenced from V2.
 - Audio whoosh per-transition mapping for V1: music bed is continuous (RMS flat,
   mean 0.223); whoosh positions are therefore taken from visual whip timestamps.
+
+## Phase 21 references
+
+- Target decode: user screen-recording (VID_20261121_000716_199.mp4) = the
+  eightsenses-style graphics-first reel — 0.5s beat map + design-language
+  decode at docs/p21/INVENTORY_target.md (R1 protocol: IG login-wall).
+- Family lockups source: upload/4_5914418752572623746.mp4 (Raw/Edited pairs).
+- MV source: upload/4_6051789922870758373 (1).mp4 = WELCOME (IDK ft. Eminem &
+  J Dilla) footage+audio, song-ID verified (see RESOURCES.md Phase 21).
+- Independent critic protocol: frames-only subagent (no claims/specs/scores),
+  side-by-side sheets target|replica; 7 replica rounds (5.6/4.4*/4.8/5.0 —
+  *stale-artifact round discarded) + T-1 rounds 6.5 -> 7.0. Sheets:
+  test-results/p21_replica_sidebyside.jpg; T-1 final sheet in delivery.
+- Replica verdict: OVERALL 5/10 < 8 bar after budget — NOT passed; blockers
+  named (color cut-out people from B&W source; sticker-species gap; display
+  register rotation). T-1: 7/10 with all axes >= 6 and >=70% aggregate.

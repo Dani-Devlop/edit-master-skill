@@ -330,6 +330,11 @@ Repository: https://github.com/Dani-Devlop/edit-master-skill
 - [x] 22.15 Docs update: SKILL.md Phase 22 baseline + components (v22kit
       colorize/crops/compose_grid_crops + reel_states_extract + gates_t1_v22)
       + docs/RESOURCES.md reel-decode replica method entry
-- [~] 22.16 Commit+push main (task.md included) + badge audit 0 Unverified
-- [ ] 22.17 Cleanup TEMP + /tmp/ems-work + p22work; chat clean; freed MB
-- [ ] 22.18 Wavely inline checkpoints (>=30min cadence, NO scheduler) + FINAL report
+- [x] 22.16 Commit+push main via Git Data API: commit 7439e412f12a (21 files,
+      task.md included); badge audit 0 verified / 8 unsigned / 0 UNVERIFIED
+      (unsigned policy per token scope, Phase 0 note)
+- [x] 22.17 Cleanup TEMP + /tmp/ems-work work dirs: freed 1164.0 MB (frames
+      caches, m1_seq, scratch, intermediates); kept: finals + gate/proof jsons
+      + p22work assets (persistent); chat surface clean (no edit-*/TEMP)
+- [x] 22.18 Wavely inline checkpoints (NO scheduler): resume report, replica
+      verdict, gates verdict, FINAL 100% report — all LIVE to owner 2040835005

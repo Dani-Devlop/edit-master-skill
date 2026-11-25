@@ -28,3 +28,7 @@ render/
 
 # Raw test footage stays local (100+ MB); only sources.txt + test-results/ are committed
 raw_videos/
+
+# Phase TEMP/render hygiene - work outputs live in /tmp/ems-work/<run>/
+/ems-tmp/
+*.bak

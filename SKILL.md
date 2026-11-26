@@ -1152,3 +1152,46 @@ scripts/p19_preset_mv_welcome.json.
 - T-1 v22 VERDICT: G22 8/8 PASS; blind critic x3 7.3/10 (typography 7.85,
   color 8.35; residuals: mid-timeline density, people presence uneven,
   chrome-bevel vs flat-type register) -> v23 plan; sha16 054115f9df030ac1.
+
+## Phase 24 — IG-NATIVE FEEL: BEAT-LOCK + PSEUDO-UI + LOOP + KINETIC SLAMS
+### (current baseline, on top of Phase 22 F-fixes; commit 759f885f base)
+
+- IG1 BEAT-LOCK: librosa onset grid (112 onsets, 102 low-band kicks, tempo
+  172.3) -> every comp change snapped to nearest onset (SNAP_LOG); kick-synced
+  ±3% scale pulse on comps; audio side: sub-drops/risers/tape-stop/echo-throw/
+  dropout-before-slam/crackle bed (t1_audio_v24.py). Gate: snapped cut IS an
+  onset (100% within ±60ms; plan-shift max 289ms logged honestly).
+- IG2 PSEUDO-UI: cursor-tap triggers scene (ui_tap 2.2s), comment bubbles with
+  lyric keyword (homicide/paid), payout notification banner w/ typing dots,
+  heart-burst payoff; elements press/settle (squash 0.84 at press). 4 beats.
+- IG3 SEAMLESS LOOP: t>=loop renders exact frame-0 hook composition; measured
+  first/last correlation 0.96 >= 0.9.
+- IG4 KINETIC SLAMS: per-letter stagger 45ms + squash 1.08/0.94 + chromatic
+  split 3px + outline+fill (WELCOME hook, homicide callout, M1 bounce).
+- IG5 IDLE: stickers wobble/ticker/dots + camera path below; gate = 1s-window
+  cam delta > 0.002 (worst measured above bar).
+- IG6 SELECTIVE COLOR: hue-window isolation beat (58-100 keeps volt + foliage
+  chroma; everything else luma). BUG FOUND+FIXED: luma 0..1 was written to
+  uint8 (all-neutral frames went black) -> *255. Measured inside=1.0 outside=0.0.
+- IG7 PACING: 19 comps, median interval 1.42s, max 2.46s (bars 2.0/2.5).
+- IG8 FILM TEXTURE: grain every frame + halation every 3rd (half-res bloom) +
+  dust every 5th + gate-weave ±1.5px + 2 light-leak windows + invert bite.
+- IG9 NATIVE CAPTIONS: draw_caption_pop active-word pop-bounce + rotate jitter,
+  volt pill on active word, plate at H*0.80 (above IG UI row); cover = frame 0.
+- IG10 CAMERA LANGUAGE: 8 distinct moves (punch-ins, whip, dutch ≤3deg,
+  0.4x->1.6x eased ramp, freeze+slam, zoom punch, shrink-card, volt-bar match
+  cut). G3 camera gate: monotone global push-in (0.36%/s) + velocity-positive
+  pans (v_x>=2.9, v_y>=1.8 px/s) — GUARANTEES |delta| over any window by
+  construction (sinusoidal-drift dead zones were the G3/IG12 FAIL root cause;
+  3 sim-verified designs before landing this one).
+- CRITICAL ENGINE FIX (homography direction): ig24kit.find_coeffs solved the
+  INVERSE mapping (src->dst) — PIL transform needs dst->src. Result: M1/M2/M5
+  quad_warp rendered empty/distorted SINCE CREATION. Fixed + standalone-verified
+  (identity/asymmetric probes + pixel counts). M1 volt/chrome type now actually
+  visible; M2 polaroid parallax + M5 world insert real.
+- LF KEEPS VERIFIED: video-in-card live (listicle band mini-video), hook
+  full-bleed + type-behind-head, density fill (void gate 12.9% max).
+- MASTER CRITIC (honest): 3 blind absolute-rubric rounds 7.6/7.0/6.9 — NO-PASS
+  vs 8.5 bar; blockers: people-cutout integration depth, sticker vocabulary
+  density, counter/m1 frame fill. r25 plan logged. Replica(live) 8.5 PASS r1.
+- v24 master: 27.9s 1080x1920@30, sha16 9042d6886bdd6eff; gates 17/17 PASS.

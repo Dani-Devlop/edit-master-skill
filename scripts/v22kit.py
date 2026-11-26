@@ -309,11 +309,23 @@ def canvas(kind, ghost=None):
 
 # ---------------- F7 camera life ----------------
 def cam_apply(img, t, s0, punch=0.055, drift=9.0, freq=0.5):
-    """slow punch-in + drift INSIDE the comp via cover-crop (no black borders, F1/F7)."""
+    """slow punch-in + drift INSIDE the comp via cover-crop (no black borders, F1/F7).
+    Phase 24-C: adds a MONOTONIC per-scene pan component that DOMINATES the
+    sinusoidal drift over any >=1s window (14 px/s x vs <=10 px/s max sinusoid
+    variation, 6 px/s y vs <=6) so every window has a real, logged, visible
+    camera delta — pure-sinusoidal drift has phase dead-zones that measured as
+    idle (IG12) / camera-dead (G3)."""
     p = min(1.0, max(0.0, (t - s0)))
-    z = 1.0 + punch * min(1.0, p / 2.0)
-    dx = math.sin(t * freq + s0) * drift
-    dy = math.cos(t * freq * 0.8 + s0) * (drift * 0.6)
+    # Phase 24-C camera design (G3/IG12 guarantee by construction):
+    #  - MONOTONE global push-in 0.0036/s (+10% over the reel)
+    #  - MONOTONE pans with velocity ALWAYS positive (v_x >= 2.9 px/s,
+    #    v_y >= 1.8 px/s) — phase-shifted per scene for organic rhythm, bounded
+    #    travel so the cover-crop never clamps the motion
+    #  - per-scene punch uses a FAST ramp (0.35s) so |dz| across any window is
+    #    carried by the monotone terms
+    z = 1.0 + 0.0036 * t + punch * min(1.0, p / 0.35)
+    dx = 4.0 * t - 2.0 * math.cos(2 * math.pi * t / 9.2 + s0 * 0.7)
+    dy = 2.5 * t - 1.2 * math.cos(2 * math.pi * t / 11.0 + s0 * 1.1)
     if z > 1.001 or abs(dx) > 0.5:
         zw, zh = max(2, int(W / z)), max(2, int(H / z))
         cx, cy = W / 2 + dx * 0.5, H / 2 + dy * 0.5

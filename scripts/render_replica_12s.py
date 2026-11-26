@@ -14,7 +14,7 @@ from renderlib import VOLT, INK
 
 W, H, FPS, DUR = 1080, 1920, 30, 12.0
 N = int(FPS * DUR)
-SCRATCH = "/tmp/my-project/p21work/scratch"
+SCRATCH = "/tmp/ems-work/p22/scratch12s"
 FRAMES = f"{SCRATCH}/replica_frames"
 OUTDIR = f"{SCRATCH}/replica_out"
 MV = "/home/z/my-project/upload/4_6051789922870758373 (1).mp4"

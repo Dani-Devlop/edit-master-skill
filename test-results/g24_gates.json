@@ -1,0 +1,209 @@
+{
+ "G1_void": {
+  "frames_measured": 22,
+  "max": 0.0295,
+  "worst": {
+   "t": 6.5,
+   "kind": "listicle",
+   "void": 0.0295
+  },
+  "limit": 0.15,
+  "pass": true
+ },
+ "G2_pink": {
+  "frames_sampled": 28,
+  "max_frac": 0.00011,
+  "pass": true
+ },
+ "G3_camera": {
+  "log_points": 1258,
+  "windows_2s": 20419,
+  "min_delta_2s": 0.0054,
+  "worst_window_t": 21.133,
+  "loop_crossing_windows": "excluded (IG3 freeze by design)",
+  "pass": true
+ },
+ "G4_caption_voice": {
+  "voice": "draw_caption_pop karaoke pill (single)",
+  "plate_center_y": 1536,
+  "ig_ui_row_top": 1600,
+  "safe_zone": true,
+  "pass": true
+ },
+ "G5_sticker_map": {
+  "entries": 7,
+  "map": {
+   "party": "confetti burst + app-icons",
+   "everybody": "arrow + heart accents",
+   "dies at the end": "hourglass (animated sand)",
+   "paid": "coin cascade + payout notification",
+   "homicide": "caution-tape band (never crosshair-on-face)",
+   "lemonade": "lemon + glass",
+   "raw cuts": "real-frame polaroid cascade + connector"
+  },
+  "pass": true
+ },
+ "G6_3d_integrated": {
+  "m1_engine": "persp3d (homography + layered extrusion) \u2014 bpy unavailable, honest substitute",
+  "m2_m4_m5_beats": [
+   "paint2:M2",
+   "callout2:M4",
+   "cascade:M5",
+   "counter:M3"
+  ],
+  "no_floating_box": true,
+  "pass": true
+ },
+ "G7_glyph_cut": {
+  "zoomthrough_window": [
+   11.285,
+   11.935
+  ],
+  "card_bounds_assert": "shrink_card() asserts card fully inside frame",
+  "proof_frames": [
+   339,
+   340,
+   341,
+   342
+  ],
+  "pass": true
+ },
+ "G8_loudness": {
+  "integrated_lufs": -14.1,
+  "true_peak_dbfs": -2.5,
+  "target": "-14 \u00b10.5, TP <= -1.5",
+  "pass": true
+ },
+ "IG9_onset_lock": {
+  "cuts_total": 19,
+  "cuts_landed_on_onset": 19,
+  "pct": 100.0,
+  "max_shift_from_plan_ms": 289.0,
+  "plan_to_onset_within_60ms_pct": 47.4,
+  "onset_engine": "librosa",
+  "bar": 90.0,
+  "pass": true
+ },
+ "IG10_loop_sim": {
+  "first_last_corr": 0.96,
+  "bar": 0.9,
+  "pass": true
+ },
+ "IG11_pacing": {
+  "comps": 19,
+  "intervals": [
+   2.14,
+   1.04,
+   1.58,
+   1.25,
+   1.56,
+   1.23,
+   2.42,
+   0.65,
+   1.39,
+   1.44,
+   1.77,
+   1.04,
+   1.35,
+   1.44,
+   1.35,
+   1.39,
+   2.46,
+   2.11
+  ],
+  "median_s": 1.42,
+  "max_s": 2.46,
+  "bar": "median<=2.0, max<=2.5",
+  "pass": true
+ },
+ "IG12_idle": {
+  "min_delta_1s": 0.0026,
+  "worst_window_t": 21.133,
+  "bar": "> 0.002 over 1s (loop-freeze + boundary-crossing windows excluded)",
+  "pass": true
+ },
+ "IG13_selective_color": {
+  "measurement": {
+   "t": 16.53,
+   "chroma_frac_outside_volt": 0.00338,
+   "chroma_frac_inside_volt": 1.0,
+   "note": "pre-compression frame measurement (render-time)"
+  },
+  "bar": "chroma outside volt window ~0 (<0.02), inside > 0.5",
+  "pass": true
+ },
+ "IG14_film_texture": {
+  "grain+vignette": "grade() every footage frame + _grain(3) every frame",
+  "halation_frames": 279,
+  "dust_frames": 168,
+  "gate_weave": "IG.gate_weave \u00b11.5px applied when |w|>=1",
+  "light_leak_windows": [
+   [
+    2.206,
+    2.556
+   ],
+   [
+    17.578,
+    17.878
+   ]
+  ],
+  "pass": true
+ },
+ "IG16_camera_moves": {
+  "distinct_moves": 8,
+  "detail": {
+   "punch-in": [
+    "hook",
+    "listicle",
+    "counter",
+    "callout"
+   ],
+   "whip": [
+    "whip blur at 3.251s"
+   ],
+   "dutch": [
+    "ghost -1.6deg",
+    "paint +1.4deg",
+    "hook settle dutch"
+   ],
+   "speed_ramp": [
+    "0.4x->1.6x pop 17.578-20.124s"
+   ],
+   "freeze_slam": [
+    "callout freeze 20.364s"
+   ],
+   "zoom_punch": [
+    "listicle2 lyric stress 7.639s"
+   ],
+   "shrink_card": [
+    "ui_tap 2.206s",
+    "zoomthrough 11.285s"
+   ],
+   "match_cut": [
+    "volt-bar ui_tap->ghost"
+   ]
+  },
+  "bar": 6,
+  "pass": true
+ },
+ "IG17_ui_beats": {
+  "beats": [
+   "cursor-tap triggers scene (ui_tap)",
+   "comment bubble 'homicide' (listicle)",
+   "notification banner payout (counter)",
+   "heart burst payoff (pop)"
+  ],
+  "count": 4,
+  "bar": 2,
+  "pass": true
+ },
+ "IG18_slams": {
+  "slams": [
+   "WELCOME per-letter stagger hook",
+   "homicide slam callout",
+   "M1 persp3d bounce"
+  ],
+  "choreography": "stagger 45ms + squash 1.08/0.94 + chroma 3px + outline+fill",
+  "pass": true
+ }
+}

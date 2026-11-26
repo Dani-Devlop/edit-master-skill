@@ -434,9 +434,10 @@ Repository: https://github.com/Dani-Devlop/edit-master-skill
       Replica(live) verdict = 8.5 PASS (bar met). Gates 17/17 PASS.
 - [x] C.10 Docs: SKILL.md Phase 24 baseline (IG1-IG10 + homography fix +
       honest critic verdict) + scripts/components updated in repo
-- [ ] C.11 Commit + push main via Git Data API (task.md included) + badge
-      audit (verified or unsigned, 0 unverified)
-- [ ] C.12 Cleanup TEMP + /tmp/ems-work (freed MB reported) + chat clean
-- [ ] C.13 Wavely inline checkpoints every >=30 min (NO scheduler) + FINAL
-      report (replica rounds, critic, match%, void%, onset-lock%, loop-sim,
-      interval median, UI beats, M bank, LUFS, freed MB, hashes)
+- [x] C.11 Commit + push main via Git Data API: commit 1532d38357eb (23
+      files, task.md included); badge audit 0 unverified (unsigned policy)
+- [x] C.12 Cleanup TEMP: freed 944 MB (frames caches, pkg grabs, mixes,
+      scratch); /tmp/ems-work 1 MB (wavely log evidence only); chat surface
+      clean (finals in download/phase24_deliverables, named full)
+- [x] C.13 Wavely inline checkpoints LIVE (initial 7.1% -> 28.6% -> 50%
+      milestone gates -> replica verdict -> FINAL); no scheduler used

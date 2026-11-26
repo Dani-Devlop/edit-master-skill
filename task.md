@@ -496,11 +496,11 @@ Repository: https://github.com/Dani-Devlop/edit-master-skill
       manifest; caption "Test Edit Skill"
 - [x] 25.17 SKILL.md Phase 25 baseline (WC1-WC4 + showcase-first protocol)
       + components + docs update
-- [~] 25.18 Commit+push main via Git Data API (task.md included; unsigned
-      policy per Phase 0 note — no ssh-keygen/token scope) + badge audit
-      0 Unverified
-- [~] 25.19 Cleanup TEMP + /tmp/ems-work (freed MB reported) + chat surface
-      clean (no edit-*/TEMP surfaced)
+- [x] 25.18 Commit+push main via Git Data API: commit ba5a1f0556c3 (11 files,
+      task.md included); badge audit 0 Unverified (unsigned policy)
+- [x] 25.19 Cleanup TEMP: freed ~552 MB (seg caches, frame caches, matte/mv
+      caches, scratch) + /tmp/ems-work purged; KEEP-LIST: masters + proofs +
+      verdicts + plans (132 MB p25work) + phase25_deliverables; chat surface clean
 - [~] 25.20 Wavely inline checkpoints every >=30 min elapsed (step-boundary,
       NO scheduler) + FINAL report (B1-B6 yes/no, every gate ID, replica
       rounds, critic, match%, motion-quota%, void%, onset-lock%, loop-sim,

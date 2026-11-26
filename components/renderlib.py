@@ -163,8 +163,11 @@ def black_halftone(w, h, quote=None):
     _halftone(d, w, h, (70, 70, 78), alpha=18, step=26, region=(0, h, 0, w))
     if quote:
         f = playfair(int(h * 0.075), 700)
-        tw = d.textbbox((0, 0), quote, font=f)[2]
-        d.text(((w - tw) / 2, h * 0.30), quote, font=f, fill=(240, 240, 235, 40))
+        bb = d.textbbox((0, 0), quote, font=f)
+        while bb[2] - bb[0] > w * 0.94 and f.size > 40:
+            f = playfair(f.size - 8, 700)
+            bb = d.textbbox((0, 0), quote, font=f)
+        d.text(((w - (bb[2] - bb[0])) / 2, h * 0.30), quote, font=f, fill=(240, 240, 235, 40))
     return _grain(_vignette(img, 0.34), 6)
 
 

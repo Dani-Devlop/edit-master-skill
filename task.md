@@ -441,3 +441,68 @@ Repository: https://github.com/Dani-Devlop/edit-master-skill
       clean (finals in download/phase24_deliverables, named full)
 - [x] C.13 Wavely inline checkpoints LIVE (initial 7.1% -> 28.6% -> 50%
       milestone gates -> replica verdict -> FINAL); no scheduler used
+
+## Phase 25 — FREEZE GATES + BINARY HUMAN ACCEPTANCE FIRST + PROVIDED CODE
+### + 10s SHOWCASE BEFORE FULL (base: remote main 9c9b0cc = Phase 24-C final;
+### honest carry-in: v24 master critic 7.6/7.0/6.9 NO-PASS, blockers = cutout
+### integration depth / sticker density / counter+M1 fill — WC1-WC4 target these)
+- [x] 25.01 Env restore: tokens rebuilt KEY=VALUE (silent, chmod 600) + asset
+      bank audit (target_audio.wav 48k/27.8s, 13 cutouts, pd painting,
+      reel_states, MV upload 720x900@30 27.9s) + tools (ffmpeg/git/z-ai ok)
+- [x] 25.02 RPT: task.md Phase 25 run list + initial Wavely sent LIVE (inline,
+      no scheduler)
+- [x] 25.03 Pull main: fetch done; reconcile local tree to remote HEAD 9c9b0cc
+- [x] 25.04 WC2 occlusion hook engine: per-frame performer alpha from LIVE MV
+      footage (rembg/isnet; if unavailable -> honest fallback + disclosure) +
+      composite order: full-bleed live footage -> giant volt type -> performer
+      alpha -> brackets/artist-tape/captions; matte fps == output fps
+- [x] 25.05 WC1 video-in-card: crop-to-window-aspect live clips + polaroid
+      border overlay + rotate + spring stagger; cascade/listicle cards MUST
+      play live video (v24 cascade polaroids were frozen — fix)
+- [x] 25.06 WC3 cutout depth: contact shadow (blurred black ellipse under
+      cutout) + parallax (cutout 1.02x vs bg 1.0x) + rim-light edge; never
+      flat pasted
+- [x] 25.07 WC4 counter/M1 tissue fill: halftone+ghost+gradient+particles
+      behind card/type; no empty box; M1 persp3d + env-light gradient +
+      contact shadow + DOF blur
+- [x] 25.08 v25 renderer (ONE path): IG1 beat-lock snap + kick pulse, IG2 UI
+      beats, IG3 seamless loop, IG4 kinetic slams, IG5 idle micro-motion,
+      IG6 selective color, IG7 tight pacing, IG8 film texture, IG9 caption
+      choreography + grid COVER, IG10 camera language (>=6 moves)
+- [x] 25.09 10s SHOWCASE render (hook 0-4s + one verse beat 4-10s) + audio
+      (sub-drop/riser/dropout/whoosh/crackle bed) + 2-pass loudnorm -14±0.5
+      TP<=-1.5
+- [x] 25.10 Numeric gates on showcase (every FZ1 ID listed pass/fail +
+      evidence) + crop proofs decoded from DELIVERED file
+- [x] 25.11 B1-B6 blind binary critic (frames-only, BEFORE numbers): B1
+      >=60% moving footage, B2 hook full-bleed LIVE + type BEHIND head,
+      B3 cards/polaroids contain MOVING video, B4 cutouts integrated
+      (contact shadow + parallax + rim), B5 >=1 semantic sticker per scene,
+      B6 counter/M1 tissue-filled — ALL six YES required, ship yes/no + crops
+- [x] 25.12 Showcase LIVE delivery to Telegram — stop-loss: showcase fails
+      2 rounds => honest hybrid human-polish/executor-swap report
+- [x] 25.13 Full 30s v25 master render via ONE path (WC1-WC4 + IG1-IG10)
+- [x] 25.14 Gates on full v25 (G1-G8, LF1-LF8 status incl. LF1 optical-flow
+      living>=60%, LF2 video-in-card, LF3 hook occlusion, LF4 void<=15%,
+      LF5 M2-M5 bank, LF7 VT proofs/quotas/loudness/face-safe/no-HUD/end-
+      clean/single-voice/palette) + cue sheet + manifest + sha256 hashes
+- [!] 25.15 Blind critic x3 independent (absolute rubric) >= 8.5 bar
+      HONEST NO-PASS: r1 median 7.1 -> r2 median 7.3 (fix round applied: ghost-fit,
+      paper tissue density, deeper shadows, ghost2 card move) — bar 8.5 NOT met;
+      stop-loss reached; never faked (same verdict family as v24: 6.9-7.6)
+      (stop-loss 2 rounds/move; honest verdict either way, NEVER fake pass)
+- [x] 25.16 Master LIVE delivery: master + cover + crop-index + contact
+      sheet + critic + match% + gate/preset/engine hashes + cue sheet +
+      manifest; caption "Test Edit Skill"
+- [x] 25.17 SKILL.md Phase 25 baseline (WC1-WC4 + showcase-first protocol)
+      + components + docs update
+- [~] 25.18 Commit+push main via Git Data API (task.md included; unsigned
+      policy per Phase 0 note — no ssh-keygen/token scope) + badge audit
+      0 Unverified
+- [~] 25.19 Cleanup TEMP + /tmp/ems-work (freed MB reported) + chat surface
+      clean (no edit-*/TEMP surfaced)
+- [~] 25.20 Wavely inline checkpoints every >=30 min elapsed (step-boundary,
+      NO scheduler) + FINAL report (B1-B6 yes/no, every gate ID, replica
+      rounds, critic, match%, motion-quota%, void%, onset-lock%, loop-sim,
+      interval median, interaction beats, M2-M5 bank, LUFS, freed MB, chat
+      clean, hashes)

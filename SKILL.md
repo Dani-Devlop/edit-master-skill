@@ -1195,3 +1195,14 @@ scripts/p19_preset_mv_welcome.json.
   vs 8.5 bar; blockers: people-cutout integration depth, sticker vocabulary
   density, counter/m1 frame fill. r25 plan logged. Replica(live) 8.5 PASS r1.
 - v24 master: 27.9s 1080x1920@30, sha16 9042d6886bdd6eff; gates 17/17 PASS.
+
+## Phase 25 baseline (2026-11-27) — FREEZE GATES + BINARY ACCEPTANCE + PROVIDED CODE
+- FZ1: gate IDs G1-G8, LF1-LF8, IG1-IG10 immutable; every report lists every ID + evidence.
+- FZ2: B1-B6 blind binary acceptance (frames-only, BEFORE numbers) — showcase ships only on 6/6 YES.
+- FZ3: 10s showcase FIRST (hook 0-4s + verse 4-10s), then full 30s; stop-loss 2 rounds.
+- WC1 video-in-card: wc25kit.wc1_card (crop-to-window-aspect + border + rotate + spring stagger; cards ALWAYS live).
+- WC2 occlusion hook: wc25kit.hook_footage_perf — per-frame rembg/isnet-general-use performer alpha from LIVE MV footage; order: full-bleed footage -> giant volt type -> performer alpha -> brackets/tape/captions.
+- WC3 cutout depth: wc25kit.paste_person_v25 — contact shadow + whole-figure cast shadow + behind-patch + 1.02x parallax + DIRECTIONAL rim light; wc25kit.lift_person_v25 (alpha-preserving brighten for dark-on-dark).
+- WC4 tissue fill: wc25kit.tissue_fill (halftone+ghost+gradient+particles) + wc25kit.dof_blur; no empty navy/beige boxes.
+- Showcase engine: scripts/render_t1_v25_showcase.py (pipe-to-ffmpeg mode); full: scripts/render_t1_v25.py; gates: scripts/gates_t1_v25.py (all 26 IDs, stage-aware); audio: scripts/t1_audio_v25.py / t1_audio_v25_full.py.
+- Honest results: showcase B1-B6 6/6 YES + gates 25/26; full master gates 25/26 but blind critic median 7.3 < 8.5 → LF6 NO-PASS (stop-loss honored, reported, not faked).

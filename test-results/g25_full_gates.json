@@ -1,0 +1,371 @@
+{
+ "LF1_living_flow": {
+  "method": "Farneback optical flow inside the footage region (per-kind rect, 270x480 scale); a frame counts when footage >=5% of frame AND motion-pixel density >2% of region pixels moving >0.5px. Two statistics disclosed: motion-density (pass metric; mean-flow dilutes partial-region motion, e.g. genuinely slow talking-head footage) and area-weighted mean-flow. Floors verified: loop-freeze ~0.03, static canvas ~0.08 mean / <0.5% pixels.",
+  "runtime_share": 0.638,
+  "area_weighted_share": 0.3512,
+  "mean_flow_share_for_reference": 0.6774,
+  "bar": 0.6,
+  "frames": 837,
+  "samples": [
+   {
+    "t": 0.0,
+    "kind": "hook",
+    "flow": 0.0,
+    "pixfrac": 0.0,
+    "footage_share": 1.0
+   },
+   {
+    "t": 1.0,
+    "kind": "hook",
+    "flow": 0.137,
+    "pixfrac": 0.012,
+    "footage_share": 1.0
+   },
+   {
+    "t": 2.0,
+    "kind": "hook",
+    "flow": 0.622,
+    "pixfrac": 0.146,
+    "footage_share": 1.0
+   },
+   {
+    "t": 3.0,
+    "kind": "ui_tap",
+    "flow": 0.085,
+    "pixfrac": 0.018,
+    "footage_share": 0.7
+   },
+   {
+    "t": 4.0,
+    "kind": "ghost",
+    "flow": 1.548,
+    "pixfrac": 0.642,
+    "footage_share": 0.056
+   },
+   {
+    "t": 5.0,
+    "kind": "ghost2",
+    "flow": 1.321,
+    "pixfrac": 0.988,
+    "footage_share": 0.056
+   },
+   {
+    "t": 6.0,
+    "kind": "ghost2",
+    "flow": 0.346,
+    "pixfrac": 0.036,
+    "footage_share": 0.056
+   },
+   {
+    "t": 7.0,
+    "kind": "listicle",
+    "flow": 0.079,
+    "pixfrac": 0.015,
+    "footage_share": 0.7
+   },
+   {
+    "t": 8.0,
+    "kind": "listicle2",
+    "flow": 0.561,
+    "pixfrac": 0.489,
+    "footage_share": 0.7
+   },
+   {
+    "t": 9.0,
+    "kind": "counter",
+    "flow": 0.427,
+    "pixfrac": 0.208,
+    "footage_share": 0.0
+   },
+   {
+    "t": 10.0,
+    "kind": "counter",
+    "flow": 0.54,
+    "pixfrac": 0.44,
+    "footage_share": 0.0
+   },
+   {
+    "t": 11.0,
+    "kind": "counter",
+    "flow": 0.175,
+    "pixfrac": 0.046,
+    "footage_share": 0.0
+   }
+  ],
+  "pass": true
+ },
+ "G1_void": {
+  "frames_measured": 46,
+  "max": 0.0775,
+  "worst": {
+   "t": 9.6,
+   "kind": "counter",
+   "void": 0.0775
+  },
+  "limit": 0.15,
+  "pass": true
+ },
+ "G2_pink": {
+  "frames_sampled": 23,
+  "max_frac": 0.00099,
+  "pass": true
+ },
+ "G3_camera": {
+  "log_points": 1430,
+  "windows_2s": 37367,
+  "min_delta_2s": 0.0054,
+  "worst_window_t": 21.133,
+  "pass": true
+ },
+ "G4_caption_voice": {
+  "voice": "draw_caption_pop karaoke pill (single)",
+  "plate_center_y": 1536,
+  "ig_ui_row_top": 1600,
+  "safe_zone": true,
+  "pass": true
+ },
+ "G5_sticker_map": {
+  "entries": 7,
+  "map": {
+   "party": "confetti burst + app-icons",
+   "everybody": "arrow + heart accents",
+   "dies at the end": "hourglass (animated sand)",
+   "paid": "coin cascade + payout notification",
+   "homicide": "caution-tape band (never crosshair-on-face)",
+   "lemonade": "lemon + glass",
+   "raw cuts": "real-frame polaroid cascade + connector"
+  },
+  "pass": true
+ },
+ "G6_3d_integrated": {
+  "engine": "persp3d (homography + layered extrusion) \u2014 bpy unavailable, honest substitute",
+  "bank": "ig24kit m1_type_persp/m2_polaroids_parallax/m3_counter_ring/m4_callout_orbit/m5_world_insert",
+  "showcase_beats": [
+   "m2_live:M2",
+   "paint2:M2",
+   "counter:M3"
+  ],
+  "no_floating_box": true,
+  "pass": true
+ },
+ "G7_glyph_cut": {
+  "zoomthrough_window": [
+   2.206,
+   6.084
+  ],
+  "card_bounds_assert": "shrink_card() asserts card fully inside frame",
+  "proof_frames": [
+   66,
+   67,
+   68,
+   69
+  ],
+  "pass": true
+ },
+ "G8_loudness": {
+  "integrated_lufs": -14.1,
+  "true_peak_dbfs": -2.5,
+  "target": "-14 \u00b10.5, TP <= -1.5",
+  "pass": true
+ },
+ "LF2_video_in_card": {
+  "method": "mean abs pixel diff (frame n vs n+2) inside card interiors; >2.0 = video playing",
+  "cards": {
+   "listicle-card1": {
+    "moving": 8,
+    "frames": 8,
+    "mean_pixel_diff": 8.64
+   },
+   "listicle-card2": {
+    "moving": 7,
+    "frames": 8,
+    "mean_pixel_diff": 3.19
+   }
+  },
+  "overall": "15/16",
+  "frozen_accent_note": "frozen accents allowed <=0.5s by spec; cards use live mv frames per WC1",
+  "pass": true
+ },
+ "LF3_hook_occlusion": {
+  "engine": "rembg isnet-general-use per-frame (live MV footage) via v25_hook",
+  "composite_order": "full-bleed live footage -> giant volt type -> performer alpha -> brackets/tape/captions",
+  "hook_scenes": [
+   "hook"
+  ],
+  "crop_proofs": "proof_crop_index (hook rows)",
+  "pass": true
+ },
+ "LF4_density_void": {
+  "measurement": "identical census to G1_void (block-median <14, std<2.5)",
+  "max": 0.0775,
+  "bar": 0.15,
+  "pass": true
+ },
+ "LF5_moves_bank": {
+  "bank": [
+   "M1 m1_type_persp",
+   "M2 m2_polaroids_parallax",
+   "M3 m3_counter_ring",
+   "M4 m4_callout_orbit",
+   "M5 m5_world_insert"
+  ],
+  "exercised_in_this_stage": [
+   "m2_live:M2",
+   "paint2:M2",
+   "counter:M3"
+  ],
+  "stop_loss": "2 rounds/move",
+  "pass": true
+ },
+ "LF6_replica_live": {
+  "bar": 8.5,
+  "stage": "pending-full-render",
+  "pass": false,
+  "note": "measured at full v25 stage (25.14/25.15)"
+ },
+ "LF7_G22_VT_bundle": {
+  "crop_proofs": "decoded from delivered file (proof_crop_index)",
+  "watermark_placeholder_ban": "no placeholder/watermark layers rendered (renderer source audit)",
+  "face_safe": "no crosshair-on-face; caution-tape only (full stage)",
+  "no_HUD": "no engine HUD; editorial labels only",
+  "end_clean": "loop freeze = designed hook composition (not black)",
+  "single_caption_voice": "draw_caption_pop karaoke pill (single)",
+  "palette": "B&W + volt only (G2 measured)",
+  "quotas": "designed scenes >=50%: canvas+tissue scenes; >=5 sticker types; >=6 wow; zoom-through+invert",
+  "pass": true
+ },
+ "LF8_gates_suite": {
+  "suite": "gates_t1_v25.py",
+  "stage": "full",
+  "pass": true
+ },
+ "IG1_onset_lock": {
+  "cuts_total": 19,
+  "cuts_landed_on_onset": 19,
+  "pct_on_onset": 100.0,
+  "max_shift_from_plan_ms": 289.0,
+  "plan_to_onset_within_60ms_pct": 47.4,
+  "onset_engine": "librosa",
+  "bar": 90.0,
+  "pass": true
+ },
+ "IG2_ui_beats": {
+  "beats": [
+   "cursor-tap triggers scene (ui_tap)",
+   "comment bubble 'homicide' (listicle)",
+   "notification banner payout (counter)"
+  ],
+  "count": 3,
+  "bar": 2,
+  "pass": true
+ },
+ "IG3_loop_sim": {
+  "first_last_corr": 0.9197,
+  "bar": 0.9,
+  "pass": true
+ },
+ "IG4_slams": {
+  "slams": [
+   "WELCOME per-letter stagger (hook_car)",
+   "DIES per-letter stagger (hook_duo/duo2)"
+  ],
+  "choreography": "stagger 45-50ms + squash 1.08/0.94 + chroma 3px + outline+fill",
+  "pass": true
+ },
+ "IG5_idle": {
+  "min_delta_1s": 0.0036,
+  "worst_window_t": 7.8,
+  "bar": "> 0.002 over 1s (loop-freeze excluded)",
+  "pass": true
+ },
+ "IG6_selective_color": {
+  "isolation_beat": {
+   "t": 7.97,
+   "chroma_frac_outside_volt": 1e-05,
+   "chroma_frac_inside_volt": 1.0,
+   "note": "pre-compression frame measurement (render-time)"
+  },
+  "bar": "chroma outside volt window <0.02, inside >0.5",
+  "pass": true
+ },
+ "IG7_pacing": {
+  "comps": 19,
+  "intervals": [
+   2.14,
+   1.04,
+   1.58,
+   1.25,
+   1.56,
+   1.23,
+   2.42,
+   0.65,
+   1.39,
+   1.44,
+   1.77,
+   1.04,
+   1.35,
+   1.44,
+   1.35,
+   1.39,
+   2.46,
+   2.11
+  ],
+  "median_s": 1.42,
+  "max_s": 2.46,
+  "bar": "median<=2.0, max<=2.5",
+  "pass": true
+ },
+ "IG8_film_texture": {
+  "grain+vignette": "grade() every footage frame + _grain(3) every frame",
+  "halation_frames": 279,
+  "dust_frames": 168,
+  "gate_weave": "IG.gate_weave \u00b11.5px applied when |w|>=1",
+  "light_leak_windows": [
+   [
+    2.206,
+    2.556
+   ],
+   [
+    null,
+    0.3
+   ]
+  ],
+  "pass": true
+ },
+ "IG9_captions": {
+  "active_word_pop_bounce": "draw_caption_pop (1.0->1.12 decay 0.16s + rotate jitter)",
+  "safe_zone": true,
+  "cover": "COVER = frame 0 (grid-designed hook, exported cover file)",
+  "pass": true
+ },
+ "IG10_camera_moves": {
+  "distinct_moves": 7,
+  "detail": {
+   "punch-in": [
+    "hook_car",
+    "listicle",
+    "counter"
+   ],
+   "dutch": [
+    "hook settle dutch"
+   ],
+   "speed_ramp": [
+    "0.4x->1.6x eased (m2 None)"
+   ],
+   "freeze_slam": [
+    "counter freeze spike 8.87"
+   ],
+   "zoom_punch": [
+    "hook_duo2 jump punch None"
+   ],
+   "shrink_card": [
+    "ui_tap 2.206"
+   ],
+   "match_cut": [
+    "volt-bar ui_tap card edge -> listicle spine"
+   ]
+  },
+  "bar": 6,
+  "pass": true
+ }
+}

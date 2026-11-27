@@ -156,11 +156,12 @@ def draw_hook(t, src_start, scene_t0, rate=1.0, slam_word="WELCOME", slam_t0=Non
     if slam_word == "WELCOME":
         # type overlaps the performer head band (~H*0.47 in the car shot) so the
         # alpha occlusion is VISIBLE: head/chest covers the bottom of the type
-        # Ph26 S3/B9: hook word FULLY legible <= 0.92W INCLUDING the camera
-        # envelope (punch-in crop + dutch + gate-weave eat up to ~7% per side);
-        # 0.84W pre-camera leaves measured clearance. Fit logged for B9.
+        # Ph26 S3/B9: hook word FULLY legible <= 0.92W on DECODED frames.
+        # Ph31 measured camera envelope: 1.30x peak (punch+pulse+dutch+weave),
+        # right-edge crop at 0.72W pre-camera (decoded 0.937W, 0px clearance)
+        # -> pre-camera fit 0.66W -> decoded ~0.86W, >=70px real clearance.
         size_big = 210
-        while R.montserrat(size_big, 900).getlength("WELCOME") > int(W * 0.84) and size_big > 90:
+        while R.montserrat(size_big, 900).getlength("WELCOME") > int(W * 0.66) and size_big > 70:
             size_big -= 8
         IG.slam_text(img, (W / 2, int(H * 0.40)), "WELCOME",
                      lambda s: R.montserrat(s, 900), t,
@@ -177,10 +178,10 @@ def draw_hook(t, src_start, scene_t0, rate=1.0, slam_word="WELCOME", slam_t0=Non
         if confetti:
             confetti_v(d, W / 2, int(H * 0.40), 230 * min(1.0, (t - s0) / 0.34 + 0.2), t)
     else:
-        # DIES slam: fit <=1020px so the word reads WIDER than the duo bodies —
-        # the heads occlude the middle, letters stay readable on both sides
+        # DIES slam: same decoded-fit discipline as WELCOME (0.66W pre-camera
+        # vs 1.30x measured camera envelope; B9 measures decoded frames)
         size_big = 240
-        while R.montserrat(size_big, 900).getlength("DIES") > int(W * 0.84) and size_big > 90:
+        while R.montserrat(size_big, 900).getlength("DIES") > int(W * 0.66) and size_big > 70:
             size_big -= 8
         IG.slam_text(img, (W / 2, int(H * 0.42)), "DIES",
                      lambda s: R.montserrat(s, 900), t,
@@ -209,6 +210,12 @@ def draw_hook(t, src_start, scene_t0, rate=1.0, slam_word="WELCOME", slam_t0=Non
     scene_label(img, (86, int(H * 0.685)), "hook / full-bleed live occlusion (WC2)")
     img, z, dx, dy = cam_apply(img, t, s0, punch=0.06, drift=18)
     img = dutch(img, 1.2 * max(0.0, 1 - (t - s0) / 0.4))
+    # Ph31 film-gate edge burn (IG8-consistent): 12px ink columns kill yuv420
+    # chroma-ringing at the frame edge (B9 measured a 1px volt sliver there);
+    # guarantees >=8px real clearance for ALL volt elements in decoded frames
+    _d = ImageDraw.Draw(img, "RGBA")
+    _d.rectangle([0, 0, 11, H], fill=(8, 8, 10, 255))
+    _d.rectangle([W - 12, 0, W - 1, H], fill=(8, 8, 10, 255))
     return img.convert("RGB"), "pil-wc2", "WC2 full-bleed occlusion + IG4 slam", (z * pulse, dx, dy)
 
 # ---------------- ui_tap: shrink-card zoom-through + cursor (IG2) ----------------
@@ -262,7 +269,7 @@ def draw_scene(idx, t):
                                        slam_word="DIES",
                                        slam_t0=ST["hook_duo"], hourglass=True,
                                        ghost_outline="everybody dies at the end")
-        img2, z, dx, dy = cam_apply(img.convert("RGBA"), t, s0, punch=0.16, drift=14, freq=0.9)
+        img2, z, dx, dy = cam_apply(img.convert("RGBA"), t, s0, punch=0.09, drift=14, freq=0.9)  # Ph31: punch 0.16->0.09 (1.42x peak zoom put DIES type at frame edge; B9 decoded-bar)
         scene_label(img2, (86, int(H * 0.72)), "jump cut / zoom punch (IG10)")
         return img2.convert("RGB"), "pil-wc2", "IG10 zoom punch jump-cut", (z * pulse, dx, dy)
 

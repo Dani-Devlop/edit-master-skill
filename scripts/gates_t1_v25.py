@@ -437,6 +437,39 @@ MOVE_TAGS["match_cut"] = ["volt-bar ui_tap card edge -> listicle spine"]
 res["IG10_camera_moves"] = {"distinct_moves": len(MOVE_TAGS), "detail": MOVE_TAGS,
                             "bar": 6, "pass": len(MOVE_TAGS) >= 6}
 
+# ---- Ph31: seek-fallback frame reader (some cv2 builds fail CAP_PROP_POS_FRAMES
+# seeks; measurement integrity unchanged - same decoded frames, sequential scan) ----
+def _read_frames_at(cap_path, indices, w=270, h=480):
+    """decode frames at the given indices from the FINAL file (seek, else
+    sequential scan fallback). Returns {idx: bgr}."""
+    out = {}
+    cap2 = cv2.VideoCapture(cap_path)
+    if not cap2.isOpened():
+        return out
+    for idx in sorted(set(indices)):
+        cap2.set(cv2.CAP_PROP_POS_FRAMES, idx)
+        ok, fr = cap2.read()
+        if ok:
+            out[idx] = fr
+    if len(out) == len(set(indices)):
+        cap2.release()
+        return out
+    out = {}
+    want = sorted(set(indices))
+    cap3 = cv2.VideoCapture(cap_path)
+    i = 0
+    wi = 0
+    while wi < len(want):
+        ok, fr = cap3.read()
+        if not ok:
+            break
+        if i == want[wi]:
+            out[i] = fr
+            wi += 1
+        i += 1
+    cap3.release()
+    return out
+
 # ================= Ph26 NEW GATES (B7-B10) =================
 # Added 2026-11-27. The frozen 26-ID ledger above is UNTOUCHED (FZ1 no-drift);
 # B7-B10 extend the binary acceptance to 10 checks (B1-B10 ALL YES required).

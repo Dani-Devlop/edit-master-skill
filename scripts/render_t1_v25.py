@@ -694,7 +694,10 @@ _PAINTING_IMG = None
 def _painting():
     global _PAINTING_IMG
     if _PAINTING_IMG is None:
-        _PAINTING_IMG = Image.open(f"{K.ASSETS}/pd_still_life_gen.png").convert("RGB")
+        _im = Image.open(f"{K.ASSETS}/pd_still_life_gen.png").convert("RGB")
+        # Ph26 S2/B8: PD painting graded B&W (color art = off-palette chroma leak)
+        from PIL import ImageOps as _IO
+        _PAINTING_IMG = _IO.grayscale(_im).convert("RGB")
     return _PAINTING_IMG
 
 ISOL_MEAS = {}

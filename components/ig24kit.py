@@ -128,10 +128,12 @@ def slam_text(img, center, word, font_fn, t, t0, per_letter=0.05, size=150,
             wch, hch = bb2[2] - bb2[0], bb2[3] - bb2[1]
         ox, oy = int(lx - wch / 2), int(cy - hch / 2)
         if off:
-            d.text((ox - off, oy), ch, font=f2, fill=(255, 60, 60, int(200 * pop)),
-                   stroke_width=2, stroke_fill=(255, 60, 60, int(160 * pop)))
-            d.text((ox + off, oy), ch, font=f2, fill=(60, 120, 255, int(200 * pop)),
-                   stroke_width=2, stroke_fill=(60, 120, 255, int(160 * pop)))
+            # Ph26 S2/B8 palette lock: chroma split stays (IG4 feature) but the
+            # split colors are volt/white — red+blue variants were off-palette
+            d.text((ox - off, oy), ch, font=f2, fill=(216, 243, 74, int(170 * pop)),
+                   stroke_width=2, stroke_fill=(216, 243, 74, int(140 * pop)))
+            d.text((ox + off, oy), ch, font=f2, fill=(246, 246, 242, int(170 * pop)),
+                   stroke_width=2, stroke_fill=(246, 246, 242, int(140 * pop)))
         d.text((ox, oy), ch, font=f2, fill=color, stroke_width=max(2, size // 60),
                stroke_fill=stroke)
         x += widths[i]

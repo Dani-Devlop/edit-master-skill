@@ -530,8 +530,8 @@ def draw_caption_pop(img, words, t, center_y, size=64):
     tt = t if t <= line_end else line_start + ((t - line_start) % span)
     x = (img.width - total) / 2
     y_c = center_y
-    d.rounded_rectangle([x - 30, y_c - 78, x + total + 30, y_c + 34], radius=22,
-                        fill=(8, 8, 10, 170))
+    _pill_box = (x - 30, y_c - 78, x + total + 30, y_c + 34)
+    d.rounded_rectangle(_pill_box, radius=22, fill=(8, 8, 10, 170))
     for i, wd in enumerate(words):
         active = (wd["start"] - line_start <= tt - line_start < wd["end"] - line_start)
         spoken = tt - line_start >= wd["end"] - line_start
@@ -559,3 +559,5 @@ def draw_caption_pop(img, words, t, center_y, size=64):
             bb = d.textbbox((0, 0), wd["text"], font=f_up)
             d.text((x, y_c - bb[3] / 2 - 20), wd["text"], font=f_up, fill=col)
             x += widths[i] + gap
+    return _pill_box
+

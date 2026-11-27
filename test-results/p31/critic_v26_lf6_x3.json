@@ -1,0 +1,25 @@
+{
+ "runs_overall": [
+  3.8,
+  2.8,
+  3.5
+ ],
+ "median_overall": 3.5,
+ "axes_avg": {
+  "panel_grid": 3.05,
+  "people_cutouts": 4.4,
+  "typography_register": 4.75,
+  "sticker_vocabulary": 5.5,
+  "color_story": 5.75,
+  "density_overlap": 5.05,
+  "motion_feel": 4.65,
+  "overall_impression": 2.65
+ },
+ "top_gaps": [
+  "replica over-designs plain B&W source shots with heavy overlays absent from target",
+  "invented UI elements (counter, money, timer) not in target's vocabulary",
+  "panel/collage structure diverges from target's simple full-frame footage grammar",
+  "over-laid editorial grammar where target uses bare footage frames"
+ ],
+ "n_valid_runs": 3
+}

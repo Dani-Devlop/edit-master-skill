@@ -1,0 +1,28 @@
+{
+ "master": {
+  "file": "T1_welcome_v26_9x16.mp4",
+  "sha256": "7a2deb83e2a3488e78ecfd2aa48a49867cac89c2ea8277000dd94b6c42006240",
+  "bytes": 82463404,
+  "dur_s": 27.9,
+  "res": "1080x1920@30"
+ },
+ "gates": {
+  "full": "g26_full_gates.json (29 PASS / LF6 replica-live honest)",
+  "showcase": "g26_showcase_gates.json (28 PASS / B10+LF6 stage-pending)"
+ },
+ "critic": {
+  "showcase_x3": 7.7,
+  "lf6_vs_raw_source_x3": 3.5
+ },
+ "census": {
+  "checked": 700,
+  "violations": []
+ },
+ "proofs": [
+  "proof_B9_20.jpg",
+  "proof_B9_54.jpg",
+  "proof_B10_300.jpg",
+  "proof_B10_560.jpg"
+ ],
+ "note": "match% vs IG reference reels PENDING (yt-dlp bot-block since 26.04; LF6 measured vs raw source MV = 3.5 median, protocol mismatch logged honestly)"
+}

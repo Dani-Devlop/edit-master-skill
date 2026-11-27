@@ -589,3 +589,34 @@ Repository: https://github.com/Dani-Devlop/edit-master-skill
 - [~] 28.06 26.11 render v26 remains BLOCKED on 26.04 raw clip (S1-S6 code
       layer present on main via wc25kit.py; B1-B10 + critic x3 + crop
       proofs + LIVE "Test Edit Skill" delivery queued on arrival)
+
+## Phase 31: NEWSESSION (fresh source URL + boot + v26 MASTER + honest queue)
+- [x] 31.01 Q1 SOURCE: fresh CDN URL downloaded (27.91s 720x900@30 h264+aac, 2.5MB) + ffprobe
+      verified; lyric-verify via ASR: exact hook "Welcome to the party where everybody dies
+      at the end" + homicide/lemonade lines -> WELCOME (IDK ft. Eminem & J Dilla) confirmed
+      (vision-API rejects video input -> ASR fallback, evidence saved)
+- [x] 31.02 HIST1/HIST2: shared session fetched via headless browser (119KB extract);
+      docs/HISTORY.md written (mission/arc/successes/failures/rules/current state) + pushed 5c76cc7
+- [x] 31.03 BOOT0: repo cloned (31 commits); docs + gates read; env verified (ffmpeg,
+      PIL/numpy/cv2/librosa, rembg+isnet installed at boot — scipy 1.16.3 pinned)
+- [x] 31.04 portable-path patches: renderlib REPO, prep MV/SCRATCH, audio plan/wav (env-driven) 5c76cc7
+- [x] 31.05 assets regen from LIVE MV: 6 cutouts (isnet-general-use, multi-window+QA gate)
+      + PD painting (Cezanne still-life, Met Open Access) -> B&W graded (S2)
+- [x] 31.06 renderer fix: load_persons() before B4/S2 lift loop (was silent no-op) 09b4682
+- [x] 31.07 v26 SHOWCASE: 300 frames -> 10s 1080x1920@30 + loudnorm; gates: 28 PASS /
+      B10+LF6 stage-pending; round-1 fixes: B8 chroma split palette-locked (volt/white),
+      S3 hook decoded fit 0.62W (1.30x measured camera envelope), duo2 punch 0.09,
+      film-gate edge burn (kills yuv420 chroma sliver at frame edge); critic x3 median 7.7
+- [x] 31.08 v26 FULL MASTER: 838->837 frames (6 chunks, --pipe segs) + sound design
+      (cues/kicks/ducking/loudnorm 2-pass) -> T1_welcome_v26_9x16.mp4 sha256
+      7a2deb83e2a3488e...c42006240; FULL GATES: 29 PASS / LF6 honest
+- [x] 31.09 B10 census hardened: per-frame accumulate census (caption pill registered all
+      scenes) -> 700 frames checked; 2 real overlaps found+fixed (callout arrow -> free
+      left column; ghost2 card raised 0.615H->0.54H); violations 158 -> 0
+- [x] 31.10 LF6 replica-live HONEST: vs raw source MV = critic x3 median 3.5 (edit grammar
+      deliberately diverges from bare footage); match% vs IG reference reels PENDING
+      (yt-dlp bot-block + IG authwall, carried since 26.04/28.05 — NO silent substitution)
+- [x] 31.11 delivery: master + cover + contact sheet + LF6 sheet + crop proofs (decoded
+      from delivered file) + cue sheet + manifest + sha256 -> Telegram LIVE (msgs 783-787)
+- [~] 31.12 Q3-Q9 queue continues (platform masters, hardening negatives, docs, banking,
+      matrix, supercut, cleanup) — reference-dependent items logged honestly when blocked

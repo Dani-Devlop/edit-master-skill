@@ -56,18 +56,29 @@ for _nm in ("man", "stair", "rock22", "duo", "church", "agent"):
 # Ph26 S1/B7: DELIVERABLE master — internal scene labels disabled (QC-logged)
 K.LABELS_ENABLED = False
 
-# Ph26 S4/B10: glyph-collision census (registered scenes, every frame)
+# Ph26 S4/B10: glyph-collision census (registered scenes, every frame).
+# Ph31: census ACCUMULATES boxes per frame (all glyph scenes + caption pill),
+# evaluated ONCE per frame in the main loop -> stricter coverage (>=100 frames),
+# same frozen bar (0 overlaps). Scene census calls below now only register.
 COLL = {"checked": 0, "violations": []}
+FRAME_OCC = []
 def occ_census(scene, boxes):
-    """boxes: (name, box, kind) triples; kind in glyph|ui|sticker."""
-    WC.occ_reset()
+    """boxes: (name, box, kind) triples; kind in glyph|ui|sticker. Accumulate-only."""
     for nm, bx, kd in boxes:
-        WC.occ_add(nm, bx, kind=kd)
-    v = WC.occ_violations()
-    COLL["checked"] += 1
-    for x in v:
-        COLL["violations"].append({"scene": scene, **x})
-    return v
+        FRAME_OCC.append((f"{scene}:{nm}", bx, kd))
+    return []
+def occ_frame_eval():
+    """evaluate one frame's registry (call after compose returns)."""
+    if FRAME_OCC:
+        WC.occ_reset()
+        for nm, bx, kd in FRAME_OCC:
+            WC.occ_add(nm, bx, kind=kd)
+        v = WC.occ_violations()
+        COLL["checked"] += 1
+        for x in v:
+            COLL["violations"].append(x)
+    FRAME_OCC.clear()
+    return COLL["violations"]
 
 import render_t1_v25_showcase as _SHOW
 from render_t1_v25_showcase import draw_hook as v25_hook, confetti_v
@@ -295,7 +306,7 @@ def draw_scene(idx, t):
         gs2 = WC.spring_stagger(0, t, s0 + 0.15)
         if gs2 > 0.02:
             img.alpha_composite(gc2.resize((max(1, int(gc2.width * gs2)), max(1, int(gc2.height * gs2)))),
-                                (60, int(H * 0.615)))
+                                (60, int(H * 0.54)))  # Ph31 B10: raised out of caption band (bottom <= 0.75H)
         f_g = R.playfair(150, 900)
         bb2 = d.textbbox((0, 0), "dies at the end", font=f_g)
         d.text(((W - bb2[2] + bb2[0]) / 2, H * 0.30), "dies at the end", font=f_g, fill=VOLT + (240,))
@@ -308,7 +319,7 @@ def draw_scene(idx, t):
         occ_census("ghost2", [
             ("quote_dies2", ((W - 900) / 2, int(H * 0.30) - 5, (W + 900) / 2, int(H * 0.30) + 140), "glyph"),
             ("scribble", (150, int(H * 0.435), 350, int(H * 0.435) + 160), "sticker"),
-            ("wc1_card2", (30, int(H * 0.615) - 30, 400, int(H * 0.615) + 400), "sticker"),
+            ("wc1_card2", (30, int(H * 0.54) - 30, 400, int(H * 0.54) + 400), "sticker"),
         ])
         img, z, dx, dy = cam_apply(img, t, s0, punch=0.10, drift=22)
         cam_log = (z * pulse, dx, dy)
@@ -602,7 +613,9 @@ def draw_scene(idx, t):
                      color=(250, 246, 242, 245), stroke=VOLT + (235,))  # IG4 slam 2
         d.rounded_rectangle([W / 2 - 240, int(H * 0.665), W / 2 + 240, int(H * 0.677)],
                             radius=4, fill=VOLT + (235,))
-        sticker_arrow(d, 180, int(H * 0.80), 320, int(H * 0.72))
+        # Ph31 B10: arrow relocated from 0.80H band (caption pill overlap, 41 frames)
+        # to the free left column (below caution tape, above homicide slam)
+        sticker_arrow(d, 100, int(H * 0.32), 240, int(H * 0.50))
         paste_person(img, (W / 2 + 300, int(H * 0.74)), 330, "duo", rot=-2, alpha=0.94)  # C.6 cutout presence
         scene_label(img, (86, int(H * 0.90)), "keyword callout / freeze+slam (IG10)")
         _hb = d.textbbox((0, 0), "homicide", font=R.playfair(150, 900))
@@ -610,7 +623,7 @@ def draw_scene(idx, t):
             ("caution_tape", (110, int(H * 0.185), 970, int(H * 0.30)), "sticker"),
             ("slam_homicide", ((W - (_hb[2] - _hb[0])) / 2, int(H * 0.60) - (_hb[3] - _hb[1]) / 2 - 6, (W + (_hb[2] - _hb[0])) / 2, int(H * 0.60) + (_hb[3] - _hb[1]) / 2 + 6), "glyph"),
             ("volt_bar", (W / 2 - 240, int(H * 0.665), W / 2 + 240, int(H * 0.677)), "glyph"),
-            ("arrow", (160, int(H * 0.72), 520, int(H * 0.82)), "sticker"),
+            ("arrow", (80, int(H * 0.31), 300, int(H * 0.52)), "sticker"),
         ])
         # freeze+slam: source frozen, scale spikes at entry
         fz = 1.0 if t < s0 + 0.30 else 1.0 + 0.10 * math.sin(min(1.0, (t - s0 - 0.30) / 0.25) * math.pi)
@@ -722,7 +735,9 @@ def compose(fi):
         img = img.convert("RGB")
         words0 = words_window(HOOK_T)
         if words0:
-            IG.draw_caption_pop(img, words0, HOOK_T, int(H * 0.80))
+            _pb = IG.draw_caption_pop(img, words0, HOOK_T, int(H * 0.80))
+            if _pb:
+                FRAME_OCC.append(("caption_pill", _pb, "glyph"))
         img = R._grain(img, 3)
         img = IG.halation(img, thr=205, strength=0.26)
         img = IG.dust_scratch(img, HOOK_T, p_dust=0.5)
@@ -740,7 +755,9 @@ def compose(fi):
         if SCENES[si][1] not in ("m1", "endcard", "ui_tap", "zoomthrough"):
             words = words_window(t)
             if words:
-                IG.draw_caption_pop(img, words, t, int(H * 0.80))  # IG9 single voice
+                _pb = IG.draw_caption_pop(img, words, t, int(H * 0.80))  # IG9 single voice
+                if _pb:
+                    FRAME_OCC.append(("caption_pill", _pb, "glyph"))
     img = R._grain(img, 3)
     # IG8 film texture: halation / dust / gate weave / light leak
     if fi % 3 == 0:
@@ -778,6 +795,7 @@ if __name__ == "__main__":
                         "-pix_fmt", "yuv420p", seg], stdin=sp.PIPE)
     for fi in range(START, END + 1):
         img, engine, tag, cam_log = compose(fi)
+        occ_frame_eval()
         if PIPE:
             enc.stdin.write(img.tobytes())
         else:
@@ -809,6 +827,7 @@ if __name__ == "__main__":
     if START == 0:
         json.dump(meta, open(f"{K.EMS_WORK}/t1_v26_plan.json", "w"), indent=1)
     else:
-        json.dump({"camera_log": cam_deltas, "chunk": [START, END]},
+        json.dump({"camera_log": cam_deltas, "chunk": [START, END],
+                   "collision_census": COLL},
                   open(f"{K.EMS_WORK}/t1_v26_chunk_{START}.json", "w"), indent=1)
     print("T1 v24 FRAMES DONE", START, END, flush=True)

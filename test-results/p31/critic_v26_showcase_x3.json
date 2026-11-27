@@ -1,0 +1,25 @@
+{
+ "runs_overall": [
+  6.5,
+  7.8,
+  7.7
+ ],
+ "median_overall": 7.7,
+ "axes_avg": {
+  "panel_grid": 7.45,
+  "people_cutouts": 7.75,
+  "typography_register": 7.95,
+  "sticker_vocabulary": 7.5,
+  "color_story": 8.85,
+  "density_overlap": 7.25,
+  "motion_feel": 7.4,
+  "overall_impression": 8.0
+ },
+ "top_gaps": [
+  "white-canvas beat too sparse/airy vs layered target density",
+  "occasional weak mono-whisper hierarchy on light frames",
+  "sticker semantics drift (random scatter) outside black beats",
+  "photo textures slightly flatter/less grainy than target"
+ ],
+ "n_valid_runs": 3
+}

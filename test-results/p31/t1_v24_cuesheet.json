@@ -1,0 +1,107 @@
+{
+ "cues": [
+  {
+   "t": 8.87,
+   "sfx": "sub",
+   "maps_to": "structural counter"
+  },
+  {
+   "t": 17.578,
+   "sfx": "sub",
+   "maps_to": "structural pop"
+  },
+  {
+   "t": 23.104,
+   "sfx": "sub",
+   "maps_to": "structural m1"
+  },
+  {
+   "t": 17.08,
+   "sfx": "riser",
+   "maps_to": "into pop"
+  },
+  {
+   "t": 22.6,
+   "sfx": "riser",
+   "maps_to": "into m1"
+  },
+  {
+   "t": 27.38,
+   "sfx": "tapestop",
+   "maps_to": "into seamless loop"
+  },
+  {
+   "t": 2.206,
+   "sfx": "whoosh R->L",
+   "maps_to": "ui_tap cursor"
+  },
+  {
+   "t": 3.251,
+   "sfx": "whoosh L->R",
+   "maps_to": "whip into ghost"
+  },
+  {
+   "t": 11.285,
+   "sfx": "whoosh L->R",
+   "maps_to": "F2 zoom-through"
+  },
+  {
+   "t": 20.46,
+   "sfx": "impact",
+   "maps_to": "slam"
+  },
+  {
+   "t": 23.15,
+   "sfx": "impact",
+   "maps_to": "slam"
+  },
+  {
+   "t": 17.93,
+   "sfx": "impact",
+   "maps_to": "slam"
+  },
+  {
+   "t": 2.63,
+   "sfx": "pop",
+   "maps_to": "cursor tap"
+  },
+  {
+   "t": 9.12,
+   "sfx": "tick",
+   "maps_to": "notification banner"
+  },
+  {
+   "t": 17.93,
+   "sfx": "pop",
+   "maps_to": "heart burst"
+  },
+  {
+   "t": 2.9,
+   "sfx": "echobed",
+   "maps_to": "lyric keyword: dies"
+  },
+  {
+   "t": 6.55,
+   "sfx": "echobed",
+   "maps_to": "lyric keyword: homicide"
+  },
+  {
+   "t": 15.6,
+   "sfx": "echobed",
+   "maps_to": "lyric keyword: paid"
+  },
+  {
+   "t": 21.2,
+   "sfx": "echobed",
+   "maps_to": "lyric keyword: lemonade"
+  }
+ ],
+ "dropouts_before_slams": [
+  20.464000000000002,
+  23.154,
+  17.928
+ ],
+ "kick_reinforced": 60,
+ "crackle": true,
+ "dur": 27.9
+}

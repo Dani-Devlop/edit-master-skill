@@ -46,6 +46,9 @@ from v22kit import (W, H, FPS, load_persons, paste_person, canvas, cam_apply,
                     sticker_caution, sticker_arrow, sticker_starburst, sticker_appicons,
                     bracket_corners, scene_label)
 
+# Ph31 fix: load salvaged mattes BEFORE lifting (was a silent no-op otherwise —
+# PERSONS was empty at this point; B4/S2 tone-map never applied)
+K.load_persons()
 # hybrid human-polish (B4): brightened cutouts, alpha preserved
 for _nm in ("man", "stair", "rock22", "duo", "church", "agent"):
     WC.lift_person_v25(_nm)

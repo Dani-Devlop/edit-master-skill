@@ -12,9 +12,9 @@ import numpy as np
 SR = 48000
 DUR = 27.9
 N = int(SR * DUR)
-P24 = "/home/z/my-project/p25work"
-WAV = "/home/z/my-project/p22work/assets/target_audio.wav"
-PLAN = json.load(open(f"{P24}/t1_v25_plan.json"))
+P24 = os.environ.get("EMS_WORK", "/tmp/ems-work/26-run")
+WAV = os.environ.get("EMS_AUDIO_WAV", f"{P24}/assets/target_audio.wav")
+PLAN = json.load(open(os.environ.get("EMS_AUDIO_PLAN", f"{P24}/t1_v26_plan.json")))
 SC = {k: t for (t, k) in PLAN["scenes"]}
 KICKS = PLAN["kicks"]
 

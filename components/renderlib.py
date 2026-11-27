@@ -7,7 +7,8 @@ import math
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
 
-REPO = "/home/z/my-project/download/edit-master-skill"
+import os as _os
+REPO = _os.environ.get("EMS_REPO", _os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))))
 FONTS = f"{REPO}/assets/fonts"
 
 VOLT = (216, 243, 74)

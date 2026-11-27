@@ -4,8 +4,8 @@ Cutouts run separately (rembg) after pip install completes."""
 import os, subprocess
 from PIL import Image, ImageDraw, ImageFilter
 
-MV = "/home/z/my-project/upload/4_6051789922870758373 (1).mp4"
-SCRATCH = "/tmp/ems-work/p22/scratch"
+MV = os.environ.get("EMS_MV", "/tmp/ems-work/current/src.mp4")
+SCRATCH = os.environ.get("EMS_SCRATCH", "/tmp/ems-work/current/scratch")
 os.makedirs(SCRATCH, exist_ok=True)
 
 # polaroid frames: 3 real MV moments (car roof @1.2, stairwell @1.35 shift, church @12.6)

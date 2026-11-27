@@ -1,0 +1,31 @@
+{
+ "suite": "Ph31 hardening negatives (MUST FAIL)",
+ "results": [
+  {
+   "probe": "n1_palette (green leaf block)",
+   "gate": "B8",
+   "result": "FAILS (offpalette 0.780)"
+  },
+  {
+   "probe": "n2_hook (volt type 0.97W edge-cropped)",
+   "gate": "B9",
+   "result": "FAILS (ratio 0.97, 0px clearance)"
+  },
+  {
+   "probe": "n3_labels (burned [ hook / WC2 ] + disabled flag off)",
+   "gate": "B7",
+   "result": "FAILS"
+  },
+  {
+   "probe": "n4_dead (all-black frames)",
+   "gate": "G1",
+   "result": "FAILS"
+  },
+  {
+   "probe": "n5_overlap (census violations in plan)",
+   "gate": "B10",
+   "result": "FAILS"
+  }
+ ],
+ "verdict": "gate suite regression-proofs the historic failure modes (labels/palette/hook/void/overlap)"
+}

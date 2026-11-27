@@ -129,3 +129,13 @@ MIT — use it, change it, ship it. See LICENSE.
 ---
 
 If this saves you an editor's fee, ⭐ the repo so more creators find it.
+
+## Results (Phase 31)
+- **v26 master delivered**: T-1 WELCOME 27.9s 1080x1920@30 — 29 gate IDs PASS,
+  B1-B10 binary ALL YES, collision census 700 frames / 0 overlaps, decoded hook
+  fit 0.89W with 20px clearance, palette census 0.0 off-palette, loop-sim 0.918,
+  loudness -14 LUFS / TP <= -1.5. Blind critic x3 median 7.7 (showcase).
+- **Hardening**: 5 regression negatives (palette leak / cropped hook / burned
+  labels / dead frame / glyph overlap) all correctly FAIL their gates.
+- **Module matrix**: 5 genres PASS via the banked module kit.
+- See `docs/GALLERY.md`, `docs/BANKING.md`, `docs/HISTORY.md`, `test-results/p31/`.

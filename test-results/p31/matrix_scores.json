@@ -1,0 +1,32 @@
+{
+ "cars": {
+  "living_frames_pct": 91.1,
+  "offpalette_frac": 0.0,
+  "module_set": "grade B&W+volt / WC1 live card / IG4 slam / IG9 caption / IG8 texture",
+  "pass": true
+ },
+ "fitness": {
+  "living_frames_pct": 87.2,
+  "offpalette_frac": 0.0,
+  "module_set": "grade B&W+volt / WC1 live card / IG4 slam / IG9 caption / IG8 texture",
+  "pass": true
+ },
+ "education": {
+  "living_frames_pct": 93.3,
+  "offpalette_frac": 0.0,
+  "module_set": "grade B&W+volt / WC1 live card / IG4 slam / IG9 caption / IG8 texture",
+  "pass": true
+ },
+ "branding": {
+  "living_frames_pct": 95.9,
+  "offpalette_frac": 0.0,
+  "module_set": "grade B&W+volt / WC1 live card / IG4 slam / IG9 caption / IG8 texture",
+  "pass": true
+ },
+ "mindset": {
+  "living_frames_pct": 67.5,
+  "offpalette_frac": 0.0002,
+  "module_set": "grade B&W+volt / WC1 live card / IG4 slam / IG9 caption / IG8 texture",
+  "pass": true
+ }
+}

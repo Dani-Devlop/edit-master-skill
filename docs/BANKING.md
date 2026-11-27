@@ -1,0 +1,24 @@
+# BANKING — verified module bank (Phase 31 re-bank)
+
+## RE-BANKED THIS SESSION (evidence = v26 gate ledgers + hardening suite)
+| module | file | verification |
+|--------|------|--------------|
+| WC1 video-in-card (live, never frozen) | components/wc25kit.py | LF2 PASS (v26) |
+| WC2 hook occlusion (per-frame isnet mattes) | components/wc25kit.py | LF3/B2 PASS (v26) |
+| WC3 cutout depth (contact shadow+parallax+rim, shadow_boost) | components/wc25kit.py | B4 PASS (v26) |
+| WC4 tissue fill | components/wc25kit.py | B6/G1 PASS (v26) |
+| IG1-IG10 beat-lock/pseudo-UI/loop/slams/idle/color/pacing/texture/captions/camera | components/ig24kit.py | all PASS (v26) |
+| persp3d M1-M5 | components/ + render_t1_v25.py | G6/LF5 PASS (v26) |
+| B1-B10 binary gates + frozen ledger w/ seek-fallback decode | scripts/gates_t1_v25.py | 29 PASS + negatives FAIL |
+| cutout pipeline (isnet-general-use, multi-window QA) | scripts/cutout_v22.py + gen_assets_v31 | 6/6 subjects banked |
+| palette-locked chroma split (volt/white) | components/ig24kit.py | B8 0.0 (v26) |
+| film-gate edge burn (kills yuv420 edge chroma) | render_t1_v25_showcase.py | B9 clearance PASS |
+
+## LOST WITH PURGE (Ph27 adoption banks — honest status)
+motion-skills full spec bank, ghost 19 style pack, 3dviz recipe pack, word-timed
+B-roll bank, face-track reframe bank, opsverify + vt_screen_check scripts: the
+Ph27 adopted banks were lost with the Ph28 sandbox purge (28.02) and the replica
+references are unreachable this session (yt-dlp bot-block + IG authwall). The
+re-bank above is the PROVEN, gate-verified core. Re-adoption of the lost banks
+requires the reference clips (or owner-supplied mirrors) — queued, no silent
+substitution.

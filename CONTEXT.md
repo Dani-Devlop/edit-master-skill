@@ -1,4 +1,4 @@
-# CONTEXT — edit-master-skill (Phase 26 boot, rebuilt from repo)
+# CONTEXT — edit-master-skill (Phase 31 state)
 
 Owner: Dani (GitHub **Dani-Devlop**) · Branch: main only · Tokens silent · MIT.
 
@@ -82,7 +82,18 @@ admin:gpg_key scope -> intentional unsigned fallback. Only Dani-Devlop, only mai
   texture. Ph25 frozen gate ledger + binary B1-B6 + WC1-WC4 provided code +
   10s showcase-first + stop-loss (commit 348423f).
 
-## CURRENT STATE AT PH26 BOOT
+## CURRENT STATE AT PH31
+- v26 MASTER DELIVERED: T1_welcome_v26_9x16.mp4 (27.9s, sha256 7a2deb83e2a3488e...),
+  FULL GATES 29 PASS, B1-B10 ALL YES, census 700/0, loudnorm -14, critic x3 median 7.7
+  (showcase), 8.5 stretch unmet (owner decision point on posting).
+- LF6 replica-live: vs raw source 3.5 median (edit-vs-bare-footage by design);
+  match% vs IG reference reels PENDING since 26.04 (yt-dlp bot-block).
+- HISTORY.md added (intent/lessons truth); gates decoder seek-fallback (env codec).
+- Module matrix: 5 genres PASS via banked modules; preset-reel renderer queued.
+- Hardening: 5 regression negatives correctly FAIL (B7/B8/B9/G1/B10).
+- Platform masters: Reels/Shorts/TikTok native + TG 720p + LinkedIn 1:1/4:5.
+- docs: HISTORY.md + GALLERY.md + BANKING.md added; STYLES/RESOURCES updated.
+
 - In-repo gate truth: test-results/g25_full_gates.json (25/26 PASS, LF6
   replica-live open). Last in-repo master sha16: v24 9042d6886bdd6eff.
   v25 deliverables + sha 881320f85d3fd166 were external-only (purged).

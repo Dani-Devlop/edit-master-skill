@@ -355,3 +355,14 @@ measured per video with a before/after pair in the scoresheet.
 - KARAOKE v2 runtime constants: lower-third plate y=0.885H (text bottom
   <=1440), auto-fit shrink to 800px max line, single active accent 1.12x with
   volt pill, spoken dim 45%, sweep loops within line window (±120ms whisper ts).
+
+## v4 additions (Phase 31, evidence: v26 gate ledgers)
+- Chroma split on kinetic slams is PALETTE-LOCKED: volt-left / white-right
+  (red+blue variants banned by B8 census — measured 0.0 off-palette on v26).
+- Hook type fit discipline: PRE-camera fit 0.62W (WELCOME/DIES) because the
+  measured camera envelope reaches 1.30x (punch+pulse+dutch+weave); the bar is
+  DECODED width <= 0.92W with >= 8px clearance (B9 measures the file, not the plan).
+- Film-gate edge burn: 12px ink columns on both frame edges of hook composites —
+  kills yuv420 chroma-ringing slivers at high-contrast edges (B9 evidence).
+- B10 census is per-frame accumulate (caption pill registered in every scene,
+  evaluated once per frame; 700 frames, 0 violations on v26).

@@ -178,3 +178,13 @@ Mixkit/Coverr (CC0 footage), Pixabay Music / YouTube Audio Library /
 Freesound, OpenMoji/Twemoji, Wikimedia Commons / Met Open Access /
 Rijksmuseum (PD art), PolyHaven/ambientCG/RenderCrate (CC0 3D).
 All license-logged in the per-phase sections above.
+
+## Phase 31 additions
+- PD painting: Paul Cezanne, "Still Life with Apples and a Pot of Primroses" —
+  The Met Open Access (public domain), fetched at runtime, graded B&W (S2).
+- Cutout engine: rembg 2.0.88 + isnet-general-use (scipy pinned 1.16.3 for
+  skimage/rembg compatibility in this sandbox — honest env log).
+- Lyric verification: z-ai ASR on extracted 16kHz mono audio (vision API rejects
+  video input in this sandbox — ASR fallback logged).
+- Matrix sources: Mixkit Stock Video Free License (5 genre clips, 720p, direct
+  asset URLs — download verified 2026-11-27).

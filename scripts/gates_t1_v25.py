@@ -456,12 +456,12 @@ res["B7_no_internal_labels"] = {
 _b8 = {"frames": 0, "chroma_px": 0, "offpalette_px": 0, "hue_bins": {}}
 if cap is not None:
     _n8 = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
-    for k in range(25):
-        _f8 = int(k * (_n8 - 2) / 24.0)
-        cap.set(cv2.CAP_PROP_POS_FRAMES, _f8)
-        _ok8, _fr8 = cap.read()
-        if not _ok8:
+    _idx8 = [int(k * (_n8 - 2) / 24.0) for k in range(25)]
+    _got8 = _read_frames_at(FINAL, _idx8)
+    for _f8 in _idx8:
+        if _f8 not in _got8:
             continue
+        _fr8 = _got8[_f8]
         _sm8 = cv2.resize(_fr8, (270, 480))
         _h8 = cv2.cvtColor(_sm8, cv2.COLOR_BGR2HSV)
         _ch8 = (_h8[..., 1] > 90) & (_h8[..., 2] > 60)
@@ -486,10 +486,11 @@ res["B8_palette_census"] = {
 _b9 = {"frames": 0, "ratios": [], "min_clear_px": None}
 if cap is not None:
     _hk = ST.get("hook") or 0.0
-    for _t9 in (_hk + 0.60, _hk + 1.20, _hk + 1.80):
-        cap.set(cv2.CAP_PROP_POS_FRAMES, int(_t9 * FPS))
-        _ok9, _fr9 = cap.read()
-        if not _ok9:
+    _t9s = (_hk + 0.60, _hk + 1.20, _hk + 1.80)
+    _got9 = _read_frames_at(FINAL, [int(_t * FPS) for _t in _t9s])
+    for _t9 in _t9s:
+        _fr9 = _got9.get(int(_t9 * FPS))
+        if _fr9 is None:
             continue
         _h9 = cv2.cvtColor(cv2.resize(_fr9, (270, 480)), cv2.COLOR_BGR2HSV)
         _ch9 = (_h9[..., 1] > 90) & (_h9[..., 2] > 60)

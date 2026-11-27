@@ -150,21 +150,6 @@ cp -r . ~/.claude/skills/edit-master   # or re-point your agent's rule
 Chat-only users: re-paste `SKILL.md` from the latest `main` when it
 changes.
 
-### GPG-PUBLIC-KEY.asc and the badge policy
-
-`GPG-PUBLIC-KEY.asc` at the repository root is the maintainer's public
-signing key. This repository follows a strict badge policy: every commit on
-`main` shows either the blue **Verified** badge or **no signature badge at
-all** — a yellow *Unverified* badge is never accepted. Commits that carry
-no badge are intentionally unsigned, not suspicious.
-
-Verify a commit manually:
-
-```bash
-gpg --import GPG-PUBLIC-KEY.asc
-git verify-commit <commit-sha>
-```
-
 ### License and remix notes
 
 The skill is MIT licensed (see [LICENSE](../LICENSE)). Fork it, rename it,

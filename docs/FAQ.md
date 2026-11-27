@@ -44,26 +44,6 @@ for what you make with it. Keep the license file with any redistribution,
 and keep the credits for the two MIT upstream repositories if you remix
 the hook libraries.
 
-## Why do commits sometimes show no Verified badge
-
-The repository follows a strict badge policy: every commit on `main` shows
-either the blue **Verified** badge or no signature badge at all — a yellow
-*Unverified* badge is never accepted. When the maintainer's API token
-lacks the `admin:gpg_key` scope, commits are intentionally left unsigned
-(no badge) rather than signed-but-unverified. No badge means unsigned by
-policy, not suspicious.
-
-## How do I verify GPG signatures manually
-
-```bash
-gpg --import GPG-PUBLIC-KEY.asc
-git verify-commit <commit-sha>
-```
-
-`GPG-PUBLIC-KEY.asc` sits at the repository root. If verification fails
-because the key is not registered with the GitHub account yet, that is
-expected under the badge policy above — commits stay unsigned rather than
-unverified.
 
 ## Does the skill publish videos for me
 

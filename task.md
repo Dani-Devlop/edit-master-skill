@@ -518,8 +518,11 @@ Repository: https://github.com/Dani-Devlop/edit-master-skill
       mystationZworkbot; badge policy active (internal-only, see docs/OPS.md)
 - [!] 26.04 SOURCE acquisition ladder (B0.7): repo manifest = Mixkit matrix,
       NO raw MV; song known (WELCOME - IDK ft. Eminem & J Dilla, Ph18 ID);
-      yt-dlp fetch attempt logged; REF-TAG-A = HTTP 403 dead; -> ONE explicit
-      ask to owner for the raw clip (NO silent substitution)
+      yt-dlp fetch attempted x2 (default + node JS runtime) - YouTube
+      bot-block ("Sign in to confirm you're not a bot"); REF-TAG-A = HTTP
+      403 dead; -> ONE explicit ask to owner for the raw clip (NO silent
+      substitution). Render stack pre-warmed meanwhile: rembg+isnet model
+      ready, pipeline turnkey via EMS_WORK/EMS_MV
 - [x] 26.05 S1 subtract labels: v22kit.LABELS_ENABLED=False + LABEL_LOG QC
       positions (15 historic call sites incl. showcase hook); pop-scene
       "[ 0.4x -> 1.6x speed ramp ]" spec pill -> IG-native volt scrubber

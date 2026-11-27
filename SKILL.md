@@ -1206,3 +1206,53 @@ scripts/p19_preset_mv_welcome.json.
 - WC4 tissue fill: wc25kit.tissue_fill (halftone+ghost+gradient+particles) + wc25kit.dof_blur; no empty navy/beige boxes.
 - Showcase engine: scripts/render_t1_v25_showcase.py (pipe-to-ffmpeg mode); full: scripts/render_t1_v25.py; gates: scripts/gates_t1_v25.py (all 26 IDs, stage-aware); audio: scripts/t1_audio_v25.py / t1_audio_v25_full.py.
 - Honest results: showcase B1-B6 6/6 YES + gates 25/26; full master gates 25/26 but blind critic median 7.3 < 8.5 → LF6 NO-PASS (stop-loss honored, reported, not faked).
+
+## Phase 26 baseline (2026-11-27) — B1-B10 BINARY + SUBTRACT / PALETTE LOCK / HOOK FIT / DE-CROWD / HERO LIGHT-PHASE
+- S7 acceptance reframe: PASS-to-post = binary B1-B10 ALL YES + IG-native
+  match >= 70% (independent blind critic). Absolute aesthetic 8.5 = STRETCH,
+  never a blocker; if unmet after ONE round -> USER decision (post-as-is OR
+  hybrid human-polish / executor swap). Never fake, never endless rounds.
+- S1 subtract labels: internal/spec/debug labels ("[ hook / ... (WC2) ]",
+  "[ ghost / quote lockup ]", "[ tap -> next scene (IG2) ]",
+  "[ stakes counter / M3 ring ]", "[ M2 persp3d ]", "[ IG6 ]", ...) are
+  QC-ONLY. Deliverable renderers set v22kit.LABELS_ENABLED=False; every
+  historic label position is logged (v22kit.LABEL_LOG) and crop-proven clean
+  in the QC contact sheet (labels NEVER in master/cover). Gate B7. Spec
+  pills ("[ 0.4x -> 1.6x speed ramp ]") become IG-native UI (volt scrubber).
+- S2 palette lock: ONE accent (volt) everywhere. Cutouts B&W
+  (wc25kit.lift_person_v25 desaturates); WC1/M5 card sources graded B&W
+  (never raw MV color — kills green-leaf/blue leaks); invert bite =
+  monochrome negative; selective color = desaturate all but volt; NO
+  blue/green/red leaks. Gate B8 palette census (off-palette chroma <= 0.02;
+  volt = HSV H 24-48, S>90, V>60).
+- S3 hook fit: giant hook word FULLY legible <= 0.92W measured on DECODED
+  frames with >= 8px edge clearance (renderer fits 0.84W pre-camera to
+  absorb punch/dutch/gate-weave). Normal letter-spacing, NO edge-cropped
+  letters. Gate B9.
+- S4 de-crowd: no glyph/ui/sticker overlaps (notification, title, caption,
+  scene-tag, stickers). wc25kit OCC collision registry + render-time census;
+  v25 fixes applied: counter ghost "stakes" into banner-free band (font 210
+  -> 150), scribble below quote band, coin below banner, counter card
+  lifted. Gate B10 (0 violations, counter/ghost/ghost2/callout).
+- S5 light-phase restructure (12-17.4s): footage-led layouts + HERO-scale
+  cutouts >= 45%H (paint man 900px / paint2 duo 880 / cascade church 880 /
+  isol man 880) + stronger contact shadow on light bg + rim light;
+  painting/cascade are accents, never the sole content; light-phase density
+  >= 8 elements/scene (LIGHT_PHASE census in plan).
+- S6 shadow depth: paste_person_v25(shadow_boost=1.7) on paper scenes —
+  contact + cast + behind-patch strengthened; visible on white; parallax
+  retained.
+- BINARY B1-B10: B1 living >= 60% · B2 hook occlusion · B3 video-in-card ·
+  B4 cutout depth · B5 sticker/scene · B6 tissue fill · B7 no internal
+  labels · B8 single-accent volt · B9 hook legible <= 0.92W · B10 no glyph
+  overlap. ALL YES required to ship. Frozen ledger FZ1 (26 IDs) untouched —
+  B7-B10 are ADDITIONS in scripts/gates_t1_v25.py.
+- Source ladder (B0.7): repo sources manifest -> song-ID automation
+  (fingerprint/lyrics -> yt-dlp public) -> owner-provided raw -> ONE
+  explicit ask; log method + confidence; never substitute silently.
+  Ph26 log: manifest = Mixkit matrix only; yt-dlp blocked (bot-check, x2
+  incl. node runtime); REF-TAG-A 403 -> owner ask.
+- Portable runs: env EMS_WORK / EMS_MV / EMS_ASSETS override all paths (old
+  sandbox paths purged). Full: scripts/render_t1_v25.py; 10s showcase:
+  scripts/render_t1_v25_showcase.py; gates: scripts/gates_t1_v25.py
+  (stage-aware, FINAL-file decoded measurements).

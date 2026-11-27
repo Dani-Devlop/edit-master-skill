@@ -149,3 +149,32 @@ Every banked asset used in a delivery carries its license in the video manifest
   mastering chain documented in SKILL.md Phase 22 section.
 - No new third-party fonts/assets this phase; fonts remain OFL set in
   assets/fonts/ (restored to repo-persistent path after sandbox recycle).
+
+## Credits (synced with README, Phase 26 2026-11-27)
+
+**Reference tutorials (studied frame-by-frame):** Joseph | Video Editing
+(premium reels, minimal talking-head, 5-phase), Dan Kieft (AI editing
+course), Grow with Alex (5 basics + beat table), Softgirlnocode
+(HyperFrames), Jason Cooperson (setup guide).
+
+**Concept repos (MIT):** Jakeschincariol/youtube-agent-skill (21 hooks,
+scoring, EDL, retention), Jakeschincariol/instagram-agent-skill (26 hooks,
+beats, humanizer, caption lint).
+
+**Adopted pipelines (MIT):** andrebrito16/skill-reels-editor,
+vshukla7/remotion-captions-themes, Maartenlouis/remotion-ads,
+haidrrrry/claude-remotion-skill, MotionCraft skill (metiu1-motion-craft).
+
+**Engines:** ArtCraft (FilmCraft/EffectCraft/Studio 3D Stage), Blender +
+blender-cli + Blender MCP, Remotion (+captions-themes, reels-editor, ads),
+HyperFrames (HeyGen), ffmpeg.
+
+**IG reference creators:** @eightsenses.media, @keevinnlc,
+@nikhilmotion.vlc, @sambee9991.
+
+**Assets/fonts/audio:** Google Fonts (Montserrat/Inter/Poppins/Playfair
+Display/Vazirmatn/JetBrains Mono/Space Mono/Archivo Black), Pexels/Pixabay/
+Mixkit/Coverr (CC0 footage), Pixabay Music / YouTube Audio Library /
+Freesound, OpenMoji/Twemoji, Wikimedia Commons / Met Open Access /
+Rijksmuseum (PD art), PolyHaven/ambientCG/RenderCrate (CC0 3D).
+All license-logged in the per-phase sections above.

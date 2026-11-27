@@ -1,129 +1,131 @@
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+# 🎬 Edit Master Skill
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![GitHub release](https://img.shields.io/github/v/release/Dani-Devlop/edit-master-skill)](https://github.com/Dani-Devlop/edit-master-skill/releases)
-[![GitHub stars](https://img.shields.io/github/stars/Dani-Devlop/edit-master-skill?style=social)](https://github.com/Dani-Devlop/edit-master-skill)
-[![GitHub forks](https://img.shields.io/github/forks/Dani-Devlop/edit-master-skill?style=social)](https://github.com/Dani-Devlop/edit-master-skill)
-[![GitHub commits](https://img.shields.io/github/commit-activity/m/Dani-Devlop/edit-master-skill)](https://github.com/Dani-Devlop/edit-master-skill/commits)
-[![Last commit](https://img.shields.io/github/last-commit/Dani-Devlop/edit-master-skill)](https://github.com/Dani-Devlop/edit-master-skill)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/Dani-Devlop/edit-master-skill/pulls)
+[![Stars](https://img.shields.io/github/stars/Dani-Devlop/edit-master-skill?style=social)](https://github.com/Dani-Devlop/edit-master-skill)
+[![Forks](https://img.shields.io/github/forks/Dani-Devlop/edit-master-skill?style=social)](https://github.com/Dani-Devlop/edit-master-skill/fork)
+[![Last commit](https://img.shields.io/github/last-commit/Dani-Devlop/edit-master-skill)](https://github.com/Dani-Devlop/edit-master-skill/commits/main)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
-# Edit Master Skill
+**One markdown skill + a component library that turns ANY AI agent into a
+premium short-form video editor.** Graphics-first, Instagram/YouTube-native,
+beat-locked, 3D-capable — and honest about its own quality.
 
-**Universal viral video editing skill for any AI agent** — Claude, ChatGPT,
-Codex, Gemini CLI, Cursor, or a plain chat window. Short-form vertical AND
-long-form horizontal. Free and open source, MIT licensed.
+Works with Claude · ChatGPT · Codex · Cursor · Gemini CLI · plain chat.
+Free & open source (MIT). Your weak laptop is fine: heavy rendering happens
+in the agent's sandbox/cloud; you receive the finished MP4.
 
-Give it raw footage or a raw idea and it runs the whole pipeline: a 10-question
-onboarding, hook options from **21 long-form + 26 short-form formulas** scored
-on a **5-property panel**, beat sheets, **edit decision lists**, a **humanizer
-pass**, **caption linting**, **viral research by outlier multiple**,
-**retention analysis**, and a QA gate that ends every run with the same
-question: *ship it, or change it?*
+---
 
-Nothing publishes itself. The skill writes, you ship.
+## ✨ What it does
 
-## What's inside
+Give it raw footage (or let it find the source itself) and it runs the whole
+pipeline: transcript & tight cuts → scene plan → designed graphics scenes →
+karaoke captions → camera language → grade → 3D accents → cue-sheet sound
+design → platform masters + cover. The edit itself is the entertainment:
+playful, interactive, motion-rich — enjoyable even when the topic isn't.
 
-| File | What it is |
-|------|------------|
-| `SKILL.md` | The complete skill: onboarding, 47 hook formulas, scoring, beat sheets, EDL, humanizer, 12 editing principles, 5-phase workflow, caption linting, viral research, retention, tool integrations, QA checklist, testing protocol |
-| `templates/voice.md` | Brand voice template — fill it in once, every phase reads it |
-| `examples/` | Three worked examples: onboarding + edit plan, an EDL, a caption file |
+## 🚀 Features
 
-## Install
+- **Graphics-first scene engine** — 19 scene types (full-screen text, line+
+  text, painting, illustrations, graphs, B-roll+text, UI listicles, counters,
+  before/after, polaroid cascades, insert worlds, 3D type slams…)
+- **Karaoke captions v2** — bold sans, single active-word highlight, spoken
+  dim, looping sweep, word-timestamp sync, RTL/Persian support
+- **IG-native feel** — onset-locked cuts, pseudo-UI interaction (tap/swipe/
+  comment/notification/heart), seamless loop, kinetic slams, idle micro-
+  motion, selective color, tight pacing, film texture
+- **Living footage** — full-bleed performance beats + video-in-card
+  polaroids (never a frozen slideshow)
+- **3D accents** — Blender headless / ArtCraft 3D Stage; extruded type,
+  floating cards, counter rings, callout orbits, world inserts
+- **Honest quality gates** — binary human-visible checklist + independent
+  blind critic + frame-crop proofs; no self-reported fake scores
+- **Full automation** — song-ID (fingerprint + lyrics), source fetch, style
+  proposal; asks only when truly blocked
+- **Multi-platform masters** — Reels / Shorts / TikTok / Telegram / LinkedIn
+  (+1:1, 4:5), per-platform safe-zones & loudness
 
-**Claude Code / Codex / Cursor / Gemini CLI:**
+## ⚡ Quick start
 
-```bash
-git clone https://github.com/Dani-Devlop/edit-master-skill.git
-cp -r edit-master-skill ~/.claude/skills/edit-master   # path varies by agent
-```
+    git clone https://github.com/Dani-Devlop/edit-master-skill.git
+    # load SKILL.md into your agent (see Install below), then say:
+    # "Edit this raw clip into a 30s IG-native reel in your best style."
 
-**Any chatbot with no filesystem:** paste the entire `SKILL.md` at the top of
-the chat. It runs as a mode — you keep the method, formulas, checklists and
-linting rules without the file-based tooling.
+No filesystem? Paste SKILL.md at the top of any chat — it runs as a mode.
 
-**Then:** spend ten minutes on `templates/voice.md`, or send the agent three
-of your own videos and say *"write my voice.md from these"*.
+## 🧩 Install per agent
 
-## Quick start
+- **Claude Code / Codex / Cursor / Gemini CLI:** copy SKILL.md (+ components/,
+  presets/) into your skills directory, or point the agent at the repo path.
+- **Any chatbot:** paste SKILL.md; keep the method, formulas and checklists.
+- **MCP/agent platforms:** expose the render engines (below) as tools;
+  SKILL.md is the brain, the renderer is pluggable.
 
-Paste one of these into your agent:
+## 🛠 Toolstack
 
-```
-Edit this raw talking-head recording into a 30-second vertical reel in a
-minimal style. Read my voice.md first. Five scored hooks, beat sheet, EDL,
-burned captions, QA checklist.
-```
+| Layer | Tools |
+|---|---|
+| NLE / motion | FilmCraft, EffectCraft, ArtCraft Studio 3D Stage, Remotion (+captions-themes, reels-editor, ads, motion-craft), HyperFrames |
+| 3D | Blender headless + blender-cli / Blender MCP |
+| Analysis | whisper/faster-whisper, librosa/aubio, rembg/isnet+mediapipe, chromaprint/AcoustID/AudD, yt-dlp |
+| Composite / master | ffmpeg, PIL/numpy |
+| Assets | Google Fonts, Pexels/Pixabay/Mixkit/Coverr, Pixabay Music/YT Audio Library/Freesound, OpenMoji/Twemoji, Wikimedia/Met/Rijksmuseum (PD art), PolyHaven/ambientCG/RenderCrate |
 
-```
-Find what's working in my niche this month: 4 direct, 4 adjacent, 2 outsized
-accounts, ranked by outlier multiple, with the hook formula each used.
-```
+## 🎯 Quality & honesty
 
-## The 10 onboarding questions
+Pass-to-post = **10 binary human-visible checks** (living footage, hook
+occlusion, video-in-card, cutout depth, semantic stickers, tissue fill, no
+internal labels, single-accent palette, legible hook, no glyph overlap)
+**+ ≥70% IG-native match** scored by an independent blind critic on decoded
+frames. Every claim ships a frame-crop proof. Stop-loss after 2 rounds →
+hybrid human polish or executor swap. Numbers are never invented.
 
-1. Main platform? 2. Video type? 3. Target length? 4. Brand style? 5. Main
-goal? 6. Available tools? 7. Budget per video? 8. Delivery speed? 9. Footage
-source? 10. Brand assets?
+## 📊 Results
 
-(Full definitions in SKILL.md → User Onboarding Questions.)
+See `test-results/` for masters, covers, contact sheets, gate ledgers,
+cue sheets and sha256 manifests.
 
-## Features
+## 🙏 Credits
 
-- **Agent-agnostic** — one markdown file, no dependencies, no API keys
-- **47 hook formulas** (21 long-form + 26 short-form), each with shape,
-  example, on-screen version and failure mode
-- **5-property hook scoring** — SPECIFICITY / ADDRESS / STAKES / CURIOSITY /
-  BREVITY, verdict = 60% mean + 40% weakest property
-- **Beat sheets** for both formats with timing rules (165 wpm default)
-- **EDL structure** — dead air, filler, retakes with timecodes; markdown +
-  JSON output
-- **Humanizer pass** — invisible characters, typography, slop lexicon,
-  structural tells, 5-check detection panel
-- **Caption linting** — Job A/B, 125-visible-character rule, one ask,
-  hashtag cap, search-term placement
-- **Viral research** — outlier multiple ranking (views / account's own median)
-- **Retention analysis** — hook leak / cliffs / slide, one fix per report
-- **Tool integrations** — ffmpeg, Remotion, HyperFrames, Premiere, DaVinci,
-  CapCut; transcripts via whisper
-- **QA gate** — 16-point checklist before anything ships
+**Reference tutorials (studied frame-by-frame):**
+Joseph | Video Editing (premium reels, minimal talking-head, 5-phase),
+Dan Kieft (AI editing course), Grow with Alex (5 basics + beat table),
+Softgirlnocode (HyperFrames), Jason Cooperson (setup guide).
 
-## Credits
+**Concept repos (MIT):** Jakeschincariol/youtube-agent-skill (21 hooks,
+scoring, EDL, retention), Jakeschincariol/instagram-agent-skill (26 hooks,
+beats, humanizer, caption lint).
 
-Synthesized and adapted with thanks to:
+**Adopted pipelines (MIT):** andrebrito16/skill-reels-editor,
+vshukla7/remotion-captions-themes, Maartenlouis/remotion-ads,
+haidrrrry/claude-remotion-skill, MotionCraft skill.
 
-- **Joseph | Video Editing** — minimal talking-head / premium reel Claude editing workflows
-- **Dan Kieft** — AI video editing course workflows
-- **Grow with Alex** — Claude video editing fundamentals and hard rules
-- **Softgirlnocode** — HyperFrames setup and prompts
-- **Jason Cooperson** — AI video editing setup guide
-- [Jakeschincariol/youtube-agent-skill](https://github.com/Jakeschincariol/youtube-agent-skill) (MIT) — 21 hook formulas, 5-property hook panel, EDL, retention and viral research concepts
-- [Jakeschincariol/instagram-agent-skill](https://github.com/Jakeschincariol/instagram-agent-skill) (MIT) — 26 hook formulas, beat sheets, humanizer, caption linting
+**Engines:** ArtCraft (FilmCraft/EffectCraft/Studio), Blender + blender-cli +
+Blender MCP, Remotion, HyperFrames (HeyGen), ffmpeg.
 
-Hook libraries and the scoring-panel concept are adapted from the two
-MIT-licensed repositories above; the onboarding, workflow, editing principles
-and checklists are original to this skill.
+**IG reference creators:** @eightsenses.media, @keevinnlc,
+@nikhilmotion.vlc, @sambee9991.
 
-## Commit signing & verification
+**Assets/fonts/audio:** Google Fonts, Pexels/Pixabay/Mixkit/Coverr,
+Pixabay Music / YouTube Audio Library / Freesound, OpenMoji/Twemoji,
+Wikimedia Commons / Met Open Access / Rijksmuseum, PolyHaven/ambientCG/
+RenderCrate. All license-logged in docs/RESOURCES.md.
 
-This repository follows a strict badge policy: every commit on `main`
-shows **either** the blue **Verified** badge **or no signature badge at
-all** — a yellow *Unverified* badge is never accepted.
+## 🤝 Contributing
 
-The maintainer's ed25519 signing key is published at
-[`GPG-PUBLIC-KEY.asc`](GPG-PUBLIC-KEY.asc). Registering it with the GitHub
-account requires an API token with the `admin:gpg_key` scope; when that
-scope is unavailable, commits are intentionally left unsigned (no badge)
-rather than signed-but-unverified. If you maintain the account, you can
-complete registration in **Settings → SSH and GPG keys → New GPG key**
-(paste the contents of `GPG-PUBLIC-KEY.asc`); future commits can then be
-verified by anyone with:
+Issues + PRs welcome (see CONTRIBUTING.md). New scene types, sticker
+species, language packs and platform presets are especially wanted.
 
-```bash
-gpg --import GPG-PUBLIC-KEY.asc
-git verify-commit <commit-sha>
-```
+## 🗺 Roadmap
 
-## License
+More 3D moves banked · color-source pipeline · more genre presets ·
+bilingual subtitle packs · public example gallery.
 
-MIT — see [LICENSE](LICENSE). Use it, change it, ship it.
+## 📄 License
+
+MIT — use it, change it, ship it. See LICENSE.
+
+---
+
+If this saves you an editor's fee, ⭐ the repo so more creators find it.

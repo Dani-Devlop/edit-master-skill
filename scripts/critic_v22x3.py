@@ -6,7 +6,8 @@ Usage: critic_v22x3.py <sheet.jpg> <out.json>"""
 import sys, json, subprocess, statistics
 
 sheet, out = sys.argv[1], sys.argv[2]
-SCRIPT = "/home/z/my-project/download/edit-master-skill/scripts/critic_v22.py"
+import os
+SCRIPT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "critic_v22.py")
 runs = []
 for k in range(3):
     tmp = f"/tmp/ems-work/p22/critic_x3_{k}.json"

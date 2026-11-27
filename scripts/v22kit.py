@@ -8,17 +8,30 @@ import numpy as np
 from PIL import Image, ImageDraw, ImageFilter
 
 import sys
-sys.path.insert(0, "/home/z/my-project/download/edit-master-skill/components")
+# Ph26: portable paths — repo-relative sys.path + env-overridable run dirs
+# (old sandbox paths /home/z/my-project/* were purged at Phase 25 cleanup)
+_HERE = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, os.path.join(os.path.dirname(_HERE), "components"))
 import renderlib as R
 from renderlib import VOLT, INK
 
 W, H, FPS = 1080, 1920, 30
-SCRATCH = "/tmp/ems-work/p22/scratch"
-ASSETS = "/home/z/my-project/p22work/assets"  # persistent across sandbox recycles
+EMS_WORK = os.environ.get("EMS_WORK", "/tmp/ems-work/26-run")
+SCRATCH = os.environ.get("EMS_SCRATCH", f"{EMS_WORK}/scratch")
+ASSETS = os.environ.get("EMS_ASSETS", f"{EMS_WORK}/assets")
 CUT = f"{ASSETS}/cutouts"
-M1_SEQ = "/tmp/ems-work/p22/m1_seq"
+M1_SEQ = f"{EMS_WORK}/m1_seq"
 M1_FRAMES = 84
-MV = "/home/z/my-project/upload/4_6051789922870758373 (1).mp4"
+MV = os.environ.get("EMS_MV", "/home/z/my-project/upload/4_6051789922870758373 (1).mp4")
+
+# ---------------- Ph26 S1/B7: internal labels are QC-ONLY ----------------
+# Deliverables (master/cover) NEVER burn internal spec labels such as
+# "[ hook / ... (WC2) ]" or "[ tap -> next scene (IG2) ]". Deliverable
+# renderers set LABELS_ENABLED=False BEFORE drawing; every label call is
+# logged with its position so the QC contact sheet can crop-proof that the
+# delivered file is clean at each historic label position.
+LABELS_ENABLED = True
+LABEL_LOG = []
 
 # ---------------- beat grid ----------------
 def beat_grid(wav, dur):
@@ -238,7 +251,13 @@ def bracket_corners(d, x0, y0=None, x1=None, y1=None, color=VOLT + (235,), L=56,
         d.line([(cx, cy), (cx, cy + dy * L)], fill=color, width=w)
 
 def scene_label(img, xy, text, color=VOLT + (240,), size=30):
-    """semantic scene label tag (F5: NOT a duplicate caption voice)"""
+    """QC-only scene tag (Ph26 S1/B7). Deliverable renderers set
+    LABELS_ENABLED=False: label is LOGGED (position+text) for QC crop proofs
+    and NOT drawn — no internal label can reach master/cover. QC sheet
+    builders may re-enable to burn positions onto QC-only sheets."""
+    LABEL_LOG.append({"xy": [int(xy[0]), int(xy[1])], "text": str(text)})
+    if not LABELS_ENABLED:
+        return None
     d = ImageDraw.Draw(img, "RGBA")
     f = R.mono(size, bold=True)
     d.text(xy, f"[ {text} ]", font=f, fill=color)

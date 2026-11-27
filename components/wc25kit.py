@@ -17,8 +17,42 @@ from PIL import Image, ImageDraw, ImageFilter
 
 VOLT = (216, 243, 74)
 INK = (16, 17, 20)
-MV = "/home/z/my-project/upload/4_6051789922870758373 (1).mp4"
-MATTE_DIR = "/home/z/my-project/p25work/matte/seq"
+# Ph26: portable run paths (env-overridable; old sandbox paths purged)
+EMS_WORK = os.environ.get("EMS_WORK", "/tmp/ems-work/26-run")
+MV = os.environ.get("EMS_MV", "/home/z/my-project/upload/4_6051789922870758373 (1).mp4")
+MATTE_DIR = f"{EMS_WORK}/matte/seq"
+
+# ---------------- Ph26 S4/B10: glyph collision registry ----------------
+# B10 bans overlaps between {notification, title/keyword text, caption pill,
+# scene-tag, stickers}. Persons/footage cutouts are NOT registered: cutout
+# occlusion over art is a deliberate depth feature (WC2/B2), not crowding.
+OCC = {"boxes": [], "violations": []}
+
+def occ_reset():
+    OCC["boxes"] = []
+    OCC["violations"] = []
+
+def occ_add(name, box, kind="glyph"):
+    """kind: glyph | ui | sticker. box=(x0,y0,x1,y1)."""
+    OCC["boxes"].append({"name": name, "kind": kind,
+                         "box": [int(v) for v in box]})
+
+def occ_violations(min_gap=2):
+    out = []
+    bs = OCC["boxes"]
+    for i in range(len(bs)):
+        for j in range(i + 1, len(bs)):
+            a, b = bs[i], bs[j]
+            if a["kind"] == "sticker" and b["kind"] == "sticker":
+                continue  # collage stacking between stickers is allowed
+            ax0, ay0, ax1, ay1 = a["box"]
+            bx0, by0, bx1, by1 = b["box"]
+            ox = min(ax1, bx1) - max(ax0, bx0)
+            oy = min(ay1, by1) - max(ay0, by0)
+            if ox > min_gap and oy > min_gap:
+                out.append({"a": a["name"], "b": b["name"],
+                            "overlap_px": [int(ox), int(oy)]})
+    return out
 
 # ---------------- WC2: per-frame performer alpha (LIVE footage) ----------------
 _SESS = None
@@ -31,7 +65,7 @@ def matte_session():
 
 def mv_source_frame(t):
     """decode ONE MV source frame at native 720x900 (ffmpeg, cached)"""
-    png = f"/home/z/my-project/p25work/mv/src_{int(t * 1000):05d}.png"
+    png = f"{EMS_WORK}/mv/src_{int(t * 1000):05d}.png"
     if not os.path.exists(png):
         os.makedirs(os.path.dirname(png), exist_ok=True)
         import subprocess
@@ -143,6 +177,11 @@ def lift_person_v25(name, k=1.26, lift=16):
     if im is None:
         return False
     arr = np.asarray(im.convert("RGB")).astype(np.float32)
+    # Ph26 S2 palette lock: cutouts are B&W — any MV color riding on a cutout
+    # is a palette leak (blue/green cutouts failed the v25 critic; B8 census
+    # enforces single-accent volt on the whole frame)
+    _lum = arr.mean(axis=2, keepdims=True)
+    arr = np.repeat(_lum, 3, axis=2)
     lo, hi = np.percentile(arr, [2, 98])
     if hi > lo + 1e-3:
         arr = (arr - lo) / (hi - lo) * 232.0 + 14.0
@@ -155,7 +194,8 @@ def lift_person_v25(name, k=1.26, lift=16):
 
 def paste_person_v25(img, center, hh, which, rot=0.0, alpha=1.0,
                      cam_dx=0.0, cam_dy=0.0, zoom_bg=1.0, rim=True,
-                     rim_color=(240, 250, 200), contact=True, seed=0):
+                     rim_color=(240, 250, 200), contact=True, seed=0,
+                     shadow_boost=1.0):
     """WC3 cutout depth:
       - contact shadow: blurred black ellipse UNDER the cutout (not a hard oval)
       - parallax: cutout scales 1.02x relative to bg zoom and shifts against
@@ -199,12 +239,12 @@ def paste_person_v25(img, center, hh, which, rot=0.0, alpha=1.0,
         # (0) darken patch BEHIND the figure (separation on dark footage)
         patch = Image.new("RGBA", (im2.width + 120, im2.height + 120), (0, 0, 0, 0))
         ImageDraw.Draw(patch).ellipse([30, 20, 30 + im2.width + 60, 20 + im2.height + 60],
-                                      fill=(0, 0, 0, 105))
+                                      fill=(0, 0, 0, min(255, int(105 * shadow_boost))))
         patch = patch.filter(ImageFilter.GaussianBlur(34))
         img.alpha_composite(patch, (px - 60, py - 60))
         # (1) whole-figure cast shadow (offset, tighter blur -> reads as cast)
         sh_full = Image.new("RGBA", (im2.width + 60, im2.height + 60), (0, 0, 0, 0))
-        fa = im2.getchannel("A").point(lambda v: int(v * 0.92))
+        fa = im2.getchannel("A").point(lambda v: int(v * min(1.0, 0.92 * shadow_boost)))
         black = Image.new("RGBA", im2.size, (0, 0, 0, 255))
         black.putalpha(fa)
         sh_full.alpha_composite(black, (26, 34))
@@ -214,7 +254,8 @@ def paste_person_v25(img, center, hh, which, rot=0.0, alpha=1.0,
         d = ImageDraw.Draw(img, "RGBA")
         sw = int(im2.width * 0.88)
         sh_img = Image.new("RGBA", (sw + 40, 60), (0, 0, 0, 0))
-        ImageDraw.Draw(sh_img).ellipse([20, 10, 20 + sw, 50], fill=(0, 0, 0, 185))
+        ImageDraw.Draw(sh_img).ellipse([20, 10, 20 + sw, 50],
+                                       fill=(0, 0, 0, min(255, int(185 * shadow_boost))))
         sh_img = sh_img.filter(ImageFilter.GaussianBlur(9))
         img.alpha_composite(sh_img, (int(cx - sh_img.width / 2),
                                      int(cy + im2.height / 2 - 34)))
@@ -223,7 +264,8 @@ def paste_person_v25(img, center, hh, which, rot=0.0, alpha=1.0,
 
 # ---------------- WC4: tissue fill (no empty box) --------------------------------
 def tissue_fill(img, region, t, tone=(118, 120, 132), alpha=56, step=20,
-                particles=14, seed=0, ghost=None, ghost_font=None):
+                particles=14, seed=0, ghost=None, ghost_font=None,
+                ghost_y=None):
     """WC4: halftone + ghost type + vertical gradient + moving particles behind
     card/type layers. region=(x0,y0,x1,y1)."""
     from importlib import import_module
@@ -254,7 +296,8 @@ def tissue_fill(img, region, t, tone=(118, 120, 132), alpha=56, step=20,
     if ghost and ghost_font is not None:
         f = ghost_font
         bb = d.textbbox((0, 0), ghost, font=f)
-        d.text(((img.width - (bb[2] - bb[0])) / 2, y0 + 8), ghost,
+        gy = y0 + 8 if ghost_y is None else int(ghost_y)  # Ph26 S4: movable ghost
+        d.text(((img.width - (bb[2] - bb[0])) / 2, gy), ghost,
                font=f, fill=(240, 240, 236, 34))
     return img
 

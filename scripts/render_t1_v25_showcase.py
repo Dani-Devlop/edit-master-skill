@@ -24,9 +24,9 @@ import os, sys, math, json
 import numpy as np
 from PIL import Image, ImageDraw, ImageFilter
 
-SK = "/home/z/my-project/download/edit-master-skill"
-sys.path.insert(0, f"{SK}/components")
-sys.path.insert(0, f"{SK}/scripts")
+_SK = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, f"{_SK}/components")
+sys.path.insert(0, f"{_SK}/scripts")
 import renderlib as R
 from renderlib import VOLT, INK, listicle_bars, volt_pill
 import ig24kit as IG
@@ -43,7 +43,12 @@ K.load_persons()
 for _nm in ("man", "stair", "rock22", "duo", "church", "agent"):
     WC.lift_person_v25(_nm)
 
-P25 = "/home/z/my-project/p25work"
+# Ph26 S1/B7: DELIVERABLE frames — internal scene labels disabled (QC-logged)
+K.LABELS_ENABLED = False
+# Ph26 S3/B9: hook-type fit evidence (measured, logged to plan)
+SHOW_HOOK_FIT = {}
+
+P25 = os.environ.get("EMS_WORK", K.EMS_WORK)
 FRAMES = f"{P25}/showcase_frames"
 os.makedirs(FRAMES, exist_ok=True)
 DUR = 10.0
@@ -51,7 +56,7 @@ N = int(FPS * DUR)
 
 # ---------------- IG1 beat grid ----------------
 ONSETS, LIB_BEATS, KICKS, TEMPO, OENG = IG.onset_grid(
-    "/home/z/my-project/p22work/assets/target_audio.wav", DUR + 0.6)
+    f"{K.ASSETS}/target_audio.wav", DUR + 0.6)
 SNAP_LOG = []
 def snap(t):
     st, d = IG.snap(t, ONSETS, 0.30)
@@ -151,14 +156,20 @@ def draw_hook(t, src_start, scene_t0, rate=1.0, slam_word="WELCOME", slam_t0=Non
     if slam_word == "WELCOME":
         # type overlaps the performer head band (~H*0.47 in the car shot) so the
         # alpha occlusion is VISIBLE: head/chest covers the bottom of the type
+        # Ph26 S3/B9: hook word FULLY legible <= 0.92W INCLUDING the camera
+        # envelope (punch-in crop + dutch + gate-weave eat up to ~7% per side);
+        # 0.84W pre-camera leaves measured clearance. Fit logged for B9.
         size_big = 210
-        while R.montserrat(size_big, 900).getlength("WELCOME") > 920 and size_big > 90:
+        while R.montserrat(size_big, 900).getlength("WELCOME") > int(W * 0.84) and size_big > 90:
             size_big -= 8
         IG.slam_text(img, (W / 2, int(H * 0.40)), "WELCOME",
                      lambda s: R.montserrat(s, 900), t,
                      slam_t0 if slam_t0 is not None else s0,
                      per_letter=0.045, size=size_big, base=True)
         tw = R.montserrat(size_big, 900).getlength("WELCOME")
+        SHOW_HOOK_FIT.update({"word": "WELCOME", "type_width_px": int(tw),
+                              "ratio_plan": round(float(tw) / W, 3), "bar_max": 0.92,
+                              "note": "pre-camera plan width; B9 measures decoded frames"})
         bracket_corners(d, (W / 2 - tw / 2 - 40, int(H * 0.31),
                             W / 2 + tw / 2 + 40, int(H * 0.50)), color=INK, L=40, w=6)
         volt_pill(img, (W / 2, H * 0.265), "IDK x EMINEM x J DILLA",
@@ -169,7 +180,7 @@ def draw_hook(t, src_start, scene_t0, rate=1.0, slam_word="WELCOME", slam_t0=Non
         # DIES slam: fit <=1020px so the word reads WIDER than the duo bodies —
         # the heads occlude the middle, letters stay readable on both sides
         size_big = 240
-        while R.montserrat(size_big, 900).getlength("DIES") > 1020 and size_big > 90:
+        while R.montserrat(size_big, 900).getlength("DIES") > int(W * 0.84) and size_big > 90:
             size_big -= 8
         IG.slam_text(img, (W / 2, int(H * 0.42)), "DIES",
                      lambda s: R.montserrat(s, 900), t,
@@ -476,6 +487,8 @@ if __name__ == "__main__":
             "camera_log": cam_deltas, "lyric_words": LYRIC_WORDS,
             "wc2_matte_engine": "rembg isnet-general-use per-frame (live MV footage)",
             "chunk": [START, END]}
+    meta.update({"labels_disabled": True, "label_log_qc": K.LABEL_LOG,
+                 "hook_fit": dict(SHOW_HOOK_FIT)})
     if START == 0:
         json.dump(meta, open(f"{P25}/showcase_plan.json", "w"), indent=1)
     else:

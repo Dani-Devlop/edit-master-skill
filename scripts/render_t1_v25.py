@@ -31,8 +31,9 @@ import os, sys, math, wave, json, subprocess
 import numpy as np
 from PIL import Image, ImageDraw, ImageFilter
 
-sys.path.insert(0, "/home/z/my-project/download/edit-master-skill/components")
-sys.path.insert(0, "/home/z/my-project/download/edit-master-skill/scripts")
+_HERE = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, os.path.join(os.path.dirname(_HERE), "components"))
+sys.path.insert(0, _HERE)
 import renderlib as R
 from renderlib import VOLT, INK
 import ig24kit as IG
@@ -48,6 +49,24 @@ from v22kit import (W, H, FPS, load_persons, paste_person, canvas, cam_apply,
 # hybrid human-polish (B4): brightened cutouts, alpha preserved
 for _nm in ("man", "stair", "rock22", "duo", "church", "agent"):
     WC.lift_person_v25(_nm)
+
+# Ph26 S1/B7: DELIVERABLE master — internal scene labels disabled (QC-logged)
+K.LABELS_ENABLED = False
+
+# Ph26 S4/B10: glyph-collision census (registered scenes, every frame)
+COLL = {"checked": 0, "violations": []}
+def occ_census(scene, boxes):
+    """boxes: (name, box, kind) triples; kind in glyph|ui|sticker."""
+    WC.occ_reset()
+    for nm, bx, kd in boxes:
+        WC.occ_add(nm, bx, kind=kd)
+    v = WC.occ_violations()
+    COLL["checked"] += 1
+    for x in v:
+        COLL["violations"].append({"scene": scene, **x})
+    return v
+
+import render_t1_v25_showcase as _SHOW
 from render_t1_v25_showcase import draw_hook as v25_hook, confetti_v
 
 def mv_frame(t):
@@ -56,9 +75,9 @@ def mv_frame(t):
 
 DUR = 27.9
 N = int(FPS * DUR)
-FRAMES = "/home/z/my-project/p25work/v25_frames"
+FRAMES = f"{K.EMS_WORK}/v26_frames"
 os.makedirs(FRAMES, exist_ok=True)
-os.makedirs("/tmp/ems-work/p22/scratch12s", exist_ok=True)  # mv_frame cache dir
+os.makedirs(f"{K.SCRATCH}/scratch12s", exist_ok=True)  # legacy cache dir
 
 # ---------------- IG1 beat-lock ----------------
 ONSETS, LIB_BEATS, KICKS, TEMPO, OENG = IG.onset_grid(
@@ -129,6 +148,22 @@ STICKER_MAP = {
     "homicide": "caution-tape band (never crosshair-on-face)",
     "lemonade": "lemon + glass",
     "raw cuts": "real-frame polaroid cascade + connector",
+}
+
+# Ph26 S5: light-phase (11.9-17.6s) density census — footage-led + HERO cutouts
+# (>=45%H); painting/cascade = accents, never the sole content of a light scene
+LIGHT_PHASE = {
+    "paint": ["graded paper canvas", "PD painting polaroid", "lemon sticker",
+              "wc1 live card (graded)", "HERO cutout man 900px", "highlight pill",
+              "halftone tissue", "grain+vignette"],
+    "paint2": ["graded paper canvas", "M2 parallax live polaroids x3", "HERO cutout duo 880px",
+               "wc4 particles", "halftone", "grain", "cam drift", "dof blur"],
+    "cascade": ["graded paper canvas", "wc1 live card c1", "wc1 live card c2",
+                "M5 world insert (live)", "volt connectors", "raw-cuts pill",
+                "arrow sticker", "HERO cutout church 880px", "halftone"],
+    "isol": ["graded paper canvas", "painting polaroid", "HERO cutout man 880px",
+             "coin stickers x2", "volt-only headline", "pixel dots",
+             "selective-color isolation", "cam life"],
 }
 
 # ---------------- F4 grade + IG8 film texture ----------------
@@ -219,7 +254,7 @@ def draw_scene(idx, t):
     elif kind == "ghost":  # LB2 + dutch + hourglass + WC1 live card (v25)
         img = canvas_cached("black", ghost="everybody dies at the end")
         d = ImageDraw.Draw(img, "RGBA")
-        gc = WC.wc1_card(mv_frame(9.6 + (t - s0) * 1.15), 320, 360, rot=2.2, border="ink")
+        gc = WC.wc1_card(graded_mv(9.6 + (t - s0) * 1.15), 320, 360, rot=2.2, border="ink")
         gc = WC.wc1_card_shadow(gc)
         gs_ = WC.spring_stagger(0, t, s0 + 0.15)
         if gs_ > 0.02:
@@ -236,6 +271,14 @@ def draw_scene(idx, t):
             paste_person(img, (170, int(H * 0.62)), 420 * min(1.0, sc), "church", rot=-2, alpha=0.92)
         d.rectangle([0, int(H * 0.845), W, int(H * 0.845) + 6], fill=VOLT + (200,))
         scene_label(img, (86, int(H * 0.80)), "ghost / quote lockup")
+        _q1 = d.textbbox((0, 0), "everybody", font=f_g)
+        _q2 = d.textbbox((0, 0), "dies at the end", font=f_g)
+        occ_census("ghost", [
+            ("quote_everybody", ((W - (_q1[2] - _q1[0])) / 2, int(H * 0.36), (W + (_q1[2] - _q1[0])) / 2, int(H * 0.36) + _q1[3] - _q1[1]), "glyph"),
+            ("quote_dies", ((W - (_q2[2] - _q2[0])) / 2, int(H * 0.46), (W + (_q2[2] - _q2[0])) / 2, int(H * 0.46) + _q2[3] - _q2[1]), "glyph"),
+            ("hourglass", (W - 190 - 80, int(H * 0.30) - 80, W - 190 + 80, int(H * 0.30) + 80), "sticker"),
+            ("wc1_card1", (30, 140, 400, 550), "sticker"),
+        ])
         img, z, dx, dy = cam_apply(img, t, s0, punch=0.035, drift=20)
         img = dutch(img, -1.6)  # IG10 dutch
         cam_log = (z * pulse, dx, dy)
@@ -244,7 +287,7 @@ def draw_scene(idx, t):
     elif kind == "ghost2":  # subcut: jump punch-in + WC1 live card (v25)
         img = canvas_cached("black", ghost="everybody dies at the end")
         d = ImageDraw.Draw(img, "RGBA")
-        gc2 = WC.wc1_card(mv_frame(14.2 + (t - s0) * 1.1), 320, 360, rot=-2.4, border="ink")
+        gc2 = WC.wc1_card(graded_mv(14.2 + (t - s0) * 1.1), 320, 360, rot=-2.4, border="ink")
         gc2 = WC.wc1_card_shadow(gc2)
         gs2 = WC.spring_stagger(0, t, s0 + 0.15)
         if gs2 > 0.02:
@@ -255,9 +298,15 @@ def draw_scene(idx, t):
         d.text(((W - bb2[2] + bb2[0]) / 2, H * 0.30), "dies at the end", font=f_g, fill=VOLT + (240,))
         paste_person(img, (W - 240, int(H * 0.60)), 460, "duo", rot=2)
         IG.sticker_scribble if False else None
-        K.sticker_scribble(d, 250, int(H * 0.33), 200, seed=5)
+        # Ph26 S4: scribble moved below the quote band (was overlapping glyphs)
+        K.sticker_scribble(d, 250, int(H * 0.435), 200, seed=5)
         d.rectangle([0, int(H * 0.845), W, int(H * 0.845) + 6], fill=VOLT + (200,))
         scene_label(img, (86, int(H * 0.80)), "jump cut / punch-in (IG10)")
+        occ_census("ghost2", [
+            ("quote_dies2", ((W - 900) / 2, int(H * 0.30) - 5, (W + 900) / 2, int(H * 0.30) + 140), "glyph"),
+            ("scribble", (150, int(H * 0.435), 350, int(H * 0.435) + 160), "sticker"),
+            ("wc1_card2", (30, int(H * 0.615) - 30, 400, int(H * 0.615) + 400), "sticker"),
+        ])
         img, z, dx, dy = cam_apply(img, t, s0, punch=0.10, drift=22)
         cam_log = (z * pulse, dx, dy)
         return img, "pil", "IG10 zoom punch jump-cut", cam_log
@@ -328,9 +377,11 @@ def draw_scene(idx, t):
     elif kind == "counter":  # WC4 tissue + odometer + M3 + IG2 notif (v25)
         img = canvas_cached("black", ghost=None)
         d = ImageDraw.Draw(img, "RGBA")
+        # Ph26 S4: ghost moved to the banner-free band + shrunk (was under the
+        # IG2 notification — v25 critic flaw "notification over stakes")
         WC.tissue_fill(img, (0, 0, W, int(H * 0.98)), t, tone=(112, 114, 126),
                        alpha=44, step=24, particles=16, seed=9, ghost="stakes",
-                       ghost_font=R.playfair(210, 900))
+                       ghost_font=R.playfair(150, 900), ghost_y=int(H * 0.16))
         d.rounded_rectangle([80, int(H * 0.24), W - 80, int(H * 0.80)], radius=28,
                             fill=(14, 14, 18, 210), outline=VOLT + (140,), width=2)
         ent_c = R.ease_out_cubic(min(1.0, max(0.0, (t - s0)) / 0.9))
@@ -340,17 +391,28 @@ def draw_scene(idx, t):
         WC.paste_person_v25(img, (W / 2 + 320, int(H * 0.735)), 320, "stair", rot=2, seed=2)
         WC.paste_person_v25(img, (W / 2 - 320, int(H * 0.745)), 290, "rock22", rot=-2, seed=3)
         R.volt_pill(img, (W / 2, H * 0.69), "2 MCs / 1 take / 0 fear", R.montserrat(40, 900), rot=-2)
-        cc = WC.wc1_card(mv_frame(20.6 + (t - s0) * 1.0), 320, 360, rot=2.0, border="ink")
+        cc = WC.wc1_card(graded_mv(20.6 + (t - s0) * 1.0), 320, 360, rot=2.0, border="ink")
         cc = WC.wc1_card_shadow(cc)
         cs_ = WC.spring_stagger(0, t, s0 + 0.20)
         if cs_ > 0.02:
             img.alpha_composite(cc.resize((max(1, int(cc.width * cs_)), max(1, int(cc.height * cs_)))),
-                                (60, int(H * 0.47)))
+                                (60, int(H * 0.435)))  # Ph26 S4: lifted clear of volt pill
         R.pixel_dots(img, 12, (80, int(H * 0.13), W - 80, int(H * 0.22)), seed=int(t * 4) + 2, size=10)
-        sticker_coin(d, W - 160, int(H * 0.115), 64)
+        # Ph26 S4: coin moved below banner band (was corner-clipping the notif)
+        sticker_coin(d, W - 150, int(H * 0.150), 58)
         IG.notif_banner(img, int(H * 0.055), "Payout", "$8,137 paid to you",
                         t, IG.snap(s0 + 0.25, ONSETS, 0.30)[0], dur=1.6)  # IG2 (onset-quantized)
         scene_label(img, (86, int(H * 0.86)), "stakes counter / M3 ring")
+        _gb = d.textbbox((0, 0), "stakes", font=R.playfair(150, 900))
+        _pb = d.textbbox((0, 0), "2 MCs / 1 take / 0 fear", font=R.montserrat(40, 900))
+        occ_census("counter", [
+            ("notif_banner", (160, int(H * 0.055), 920, int(H * 0.055) + 108), "ui"),
+            ("ghost_stakes", ((W - (_gb[2] - _gb[0])) / 2, int(H * 0.16), (W + (_gb[2] - _gb[0])) / 2, int(H * 0.16) + _gb[3] - _gb[1]), "glyph"),
+            ("coin_big", (W - 150 - 29, int(H * 0.150) - 29, W - 150 + 29, int(H * 0.150) + 29), "sticker"),
+            ("volt_pill", (W / 2 - (_pb[2] - _pb[0]) / 2 - 44, int(H * 0.69) - 36, W / 2 + (_pb[2] - _pb[0]) / 2 + 44, int(H * 0.69) + 36), "glyph"),
+            ("odometer", (W / 2 - 140, int(H * 0.38) - 56, W / 2 + 140, int(H * 0.38) + 56), "glyph"),
+            ("wc1_card3", (30, int(H * 0.435) - 30, 400, int(H * 0.435) + 400), "sticker"),
+        ])
         img, z, dx, dy = cam_apply(img, t, s0, punch=0.045, drift=16)
         cam_log = (z * pulse, dx, dy)
         return img, "persp3d-m3", "M3 counter ring + IG2 notif banner", cam_log
@@ -371,7 +433,12 @@ def draw_scene(idx, t):
             ph = int(pw * PAINTING.height / PAINTING.width)
             R.polaroid(img, PAINTING.resize((pw - 24, ph - 24)), (W / 2 - 60, H * 0.40), pw - 24, rot=2)
             sticker_lemon(d, W / 2 + 330, int(H * 0.20), 150 * min(1.0, sc))
-        pc = WC.wc1_card(mv_frame(2.6 + (t - s0) * 1.1), 320, 360, rot=-2.6, border="polaroid")
+        # Ph26 S5/S6: HERO cutout anchors the light phase (>=45%H) + boosted
+        # contact shadow so depth reads on the white paper canvas
+        if sc > 0.25:
+            WC.paste_person_v25(img, (W / 2 - 10, int(H * 0.575)), 900, "man", rot=-1,
+                                alpha=0.96, shadow_boost=1.7, seed=11)
+        pc = WC.wc1_card(graded_mv(2.6 + (t - s0) * 1.1), 320, 360, rot=-2.6, border="polaroid")
         pc = WC.wc1_card_shadow(pc)
         ps_ = WC.spring_stagger(0, t, s0 + 0.15)
         if ps_ > 0.02:
@@ -393,6 +460,9 @@ def draw_scene(idx, t):
         frames = [mv_frame(max(0.05, 12.5 + (t - s0) * 1.4)),
                   mv_frame(max(0.05, 4.5 + (t - s0) * 1.4)),
                   mv_frame(max(0.05, 24.0 + (t - s0) * 0.6))]
+        # Ph26 S5/S6: HERO cutout behind the M2 polaroids (footage-led light scene)
+        WC.paste_person_v25(img, (W / 2 + 250, int(H * 0.585)), 880, "duo", rot=1,
+                            alpha=0.96, shadow_boost=1.7, seed=12)
         IG.m2_polaroids_parallax(img, frames, t, s0, base_c=(W / 2, int(H * 0.42)))  # M2
         scene_label(img, (86, int(H * 0.90)), "floating polaroids / M2 persp3d")
         img, z, dx, dy = cam_apply(img, t, s0, punch=0.07, drift=18)
@@ -405,16 +475,19 @@ def draw_scene(idx, t):
         d = ImageDraw.Draw(img, "RGBA")
         if sc > 0.2:
             # WC1: polaroids play LIVE video (window advances with t) — never frozen
-            c1 = WC.wc1_card(mv_frame(12.5 + (t - s0) * 1.3), 240, 240, rot=-5, border="polaroid")
-            c2 = WC.wc1_card(mv_frame(4.5 + (t - s0) * 1.3), 214, 214, rot=4, border="polaroid")
+            c1 = WC.wc1_card(graded_mv(12.5 + (t - s0) * 1.3), 240, 240, rot=-5, border="polaroid")
+            c2 = WC.wc1_card(graded_mv(4.5 + (t - s0) * 1.3), 214, 214, rot=4, border="polaroid")
             c1 = WC.wc1_card_shadow(c1); c2 = WC.wc1_card_shadow(c2)
             img.alpha_composite(c1, (int(W / 2 - 170 - c1.width / 2), int(H * 0.36 - c1.height / 2)))
             img.alpha_composite(c2, (int(W / 2 + 190 - c2.width / 2), int(H * 0.46 - c2.height / 2)))
             # M5 world insert: footage plane perspective-mounted
             quad = [(W / 2 - 300, int(H * 0.58)), (W / 2 + 120, int(H * 0.60)),
                     (W / 2 + 90, int(H * 0.74)), (W / 2 - 320, int(H * 0.72))]
-            IG.m5_world_insert(img, mv_frame(max(0.05, 24.0 + (t - s0) * 0.9)).resize((560, 400)),
+            IG.m5_world_insert(img, graded_mv(max(0.05, 24.0 + (t - s0) * 0.9)).resize((560, 400)),
                                quad)  # M5 + LF2 live
+            # Ph26 S5/S6: HERO cutout on the light paper (painting = accent only)
+            WC.paste_person_v25(img, (W / 2 - 280, int(H * 0.585)), 880, "church", rot=-2,
+                                alpha=0.96, shadow_boost=1.7, seed=13)
         d.line([W / 2 - 170, int(H * 0.50), W / 2 + 190, int(H * 0.56)], fill=VOLT + (220,), width=3)
         d.line([W / 2 + 190, int(H * 0.56), W / 2 - 40, int(H * 0.68)], fill=VOLT + (220,), width=3)
         R.volt_pill(img, (W / 2 + 310, H * 0.70), "raw cuts", R.montserrat(40, 900), rot=6)
@@ -431,7 +504,10 @@ def draw_scene(idx, t):
         pw = 520
         ph = int(pw * PAINTING.height / PAINTING.width)
         R.polaroid(img, PAINTING.resize((pw - 24, ph - 24)), (W / 2 - 80, H * 0.38), pw - 24, rot=-2)
-        paste_person(img, (W / 2 - 330, int(H * 0.56)), 350, "man", rot=1, alpha=0.95)  # C.6 cutout presence
+        WC.paste_person_v25(img, (W / 2 - 290, int(H * 0.585)), 880, "man", rot=1,
+                            alpha=0.96, shadow_boost=1.7, seed=14)  # Ph26 S5 HERO + S6
+        R.pixel_dots(img, 8, (W - 330, int(H * 0.16), W - 80, int(H * 0.24)),
+                     seed=int(t * 5) + 4, size=8)  # Ph26 S5 density
         sticker_coin(d, W / 2 + 250, int(H * 0.62), 110)
         sticker_coin(d, W / 2 - 240, int(H * 0.66), 74)
         f_t = R.playfair(96, 900)
@@ -443,12 +519,12 @@ def draw_scene(idx, t):
         ISOL_MEAS["t"] = round(t, 2)
         ISOL_MEAS["chroma_frac_outside_volt"] = round(chroma_out, 5)
         ISOL_MEAS["chroma_frac_inside_volt"] = round(chroma_in, 5)
-        if not os.path.exists("/home/z/my-project/p25work/isol_live.json"):
+        if not os.path.exists(f"{K.EMS_WORK}/isol_live.json"):
             json.dump({"t": round(t, 2),
                        "chroma_frac_outside_volt": round(chroma_out, 5),
                        "chroma_frac_inside_volt": round(chroma_in, 5),
                        "note": "pre-compression frame measurement (render-time)"},
-                      open("/home/z/my-project/p25work/isol_live.json", "w"), indent=1)
+                      open(f"{K.EMS_WORK}/isol_live.json", "w"), indent=1)
         res2, z, dx, dy = cam_apply(res.convert("RGBA"), t, s0, punch=0.06, drift=12)  # IG5/IG10 camera life on isol beat
         return res2.convert("RGB"), "numpy-selective", "IG6 selective-color isolation (volt hue 58-100) + cam life", (z, dx, dy)
 
@@ -472,10 +548,16 @@ def draw_scene(idx, t):
         img.alpha_composite(glow)
         img.alpha_composite(pop.convert("RGBA"))
         d = ImageDraw.Draw(img, "RGBA")
+        # Ph26 S1: internal spec label removed; IG-native scrubber stays
+        # (progress fill = ramp factor; reads as platform UI, not a debug HUD)
+        _rp = min(1.0, max(0.0, (factor - 0.4) / 1.2))
         d.rounded_rectangle([W / 2 - 210, int(H * 0.80), W / 2 + 210, int(H * 0.80) + 64], radius=32,
                             fill=(10, 10, 14, 215), outline=(240, 244, 255, 120), width=2)
-        f_u = R.mono(36, bold=True)
-        d.text((W / 2 - 160, int(H * 0.80) + 14), "[ 0.4x -> 1.6x speed ramp ]", font=f_u, fill=(240, 244, 255, 240))
+        _fx = W / 2 - 196 + int(392 * _rp)
+        d.rounded_rectangle([W / 2 - 196, int(H * 0.80) + 24, _fx, int(H * 0.80) + 40],
+                            radius=8, fill=VOLT + (235,))
+        d.ellipse([_fx - 12, int(H * 0.80) + 8, _fx + 12, int(H * 0.80) + 56],
+                  fill=(240, 244, 255, 240))
         IG.heart_burst(d, W / 2, int(H * 0.30), t, IG.snap(s0 + 0.35, ONSETS, 0.30)[0], n=8)  # IG2 payoff (onset-quantized)
         # C.3 honest camera life: REAL cover-crop transform (log was z-only, never applied)
         img, z, dx, dy = cam_apply(img, t, s0, punch=0.04, drift=10)
@@ -520,6 +602,13 @@ def draw_scene(idx, t):
         sticker_arrow(d, 180, int(H * 0.80), 320, int(H * 0.72))
         paste_person(img, (W / 2 + 300, int(H * 0.74)), 330, "duo", rot=-2, alpha=0.94)  # C.6 cutout presence
         scene_label(img, (86, int(H * 0.90)), "keyword callout / freeze+slam (IG10)")
+        _hb = d.textbbox((0, 0), "homicide", font=R.playfair(150, 900))
+        occ_census("callout", [
+            ("caution_tape", (110, int(H * 0.185), 970, int(H * 0.30)), "sticker"),
+            ("slam_homicide", ((W - (_hb[2] - _hb[0])) / 2, int(H * 0.60) - (_hb[3] - _hb[1]) / 2 - 6, (W + (_hb[2] - _hb[0])) / 2, int(H * 0.60) + (_hb[3] - _hb[1]) / 2 + 6), "glyph"),
+            ("volt_bar", (W / 2 - 240, int(H * 0.665), W / 2 + 240, int(H * 0.677)), "glyph"),
+            ("arrow", (160, int(H * 0.72), 520, int(H * 0.82)), "sticker"),
+        ])
         # freeze+slam: source frozen, scale spikes at entry
         fz = 1.0 if t < s0 + 0.30 else 1.0 + 0.10 * math.sin(min(1.0, (t - s0 - 0.30) / 0.25) * math.pi)
         img, z, dx, dy = cam_apply(img, t, s0, punch=0.05, drift=14)
@@ -556,7 +645,7 @@ def draw_scene(idx, t):
             sc = R.spring_scale(max(0.0, t - s0 - 0.06), 0.30)
             if sc > 0.2:
                 paste_person(img, (W / 2 + 310, H * 0.66), int(380 * sc), "stair", rot=2)
-        mc = WC.wc1_card(mv_frame(6.2 + (t - s0) * 1.0), 320, 360, rot=2.4, border="polaroid")
+        mc = WC.wc1_card(graded_mv(6.2 + (t - s0) * 1.0), 320, 360, rot=2.4, border="polaroid")
         mc = WC.wc1_card_shadow(mc)
         ms_ = WC.spring_stagger(0, t, s0 + 0.25)
         if ms_ > 0.02:
@@ -676,7 +765,7 @@ if __name__ == "__main__":
     cam_deltas = []
     if PIPE:
         import subprocess as sp
-        seg = f"/home/z/my-project/p25work/seg_{START:05d}.mp4"
+        seg = f"{K.EMS_WORK}/seg_{START:05d}.mp4"
         enc = sp.Popen(["ffmpeg", "-y", "-v", "error", "-f", "rawvideo", "-pix_fmt", "rgb24",
                         "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-",
                         "-c:v", "libx264", "-preset", "veryfast", "-crf", "16",
@@ -705,9 +794,15 @@ if __name__ == "__main__":
             "camera_log": cam_deltas,
             "wc2_matte_engine": "rembg isnet-general-use per-frame (live MV footage) via v25_hook",
             "chunk": [START, END]}
+    meta.update({
+        "labels_disabled": True,                                  # Ph26 S1/B7
+        "label_log_qc": K.LABEL_LOG,                              # QC-only positions
+        "collision_census": COLL,                                 # Ph26 S4/B10
+        "hook_fit": dict(getattr(_SHOW, "SHOW_HOOK_FIT", {})),    # Ph26 S3/B9
+        "light_phase_density": LIGHT_PHASE})                      # Ph26 S5
     if START == 0:
-        json.dump(meta, open("/home/z/my-project/p25work/t1_v25_plan.json", "w"), indent=1)
+        json.dump(meta, open(f"{K.EMS_WORK}/t1_v26_plan.json", "w"), indent=1)
     else:
         json.dump({"camera_log": cam_deltas, "chunk": [START, END]},
-                  open(f"/home/z/my-project/p25work/t1_v25_chunk_{START}.json", "w"), indent=1)
+                  open(f"{K.EMS_WORK}/t1_v26_chunk_{START}.json", "w"), indent=1)
     print("T1 v24 FRAMES DONE", START, END, flush=True)

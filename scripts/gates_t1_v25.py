@@ -437,6 +437,96 @@ MOVE_TAGS["match_cut"] = ["volt-bar ui_tap card edge -> listicle spine"]
 res["IG10_camera_moves"] = {"distinct_moves": len(MOVE_TAGS), "detail": MOVE_TAGS,
                             "bar": 6, "pass": len(MOVE_TAGS) >= 6}
 
+# ================= Ph26 NEW GATES (B7-B10) =================
+# Added 2026-11-27. The frozen 26-ID ledger above is UNTOUCHED (FZ1 no-drift);
+# B7-B10 extend the binary acceptance to 10 checks (B1-B10 ALL YES required).
+
+# ---- B7 no internal labels in deliverable (S1) ----
+_labdis = bool(P.get("labels_disabled"))
+_lablog = P.get("label_log_qc") or []
+res["B7_no_internal_labels"] = {
+    "labels_disabled": _labdis,
+    "qc_label_positions_logged": len(_lablog),
+    "label_texts": sorted({str(l.get("text", "")) for l in _lablog}),
+    "bar": "labels_disabled=True AND >=12 historic label positions logged for QC "
+           "crop proofs; master/cover pixel-clean of [ ... ] spec tags",
+    "pass": _labdis and len(_lablog) >= 12}
+
+# ---- B8 single-accent palette census (S2) — decoded from FINAL ----
+_b8 = {"frames": 0, "chroma_px": 0, "offpalette_px": 0, "hue_bins": {}}
+if cap is not None:
+    _n8 = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
+    for k in range(25):
+        _f8 = int(k * (_n8 - 2) / 24.0)
+        cap.set(cv2.CAP_PROP_POS_FRAMES, _f8)
+        _ok8, _fr8 = cap.read()
+        if not _ok8:
+            continue
+        _sm8 = cv2.resize(_fr8, (270, 480))
+        _h8 = cv2.cvtColor(_sm8, cv2.COLOR_BGR2HSV)
+        _ch8 = (_h8[..., 1] > 90) & (_h8[..., 2] > 60)
+        _vo8 = _ch8 & (_h8[..., 0] >= 24) & (_h8[..., 0] <= 48)  # volt window
+        _bad8 = _ch8 & (~_vo8)
+        _b8["frames"] += 1
+        _b8["chroma_px"] += int(_ch8.sum())
+        _b8["offpalette_px"] += int(_bad8.sum())
+        for _hue, _cnt in zip(*np.unique(_h8[..., 0][_bad8] // 5, return_counts=True)):
+            _b8["hue_bins"][str(int(_hue) * 5)] = _b8["hue_bins"].get(str(int(_hue) * 5), 0) + int(_cnt)
+_b8_frac = _b8["offpalette_px"] / max(1, _b8["chroma_px"])
+res["B8_palette_census"] = {
+    "frames_sampled": _b8["frames"],
+    "chroma_px": _b8["chroma_px"], "offpalette_px": _b8["offpalette_px"],
+    "offpalette_frac": round(float(_b8_frac), 5),
+    "top_offhue_bins": dict(sorted(_b8["hue_bins"].items(), key=lambda kv: -kv[1])[:5]),
+    "bar": "off-palette chroma <= 0.02 (volt = HSV H 24-48, S>90, V>60; "
+           "no blue invert / green leaves / colored cutouts)",
+    "pass": _b8["frames"] >= 20 and float(_b8_frac) <= 0.02}
+
+# ---- B9 hook fit (S3) — decoded frames, volt-type bbox in hook band ----
+_b9 = {"frames": 0, "ratios": [], "min_clear_px": None}
+if cap is not None:
+    _hk = ST.get("hook") or 0.0
+    for _t9 in (_hk + 0.60, _hk + 1.20, _hk + 1.80):
+        cap.set(cv2.CAP_PROP_POS_FRAMES, int(_t9 * FPS))
+        _ok9, _fr9 = cap.read()
+        if not _ok9:
+            continue
+        _h9 = cv2.cvtColor(cv2.resize(_fr9, (270, 480)), cv2.COLOR_BGR2HSV)
+        _ch9 = (_h9[..., 1] > 90) & (_h9[..., 2] > 60)
+        _vo9 = _ch9 & (_h9[..., 0] >= 24) & (_h9[..., 0] <= 48)
+        _band = _vo9[int(480 * 0.30):int(480 * 0.55), :]
+        _rowc = _band.sum(axis=1)
+        _rows = np.where(_rowc >= max(6, int(0.12 * 270)))[0]  # dense volt rows = type
+        if len(_rows) == 0:
+            continue
+        _seg = _band[_rows[0]:_rows[-1] + 1]
+        _cols = np.where(_seg.any(axis=0))[0]
+        if len(_cols) == 0:
+            continue
+        _b9["frames"] += 1
+        _b9["ratios"].append(round(float(_cols[-1] - _cols[0]) / 270.0, 3))
+        _clr = round(float(min(_cols[0], 269 - _cols[-1])) / 270.0 * 1080, 1)
+        _b9["min_clear_px"] = _clr if _b9["min_clear_px"] is None else min(_b9["min_clear_px"], _clr)
+_b9_max = max(_b9["ratios"]) if _b9["ratios"] else 1.0
+res["B9_hook_fit"] = {
+    "measured": _b9,
+    "plan_hook_fit": P.get("hook_fit") or {},
+    "bar": "volt hook-type width <= 0.92W with >=8px edge clearance "
+           "(decoded frames; NO edge-cropped letters)",
+    "pass": _b9["frames"] >= 2 and _b9_max <= 0.92 and (_b9["min_clear_px"] or 0) >= 8}
+
+# ---- B10 no glyph overlap (S4) — render-time collision census ----
+_c10 = P.get("collision_census") or {}
+_pending10 = not _c10
+res["B10_no_glyph_overlap"] = {
+    "census_frames_checked": _c10.get("checked", 0),
+    "violations": _c10.get("violations", []),
+    "bar": "0 glyph/ui/sticker overlaps across registered scenes "
+           "(counter/ghost/ghost2/callout, every frame)",
+    "stage_pending": _pending10,
+    "pass": (not _pending10) and _c10.get("checked", 0) >= 100
+            and len(_c10.get("violations", [])) == 0}
+
 json.dump(res, open(OUT, "w"), indent=1)
 npass = sum(1 for v in res.values() if isinstance(v, dict) and v.get("pass") is True)
 npending = sum(1 for v in res.values() if isinstance(v, dict) and v.get("pass") is None)

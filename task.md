@@ -506,3 +506,51 @@ Repository: https://github.com/Dani-Devlop/edit-master-skill
       rounds, critic, match%, motion-quota%, void%, onset-lock%, loop-sim,
       interval median, interaction beats, M2-M5 bank, LUFS, freed MB, chat
       clean, hashes)
+
+## Phase 26: subtract labels + palette lock + hook fit + de-crowd + light-phase + DOC
+- [x] 26.01 BOOT0 cold-start: repo recon (31 commits, Ph1-25 arc), CONTEXT.md
+      rebuilt from M0 + history + gates (in-repo truth g25_full_gates 25/26)
+- [x] 26.02 env recon: ffmpeg 7.1.5 / python3.12 (PIL/numpy/cv2/librosa OK);
+      rembg+onnxruntime+yt-dlp install; honest fallback log (no blender,
+      no fpcalc, no whisper -> optional engines)
+- [x] 26.03 silent verify: GH user == Dani-Devlop (repo/workflow scopes, NO
+      admin:gpg_key -> unsigned fallback per policy); TG getMe ==
+      mystationZworkbot; badge policy active (internal-only, see docs/OPS.md)
+- [!] 26.04 SOURCE acquisition ladder (B0.7): repo manifest = Mixkit matrix,
+      NO raw MV; song known (WELCOME - IDK ft. Eminem & J Dilla, Ph18 ID);
+      yt-dlp fetch attempt logged; REF-TAG-A = HTTP 403 dead; -> ONE explicit
+      ask to owner for the raw clip (NO silent substitution)
+- [x] 26.05 S1 subtract labels: v22kit.LABELS_ENABLED=False + LABEL_LOG QC
+      positions (15 historic call sites incl. showcase hook); pop-scene
+      "[ 0.4x -> 1.6x speed ramp ]" spec pill -> IG-native volt scrubber
+- [x] 26.06 S2 palette lock: cutout lift desaturated B&W; ALL wc1_card/M5
+      sources graded_mv (B&W, kills green-leaf/blue leaks); B8 volt-window
+      census gate (off-palette chroma <= 0.02) added
+- [x] 26.07 S3 hook fit: WELCOME/DIES slam fit <= 0.84W pre-camera (B9
+      measures <= 0.92W + >= 8px edge clearance on DECODED frames); fit
+      evidence logged to plan
+- [x] 26.08 S4 de-crowd: counter ghost "stakes" moved to banner-free band +
+      shrunk 210->150; scribble below quote band; coin below banner; counter
+      card lifted clear of volt pill; render-time collision census (B10, 0
+      glyph/ui/sticker overlaps, counter/ghost/ghost2/callout)
+- [x] 26.09 S5 light-phase restructure: HERO cutouts >= 45%H (paint man 900px,
+      paint2 duo 880px, cascade church 880px, isol man 880px) behind footage
+      layouts; density census >= 8 elements per light scene (LIGHT_PHASE)
+- [x] 26.10 S6 shadow depth: paste_person_v25 shadow_boost param (1.7 on
+      paper scenes: contact + cast + behind-patch strengthened)
+- [~] 26.11 render v26 ONE round -> showcase + full master -> B1-B10 gates +
+      blind critic x3 + crop proofs + LIVE delivery (caption "Test Edit
+      Skill") — BLOCKED on 26.04 raw clip; pipeline is turnkey (EMS_WORK/
+      EMS_MV env), stop-loss honored, never faked
+- [x] 26.12 D1: public "Commit signing & verification" README section removed;
+      GPG-PUBLIC-KEY.asc deleted from repo; FAQ/INSTALLATION de-GPG'd;
+      badge policy kept as INTERNAL note in docs/OPS.md
+- [x] 26.13 D2: README.md replaced EXACTLY with the Phase-26 README
+      (badges, features, toolstack, quality/honesty, grouped credits)
+- [x] 26.14 D3: docs/RESOURCES.md credits synced with new README (Credits
+      section added; license-log retained)
+- [x] 26.15 D4/S7/S8: SKILL.md Ph26 baseline appended (B1-B10 binary
+      acceptance + S1-S6 rules + stretch-vs-blocker reframe; frozen ledger
+      G1-G8/LF1-LF8/IG1-IG10/WC1-WC4 untouched)
+- [x] 26.16 commit+push main (unsigned fallback) + badge audit 0 Unverified +
+      chat clean + hygiene TEMP delete

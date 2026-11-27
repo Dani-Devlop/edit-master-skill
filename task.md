@@ -555,5 +555,7 @@ Repository: https://github.com/Dani-Devlop/edit-master-skill
 - [x] 26.15 D4/S7/S8: SKILL.md Ph26 baseline appended (B1-B10 binary
       acceptance + S1-S6 rules + stretch-vs-blocker reframe; frozen ledger
       G1-G8/LF1-LF8/IG1-IG10/WC1-WC4 untouched)
-- [x] 26.16 commit+push main (unsigned fallback) + badge audit 0 Unverified +
-      chat clean + hygiene TEMP delete
+- [x] 26.16 commit+push main (unsigned fallback): 95f9c7a (boot+S1-S6 code)
+      + 04c6400 (DOC rebuild) -> 348423f..04c6400 main; badge audit: both
+      commits reason=unsigned (NO badge shown, 0 Unverified) - policy OK;
+      README 0 signing/GPG mentions; .asc deleted; chat clean + hygiene

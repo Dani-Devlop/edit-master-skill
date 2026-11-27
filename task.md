@@ -559,3 +559,33 @@ Repository: https://github.com/Dani-Devlop/edit-master-skill
       + 04c6400 (DOC rebuild) -> 348423f..04c6400 main; badge audit: both
       commits reason=unsigned (NO badge shown, 0 Unverified) - policy OK;
       README 0 signing/GPG mentions; .asc deleted; chat clean + hygiene
+
+## Phase 28: OPS-RESTORE (self-contained config + Telegram LIVE + push + interim + raw-clip ask)
+- [x] 28.01 O1 proof-of-life: tokens loaded once (env file, never printed);
+      Git API user == Dani-Devlop, TG getMe == mystationZworkbot; initial
+      Progress Report + session-restored notice sent LIVE (msgs 772-773)
+- [!] 28.02 O2 push pending a4c4a42 + e12f6b4: IMPOSSIBLE honestly — both
+      SHAs absent from remote (API 404 "No commit found") and local worktree
+      purged with the old sandbox; Phase-27 adopted banks + smoke scripts
+      lived ONLY in those commits -> LOST; re-adoption queued (O5). Remote
+      main verified at Phase-26 head 41d741e (no drift, ledger frozen
+      25/26, LF6 open). Badge audit on main: 0 Unverified (all
+      reason=unsigned = Verified-or-none policy OK). No fake re-push.
+- [x] 28.03 O3 interim delivery (regenerated from scratch, deterministic
+      seed 26, B&W + volt): kinetic_frame.jpg 1080x1920 (two-font lockup,
+      headline <= 0.9W, no glyph overlap); broll_strip.jpg 2210x640 (6
+      word-timed B-roll tiles); reframe_samples.jpg 1252x500 (16:9 -> 9:16
+      center-vs-tracked, saliency centroid 588,374); module_smoke_45f.mp4
+      720x900 @ 12 fps, 45 frames, 3.75 s, 2.4 MB (hook slam 0.84W <= 0.92W
+      rule honored). Sent to Telegram with caption "Test Edit Skill —
+      module tests (interim, NOT v26 master)" (msgs 774-777)
+- [x] 28.04 O4 raw-clip ASK 26.04 sent (Telegram msg 778): re-send raw
+      WELCOME MV clip (720x900, ~27.9s); v26 stays HONESTLY BLOCKED until
+      arrival; NO Mixkit substitution for the master
+- [~] 28.05 O5 banking: Phase-27 adopted banks lost with purge (28.02);
+      replica tests vs references impossible this run (REF-TAG-A 403 dead +
+      master clip missing) -> match% honestly PENDING v26; stop-loss rule
+      intact; frozen gate ledger G1-G8/LF1-LF8/IG1-IG10 + B7-B10 untouched
+- [~] 28.06 26.11 render v26 remains BLOCKED on 26.04 raw clip (S1-S6 code
+      layer present on main via wc25kit.py; B1-B10 + critic x3 + crop
+      proofs + LIVE "Test Edit Skill" delivery queued on arrival)

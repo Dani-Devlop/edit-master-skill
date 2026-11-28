@@ -620,3 +620,26 @@ Repository: https://github.com/Dani-Devlop/edit-master-skill
       from delivered file) + cue sheet + manifest + sha256 -> Telegram LIVE (msgs 783-787)
 - [~] 31.12 Q3-Q9 queue continues (platform masters, hardening negatives, docs, banking,
       matrix, supercut, cleanup) — reference-dependent items logged honestly when blocked
+
+## Phase 32-R2: v26 residuals + adoption wave + preset reels + supercut v2 (started 2026-11-28)
+- [x] 32.01 BOOT: repo cloned @4716c13; env verified (ffmpeg 7.1.5, py3.12, PIL/numpy/cv2/
+      librosa, tesseract 5.5 + pytesseract); silent creds; TEMP /tmp/ems-work/p32r2 rebuilt
+- [x] 32.02 SOURCE LADDER: PHASE-31 CDN URL -> HTTP 403 (auth_key expired). Owner asked
+      once via Telegram; queue continues per contract (v26b re-render pending re-supply)
+- [x] 32.03 F1 PALETTE CENSUS FIX: scribble/playchip/lemon/numerals/confetti-y/hearts
+      red->volt in kits (historical off-palette sources retired at the draw site);
+      gates B8 extended: TARGETED windows (scribble ghost2 / lemon paint / heart pop /
+      endcard smear) + invert-bite strict rule (monochrome negative + volt-negative
+      band H112-134 ONLY, else FAIL)
+- [x] 32.04 F2 SHADOW ALPHA FIX (histmap gotcha#2, verified empirically: Pillow RGBA
+      draw OVERWRITES pixel alpha): v22kit.paste_person contact shadow, endcard WELCOME
+      drop-shadow (white ghost smear), showcase ghost_outline, dust_scratch specks —
+      ALL now render on transparent patch + canvas.alpha_composite; wc25kit unused
+      direct-draw leftover removed
+- [x] 32.05 F3 HOOK LEGIBILITY: slam_text advance fixed (lx double-accumulation ->
+      natural advance + track param; hook WELCOME/DIES track=-2; type band up to
+      0.385H); verified: old render clipped ink at canvas edge (col 0), new render
+      full word inside frame; gates B9 extended with OCR legibility check (volt-mask
+      -> component filter -> tesseract psm7 -> must read plan word, sim>=0.8)
+- [~] 32.06 v26b re-render + full gates re-run: BLOCKED on SOURCE re-supply (403);
+      code+gates landed; renders immediately when owner provides fresh URL

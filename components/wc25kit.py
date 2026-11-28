@@ -251,7 +251,6 @@ def paste_person_v25(img, center, hh, which, rot=0.0, alpha=1.0,
         sh_full = sh_full.filter(ImageFilter.GaussianBlur(12))
         img.alpha_composite(sh_full, (px - 30, py - 30))
         # (2) contact shadow: dark blurred ellipse UNDER the feet
-        d = ImageDraw.Draw(img, "RGBA")
         sw = int(im2.width * 0.88)
         sh_img = Image.new("RGBA", (sw + 40, 60), (0, 0, 0, 0))
         ImageDraw.Draw(sh_img).ellipse([20, 10, 20 + sw, 50],

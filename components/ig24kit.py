@@ -81,7 +81,8 @@ def kick_pulse(t, kicks, amp=0.03, decay=7.0):
 
 # ---------------- IG4: kinetic slams ----------------
 def slam_text(img, center, word, font_fn, t, t0, per_letter=0.05, size=150,
-              color=VOLT + (245,), stroke=(240, 240, 238, 235), chroma=True, base=False):
+              color=VOLT + (245,), stroke=(240, 240, 238, 235), chroma=True, base=False,
+              track=0):
     """per-letter stagger slam: each letter enters 30-60ms late with squash/stretch
     1.08/0.94 on impact + chromatic split 2-3px + outline+fill double layer.
     base=True: ALWAYS draw the full word (composed frame-0 / loop-freeze safety);
@@ -119,7 +120,11 @@ def slam_text(img, center, word, font_fn, t, t0, per_letter=0.05, size=150,
             sc = min(1.08, max(0.94, sc))
         # chromatic split 2-3px during impact
         off = int(3 * pop) if chroma else 0
-        lx = x + (sum(widths[:i]) if i else 0)
+        # F3 (Ph32): natural advance ONLY — the old `lx = x + sum(widths[:i])`
+        # double-accumulated position (x already advanced) rendering the word
+        # ~1.5x wider than the S3 fit loop measured (plan 690px vs actual 1014px
+        # ink span on decoded frames) -> edge-cropped hook. track (px) tightens.
+        lx = x
         f2 = f
         if abs(sc - 1.0) > 0.004:
             sz = max(8, int(size * sc))
@@ -136,7 +141,7 @@ def slam_text(img, center, word, font_fn, t, t0, per_letter=0.05, size=150,
                    stroke_width=2, stroke_fill=(246, 246, 242, int(140 * pop)))
         d.text((ox, oy), ch, font=f2, fill=color, stroke_width=max(2, size // 60),
                stroke_fill=stroke)
-        x += widths[i]
+        x += widths[i] + track
     return letters_drawn
 
 # ---------------- IG2: pseudo-UI ----------------
@@ -167,8 +172,9 @@ def cursor_tap(img, x, y, t, t0, dur=0.55, scale=1.0):
             d.ellipse([cx - rr, cy - rr, cx + rr, cy + rr], outline=VOLT + (a,), width=4)
     return True
 
-def heart_burst(d, cx, cy, t, t0, n=7, spread=120, color=(240, 78, 90, 235)):
-    """hearts pop outward with gravity arc (payoff beat)"""
+def heart_burst(d, cx, cy, t, t0, n=7, spread=120, color=VOLT + (235,)):
+    """hearts pop outward with gravity arc (payoff beat). F1 (Ph32): volt ONLY —
+    the red-pink 240,78,90 default was an off-palette leak (B8 targeted census)"""
     dt = t - t0
     if dt < 0 or dt > 0.9:
         return 0
@@ -307,7 +313,10 @@ def dust_scratch(img, t, seed=None, p_dust=0.55, scratch=False):
     rng = np.random.default_rng(int((t * 7 + 3) * 13) % (2 ** 32) if seed is None else seed)
     if rng.random() > p_dust and not scratch:
         return img
-    d = ImageDraw.Draw(img, "RGBA")
+    # F2 (Ph32): dust via alpha_composite patch — never translucent ink directly
+    # on the RGBA canvas (draw overwrites alpha; blending keeps dust subtle)
+    _dpatch = Image.new("RGBA", (img.width, img.height), (0, 0, 0, 0))
+    d = ImageDraw.Draw(_dpatch)
     for _ in range(rng.integers(2, 7)):
         x, y = rng.uniform(0, img.width), rng.uniform(0, img.height)
         s = rng.uniform(1.5, 4.5)
@@ -315,6 +324,7 @@ def dust_scratch(img, t, seed=None, p_dust=0.55, scratch=False):
     if scratch or rng.random() < 0.10:
         x = rng.uniform(0, img.width)
         d.line([(x, 0), (x + rng.uniform(-6, 6), img.height)], fill=(240, 240, 238, 42), width=1)
+    img.alpha_composite(_dpatch)
     return img
 
 def light_leak(img, p, edge="right"):

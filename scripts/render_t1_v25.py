@@ -683,7 +683,14 @@ def draw_scene(idx, t):
             f_g = R.playfair(f_g.size - 10, 900)
             bb = d.textbbox((0, 0), "WELCOME", font=f_g)
         ox, oy = (W - bb[2] + bb[0]) / 2, H * 0.30
-        d.text((ox + 12, oy + 10), "WELCOME", font=f_g, fill=(20, 20, 24, 40))
+        # F2 (Ph32): translucent drop-shadow via alpha_composite patch — the old
+        # direct draw overwrite-alpha caused the end-card white ghost smear
+        _tw, _th = bb[2] - bb[0], bb[3] - bb[1]
+        _shpad = 28
+        _sh = Image.new("RGBA", (_tw + _shpad * 2, _th + _shpad * 2), (0, 0, 0, 0))
+        ImageDraw.Draw(_sh).text((_shpad + 12, _shpad + 10), "WELCOME", font=f_g, fill=(20, 20, 24, 40))
+        _sh = _sh.filter(ImageFilter.GaussianBlur(4))
+        img.alpha_composite(_sh, (int(ox - _shpad), int(oy - _shpad)))
         d.text((ox, oy), "WELCOME", font=f_g, fill=(16, 17, 20, 245))
         d.text((ox + 6, oy + bb[3] - bb[1] + 40), "to the party", font=R.playfair(84, 900), fill=(150, 165, 30, 235))
         sc = R.spring_scale(max(0.0, t - s0 - 0.10), 0.32)

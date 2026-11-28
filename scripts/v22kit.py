@@ -143,9 +143,15 @@ def paste_person(img, center, hh, which="stair", rot=0.0, shadow=True, alpha=1.0
     cx, cy = center
     px, py = int(cx - im2.width / 2), int(cy - im2.height / 2)
     if shadow:
-        d = ImageDraw.Draw(img, "RGBA")
+        # F2 (Ph32): translucent contact shadow NEVER drawn directly on the RGBA
+        # canvas (Pillow draw overwrites pixel alpha -> ghost smear). Render onto
+        # a transparent patch, blur, then alpha_composite — same pattern as
+        # draw_flame_cluster (historical-map gotcha #2).
         sw = int(im2.width * 0.72)
-        d.ellipse([cx - sw // 2, cy + hh // 2 - 26, cx + sw // 2, cy + hh // 2 + 18], fill=(0, 0, 0, 60))
+        patch = Image.new("RGBA", (sw + 16, 60), (0, 0, 0, 0))
+        ImageDraw.Draw(patch).ellipse([8, 8, 8 + sw, 52], fill=(0, 0, 0, 60))
+        patch = patch.filter(ImageFilter.GaussianBlur(7))
+        img.alpha_composite(patch, (int(cx - patch.width / 2), int(cy + hh // 2 - 34)))
     img.alpha_composite(im2, (px, py))
 
 # ---------------- F3 semantic sticker kit (documented map, no random emoji) ----------------
@@ -168,7 +174,8 @@ def sticker_coin(d, cx, cy, s, color=VOLT + (240,)):
     f = R.mono(max(14, int(r * 0.9)), bold=True)
     d.text((cx - int(r * 0.30), cy - int(r * 0.66)), "$", fill=color, font=f)
 
-def sticker_lemon(d, cx, cy, s, color=(255, 214, 64, 235)):
+def sticker_lemon(d, cx, cy, s, color=VOLT + (235,)):
+    """F1 (Ph32): lemon marker re-paletted VOLT (yellow = off-palette, B8 census)"""
     r = s * 0.42
     d.ellipse([cx - r, cy - r * 0.78, cx + r, cy + r * 0.78], fill=color)
     d.ellipse([cx - r * 0.55, cy - r * 0.42, cx + r * 0.55, cy + r * 0.42], outline=(255, 240, 180, 235), width=4)
@@ -178,7 +185,8 @@ def sticker_lemon(d, cx, cy, s, color=(255, 214, 64, 235)):
 
 def sticker_confetti(d, cx, cy, spread, t, rng_seed=7):
     rng = np.random.default_rng(rng_seed)
-    colors = [VOLT + (235,), (238, 238, 240, 225), (255, 214, 64, 225)]
+    # F1 (Ph32): volt + white ONLY — yellow variant was an off-palette leak
+    colors = [VOLT + (235,), (238, 238, 240, 225)]
     for i in range(16):
         a = rng.uniform(0, 2 * math.pi)
         rr = spread * (0.25 + 0.75 * ((i % 5) / 5)) * (1 + 0.08 * math.sin(t * 3 + i))
@@ -388,8 +396,9 @@ def m1_available():
     return os.path.exists(f"{M1_SEQ}/f_0000.png")
 
 # ---------------- v22.1 target-refined kit (from p21 blind critic gap analysis) ----------------
-def sticker_scribble(d, cx, cy, s, color=(232, 60, 60, 235), loops=2, seed=3):
-    """red scribble ellipse annotation (target signature)"""
+def sticker_scribble(d, cx, cy, s, color=VOLT + (235,), loops=2, seed=3):
+    """F1 (Ph32): volt scribble ellipse annotation — scribble family is VOLT ONLY
+    (red 232,60,60 was the historical off-palette leak B8 census now targets)"""
     rng = np.random.default_rng(seed)
     pts = []
     for L in range(loops):
@@ -409,8 +418,8 @@ def sticker_badge_A(d, cx, cy, s, bg=(246, 244, 238, 255), fg=(20, 20, 22, 255))
     bb = d.textbbox((0, 0), "A", font=f)
     d.text((cx - (bb[2] - bb[0]) / 2, cy - (bb[3] - bb[1]) / 2 - bb[1]), "A", font=f, fill=fg)
 
-def sticker_playchip(d, cx, cy, s, color=(232, 60, 60, 235)):
-    """scribble circle + play button (target annotation voice)"""
+def sticker_playchip(d, cx, cy, s, color=VOLT + (235,)):
+    """scribble circle + play button (F1: volt ONLY)"""
     sticker_scribble(d, cx, cy, s, color=color)
     r = s // 5
     d.polygon([(cx - r * 0.5, cy - r), (cx - r * 0.5, cy + r), (cx + r * 1.1, cy)], fill=color)
@@ -433,8 +442,8 @@ def floating_pill(img, center, text, size=34, rot=-6):
     """volt pill = SMALL FLOATING LABEL (critic fix: not highlighter-behind-keyword)"""
     return R.volt_pill(img, center, text, R.montserrat(size, 900), rot=rot, pad=(16, 8))
 
-def big_numerals(d, center, text, size=150, color=(232, 60, 60, 245)):
-    """big red serif numerals (target $100 voice)"""
+def big_numerals(d, center, text, size=150, color=VOLT + (245,)):
+    """big volt serif numerals (F1: volt ONLY; red retired)"""
     f = R.playfair(size, 900)
     bb = d.textbbox((0, 0), text, font=f)
     d.text((center[0] - (bb[2] - bb[0]) / 2, center[1] - (bb[3] - bb[1]) / 2), text, font=f, fill=color)

@@ -160,19 +160,22 @@ def draw_hook(t, src_start, scene_t0, rate=1.0, slam_word="WELCOME", slam_t0=Non
         # Ph31 measured camera envelope: 1.30x peak (punch+pulse+dutch+weave),
         # right-edge crop at 0.72W pre-camera (decoded 0.937W, 0px clearance)
         # -> pre-camera fit 0.66W -> decoded ~0.86W, >=70px real clearance.
+        # F3 (Ph32): hook word natural-advance + track=-2 (was double-spaced 1.5x);
+        # type band offset UP to H*0.385 so performer occlusion hides <=1 letter
+        # descender edge and the full word OCR-reads (B9 OCR gate).
         size_big = 210
         while R.montserrat(size_big, 900).getlength("WELCOME") > int(W * 0.66) and size_big > 70:
             size_big -= 8
-        IG.slam_text(img, (W / 2, int(H * 0.40)), "WELCOME",
+        IG.slam_text(img, (W / 2, int(H * 0.385)), "WELCOME",
                      lambda s: R.montserrat(s, 900), t,
                      slam_t0 if slam_t0 is not None else s0,
-                     per_letter=0.045, size=size_big, base=True)
+                     per_letter=0.045, size=size_big, base=True, track=-2)
         tw = R.montserrat(size_big, 900).getlength("WELCOME")
         SHOW_HOOK_FIT.update({"word": "WELCOME", "type_width_px": int(tw),
                               "ratio_plan": round(float(tw) / W, 3), "bar_max": 0.92,
                               "note": "pre-camera plan width; B9 measures decoded frames"})
-        bracket_corners(d, (W / 2 - tw / 2 - 40, int(H * 0.31),
-                            W / 2 + tw / 2 + 40, int(H * 0.50)), color=INK, L=40, w=6)
+        bracket_corners(d, (W / 2 - tw / 2 - 40, int(H * 0.30),
+                            W / 2 + tw / 2 + 40, int(H * 0.48)), color=INK, L=40, w=6)
         volt_pill(img, (W / 2, H * 0.265), "IDK x EMINEM x J DILLA",
                   R.montserrat(44, 900), rot=-3)
         if confetti:
@@ -186,7 +189,7 @@ def draw_hook(t, src_start, scene_t0, rate=1.0, slam_word="WELCOME", slam_t0=Non
         IG.slam_text(img, (W / 2, int(H * 0.42)), "DIES",
                      lambda s: R.montserrat(s, 900), t,
                      slam_t0 if slam_t0 is not None else t,
-                     per_letter=0.05, size=size_big, base=True,
+                     per_letter=0.05, size=size_big, base=True, track=-2,
                      stroke=(10, 10, 12, 235))
         f2 = R.playfair(92, 900)
         bb = d.textbbox((0, 0), "at the end", font=f2)
@@ -198,8 +201,14 @@ def draw_hook(t, src_start, scene_t0, rate=1.0, slam_word="WELCOME", slam_t0=Non
             while d.textbbox((0, 0), ghost_outline, font=f_g)[2] > 1030 and f_g.size > 60:
                 f_g = R.playfair(f_g.size - 10, 700)
             bb = d.textbbox((0, 0), ghost_outline, font=f_g)
-            d.text(((W - bb[2] + bb[0]) / 2, 130), ghost_outline,
-                   font=f_g, fill=(255, 255, 255, 36))
+            # F2 (Ph32): translucent ghost type via alpha_composite patch
+            # (never direct draw — Pillow draw overwrites pixel alpha)
+            _gw, _gh = bb[2] - bb[0], bb[3] - bb[1]
+            _gp = 8
+            _gsh = Image.new("RGBA", (_gw + _gp * 2, _gh + _gp * 2), (0, 0, 0, 0))
+            ImageDraw.Draw(_gsh).text((_gp - bb[0], _gp - bb[1]), ghost_outline,
+                                      font=f_g, fill=(255, 255, 255, 36))
+            img.alpha_composite(_gsh, (int((W - bb[2] + bb[0]) / 2 - _gp), 130 - _gp))
     # ---- WC2 performer alpha ON TOP of type (occlusion: head covers type) ----
     if perf is not None:
         img.alpha_composite(perf)

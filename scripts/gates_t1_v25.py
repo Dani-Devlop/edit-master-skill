@@ -486,36 +486,76 @@ res["B7_no_internal_labels"] = {
     "pass": _labdis and len(_lablog) >= 12}
 
 # ---- B8 single-accent palette census (S2) — decoded from FINAL ----
-_b8 = {"frames": 0, "chroma_px": 0, "offpalette_px": 0, "hue_bins": {}}
+# F1 (Ph32): census TARGETS the known accent windows (scribble ghost2 / lemon
+# paint / heart pop / endcard smear) instead of relying on uniform-sampling
+# luck. Invert-bite frames get the strict rule: monochrome negative + the
+# deterministic volt-negative hue band ONLY (volt inverts to ~H124 blue-violet;
+# any other chroma on an invert frame = FAIL).
+_b8 = {"frames": 0, "chroma_px": 0, "offpalette_px": 0, "hue_bins": {},
+       "targeted_windows": {}, "invert_frames": 0, "invert_violations": 0}
 if cap is not None:
     _n8 = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
     _idx8 = [int(k * (_n8 - 2) / 24.0) for k in range(25)]
+    _tgt8 = []
+    for _wn, (_t0, _t1) in {
+        "scribble_ghost2": (ST.get("ghost2", 4.8) + 0.4, ST.get("ghost2", 4.8) + 1.2),
+        "lemon_paint": (ST.get("paint", 11.9) + 0.4, ST.get("paint", 11.9) + 1.2),
+        "heart_pop": (ST.get("pop", 17.6) + 0.4, ST.get("pop", 17.6) + 1.2),
+        "endcard_smear": (ST.get("endcard", 25.6) + 0.5, ST.get("endcard", 25.6) + 1.5),
+    }.items():
+        _tgt8.append((_wn, _t0, _t1))
+        _idx8 += [int(_t0 * FPS), int((_t0 + _t1) / 2 * FPS), int(_t1 * FPS)]
+    _inv8 = [ST.get("callout2", 22.0) + d / FPS for d in (0, 1, 2, 3)]
+    _idx8 = sorted(set(min(i, _n8 - 2) for i in _idx8))
     _got8 = _read_frames_at(FINAL, _idx8)
+    _winof = {}
     for _f8 in _idx8:
         if _f8 not in _got8:
             continue
         _fr8 = _got8[_f8]
+        _t8 = _f8 / float(FPS)
+        _is_inv = any(abs(_t8 - _it) < 0.30 for _it in _inv8)
         _sm8 = cv2.resize(_fr8, (270, 480))
         _h8 = cv2.cvtColor(_sm8, cv2.COLOR_BGR2HSV)
         _ch8 = (_h8[..., 1] > 90) & (_h8[..., 2] > 60)
-        _vo8 = _ch8 & (_h8[..., 0] >= 24) & (_h8[..., 0] <= 48)  # volt window
-        _bad8 = _ch8 & (~_vo8)
+        if _is_inv:
+            _neg8 = _ch8 & (_h8[..., 0] >= 112) & (_h8[..., 0] <= 134)  # volt-negative
+            _bad8 = _ch8 & (~_neg8)
+            _b8["invert_frames"] += 1
+            if int(_bad8.sum()) > 0.004 * 270 * 480:
+                _b8["invert_violations"] += 1
+        else:
+            _vo8 = _ch8 & (_h8[..., 0] >= 24) & (_h8[..., 0] <= 48)  # volt window
+            _bad8 = _ch8 & (~_vo8)
         _b8["frames"] += 1
         _b8["chroma_px"] += int(_ch8.sum())
         _b8["offpalette_px"] += int(_bad8.sum())
         for _hue, _cnt in zip(*np.unique(_h8[..., 0][_bad8] // 5, return_counts=True)):
             _b8["hue_bins"][str(int(_hue) * 5)] = _b8["hue_bins"].get(str(int(_hue) * 5), 0) + int(_cnt)
+        _wn_hit = next((w for w, a, b in _tgt8 if a <= _t8 <= b), None)
+        if _wn_hit:
+            _wst = _winof.setdefault(_wn_hit, {"frames": 0, "bad_px": 0})
+            _wst["frames"] += 1
+            _wst["bad_px"] += int(_bad8.sum())
+    _b8["targeted_windows"] = _winof
 _b8_frac = _b8["offpalette_px"] / max(1, _b8["chroma_px"])
 res["B8_palette_census"] = {
     "frames_sampled": _b8["frames"],
     "chroma_px": _b8["chroma_px"], "offpalette_px": _b8["offpalette_px"],
     "offpalette_frac": round(float(_b8_frac), 5),
     "top_offhue_bins": dict(sorted(_b8["hue_bins"].items(), key=lambda kv: -kv[1])[:5]),
-    "bar": "off-palette chroma <= 0.02 (volt = HSV H 24-48, S>90, V>60; "
-           "no blue invert / green leaves / colored cutouts)",
-    "pass": _b8["frames"] >= 20 and float(_b8_frac) <= 0.02}
+    "targeted_windows": _b8["targeted_windows"],
+    "invert_frames_checked": _b8["invert_frames"],
+    "invert_violations": _b8["invert_violations"],
+    "bar": "off-palette chroma <= 0.02 (volt = HSV H 24-48, S>90, V>60); F1: "
+           "targeted scribble/lemon/heart/endcard windows clean; invert frames = "
+           "monochrome negative + volt-negative ONLY",
+    "pass": _b8["frames"] >= 20 and float(_b8_frac) <= 0.02
+            and _b8["invert_violations"] == 0}
 
 # ---- B9 hook fit (S3) — decoded frames, volt-type bbox in hook band ----
+# F3 (Ph32): adds OCR legibility — decoded hook frames, volt type isolated to
+# black-on-white (component-filtered), tesseract must read the plan word.
 _b9 = {"frames": 0, "ratios": [], "min_clear_px": None}
 if cap is not None:
     _hk = ST.get("hook") or 0.0
@@ -542,12 +582,47 @@ if cap is not None:
         _clr = round(float(min(_cols[0], 269 - _cols[-1])) / 270.0 * 1080, 1)
         _b9["min_clear_px"] = _clr if _b9["min_clear_px"] is None else min(_b9["min_clear_px"], _clr)
 _b9_max = max(_b9["ratios"]) if _b9["ratios"] else 1.0
+
+# F3 (Ph32): OCR legibility check on decoded hook frames
+_b9ocr = {"frames": 0, "texts": [], "match": False}
+try:
+    import pytesseract
+    import difflib
+    _word9 = str((P.get("hook_fit") or {}).get("word") or "WELCOME")
+    if cap is not None and "hook" in ST:
+        _hk9 = ST["hook"]
+        _got9o = _read_frames_at(FINAL, [int((_hk9 + d) * FPS) for d in (0.60, 1.20, 1.80)])
+        for _fro in _got9o.values():
+            _hh9 = cv2.cvtColor(_fro, cv2.COLOR_BGR2HSV)
+            _vm = ((_hh9[..., 0] >= 24) & (_hh9[..., 0] <= 48) &
+                   (_hh9[..., 1] > 90) & (_hh9[..., 2] > 60)).astype(np.uint8) * 255
+            _vm = cv2.morphologyEx(_vm, cv2.MORPH_CLOSE, np.ones((9, 9), np.uint8))
+            # component filter: keep letter-sized blobs (kills confetti specks)
+            _nlab, _lab, _st, _ce = cv2.connectedComponentsWithStats(_vm, 8)
+            _keep = np.zeros_like(_vm)
+            for _li in range(1, _nlab):
+                if _st[_li, cv2.CC_STAT_HEIGHT] >= 55 and _st[_li, cv2.CC_STAT_WIDTH] >= 15:
+                    _keep[_lab == _li] = 255
+            _ocr_img = Image.fromarray(255 - _keep)
+            _txt = pytesseract.image_to_string(
+                _ocr_img, config="--psm 7 -c tessedit_char_whitelist=ABCDEFGHIJKLMNOPQRSTUVWXYZ")
+            _txt = "".join(c for c in _txt.upper() if c.isalpha())
+            _sim = difflib.SequenceMatcher(None, _word9, _txt).ratio()
+            _b9ocr["frames"] += 1
+            _b9ocr["texts"].append(_txt)
+            if _txt == _word9 or _sim >= 0.8:
+                _b9ocr["match"] = True
+except Exception as _e:
+    _b9ocr["error"] = str(_e)
 res["B9_hook_fit"] = {
     "measured": _b9,
+    "ocr": _b9ocr,
     "plan_hook_fit": P.get("hook_fit") or {},
     "bar": "volt hook-type width <= 0.92W with >=8px edge clearance "
-           "(decoded frames; NO edge-cropped letters)",
-    "pass": _b9["frames"] >= 2 and _b9_max <= 0.92 and (_b9["min_clear_px"] or 0) >= 8}
+           "(decoded frames; NO edge-cropped letters); F3: OCR of decoded hook "
+           "frame must read the full plan word",
+    "pass": _b9["frames"] >= 2 and _b9_max <= 0.92 and (_b9["min_clear_px"] or 0) >= 8
+            and bool(_b9ocr.get("match"))}
 
 # ---- B10 no glyph overlap (S4) — render-time collision census ----
 _c10 = P.get("collision_census") or {}

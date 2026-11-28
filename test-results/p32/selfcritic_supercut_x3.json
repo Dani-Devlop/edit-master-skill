@@ -1,0 +1,37 @@
+{
+ "protocol": "self-critic x3 rubric-only (NO IG target refs reachable \u2014 match% stays PENDING)",
+ "refs_status": {
+  "P1_Hera": "absent",
+  "P2_4quadrant": "absent",
+  "P3_raw_edited": "absent",
+  "yt_dlp": "bot-blocked since 26.04",
+  "owner": "asked again in Ph32 report"
+ },
+ "sheet": "/tmp/ems-work/p32r2/supercut_contact_sheet.jpg",
+ "runs_overall": [
+  6.3,
+  6.2,
+  5.5
+ ],
+ "median_overall": 6.2,
+ "axes_avg": {
+  "structural_grammar": 7.0,
+  "people_subjects": 7.0,
+  "typography_register": 5.5,
+  "sticker_vocabulary": 6.25,
+  "color_story": 6.0,
+  "density_overlap": 5.5,
+  "motion_feel": 6.5,
+  "overall_impression": 6.1
+ },
+ "top_gaps": [
+  "display headlines render with mushy/clipped glyphs ('STILLM ND', 'NIGHTDRIVE' missing letters, frame-4 listicle lines barely legible)",
+  "off-world chroma breaks the B&W+volt discipline \u2014 tan/beige card frames ('THE RIVER CROSSING', 'TEST EDIT SKILL') read as a different system",
+  "repeated near-identical car/sunset footage fills slots without variety, and bottom-bar captions sit as static safe overlays limiting motion feel",
+  "glyph collisions/clipping: 'STILL M ND' silhouette eats the 'I's and listicle entries ('designed', 'records') are struck through by bars rather than composed"
+ ],
+ "grammar_conformance": {
+  "vs_A_single_column_lockups": "our reels use single-column full-frame footage + lockups (REFERENCES.md grammar A) on hook/footage/endcard ops",
+  "vs_B_4quadrant_collage": "4-quadrant collage is a v26-master-scene grammar; preset reels use video-in-card as the collage-family stand-in (1 card per scene) \u2014 documented, not silent"
+ }
+}

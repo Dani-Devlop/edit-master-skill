@@ -667,3 +667,8 @@ Repository: https://github.com/Dani-Devlop/edit-master-skill
       end card + loop-hold) — loudness -14.2 LUFS (fixed: bed RMS-normalized, loudnorm
       linear was TP-clamped on sparse mix), per-segment world-aware census ALL PASS,
       duration PASS -> Telegram LIVE
+- [x] 32.12 F9 IG-MATCH honest protocol: IG refs (P1 Hera / P2 4-quadrant / P3 Raw-Edited)
+      NOT reachable (absent since ingest per docs/REFERENCES.md; yt-dlp bot-blocked since
+      26.04; owner asked again) -> NO fabricated match%. Delivered: self-critic x3
+      rubric-only over supercut sheet — median 6.2 (runs 6.3/6.2/5.5) + grammar
+      conformance notes vs documented grammars A/B (test-results/p32/selfcritic_supercut_x3.json)

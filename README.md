@@ -130,6 +130,22 @@ MIT — use it, change it, ship it. See LICENSE.
 
 If this saves you an editor's fee, ⭐ the repo so more creators find it.
 
+## Results (Phase 32-R2)
+- **Preset reels**: generalized preset renderer (op engine) -> 5 FULL genre reels
+  (cars/fitness/education/branding/mindset), 12s 720x1280@30, all gates PASS
+  (volt census 0.0-6e-05, hook fit 0.60-0.64W, loudnorm, QA keyframes).
+- **Supercut v2**: 30.5s variety montage, -14.2 LUFS, loop-hold end card,
+  per-segment world-aware census PASS.
+- **Adoption wave**: histmap skill (EXACT helper copies + F12 family, ZERO neon
+  route lines), 55-entry internal prompt bank, 8 repos security-graded + banked
+  (all MIT, zero network-capable files banked, deny-lists recorded).
+- **Residual fixes**: palette census targets + invert rule (F1), Pillow
+  alpha-overwrite shadow discipline (F2, verified empirically), hook natural
+  advance + OCR legibility gate (F3, verified: ink was clipped at canvas edge).
+- **Honest pendings**: v26b master re-render awaits fresh SOURCE URL (CDN 403);
+  match% vs IG refs pending (refs unreachable since 26.04); self-critic x3
+  median 6.2 delivered instead.
+
 ## Results (Phase 31)
 - **v26 master delivered**: T-1 WELCOME 27.9s 1080x1920@30 — 29 gate IDs PASS,
   B1-B10 binary ALL YES, collision census 700 frames / 0 overlaps, decoded hook

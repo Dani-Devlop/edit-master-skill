@@ -82,6 +82,19 @@ admin:gpg_key scope -> intentional unsigned fallback. Only Dani-Devlop, only mai
   texture. Ph25 frozen gate ledger + binary B1-B6 + WC1-WC4 provided code +
   10s showcase-first + stop-loss (commit 348423f).
 
+## CURRENT STATE AT PH32-R2 (2026-11-28)
+- F1-F3 v26 residuals FIXED in code+gates (palette census targets + invert rule;
+  alpha_composite shadow discipline x4; hook natural advance + B9 OCR gate).
+  v26b re-render BLOCKED on SOURCE re-supply (CDN 403; owner asked once).
+- ADOPTION WAVE banked: components/adopted/{histmap,ffmpeg-skill,claude-motion-design,
+  motion-skills,claude-animation-skills,motion-graphics,claude-shorts,ghost-editor,
+  3dviz-pro-max}/ + presets/ghost-styles/ + components/prompt-bank/ (55 internal
+  entries). Security grades in components/adopted/ADOPTION-LOG.md (all MIT,
+  zero network-capable files banked).
+- PRESET RENDERER: scripts/p32_preset_render.py + presets/p32/*.json -> 5 FULL
+  genre reels PASS + delivered LIVE; supercut v2 30.5s -14.2 LUFS PASS + LIVE.
+- Self-critic x3 (no IG refs): median 6.2. Match% vs IG refs PENDING (unreachable).
+
 ## CURRENT STATE AT PH31
 - v26 MASTER DELIVERED: T1_welcome_v26_9x16.mp4 (27.9s, sha256 7a2deb83e2a3488e...),
   FULL GATES 29 PASS, B1-B10 ALL YES, census 700/0, loudnorm -14, critic x3 median 7.7

@@ -145,3 +145,31 @@ Telegram owner 2040835005 via bot mystationZworkbot, LIVE-only inline reports ev
 TEMP under /tmp/ems-work/<run>/ deleted after output; KEEP-LIST honored (masters +
 proofs + verdicts + plans); chat surface clean; tokens silent; badge policy internal
 (see docs/OPS.md); only Dani-Devlop, only main.
+
+## PHASE 32-R2 (2026-11-28) — v26 residuals + adoption wave + preset reels + supercut v2
+Owner directive: F1-F10 in one autonomous run. SOURCE MV CDN link expired (403) —
+v26b re-render honestly blocked, owner asked once, queue continued per contract.
+- F1 palette census: historical off-palette draw sites retired (scribble/playchip/
+  lemon/hearts/numerals/confetti-yellow -> volt); B8 census extended with TARGETED
+  windows + strict invert rule (monochrome negative + volt-negative H112-134 only).
+- F2 shadow alpha discipline: Pillow RGBA draw overwrites pixel alpha (VERIFIED
+  empirically: 60-alpha draw on opaque canvas -> alpha 60). Four sites patched to
+  patch+alpha_composite (paste_person shadow, endcard WELCOME smear, ghost outline,
+  dust specks). Root cause of the end-card white ghost smear.
+- F3 hook: slam_text double-accumulated letter positions (ink 1014px vs plan 690px
+  measured) -> natural advance + track; B9 extended with OCR legibility gate.
+- F4 histmap adopted (EXACT copies + gotcha helpers + F12 family) + 7s replica PASS.
+- F5 prompt bank: prompt-motion.com Cloudflare-hard-blocked (headless click attempted);
+  archive.org unreachable -> 55-entry INTERNAL vocabulary bank, zero fabricated content.
+- F6 15-repo checklist: 8 repos security-graded + banked (all MIT; 4 fetch scripts
+  deny-listed; ghost-editor Mac renderer + scripts denied; 19-vs-7 style discrepancy
+  logged); 3 SKIP (stack), 1 SKIP (GPU research), 2 reference-only.
+- F7 generalized preset renderer -> 5 FULL genre reels (cars/fitness/education/
+  branding/mindset) ALL gates PASS, delivered LIVE (msgs 805-809).
+- F8 supercut v2 30.5s, -14.2 LUFS, loop-hold end card, per-segment census PASS (msg 811).
+- F9 match% honestly PENDING (no reachable refs); self-critic x3 median 6.2 delivered.
+- Lessons: (1) Pillow translucent-draw overwrite is a REAL failure class — patch+composite
+  only; (2) sparse audio mixes cannot be loudnorm-ed to -14 within TP — build a dense bed;
+  (3) palette census must be palette-WORLD-aware (volt vs histmap F12 families);
+  (4) shell sessions in this sandbox may SIGKILL mid-command — commands must be
+  idempotent/resumable and files verified in separate calls.

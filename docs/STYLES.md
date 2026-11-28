@@ -366,3 +366,25 @@ measured per video with a before/after pair in the scoresheet.
   kills yuv420 chroma-ringing slivers at high-contrast edges (B9 evidence).
 - B10 census is per-frame accumulate (caption pill registered in every scene,
   evaluated once per frame; 700 frames, 0 violations on v26).
+
+---
+
+# STYLES v5 additions (Phase 32)
+
+## HISTMAP F12 family (components/adopted/histmap/)
+- Palette: parchment-tan `#B59F78` terrain, snow `#F4F7FA`, slate-teal water `#4B7282`,
+  moonlit night = dark parchment `#56523A` + deep navy-teal `#1C303E`, ink `#2A2417`
+- Motion: smootherstep S-curve camera (900x1600 -> 720x1280), spring_pop 0->1.16->0.96->1.0,
+  parabolic_hop (sin(u*pi)*h, tilt sin(2u*pi)*8.5deg)
+- Signature: physical props ONLY (chains/planks/barrels/crates/reeds/watchtower banners/
+  alpha-composited flame clusters) — **ZERO neon route lines** (hard rule, census-checked)
+- Type: bold italic serif map labels (DejaVuSerif-BoldItalic spec; FreeSerif fallback logged),
+  lower-third auto-fit 34->28pt at tw>W-56
+- Audio: sparse one-shot foley 0.20-0.28 gain under 0dB narration, never looped
+
+## Volt-world additions (Phase 32 F1/F3)
+- scribble / arrow / underline / hearts / lemon / numerals / confetti = VOLT ONLY
+  (red 232,60,60 + yellow 255,214,64 retired; census targets each window)
+- Invert bite frames: monochrome negative + volt-negative band H112-134 ONLY
+- Hook type: natural advance (double-spacing bug fixed), track=-2, fit 0.66W pre-camera,
+  B9 + OCR legibility (tesseract must read the plan word)

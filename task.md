@@ -672,3 +672,10 @@ Repository: https://github.com/Dani-Devlop/edit-master-skill
       26.04; owner asked again) -> NO fabricated match%. Delivered: self-critic x3
       rubric-only over supercut sheet — median 6.2 (runs 6.3/6.2/5.5) + grammar
       conformance notes vs documented grammars A/B (test-results/p32/selfcritic_supercut_x3.json)
+- [x] 32.13 F10 DOCS: GALLERY p32 deliveries+scores / STYLES v5 (+F12 histmap + volt
+      F1/F3 additions) / HISTORY Ph32 arc / RESOURCES 15-repo grades / CONTEXT Ph32
+      state / README results — all committed+pushed per item (236366e 7319bc3 f02cdf9
+      26485ca 7811f20 05c515e 2700a08)
+- [x] 32.14 FINAL: secret-scan clean (no tokens in repo; chat-id/bot-name pre-existing
+      owner docs only); TEMP /tmp/ems-work/p32r2 + adoption clones deleted after
+      delivery; badge audit (Verified-or-none); final report -> Telegram

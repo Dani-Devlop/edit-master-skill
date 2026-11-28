@@ -195,3 +195,12 @@ All license-logged in the per-phase sections above.
   font fallback chain logged in components/adopted/histmap/README.md.
 - prompt-motion.com free prompt bank: components/prompt-bank/ (license note
   inside; vocabulary-only adoption, no engine coupling). See F5.
+
+## Phase 32 15-repo security grades (F6 — see components/adopted/ADOPTION-LOG.md)
+ffmpeg-skill A · claude-motion-design CAUTION (4 fetch scripts deny-listed) ·
+motion-skills A · claude-animation-skills A- (2 files denied) · motion-graphics B
+(scripts denied) · claude-shorts A · ghost-editor B (scripts + Mac renderer denied;
+19-vs-7 style discrepancy logged) · 3dviz-pro-max A- · SKIP: yt-dlp/whisper/hyper-frames
+(in stack), MotionClone (GPU research) · REFERENCE-ONLY: threejs-skills, Motion-graphics-skill.
+ALL adopted repos verified MIT. prompt-motion.com: UNREACHABLE (Cloudflare Turnstile hard-
+block + archive.org dead) — external prompt content NOT banked, nothing fabricated.

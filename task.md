@@ -657,3 +657,9 @@ Repository: https://github.com/Dani-Devlop/edit-master-skill
       (GPU research) + 2 REFERENCE-ONLY; ALL MIT verified; ghost styles -> presets/
       ghost-styles/; 19-vs-7 style discrepancy logged; drops/stop-loss recorded in
       components/adopted/ADOPTION-LOG.md
+- [x] 32.10 F7 GENERALIZED PRESET RENDERER: scripts/p32_preset_render.py (preset-JSON op
+      engine: hook_slam/footage/video_in_card/listicle/shrink_card/endcard + texture
+      stack; resolution-parameterized cam_pulse; energy-window reframe; foley->loudnorm
+      -14) + presets/p32/{cars,fitness,education,branding,mindset}.json + 5 FULL reels
+      rendered 12.0s 720x1280@30, ALL gates PASS (census 0.0-6e-05, hook 0.60-0.64W) ->
+      Telegram LIVE msgs 805-809

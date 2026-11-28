@@ -1,0 +1,187 @@
+[
+ {
+  "genre": "cars",
+  "out": "/tmp/ems-work/p32r2/reels/preset_cars_12s.mp4",
+  "rc": 0,
+  "err": "",
+  "gate": {
+   "frames": 12,
+   "offpalette_frac": 0.0,
+   "census_pass": true,
+   "hook_ratios": [
+    0.6,
+    0.6,
+    0.6,
+    0.448,
+    0.611,
+    0.548
+   ],
+   "hook_pass": true,
+   "probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+     {
+      "codec_type": "video",
+      "width": 720,
+      "height": 1280
+     },
+     {
+      "codec_type": "audio"
+     }
+    ],
+    "format": {
+     "duration": "12.000000"
+    }
+   }
+  }
+ },
+ {
+  "genre": "fitness",
+  "out": "/tmp/ems-work/p32r2/reels/preset_fitness_12s.mp4",
+  "rc": 0,
+  "err": "",
+  "gate": {
+   "frames": 12,
+   "offpalette_frac": 6e-05,
+   "census_pass": true,
+   "hook_ratios": [
+    0.637,
+    0.633,
+    0.633,
+    0.452,
+    0.615,
+    0.548
+   ],
+   "hook_pass": true,
+   "probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+     {
+      "codec_type": "video",
+      "width": 720,
+      "height": 1280
+     },
+     {
+      "codec_type": "audio"
+     }
+    ],
+    "format": {
+     "duration": "12.000000"
+    }
+   }
+  }
+ },
+ {
+  "genre": "education",
+  "out": "/tmp/ems-work/p32r2/reels/preset_education_12s.mp4",
+  "rc": 0,
+  "err": "",
+  "gate": {
+   "frames": 12,
+   "offpalette_frac": 0.0,
+   "census_pass": true,
+   "hook_ratios": [
+    0.633,
+    0.626,
+    0.626,
+    0.448,
+    0.611,
+    0.548
+   ],
+   "hook_pass": true,
+   "probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+     {
+      "codec_type": "video",
+      "width": 720,
+      "height": 1280
+     },
+     {
+      "codec_type": "audio"
+     }
+    ],
+    "format": {
+     "duration": "12.000000"
+    }
+   }
+  }
+ },
+ {
+  "genre": "branding",
+  "out": "/tmp/ems-work/p32r2/reels/preset_branding_12s.mp4",
+  "rc": 0,
+  "err": "",
+  "gate": {
+   "frames": 12,
+   "offpalette_frac": 6e-05,
+   "census_pass": true,
+   "hook_ratios": [
+    0.622,
+    0.615,
+    0.615,
+    0.448,
+    0.611,
+    0.552
+   ],
+   "hook_pass": true,
+   "probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+     {
+      "codec_type": "video",
+      "width": 720,
+      "height": 1280
+     },
+     {
+      "codec_type": "audio"
+     }
+    ],
+    "format": {
+     "duration": "12.000000"
+    }
+   }
+  }
+ },
+ {
+  "genre": "mindset",
+  "out": "/tmp/ems-work/p32r2/reels/preset_mindset_12s.mp4",
+  "rc": 0,
+  "err": "",
+  "gate": {
+   "frames": 12,
+   "offpalette_frac": 0.0,
+   "census_pass": true,
+   "hook_ratios": [
+    0.611,
+    0.607,
+    0.607,
+    0.448,
+    0.615,
+    0.548
+   ],
+   "hook_pass": true,
+   "probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+     {
+      "codec_type": "video",
+      "width": 720,
+      "height": 1280
+     },
+     {
+      "codec_type": "audio"
+     }
+    ],
+    "format": {
+     "duration": "12.000000"
+    }
+   }
+  }
+ }
+]

@@ -1,0 +1,28 @@
+{
+ "genre": "mindset", "world": "volt", "res": [720, 1280], "fps": 30, "dur": 12.0,
+ "hook": {"word": "STILL MIND", "sub": "breathe first", "fit_w": 0.66},
+ "clip": {"path": "/tmp/ems-work/p32r2/mixkit/mindset.mp4", "loop_short": true},
+ "beats": [
+  {"t": 0.0,  "dur": 2.2, "op": "hook_slam", "src_t": 0.3},
+  {"t": 2.2,  "dur": 2.0, "op": "footage", "src_t": 2.5, "sticker": "scribble", "caption": false},
+  {"t": 4.2,  "dur": 2.2, "op": "video_in_card", "src_t": 1.2, "card_w": 0.62, "cx": 0.5, "cy": 0.44, "tilt": -4},
+  {"t": 6.4,  "dur": 1.8, "op": "footage", "src_t": 4.0, "sticker": "arrow"},
+  {"t": 8.2,  "dur": 2.0, "op": "listicle", "src_t": 0.8},
+  {"t": 10.2, "dur": 0.7, "op": "shrink_card", "src_t": 3.0, "tilt": -6},
+  {"t": 10.9, "dur": 1.1, "op": "endcard", "src_t": 2.0, "caption": false}
+ ],
+ "listicle": {"items": ["breathe", "focus", "let go"], "value": 8137},
+ "caption": {"text": "calm is power."},
+ "endcard": {"word": "STILL", "pill": "TEST EDIT SKILL"},
+ "audio": {"foley": [
+   {"t": 0.10, "kind": "thump", "gain": 0.24},
+   {"t": 2.20, "kind": "thump", "gain": 0.22},
+   {"t": 4.20, "kind": "whoosh", "gain": 0.24},
+   {"t": 6.40, "kind": "thump", "gain": 0.22},
+   {"t": 8.20, "kind": "knock", "gain": 0.22},
+   {"t": 8.75, "kind": "knock", "gain": 0.22},
+   {"t": 9.30, "kind": "knock", "gain": 0.22},
+   {"t": 10.20, "kind": "whoosh", "gain": 0.24},
+   {"t": 10.90, "kind": "thump", "gain": 0.24}],
+  "bed_gain": 0.05}
+}

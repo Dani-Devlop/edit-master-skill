@@ -663,3 +663,7 @@ Repository: https://github.com/Dani-Devlop/edit-master-skill
       -14) + presets/p32/{cars,fitness,education,branding,mindset}.json + 5 FULL reels
       rendered 12.0s 720x1280@30, ALL gates PASS (census 0.0-6e-05, hook 0.60-0.64W) ->
       Telegram LIVE msgs 805-809
+- [x] 32.11 F8 SUPERCUT v2: 30.5s variety montage (13 reel segments + histmap + designed
+      end card + loop-hold) — loudness -14.2 LUFS (fixed: bed RMS-normalized, loudnorm
+      linear was TP-clamped on sparse mix), per-segment world-aware census ALL PASS,
+      duration PASS -> Telegram LIVE

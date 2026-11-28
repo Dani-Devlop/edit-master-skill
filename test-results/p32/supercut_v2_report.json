@@ -1,0 +1,97 @@
+{
+ "out": "/tmp/ems-work/p32r2/reels/supercut_v2_31s.mp4",
+ "planned_total": 30.9,
+ "measured_duration": 30.5,
+ "loudnorm_pass1_I": null,
+ "ebur128_final_I": -14.2,
+ "loudness_pass": true,
+ "duration_pass": true,
+ "segment_census_all_pass": true,
+ "segment_census": [
+  {
+   "t_mid": 1.1,
+   "world": "volt",
+   "offpalette_frac": 0.0,
+   "pass": true
+  },
+  {
+   "t_mid": 3.2,
+   "world": "volt",
+   "offpalette_frac": 0.0,
+   "pass": true
+  },
+  {
+   "t_mid": 5.3,
+   "world": "volt",
+   "offpalette_frac": 0.0,
+   "pass": true
+  },
+  {
+   "t_mid": 7.3,
+   "world": "volt",
+   "offpalette_frac": 0.0,
+   "pass": true
+  },
+  {
+   "t_mid": 9.2,
+   "world": "volt",
+   "offpalette_frac": 0.0,
+   "pass": true
+  },
+  {
+   "t_mid": 12.0,
+   "world": "histmap",
+   "offpalette_frac": 0.0,
+   "pass": true
+  },
+  {
+   "t_mid": 14.9,
+   "world": "volt",
+   "offpalette_frac": 0.0,
+   "pass": true
+  },
+  {
+   "t_mid": 17.1,
+   "world": "volt",
+   "offpalette_frac": 0.0,
+   "pass": true
+  },
+  {
+   "t_mid": 19.2,
+   "world": "volt",
+   "offpalette_frac": 0.0,
+   "pass": true
+  },
+  {
+   "t_mid": 21.3,
+   "world": "volt",
+   "offpalette_frac": 0.0004,
+   "pass": true
+  },
+  {
+   "t_mid": 23.4,
+   "world": "volt",
+   "offpalette_frac": 0.0,
+   "pass": true
+  },
+  {
+   "t_mid": 25.3,
+   "world": "volt",
+   "offpalette_frac": 0.0,
+   "pass": true
+  },
+  {
+   "t_mid": 26.75,
+   "world": "volt",
+   "offpalette_frac": 0.0,
+   "pass": true
+  },
+  {
+   "t_mid": 29.1,
+   "world": "volt",
+   "offpalette_frac": 0.0,
+   "pass": true
+  }
+ ],
+ "loop_hold": "endcard tail 0.55s = cold-open frame 0"
+}

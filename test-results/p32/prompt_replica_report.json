@@ -1,0 +1,46 @@
+{
+ "bank": "components/prompt-bank/prompts.json",
+ "replicas": [
+  {
+   "clip": "/tmp/ems-work/p32r2/prompt1_hook_slam_3s.mp4",
+   "prompt": "hook_volt_slam_confetti",
+   "world": "volt",
+   "rc": 0,
+   "err": "",
+   "gate": {
+    "world": "volt",
+    "frames": 12,
+    "offpalette_frac": 0.0,
+    "hook_ratios": [
+     0.656,
+     0.685,
+     0.693,
+     0.693,
+     0.696,
+     0.696,
+     0.696,
+     0.7,
+     0.7,
+     0.696,
+     0.7,
+     0.7
+    ],
+    "hook_ok": true
+   }
+  },
+  {
+   "clip": "/tmp/ems-work/p32r2/prompt2_shrinkcard_3s.mp4",
+   "prompt": "trans_shrink_card_zoom",
+   "world": "histmap",
+   "rc": 0,
+   "err": "",
+   "gate": {
+    "world": "histmap",
+    "frames": 12,
+    "offpalette_frac": 0.0,
+    "hook_ratios": [],
+    "hook_ok": true
+   }
+  }
+ ]
+}

@@ -1,0 +1,28 @@
+{
+ "out": "/tmp/ems-work/p32r2/histmap_replica_7s.mp4",
+ "ffprobe": [
+  "codec_name=h264",
+  "width=720",
+  "height=1280",
+  "r_frame_rate=30/1",
+  "codec_name=aac",
+  "r_frame_rate=0/0",
+  "duration=7.000000"
+ ],
+ "qa_frames": 6,
+ "qa_files": [
+  "qa_f0000.jpg",
+  "qa_f0042.jpg",
+  "qa_f0084.jpg",
+  "qa_f0125.jpg",
+  "qa_f0167.jpg",
+  "qa_f0209.jpg"
+ ],
+ "neon_route_line_violation_px": 70,
+ "serif_font_used": [
+  "/usr/share/fonts/truetype/freefont/FreeSerifBoldItalic.ttf"
+ ],
+ "foley_accents": 14,
+ "foley_gain_band": "0.20-0.28",
+ "check_windows": "H 0-48 tan/brown/crimson; 80-130 olive+slate-teal; 165-180 ember"
+}

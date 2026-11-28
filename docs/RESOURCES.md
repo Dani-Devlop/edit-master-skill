@@ -188,3 +188,10 @@ All license-logged in the per-phase sections above.
   video input in this sandbox — ASR fallback logged).
 - Matrix sources: Mixkit Stock Video Free License (5 genre clips, 720p, direct
   asset URLs — download verified 2026-11-27).
+
+## Phase 32 adoption credits
+- historical-map-animation skill (owner-supplied attachment): EXACT helper code
+  adopted into components/adopted/histmap/ — provenance + license status +
+  font fallback chain logged in components/adopted/histmap/README.md.
+- prompt-motion.com free prompt bank: components/prompt-bank/ (license note
+  inside; vocabulary-only adoption, no engine coupling). See F5.

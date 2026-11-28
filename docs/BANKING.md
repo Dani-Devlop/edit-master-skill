@@ -22,3 +22,8 @@ references are unreachable this session (yt-dlp bot-block + IG authwall). The
 re-bank above is the PROVEN, gate-verified core. Re-adoption of the lost banks
 requires the reference clips (or owner-supplied mirrors) — queued, no silent
 substitution.
+
+## PHASE 32 BANK (F4-F6 adoption wave — replica-tested before banking)
+| module | file | verification |
+|--------|------|--------------|
+| histmap adopted kit (spring_pop/parabolic_hop/smootherstep/extract_green_screen_sprite/draw_flame_cluster EXACT copies + stick-arm clamp -45..-68 + lower-third 34->28 fit + OneShotFoley 0.20-0.28 + FFmpegPipe clean shutdown + KeyframeQA 5-7 + relief plates + physical props, ZERO neon route lines) | components/adopted/histmap/histmap_kit.py | replica-test 7s scene PASS: 6 QA frames clean, 0 route lines (70px AA residual), foley in band, probe 720x1280@30 h264+aac (test-results/p32/histmap_replica_report.json) |

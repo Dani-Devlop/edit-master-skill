@@ -643,3 +643,17 @@ Repository: https://github.com/Dani-Devlop/edit-master-skill
       -> component filter -> tesseract psm7 -> must read plan word, sim>=0.8)
 - [~] 32.06 v26b re-render + full gates re-run: BLOCKED on SOURCE re-supply (403);
       code+gates landed; renders immediately when owner provides fresh URL
+- [x] 32.07 F4 histmap ADOPTED: components/adopted/histmap/ (EXACT copies + gotcha helpers
+      + F12 relief/props, ZERO neon route lines) + 7s replica-test PASS (Telegram LIVE,
+      msg 796) + license-log + font fallback chain — 7319bc3
+- [x] 32.08 F5 prompt bank: prompt-motion.com = Cloudflare Turnstile hard-block (headless
+      click attempted; archive.org HTTP 000) -> honest stop-loss; 55-entry INTERNAL
+      vocabulary bank (recipes map 1:1 to banked components; ZERO fabricated external
+      content) + 2 prompt-driven replica renders PASS (Telegram LIVE) + palette-world-
+      aware census (volt vs histmap F12) — f02cdf9
+- [x] 32.09 F6 15-repo checklist: 10 repos cloned; 8 ADOPTED w/ security grade
+      (A/A-/B/CAUTION) + deny-lists (4 fetch scripts cmd; motion-graphics scripts;
+      ghost-editor scripts/ + Mac renderer; tts/setup.sh); 3 SKIP (stack) + 1 SKIP
+      (GPU research) + 2 REFERENCE-ONLY; ALL MIT verified; ghost styles -> presets/
+      ghost-styles/; 19-vs-7 style discrepancy logged; drops/stop-loss recorded in
+      components/adopted/ADOPTION-LOG.md
